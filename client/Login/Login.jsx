@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <div class="container">
+    <div className="container">
       <header></header>
       <main id="login">
         <div id="login__core">
@@ -21,13 +21,16 @@ const Login = () => {
               type="password"
               placeholder="Heslo"
             />
-            <div class="login__remember-me">
+            <div className="login__remember-me">
               <input
                 id="login__remember-me--input"
                 className="login__field"
                 type="checkbox"
               />
-              <span class="login__remember-me--text"> Zapamatovat si mě</span>
+              <span className="login__remember-me--text">
+                {' '}
+                Zapamatovat si mě
+              </span>
             </div>
 
             <Link to="/dashboard">
