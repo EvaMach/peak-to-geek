@@ -1,4 +1,5 @@
 import React from 'react';
+import Navigation from '../Navigation';
 
 const Dashboard = () => {
   return (
@@ -11,30 +12,7 @@ const Dashboard = () => {
             </a>
           </div>
 
-          <nav id="navigation" className="dashboard__navigation">
-            <img id="hamburger" src="img/hamburger.svg" alt="Hamburger menu" />
-            <ul id="navigation__items">
-              <a href="info.html">
-                <li className="navigation__item">Info</li>
-              </a>
-              <a href="dashboard.html">
-                <li className="navigation__item navigation__item--actual">
-                  Dashboard
-                </li>
-              </a>
-              <a href="tree.html">
-                <li className="navigation__item">Tvůj Geek strom</li>
-              </a>
-              <a href="courses.html">
-                <li className="navigation__item">Tvoje kurzy</li>
-              </a>
-              <a href="login.html">
-                <li className="navigation__item">
-                  <img src="img/icon__log-out.svg" alt="Ikona odhlášení" />
-                </li>
-              </a>
-            </ul>
-          </nav>
+          <Navigation />
         </header>
       </div>
       <div className="container">
