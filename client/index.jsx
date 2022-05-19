@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
-import './style.css';
-import Tree from './Tree';
+import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
 
 const App = () => {
-  const [items, setItems] = useState([]);
-
-  return (
-    <>
-      <Tree></Tree>
-    </>
-  );
+  return <div id="app">App</div>;
 };
 
-createRoot(document.querySelector('#app')).render(<App />);
+createRoot(document.querySelector('#app')).render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}></Route>
+    </Routes>
+  </BrowserRouter>,
+);
