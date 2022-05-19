@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Branch from './Branch/Branch.jsx';
 import Navigation from '../Navigation/Navigation.jsx';
+<<<<<<< HEAD
 import '../style-responsivity.css';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 8ed9ad1574c2177a4f1f0853e6b5c8625cfa2e56
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
