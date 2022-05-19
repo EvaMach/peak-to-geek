@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
@@ -29,11 +30,11 @@ const Login = () => {
               <span class="login__remember-me--text"> Zapamatovat si mě</span>
             </div>
 
-            <a href="dashboard.html">
+            <Link to="/dashboard">
               <button type="button" id="login__button">
                 Přihlásit se
               </button>
-            </a>
+            </Link>
           </form>
         </div>
       </main>
