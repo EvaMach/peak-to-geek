@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style-new.css';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -9,15 +10,18 @@ const Home = () => {
           <header className="main-page__header">
             <div className="left-side header__left-side">
               <div id="logo" className="main-page__logo">
-                <a href="index.html">
-                  <img src="img/logo-nerd-sloth.png" alt="Logo Peak to Geek" />
-                </a>
+                <Link to="/">
+                  <img
+                    src={require('./img/logo-nerd-sloth.png')}
+                    alt="Logo Peak to Geek"
+                  />
+                </Link>
               </div>
             </div>
             <div className="right-side header__right-side">
-              <a className="main-page__login" href="login.html">
+              <Link to="/login" className="main-page__login">
                 Přihlásit se
-              </a>
+              </Link>
             </div>
           </header>
           <main className="main-page__main">
@@ -28,16 +32,16 @@ const Home = () => {
                   Sleduj svůj progress napříč IT společně s komunitou stejně
                   motivovaných nadšenců
                 </p>
-                <a id="main-page__signup-link" href="login.html">
+                <Link to="/login" id="main-page__signup-link">
                   <button id="main-page__signup-button">Přidej se!</button>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="right-side main__right-side">
               <div className="main-page__tree">
                 <img
                   className="tree__image"
-                  src="img/tree.svg"
+                  src={require('./img/tree.svg')}
                   alt="Stromeček"
                 />
               </div>

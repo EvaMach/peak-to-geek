@@ -8,11 +8,18 @@ const Navigation = () => {
       <header>
         <div id="logo" className="info__logo">
           <Link to="/">
-            <img src="img/logo-nerd-sloth.png" alt="Peak to Geek logo" />
+            <img
+              src={require('./img/logo-nerd-sloth.png')}
+              alt="Peak to Geek logo"
+            />
           </Link>
         </div>
         <nav id="navigation" className="info__navigation">
-          <img id="hamburger" src="img/hamburger.svg" alt="Hamburger menu" />
+          <img
+            id="hamburger"
+            src={require('./img/hamburger.svg')}
+            alt="Hamburger menu"
+          />
           <ul id="navigation__items">
             <Link to="/info">
               <li className="navigation__item navigation__item--actual">
@@ -30,7 +37,10 @@ const Navigation = () => {
             </Link>
             <Link to="/login">
               <li className="navigation__item">
-                <img src="img/icon__log-out.svg" alt="Ikona odhlášení" />
+                <img
+                  src={require('./img/icon__log-out.svg')}
+                  alt="Ikona odhlášení"
+                />
               </li>
             </Link>
           </ul>

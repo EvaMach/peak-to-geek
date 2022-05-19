@@ -17,16 +17,9 @@ const Tree = () => {
 
   return (
     <>
-      <div>Tvůj Geek strom</div>
       <div className="container">
-        <header>
-          <div id="logo" className="tree__logo">
-            <Link to="/">
-              <img src="img/logo-nerd-sloth.png" alt="" />
-            </Link>
-          </div>
-          <Navigation />
-        </header>
+        <Navigation />
+
         <main>
           <h1 id="tree__title">Tvůj Geek strom</h1>
           <div className="tree" id="tree">

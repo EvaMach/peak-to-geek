@@ -6,7 +6,7 @@ const Progress = () => {
       <div className="dashboard__streak-update">
         <img
           className="streak-update__crown-icon"
-          src="img/progress-crown.svg"
+          src={require('../img/progress-crown.svg')}
           alt="Ikonka progress korunky"
         />
         <p>Svůj strom pěstuješ už XY. den v řadě</p>

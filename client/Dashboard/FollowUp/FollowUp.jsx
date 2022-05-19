@@ -5,7 +5,7 @@ const FollowUp = () => {
     <div className="dashboard__right-side">
       <img
         className="dashboard__image--sloth"
-        src="img/sloth.svg"
+        src={require('../img/sloth.svg')}
         alt="Lenochod visící na stromě"
       />
       <div className="dashboard__follow-up">
@@ -14,10 +14,10 @@ const FollowUp = () => {
           <div className="leaves__tree-checklist">
             <img
               className="leaves__leaf--inactive"
-              src="img/leaf__black.svg"
+              src={require('../img/leaf__black.svg')}
               alt="Lísteček"
             />
-            <p>Návody &amp; best practices</p>
+            <p>Návody a best practices</p>
           </div>
         </div>
 

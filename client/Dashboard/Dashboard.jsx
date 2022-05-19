@@ -10,15 +10,7 @@ const Dashboard = () => {
   return (
     <>
       <div className="container__topbar">
-        <header>
-          <div id="logo" className="dashboard__logo">
-            <Link to="/">
-              <img src="img/logo-nerd-sloth.png" alt="Peak to Geek logo" />
-            </Link>
-          </div>
-
-          <Navigation />
-        </header>
+        <Navigation />
       </div>
       <div className="container">
         <main id="dashboard__core">
