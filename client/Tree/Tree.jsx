@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Branch from './Branch/Branch.jsx';
 import Navigation from '../Navigation/Navigation.jsx';
+import { Link } from 'react-router-dom';
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
