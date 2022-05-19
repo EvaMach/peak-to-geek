@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style-new.css';
 
 const Home = () => {
   return (
