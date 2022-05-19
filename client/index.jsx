@@ -1,22 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
+import Tree from './Tree';
 
-const App = () => (
-  <div className="container">
-    <header>
-      <div className="logo"></div>
-      <h1>Webová aplikace</h1>
-    </header>
-    <main>
-      <p>Startovací šablona pro webovou aplikaci v Reactu. Vytvořeno pomocí <a href="https://www.npmjs.com/package/create-czechitas-app">create-czechitas-app</a>.</p>
-    </main>
-    <footer>
-      <p>Czechitas, Digitální akademie: Web</p>
-    </footer>
-  </div>
-);
+const App = () => {
+  const [items, setItems] = useState([]);
 
-createRoot(
-  document.querySelector('#app')
-).render(<App />);
+  return (
+    <>
+      <Tree></Tree>
+    </>
+  );
+};
+
+createRoot(document.querySelector('#app')).render(<App />);
