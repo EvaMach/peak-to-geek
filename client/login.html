@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-new.css" />
+    <!-- <script src="index.js" type="module"></script> -->
+    <title>Přihlásit se 💫</title>
+  </head>
+  <body id="login-page__body">
+    <div class="container">
+      <header>
+        <!-- bude tady nějaká navigační lišta předpokládám? -->
+      </header>
+      <main id="login">
+        <div id="login__core">
+          <h1 id="login__title">Vítej zpátky!</h1>
+          <form id="login__form">
+            <input
+              id="login__user-name"
+              class="login__field"
+              type="text"
+              placeholder="Přihlašovací jméno"
+            />
+            <input
+              id="login__user-password"
+              class="login__field"
+              type="password"
+              placeholder="Heslo"
+            />
+            <div class="login__remember-me">
+              <input
+                id="login__remember-me--input"
+                class="login__field"
+                type="checkbox"
+              /><span class="login__remember-me--text"> Zapamatovat si mě</span>
+            </div>
+            <!-- type u buttonu změním, teď jen pro funkčnost,aby se to dalo prokliknout na dashboard -->
+            <a href="dashboard.html"
+              ><button type="button" id="login__button">Přihlásit se</button></a
+            >
+          </form>
+        </div>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>
