@@ -1,5 +1,6 @@
 import React from 'react';
-import Navigation from '../Navigation';
+import Navigation from '../Navigation/Navigation.jsx';
+import { Link } from 'react-router-dom';
 
 const Courses = () => {
   return (
@@ -7,9 +8,9 @@ const Courses = () => {
       <div class="container">
         <header>
           <div id="logo" className="courses__logo">
-            <a href="index.html">
+            <Link to="/">
               <img src="img/logo-nerd-sloth.png" alt="" />
-            </a>
+            </Link>
           </div>
           <Navigation />
         </header>

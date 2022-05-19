@@ -5,30 +5,30 @@ const Navigation = () => {
     <>
       <header>
         <div id="logo" class="info__logo">
-          <a href="index.html">
+          <Link to="/">
             <img src="img/logo-nerd-sloth.png" alt="Peak to Geek logo" />
-          </a>
+          </Link>
         </div>
         <nav id="navigation" class="info__navigation">
           <img id="hamburger" src="img/hamburger.svg" alt="Hamburger menu" />
           <ul id="navigation__items">
-            <a href="info.html">
+            <Link to="/info">
               <li class="navigation__item navigation__item--actual">Info</li>
-            </a>
-            <a href="dashboard.html">
+            </Link>
+            <Link to="/dashboard">
               <li class="navigation__item">Dashboard</li>
-            </a>
-            <a href="tree.html">
+            </Link>
+            <Link to="/tree">
               <li class="navigation__item">Tvůj Geek strom</li>
-            </a>
-            <a href="courses.html">
+            </Link>
+            <Link to="/courses">
               <li class="navigation__item">Tvoje kurzy</li>
-            </a>
-            <a href="login.html">
+            </Link>
+            <Link to="/login">
               <li class="navigation__item">
                 <img src="img/icon__log-out.svg" alt="Ikona odhlášení" />
               </li>
-            </a>
+            </Link>
           </ul>
         </nav>
       </header>

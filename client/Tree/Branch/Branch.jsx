@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Leaf from './Leaf';
+import Leaf from './Leaf/Leaf.jsx';
 
 const Branch = ({ name, id }) => {
   const [state, setState] = useState(true);

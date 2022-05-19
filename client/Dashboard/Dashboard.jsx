@@ -1,8 +1,9 @@
 import React from 'react';
-import Navigation from '../Navigation';
-import DashboardCourses from './DashboardCourses';
-import Progress from './Progress';
-import FollowUp from './FollowUp';
+import Navigation from '../Navigation/Navigation.jsx';
+import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
+import Progress from './Progress/Progress.jsx';
+import FollowUp from './FollowUp/FollowUp.jsx';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -10,9 +11,9 @@ const Dashboard = () => {
       <div className="container__topbar">
         <header>
           <div id="logo" className="dashboard__logo">
-            <a href="index.html">
+            <Link to="/">
               <img src="img/logo-nerd-sloth.png" alt="Peak to Geek logo" />
-            </a>
+            </Link>
           </div>
 
           <Navigation />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Branch from './Branch';
-import Navigation from '../Navigation';
+import Branch from './Branch/Branch.jsx';
+import Navigation from '../Navigation/Navigation.jsx';
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
@@ -19,9 +19,9 @@ const Tree = () => {
       <div className="container">
         <header>
           <div id="logo" className="tree__logo">
-            <a href="index.html">
+            <Link to="/">
               <img src="img/logo-nerd-sloth.png" alt="" />
-            </a>
+            </Link>
           </div>
           <Navigation />
         </header>
