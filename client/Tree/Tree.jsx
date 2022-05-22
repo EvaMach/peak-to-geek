@@ -13,92 +13,33 @@ const Tree = () => {
       .then((data) => {
         setBranches(data.results.branches.map((branch) => branch));
       });
-  }, []);
+  }, [branches]);
 
   return (
     <>
       <div className="container">
         <Navigation />
-
         <main>
           <h1 id="tree__title">Tvůj Geek strom</h1>
           <div className="tree" id="tree">
-            <div className="tree__treetop"></div>
+            <div className="tree__treetop">Portfolio</div>
             <div className="tree__core">
               <div className="tree__trunk">
                 <div className="tree__branches">
-                  <span className="tree__branch--left tree__branch--left1">
-                    <div className="tree__treetop--left tree__treetop--left1"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right1">
-                    <div className="tree__treetop--right tree__treetop--right1"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left2">
-                    <div className="tree__treetop--left tree__treetop--left2"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right2">
-                    <div className="tree__treetop--right tree__treetop--right2"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left3">
-                    <div className="tree__treetop--left tree__treetop--left3"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right3">
-                    <div className="tree__treetop--right tree__treetop--right3"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left4">
-                    <div className="tree__treetop--left tree__treetop--left4"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right4">
-                    <div className="tree__treetop--right tree__treetop--right4"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left5">
-                    <div className="tree__treetop--left tree__treetop--left5"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right5">
-                    <div className="tree__treetop--right tree__treetop--right5"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left6">
-                    <div className="tree__treetop--left tree__treetop--left6"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right6">
-                    <div className="tree__treetop--right tree__treetop--right6"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left7">
-                    <div className="tree__treetop--left tree__treetop--left7"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right7">
-                    <div className="tree__treetop--right tree__treetop--right7"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left8">
-                    <div className="tree__treetop--left tree__treetop--left8"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right8">
-                    <div className="tree__treetop--right tree__treetop--right8"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left9">
-                    <div className="tree__treetop--left tree__treetop--left9"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right9">
-                    <div className="tree__treetop--right tree__treetop--right9"></div>
-                  </span>
-                  <span className="tree__branch--left tree__branch--left10">
-                    <div className="tree__treetop--left tree__treetop--left10"></div>
-                  </span>
-                  <span className="tree__branch--right tree__branch--right10">
-                    <div className="tree__treetop--right tree__treetop--right10"></div>
-                  </span>
+                  {branches.map((branch) => (
+                    <Branch
+                      key={branch.id}
+                      name={branch.name}
+                      id={branch.id}
+                      branchDone={branch.done}
+                      leaves={branch.leaves}
+                    ></Branch>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </main>
-        <footer></footer>
-      </div>
-      {/* branches */}
-      <div>
-        {branches.map((branch) => (
-          <Branch key={branch.id} name={branch.name} id={branch.id}></Branch>
-        ))}
       </div>
     </>
   );

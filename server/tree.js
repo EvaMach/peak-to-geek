@@ -1,106 +1,391 @@
 export const tree = {
   branches: [
     {
-      id: '1',
-      name: 'Základy UX',
-      done: true,
+      id: '8',
+      name: 'Principy a best practices',
+      done: false,
       leaves: [
         {
-          id: '11',
-          name: 'Design proces',
+          id: '1',
+          name: 'Principy',
           done: false,
           checkboxes: [
             {
-              name: 'Google Design Sprint',
+              name: 'Primární, sekundární, terciárny barvy',
               done: false,
             },
             {
-              name: 'The Double Diamond by Design Council',
+              name: 'Color wheel',
               state: false,
             },
             {
-              name: 'IBM Design Thinking Model',
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
               state: false,
             },
             {
-              name: 'IDEO Human-Centered Design Model',
-              state: false,
-            },
-          ],
-        },
-        {
-          id: '12',
-          name: 'UX disciplíny',
-          done: false,
-          checkboxes: [
-            {
-              name: 'User research (UR)',
+              name: 'Studené, teplé barvy, význam barev',
               state: false,
             },
             {
-              name: 'Interakční design (IxD)',
+              name: 'Color kontext',
               state: false,
             },
             {
-              name: 'Informační architektura (IA)',
+              name: 'RGB, CMYK, HEX, HSL',
               state: false,
             },
             {
-              name: 'Vizuální design',
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
               state: false,
             },
           ],
         },
         {
-          id: '13',
-          name: 'UX Aspekty',
+          id: '2',
+          name: 'Přístupnost',
           done: false,
           checkboxes: [
             {
-              name: 'Usefulness',
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
               state: false,
             },
             {
-              name: 'Usability',
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
               state: false,
             },
             {
-              name: 'Findability',
+              name: 'Studené, teplé barvy, význam barev',
               state: false,
             },
             {
-              name: 'Credibility',
+              name: 'Color kontext',
               state: false,
             },
             {
-              name: 'Accessibility',
+              name: 'RGB, CMYK, HEX, HSL',
               state: false,
             },
             {
-              name: 'Desirability',
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: '7',
+      name: 'Design process: User testing',
+      done: false,
+      leaves: [
+        {
+          id: '1',
+          name: 'Druhy testování',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
               state: false,
             },
             {
-              name: 'Value',
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
               state: false,
             },
           ],
         },
         {
-          id: '14',
-          name: 'Zákony UX',
+          id: '2',
+          name: 'Proces testování',
           done: false,
           checkboxes: [
             {
-              name: 'Aesthetic-Usability Effect',
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
               state: false,
             },
             {
-              name: "Fitts's Law",
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
               state: false,
             },
             {
-              name: 'Goal-Gradient Effect',
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: '6',
+      name: 'Design process: Prototype',
+      done: false,
+      leaves: [
+        {
+          id: '1',
+          name: 'Prototypy',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+        {
+          id: '2',
+          name: 'Grafika',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: '5',
+      name: 'Design proces: Ideate',
+      done: false,
+      leaves: [
+        {
+          id: '1',
+          name: 'Wireframy',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: '4',
+      name: 'Design proces: Define',
+      done: false,
+      leaves: [
+        {
+          id: '1',
+          name: 'UX výzkum',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: '3',
+      name: 'Design proces: Emphatise',
+      done: false,
+      leaves: [
+        {
+          id: '1',
+          name: 'Heuristiky použitelnosti',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              state: false,
+            },
+          ],
+        },
+        {
+          id: '2',
+          name: 'Dobrý design',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Primární, sekundární, terciárny barvy',
+              done: false,
+            },
+            {
+              name: 'Color wheel',
+              state: false,
+            },
+            {
+              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              state: false,
+            },
+            {
+              name: 'Studené, teplé barvy, význam barev',
+              state: false,
+            },
+            {
+              name: 'Color kontext',
+              state: false,
+            },
+            {
+              name: 'RGB, CMYK, HEX, HSL',
+              state: false,
+            },
+            {
+              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
               state: false,
             },
           ],
@@ -255,402 +540,111 @@ export const tree = {
       ],
     },
     {
-      id: '3',
-      name: 'Design proces: Emphatise',
-      done: false,
+      id: '1',
+      name: 'Základy UX',
+      done: true,
       leaves: [
         {
-          id: '1',
-          name: 'Heuristiky použitelnosti',
+          id: '11',
+          name: 'Design proces',
           done: false,
           checkboxes: [
             {
-              name: 'Primární, sekundární, terciárny barvy',
+              name: 'Google Design Sprint',
               done: false,
             },
             {
-              name: 'Color wheel',
+              name: 'The Double Diamond by Design Council',
               state: false,
             },
             {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              name: 'IBM Design Thinking Model',
               state: false,
             },
             {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              name: 'IDEO Human-Centered Design Model',
               state: false,
             },
           ],
         },
         {
-          id: '2',
-          name: 'Dobrý design',
+          id: '12',
+          name: 'UX disciplíny',
           done: false,
           checkboxes: [
             {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
+              name: 'User research (UR)',
               state: false,
             },
             {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
+              name: 'Interakční design (IxD)',
               state: false,
             },
             {
-              name: 'Studené, teplé barvy, význam barev',
+              name: 'Informační architektura (IA)',
               state: false,
             },
             {
-              name: 'Color kontext',
+              name: 'Vizuální design',
+              state: false,
+            },
+          ],
+        },
+        {
+          id: '13',
+          name: 'UX Aspekty',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Usefulness',
               state: false,
             },
             {
-              name: 'RGB, CMYK, HEX, HSL',
+              name: 'Usability',
               state: false,
             },
             {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
+              name: 'Findability',
+              state: false,
+            },
+            {
+              name: 'Credibility',
+              state: false,
+            },
+            {
+              name: 'Accessibility',
+              state: false,
+            },
+            {
+              name: 'Desirability',
+              state: false,
+            },
+            {
+              name: 'Value',
+              state: false,
+            },
+          ],
+        },
+        {
+          id: '14',
+          name: 'Zákony UX',
+          done: false,
+          checkboxes: [
+            {
+              name: 'Aesthetic-Usability Effect',
+              state: false,
+            },
+            {
+              name: "Fitts's Law",
+              state: false,
+            },
+            {
+              name: 'Goal-Gradient Effect',
               state: false,
             },
           ],
         },
       ],
-    },
-    {
-      id: '4',
-      name: 'Design proces: Define',
-      done: false,
-      leaves: [
-        {
-          id: '1',
-          name: 'UX výzkum',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: '5',
-      name: 'Design proces: Ideate',
-      done: false,
-      leaves: [
-        {
-          id: '1',
-          name: 'Wireframy',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: '6',
-      name: 'Design process: Prototype',
-      done: false,
-      leaves: [
-        {
-          id: '1',
-          name: 'Prototypy',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-        {
-          id: '2',
-          name: 'Grafika',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: '7',
-      name: 'Design process: User testing',
-      done: false,
-      leaves: [
-        {
-          id: '1',
-          name: 'Druhy testování',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-        {
-          id: '2',
-          name: 'Proces testování',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: '8',
-      name: 'Principy a best practices',
-      done: false,
-      leaves: [
-        {
-          id: '1',
-          name: 'Principy',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-        {
-          id: '2',
-          name: 'Přístupnost',
-          done: false,
-          checkboxes: [
-            {
-              name: 'Primární, sekundární, terciárny barvy',
-              done: false,
-            },
-            {
-              name: 'Color wheel',
-              state: false,
-            },
-            {
-              name: 'Harmonie barev a schémata - komplementární, analogická...',
-              state: false,
-            },
-            {
-              name: 'Studené, teplé barvy, význam barev',
-              state: false,
-            },
-            {
-              name: 'Color kontext',
-              state: false,
-            },
-            {
-              name: 'RGB, CMYK, HEX, HSL',
-              state: false,
-            },
-            {
-              name: 'Hue, chroma, shade, tint, tone, saturation, value, luminance',
-              state: false,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      id: '9',
-      name: 'Portfolio',
-      done: false,
-      leaves: [],
     },
   ],
 };

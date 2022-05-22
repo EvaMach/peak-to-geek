@@ -532,12 +532,19 @@ header {
 }
 
 .tree__treetop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
   border-radius: 50%;
   background-color: #2e9398;
   aspect-ratio: 1 / 1;
   margin: 3% auto -2% auto;
   z-index: 1;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .tree__trunk {
@@ -568,10 +575,6 @@ header {
 
 .tree__treetop--right {
   width: 50%;
-  border-radius: 50%;
-  background-color: #2e9398;
-  aspect-ratio: 1 / 1;
-  z-index: 1;
   position: absolute;
   bottom: 50%;
   left: 77%;
@@ -579,37 +582,17 @@ header {
 
 /* Větve - individual */
 
-.tree__branch--right1 {
+.tree__branch--8 {
   margin-top: 7em;
 }
-.tree__branch--right2 {
+.tree__branch--6 {
   margin-top: 27em;
 }
-.tree__branch--right3 {
+.tree__branch--4 {
   margin-top: 47em;
 }
-.tree__branch--right4 {
+.tree__branch--2 {
   margin-top: 67em;
-}
-.tree__branch--right5 {
-  margin-top: 87em;
-}
-.tree__branch--right6 {
-  margin-top: 107em;
-}
-.tree__branch--right7 {
-  margin-top: 127em;
-}
-.tree__branch--right8 {
-  margin-top: 147em;
-}
-.tree__branch--right9 {
-  margin-top: 167em;
-  display: none;
-}
-.tree__branch--right10 {
-  margin-top: 187em;
-  display: none;
 }
 
 /* Levá strana stromu */
@@ -630,10 +613,6 @@ header {
 
 .tree__treetop--left {
   width: 50%;
-  border-radius: 50%;
-  background-color: #2e9398;
-  aspect-ratio: 1 / 1;
-  z-index: 1;
   position: absolute;
   bottom: 50%;
   right: 77%;
@@ -641,37 +620,17 @@ header {
 
 /* Větve - individual */
 
-.tree__branch--left1 {
+.tree__branch--7 {
   margin-top: 17em;
 }
-.tree__branch--left2 {
+.tree__branch--5 {
   margin-top: 37em;
 }
-.tree__branch--left3 {
+.tree__branch--3 {
   margin-top: 57em;
 }
-.tree__branch--left4 {
+.tree__branch--1 {
   margin-top: 77em;
-}
-.tree__branch--left5 {
-  margin-top: 97em;
-}
-.tree__branch--left6 {
-  margin-top: 117em;
-}
-.tree__branch--left7 {
-  margin-top: 137em;
-}
-.tree__branch--left8 {
-  margin-top: 157em;
-}
-.tree__branch--left9 {
-  margin-top: 177em;
-  display: none;
-}
-.tree__branch--left10 {
-  margin-top: 197em;
-  display: none;
 }
 
 @media (min-width: 992px) {
@@ -692,10 +651,6 @@ header {
 
   .tree__treetop--right {
     width: 50%;
-    border-radius: 50%;
-    background-color: #2e9398;
-    aspect-ratio: 1 / 1;
-    z-index: 1;
     position: absolute;
     bottom: 50%;
     left: 77%;
@@ -703,37 +658,17 @@ header {
 
   /* Větve - individual */
 
-  .tree__branch--right1 {
+  .tree__branch--8 {
     margin-top: 7em;
   }
-  .tree__branch--right2 {
+  .tree__branch--6 {
     margin-top: 50em;
   }
-  .tree__branch--right3 {
+  .tree__branch--4 {
     margin-top: 90em;
   }
-  .tree__branch--right4 {
+  .tree__branch--2 {
     margin-top: 130em;
-  }
-  .tree__branch--right5 {
-    margin-top: 170em;
-  }
-  .tree__branch--right6 {
-    margin-top: 210em;
-  }
-  .tree__branch--right7 {
-    margin-top: 250em;
-  }
-  .tree__branch--right8 {
-    margin-top: 290em;
-  }
-  .tree__branch--right9 {
-    margin-top: 330em;
-    display: none;
-  }
-  .tree__branch--right10 {
-    margin-top: 370em;
-    display: none;
   }
 
   /* Levá strana stromečku */
@@ -752,10 +687,6 @@ header {
 
   .tree__treetop--left {
     width: 50%;
-    border-radius: 50%;
-    background-color: #2e9398;
-    aspect-ratio: 1 / 1;
-    z-index: 1;
     position: absolute;
     bottom: 50%;
     right: 77%;
@@ -763,37 +694,17 @@ header {
 
   /* Větve - individual */
 
-  .tree__branch--left1 {
+  .tree__branch--7 {
     margin-top: 30em;
   }
-  .tree__branch--left2 {
+  .tree__branch--5 {
     margin-top: 70em;
   }
-  .tree__branch--left3 {
+  .tree__branch--3 {
     margin-top: 110em;
   }
-  .tree__branch--left4 {
+  .tree__branch--1 {
     margin-top: 150em;
-  }
-  .tree__branch--left5 {
-    margin-top: 190em;
-  }
-  .tree__branch--left6 {
-    margin-top: 230em;
-  }
-  .tree__branch--left7 {
-    margin-top: 270em;
-  }
-  .tree__branch--left8 {
-    margin-top: 310em;
-  }
-  .tree__branch--left9 {
-    margin-top: 350em;
-    display: none;
-  }
-  .tree__branch--left10 {
-    margin-top: 390em;
-    display: none;
   }
 }
 
@@ -806,4 +717,8 @@ header {
 #community__title {
   font-size: 3em;
   margin-top: 15%;
+}
+
+.leaf {
+  color: red;
 }
