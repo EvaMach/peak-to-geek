@@ -550,100 +550,118 @@ export const tree = {
       done: true,
       leaves: [
         {
-          id: '11',
+          id: '1',
           name: 'Design proces',
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'Google Design Sprint',
               done: false,
             },
             {
+              id: '2',
               name: 'The Double Diamond by Design Council',
               state: false,
             },
             {
+              id: '3',
               name: 'IBM Design Thinking Model',
               state: false,
             },
             {
+              id: '4',
               name: 'IDEO Human-Centered Design Model',
               state: false,
             },
           ],
         },
         {
-          id: '12',
+          id: '2',
           name: 'UX disciplíny',
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'User research (UR)',
               state: false,
             },
             {
+              id: '2',
               name: 'Interakční design (IxD)',
               state: false,
             },
             {
+              id: '3',
               name: 'Informační architektura (IA)',
               state: false,
             },
             {
+              id: '4',
               name: 'Vizuální design',
               state: false,
             },
           ],
         },
         {
-          id: '13',
+          id: '3',
           name: 'UX Aspekty',
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'Usefulness',
               state: false,
             },
             {
+              id: '2',
               name: 'Usability',
               state: false,
             },
             {
+              id: '3',
               name: 'Findability',
               state: false,
             },
             {
+              id: '4',
               name: 'Credibility',
               state: false,
             },
             {
+              id: '5',
               name: 'Accessibility',
               state: false,
             },
             {
+              id: '6',
               name: 'Desirability',
               state: false,
             },
             {
+              id: '7',
               name: 'Value',
               state: false,
             },
           ],
         },
         {
-          id: '14',
+          id: '4',
           name: 'Zákony UX',
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'Aesthetic-Usability Effect',
               state: false,
             },
             {
+              id: '2',
               name: "Fitts's Law",
               state: false,
             },
             {
+              id: '3',
               name: 'Goal-Gradient Effect',
               state: false,
             },

@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ChecklistItem from './ChecklistItem/ChecklistItem';
 
-const ChecklistModal = ({ closeModal, name, leafId, branchId }) => {
+const ChecklistModal = ({
+  closeModal,
+  modalName,
+  leafId,
+  branchId,
+  onFinishList,
+}) => {
   const [checkboxes, setCheckboxes] = useState([]);
-
-  console.log(leafId);
-  console.log(branchId);
+  const [leafDone, setLeafDone] = useState(false);
 
   useEffect(() => {
     fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`)
@@ -13,21 +17,31 @@ const ChecklistModal = ({ closeModal, name, leafId, branchId }) => {
       .then((data) => {
         setCheckboxes(data.results.checkboxes);
       });
-  }, [ChecklistItem]);
+  }, [checkboxes]);
+
+  const value = checkboxes.every((i) => i.done === true);
 
   return (
     <div className="modal">
       <div className="modal__header">
-        <h3>{name}</h3> <button onClick={() => closeModal(false)}>X</button>
+        <h3>{modalName}</h3>{' '}
+        <button
+          onClick={() => {
+            onFinishList(value);
+            closeModal(false);
+          }}
+        >
+          X
+        </button>
       </div>
       {checkboxes.map((checkbox) => (
         <ChecklistItem
           key={checkbox.name}
           itemName={checkbox.name}
-          done={checkbox.done}
+          itemId={checkbox.id}
+          apiItemState={checkbox.done}
           branchId={branchId}
           leafId={leafId}
-          id={checkbox.id}
         />
       ))}
     </div>

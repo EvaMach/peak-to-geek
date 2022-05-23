@@ -1,37 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
 
-const Leaf = ({ name, branchId, id, leafState }) => {
-  const [state, setState] = useState(leafState);
+const Leaf = ({ leafName, branchId, leafId, apiLeafState }) => {
+  const [leafDone, setLeafDone] = useState(apiLeafState);
   const [openModal, setOpenModal] = useState(false);
+
+  const handleFinishList = (value) => {
+    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        done: value,
+      }),
+    });
+  };
 
   return (
     <>
       {openModal && (
         <ChecklistModal
-          name={name}
+          modalName={leafName}
           closeModal={setOpenModal}
-          leafId={id}
+          leafId={leafId}
           branchId={branchId}
+          onFinishList={handleFinishList}
         />
       )}
       <div onClick={() => setOpenModal(true)}>
-        {name}&nbsp;&nbsp;&nbsp;
+        {leafName}&nbsp;&nbsp;&nbsp;
         <span
           onClick={() => {
-            setState(!state);
-            fetch(`/api/tree/branch/${branchId}/leaf/${id}`, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                done: !state,
-              }),
-            });
+            // setState(!state);
+            // fetch(`/api/tree/branch/${branchId}/leaf/${id}`, {
+            //   method: 'POST',
+            //   headers: {
+            //     'Content-Type': 'application/json',
+            //   },
+            //   body: JSON.stringify({
+            //     done: !state,
+            //   }),
+            // });
           }}
         >
-          {state ? 'ano' : 'ne'}
+          {leafDone ? 'ano' : 'ne'}
         </span>
       </div>
     </>

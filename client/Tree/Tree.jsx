@@ -12,7 +12,7 @@ const Tree = () => {
       .then((data) => {
         setBranches(data.results.branches.map((branch) => branch));
       });
-  }, []);
+  }, [Tree]);
 
   return (
     <>
@@ -28,9 +28,9 @@ const Tree = () => {
                   {branches.map((branch) => (
                     <Branch
                       key={branch.id}
-                      name={branch.name}
-                      id={branch.id}
-                      branchDone={branch.done}
+                      branchName={branch.name}
+                      branchId={branch.id}
+                      apiBranchState={branch.done}
                       leaves={branch.leaves}
                     ></Branch>
                   ))}
