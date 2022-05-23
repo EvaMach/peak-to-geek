@@ -31,7 +31,7 @@ const Tree = () => {
                       name={branch.name}
                       id={branch.id}
                       branchDone={branch.done}
-                      // leaves={branch.leaves}
+                      leaves={branch.leaves}
                     ></Branch>
                   ))}
                 </div>

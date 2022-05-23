@@ -34,6 +34,27 @@ server.get('/api/tree/branch/:id', (req, resp) => {
   });
 });
 
+server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
+  const { id, id2 } = req.params;
+  const { done } = req.body;
+
+  const branch = tree.branches.find((i) => i.id === id);
+  const leaves = branch.leaves;
+  const leaf = leaves.find((i) => i.id === id2);
+
+  if (leaf === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Checklist not found',
+    });
+    return;
+  }
+  resp.send({
+    status: 'success',
+    results: leaf,
+  });
+});
+
 server.post('/api/tree/branch/:id', (req, resp) => {
   const { id } = req.params;
   const { done } = req.body;
@@ -48,35 +69,37 @@ server.post('/api/tree/branch/:id', (req, resp) => {
   });
 });
 
-server.get('/api/tree/leaf/:id', (req, resp) => {
-  const { id } = req.params;
-
-  const leaf = tree.branches[leaves].find((i) => i.id === id);
-
-  if (leaf === undefined) {
-    resp.status(404).send({
-      status: 'error',
-      message: 'Leaf not found',
-    });
-    return;
-  }
-  resp.send({
-    status: 'success',
-    results: leaf,
-  });
-});
-
-server.post('/api/tree/branch/:id/leaf/:id', (req, resp) => {
-  const { id } = req.params;
+server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
+  const { id, id2 } = req.params;
   const { done } = req.body;
 
-  const leaf = tree.branches.find((i) => i.id === id);
+  const branch = tree.branches.find((i) => i.id === id);
+  const leaves = branch.leaves;
+  const leaf = leaves.find((i) => i.id === id2);
 
   leaf.done = done;
 
   resp.send({
     status: 'success',
     results: leaf,
+  });
+});
+
+server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
+  const { id, id2, id3 } = req.params;
+  const { done } = req.body;
+
+  const branch = tree.branches.find((i) => i.id === id);
+  const leaves = branch.leaves;
+  const leaf = leaves.find((i) => i.id === id2);
+  const checkboxes = leaf.checkboxes;
+  const checkboxItem = checkboxes.find((i) => i.id === id3);
+
+  checkboxItem.done = done;
+
+  resp.send({
+    status: 'success',
+    results: checkboxItem,
   });
 });
 

@@ -11,14 +11,17 @@ export const tree = {
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'Primární, sekundární, terciárny barvy',
               done: false,
             },
             {
+              id: '2',
               name: 'Color wheel',
               state: false,
             },
             {
+              id: '3',
               name: 'Harmonie barev a schémata - komplementární, analogická...',
               state: false,
             },
@@ -88,10 +91,12 @@ export const tree = {
           done: false,
           checkboxes: [
             {
+              id: '1',
               name: 'Primární, sekundární, terciárny barvy',
               done: false,
             },
             {
+              id: '2',
               name: 'Color wheel',
               state: false,
             },

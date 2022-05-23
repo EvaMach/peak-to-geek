@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-const Branch = ({ name, id, branchDone }) => {
+import Leaf from './Leaf/Leaf.jsx';
+
+const Branch = ({ name, id, branchDone, leaves }) => {
   const [state, setState] = useState(branchDone);
 
   return (
@@ -34,11 +36,17 @@ const Branch = ({ name, id, branchDone }) => {
         >
           <p>{name}</p>
         </div>
-        {/* <div>
+        <div>
           {leaves.map((leaf) => (
-            <Leaf key={leaf.name} name={leaf.name} id={leaf.id}></Leaf>
+            <Leaf
+              key={leaf.name}
+              name={leaf.name}
+              branchId={id}
+              id={leaf.id}
+              leafState={leaf.done}
+            ></Leaf>
           ))}
-        </div> */}
+        </div>
       </span>
     </>
   );
