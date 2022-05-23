@@ -9,12 +9,16 @@ const server = express();
 
 server.use(express.json());
 
+// STROM
+
 server.get('/api/tree', (req, resp) => {
   resp.send({
     status: 'success',
     results: tree,
   });
 });
+
+// JEDNOTLIVÉ VĚTVE
 
 server.get('/api/tree/branch/:id', (req, resp) => {
   const { id } = req.params;
@@ -33,6 +37,22 @@ server.get('/api/tree/branch/:id', (req, resp) => {
     results: branch,
   });
 });
+
+server.post('/api/tree/branch/:id', (req, resp) => {
+  const { id } = req.params;
+  const { done } = req.body;
+
+  const branch = tree.branches.find((i) => i.id === id);
+
+  branch.done = done;
+
+  resp.send({
+    status: 'success',
+    results: branch,
+  });
+});
+
+// LISTY
 
 server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
@@ -55,20 +75,6 @@ server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   });
 });
 
-server.post('/api/tree/branch/:id', (req, resp) => {
-  const { id } = req.params;
-  const { done } = req.body;
-
-  const branch = tree.branches.find((i) => i.id === id);
-
-  branch.done = done;
-
-  resp.send({
-    status: 'success',
-    results: branch,
-  });
-});
-
 server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
   const { done } = req.body;
@@ -84,6 +90,8 @@ server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
     results: leaf,
   });
 });
+
+// CHECKLISTY
 
 server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
   const { id, id2, id3 } = req.params;
@@ -102,6 +110,8 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
     results: checkboxItem,
   });
 });
+
+// KURZY
 
 server.use(express.static('dist'));
 

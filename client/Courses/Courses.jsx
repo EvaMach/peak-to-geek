@@ -17,6 +17,7 @@ const Courses = () => {
         </header>
         <main>
           <h1 id="courses__title">Tvoje kurzy</h1>
+
           <h2 id="community__title">Kurzy komunity</h2>
         </main>
         <footer></footer>

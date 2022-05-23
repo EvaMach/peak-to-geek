@@ -9,8 +9,6 @@ const ChecklistModal = ({
   onFinishList,
 }) => {
   const [checkboxes, setCheckboxes] = useState([]);
-  const [leafDone, setLeafDone] = useState(false);
-
   useEffect(() => {
     fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`)
       .then((response) => response.json())
