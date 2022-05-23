@@ -12,9 +12,8 @@ import Courses from './Courses/Courses.jsx';
 const App = () => {
   return (
     <div id="app">
+      {/* <Navigation /> */}
       <Home />
-      <Login />
-      <Navigation />
     </div>
   );
 };
@@ -22,12 +21,12 @@ const App = () => {
 createRoot(document.querySelector('#app')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />}></Route>
-      <Route path="/info" element={<Info />}></Route>
-      <Route path="/login" element={<Login />}></Route>
-      <Route path="/dashboard" element={<Dashboard />}></Route>
-      <Route path="/tree" element={<Tree />}></Route>
-      <Route path="/courses" element={<Courses />}></Route>
+      <Route path="/" element={<App />} />
+      <Route path="info" element={<Info />} />
+      <Route path="login" element={<Login />} />
+      <Route path="dashboard" element={<Dashboard />} />
+      <Route path="tree" element={<Tree />} />
+      <Route path="courses" element={<Courses />} />
     </Routes>
   </BrowserRouter>,
 );

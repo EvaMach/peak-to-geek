@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style-responsivity.css';
+// import '../style-responsivity.css';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {

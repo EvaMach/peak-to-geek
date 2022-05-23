@@ -83,7 +83,8 @@ server.post('/api/tree/branch/:id/leaf/:id', (req, resp) => {
 server.use(express.static('dist'));
 
 server.get('*', (req, resp) => {
-  resp.sendFile('dist/index.html');
+  // resp.sendFile('dist/index.html');
+  resp.sendFile('index.html', { root: 'dist' });
 });
 
 server.listen(port, () => {

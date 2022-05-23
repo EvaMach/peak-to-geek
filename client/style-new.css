@@ -479,7 +479,6 @@ header {
   width: 20em;
   margin: 0 auto;
   position: relative;
-  z-index: -1;
 }
 
 /* Pravá strana stromu */

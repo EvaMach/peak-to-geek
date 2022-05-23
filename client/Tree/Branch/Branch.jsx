@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Leaf from './Leaf/Leaf.jsx';
 
-const Branch = ({ name, id, branchDone, leaves }) => {
-  const [done, setDone] = useState(branchDone);
+const Branch = ({ name, id, branchDone }) => {
+  const [state, setState] = useState(branchDone);
 
   return (
     <>
@@ -15,16 +14,17 @@ const Branch = ({ name, id, branchDone, leaves }) => {
       >
         <div
           onClick={() => {
-            setDone(!done);
-            fetch(`/api/tree/branch/${id}`, {
+            setState(!state);
+            fetch(`/api/tree/branch/${id}/`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                done: !done,
+                done: !state,
               }),
             });
+            console.log(state);
           }}
           className={
             id % 2 === 0
@@ -34,12 +34,12 @@ const Branch = ({ name, id, branchDone, leaves }) => {
         >
           <p>{name}</p>
         </div>
+        {/* <div>
+          {leaves.map((leaf) => (
+            <Leaf key={leaf.name} name={leaf.name} id={leaf.id}></Leaf>
+          ))}
+        </div> */}
       </span>
-      {/* <div className="leaf">
-        {leaves.map((leaf) => (
-          <Leaf key={leaf.name} name={leaf.name} id={leaf.id}></Leaf>
-        ))}
-      </div> */}
     </>
   );
 };

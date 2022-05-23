@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import '../style-responsivity.css';
 import Branch from './Branch/Branch.jsx';
 import Navigation from '../Navigation/Navigation.jsx';
-import { Link } from 'react-router-dom';
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
@@ -13,7 +12,7 @@ const Tree = () => {
       .then((data) => {
         setBranches(data.results.branches.map((branch) => branch));
       });
-  }, [branches]);
+  }, []);
 
   return (
     <>
@@ -32,7 +31,7 @@ const Tree = () => {
                       name={branch.name}
                       id={branch.id}
                       branchDone={branch.done}
-                      leaves={branch.leaves}
+                      // leaves={branch.leaves}
                     ></Branch>
                   ))}
                 </div>

@@ -554,7 +554,6 @@ header {
   width: 18em;
   margin: 0 auto;
   position: relative;
-  z-index: -1;
 }
 
 /* Pravá strana stromu */
@@ -717,8 +716,4 @@ header {
 #community__title {
   font-size: 3em;
   margin-top: 15%;
-}
-
-.leaf {
-  color: red;
 }

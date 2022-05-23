@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -12,6 +12,7 @@ const Dashboard = () => {
       <div className="container__topbar">
         <Navigation />
       </div>
+      <Outlet />
       <div className="container">
         <main id="dashboard__core">
           <div className="dashboard__left-side">
