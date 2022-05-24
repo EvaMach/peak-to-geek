@@ -1,13 +1,37 @@
 import express from 'express';
 import { tree } from './tree.js';
+import { courses } from './courses.js';
+import { users } from './users.js';
 
-console.log(tree.branches);
-
-//nullish coalescing
 const port = process.env.PORT ?? 2000;
 const server = express();
 
 server.use(express.json());
+
+// LOGIN
+
+server.post('/api/login', (req, resp) => {
+  const { login, password } = req.body;
+
+  const user = users.find((u) => u.login === login && u.password === password);
+
+  if (user === undefined) {
+    resp.status(401).send({
+      status: 'error',
+      message: 'Invalid user credentials',
+    });
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: {
+      login: user.login,
+      name: user.name,
+      token: user.token,
+    },
+  });
+});
 
 // STROM
 
@@ -112,6 +136,22 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
 });
 
 // KURZY
+
+server.get('/api/courses', (req, resp) => {
+  resp.send({
+    status: 'success',
+    results: courses,
+  });
+});
+
+server.post('/api/courses', (req, resp) => {
+  const { name, url } = req.body;
+  courses.push({ name, url });
+  resp.send({
+    status: 'success',
+    results: courses,
+  });
+});
 
 server.use(express.static('dist'));
 
