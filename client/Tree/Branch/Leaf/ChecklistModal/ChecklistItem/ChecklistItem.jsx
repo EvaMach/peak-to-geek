@@ -13,6 +13,7 @@ const ChecklistItem = ({
     <div>
       <input
         onChange={(e) => {
+          setItemDone(!itemDone);
           fetch(`/api/tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`, {
             method: 'POST',
             headers: {
@@ -23,7 +24,7 @@ const ChecklistItem = ({
             }),
           });
         }}
-        checked={apiItemState}
+        checked={itemDone}
         type="checkbox"
       />
       {itemName}

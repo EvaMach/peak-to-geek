@@ -33,7 +33,7 @@ export const tree = {
           done: false,
           checkboxes: [
             {
-              id: '2',
+              id: '1',
               name: 'Dostatečný kontrast - WCAG Guidelines',
               done: false,
             },
@@ -200,7 +200,7 @@ export const tree = {
               done: false,
             },
             {
-              id: '2',
+              id: '1',
               name: 'Interakční design',
               state: false,
             },

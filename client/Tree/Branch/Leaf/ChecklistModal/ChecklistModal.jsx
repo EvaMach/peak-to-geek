@@ -18,7 +18,7 @@ const ChecklistModal = ({
       });
   }, [checkboxes]);
 
-  const value = checkboxes.every((i) => i.done === true);
+  const leafDone = checkboxes.every((i) => i.done === true);
 
   return (
     <div className="modal">
@@ -26,7 +26,7 @@ const ChecklistModal = ({
         <h3>{modalName}</h3>{' '}
         <button
           onClick={() => {
-            onFinishList(value);
+            onFinishList(leafDone);
             closeModal(false);
           }}
         >

@@ -5,6 +5,10 @@ import Leaf from './Leaf/Leaf.jsx';
 const Branch = ({ branchName, branchId, apiBranchState, leaves }) => {
   const [branchDone, setBranchDone] = useState(apiBranchState);
 
+  useEffect(() => {
+    setBranchDone(leaves.every((i) => i.done === true));
+  }, leaves);
+
   return (
     <>
       <span
@@ -15,26 +19,14 @@ const Branch = ({ branchName, branchId, apiBranchState, leaves }) => {
         }
       >
         <div
-          onClick={() => {
-            setBranchDone(!branchDone);
-            fetch(`/api/tree/branch/${branchId}/`, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                done: !branchDone,
-              }),
-            });
-            console.log(branchDone);
-          }}
           className={
             branchId % 2 === 0
               ? `tree__treetop tree__treetop--right`
               : `tree__treetop tree__treetop--left`
           }
         >
-          <p>{branchName}</p>
+          <p>{branchName}</p>&nbsp;&nbsp;
+          <span>{branchDone ? 'ano' : 'ne'}</span>
         </div>
         <div>
           {leaves.map((leaf) => (
