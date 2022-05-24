@@ -25,8 +25,10 @@ const Branch = ({ branchName, branchId, apiBranchState, leaves }) => {
               : `tree__treetop tree__treetop--left`
           }
         >
+          {branchDone ? (
+            <img src={require('./img/sloth.svg')} alt="lenochodik" />
+          ) : null}
           <p>{branchName}</p>&nbsp;&nbsp;
-          <span>{branchDone ? 'ano' : 'ne'}</span>
         </div>
         <div>
           {leaves.map((leaf) => (

@@ -31,7 +31,20 @@ const Leaf = ({ leafName, branchId, leafId, apiLeafState }) => {
       )}
       <div onClick={() => setOpenModal(true)}>
         {leafName}&nbsp;&nbsp;&nbsp;
-        <span>{leafDone ? 'ano' : 'ne'}</span>
+        {/* <span>{leafDone ? 'ano' : 'ne'}</span> */}
+        {leafDone ? (
+          <img
+            className="tree__leaf-icon"
+            src={require('./img/leaf__done.svg')}
+            alt="lísteček"
+          />
+        ) : (
+          <img
+            className="tree__leaf-icon"
+            src={require('./img/leaf__black.svg')}
+            alt="lísteček"
+          />
+        )}
       </div>
     </>
   );

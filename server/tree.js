@@ -200,12 +200,12 @@ export const tree = {
               done: false,
             },
             {
-              id: '1',
+              id: '2',
               name: 'Interakční design',
               state: false,
             },
             {
-              id: '2',
+              id: '3',
               name: 'Nástroje: Figma, Adobe XD, Sketch, Framer, Gravit',
               state: false,
             },
