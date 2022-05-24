@@ -6,6 +6,7 @@ const Leaf = ({ leafName, branchId, leafId, apiLeafState }) => {
   const [openModal, setOpenModal] = useState(false);
 
   const handleFinishList = (value) => {
+    setLeafDone(value);
     fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`, {
       method: 'POST',
       headers: {
@@ -30,22 +31,7 @@ const Leaf = ({ leafName, branchId, leafId, apiLeafState }) => {
       )}
       <div onClick={() => setOpenModal(true)}>
         {leafName}&nbsp;&nbsp;&nbsp;
-        <span
-          onClick={() => {
-            // setState(!state);
-            // fetch(`/api/tree/branch/${branchId}/leaf/${id}`, {
-            //   method: 'POST',
-            //   headers: {
-            //     'Content-Type': 'application/json',
-            //   },
-            //   body: JSON.stringify({
-            //     done: !state,
-            //   }),
-            // });
-          }}
-        >
-          {leafDone ? 'ano' : 'ne'}
-        </span>
+        <span>{leafDone ? 'ano' : 'ne'}</span>
       </div>
     </>
   );

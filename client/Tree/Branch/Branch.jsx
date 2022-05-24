@@ -17,7 +17,7 @@ const Branch = ({ branchName, branchId, apiBranchState, leaves }) => {
         <div
           onClick={() => {
             setBranchDone(!branchDone);
-            fetch(`/api/tree/branch/${id}/`, {
+            fetch(`/api/tree/branch/${branchId}/`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

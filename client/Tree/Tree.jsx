@@ -12,7 +12,7 @@ const Tree = () => {
       .then((data) => {
         setBranches(data.results.branches.map((branch) => branch));
       });
-  }, [Tree]);
+  }, [branches]);
 
   return (
     <>
