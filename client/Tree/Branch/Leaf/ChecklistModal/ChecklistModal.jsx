@@ -6,7 +6,7 @@ const ChecklistModal = ({
   modalName,
   leafId,
   branchId,
-  onFinishList,
+  onChecked,
 }) => {
   const [checkboxes, setCheckboxes] = useState([]);
 
@@ -16,9 +16,7 @@ const ChecklistModal = ({
       .then((data) => {
         setCheckboxes(data.results.checkboxes);
       });
-  }, [checkboxes]);
-
-  const leafDone = checkboxes.every((i) => i.done === true);
+  }, []);
 
   return (
     <div className="modal">
@@ -26,7 +24,6 @@ const ChecklistModal = ({
         <h3>{modalName}</h3>{' '}
         <button
           onClick={() => {
-            onFinishList(leafDone);
             closeModal(false);
           }}
         >
@@ -41,6 +38,7 @@ const ChecklistModal = ({
           apiItemState={checkbox.done}
           branchId={branchId}
           leafId={leafId}
+          onCheck={onChecked}
         />
       ))}
     </div>

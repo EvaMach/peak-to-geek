@@ -11,7 +11,7 @@ import Courses from './Courses/Courses.jsx';
 
 const App = () => {
   return (
-    <div id="app">
+    <div>
       {/* <Navigation /> */}
       <Home />
     </div>
@@ -21,7 +21,7 @@ const App = () => {
 createRoot(document.querySelector('#app')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Home />} />
       <Route path="info" element={<Info />} />
       <Route path="login" element={<Login />} />
       <Route path="dashboard" element={<Dashboard />} />

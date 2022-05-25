@@ -26,13 +26,7 @@ const Tree = () => {
               <div className="tree__trunk">
                 <div className="tree__branches">
                   {branches.map((branch) => (
-                    <Branch
-                      key={branch.id}
-                      branchName={branch.name}
-                      branchId={branch.id}
-                      apiBranchState={branch.done}
-                      leaves={branch.leaves}
-                    ></Branch>
+                    <Branch key={branch.id} initialBranch={branch}></Branch>
                   ))}
                 </div>
               </div>

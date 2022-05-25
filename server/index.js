@@ -131,7 +131,7 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
 
   resp.send({
     status: 'success',
-    results: checkboxItem,
+    results: branch,
   });
 });
 

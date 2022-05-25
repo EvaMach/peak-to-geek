@@ -14,7 +14,7 @@ const Courses = () => {
       .then((data) => {
         setCourses(data.results);
       });
-  }, [courses]);
+  }, []);
 
   return (
     <>

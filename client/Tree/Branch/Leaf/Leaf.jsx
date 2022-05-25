@@ -1,38 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
 
-const Leaf = ({ leafName, branchId, leafId, apiLeafState }) => {
-  const [leafDone, setLeafDone] = useState(apiLeafState);
+const Leaf = ({ leaf, branchId, onCheckedChecked }) => {
   const [openModal, setOpenModal] = useState(false);
-
-  const handleFinishList = (value) => {
-    setLeafDone(value);
-    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        done: value,
-      }),
-    });
-  };
 
   return (
     <>
       {openModal && (
         <ChecklistModal
-          modalName={leafName}
+          modalName={leaf.name}
           closeModal={setOpenModal}
-          leafId={leafId}
+          leafId={leaf.id}
           branchId={branchId}
-          onFinishList={handleFinishList}
+          onChecked={onCheckedChecked}
         />
       )}
       <div onClick={() => setOpenModal(true)}>
-        {leafName}&nbsp;&nbsp;&nbsp;
-        {/* <span>{leafDone ? 'ano' : 'ne'}</span> */}
-        {leafDone ? (
+        {leaf.name}&nbsp;&nbsp;&nbsp;
+        {leaf.checkboxes.every((i) => i.done === true) ? (
           <img
             className="tree__leaf-icon"
             src={require('./img/leaf__done.svg')}
