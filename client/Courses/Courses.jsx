@@ -16,6 +16,21 @@ const Courses = () => {
       });
   }, []);
 
+  const handleAddCourse = () => {
+    fetch('api/courses', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: courseName,
+        url: courseUrl,
+      }),
+    }).then((response) => response.json()).then((data) => {
+      setCourses(data.results)
+    })
+  }
+
   return (
     <>
       <div className="container">
@@ -29,7 +44,7 @@ const Courses = () => {
         </header>
         <main>
           <h1 id="courses__title">Tvoje kurzy</h1>
-          <AddCourse />
+          <AddCourse onNewCourse={handleAddCourse}/>
           <h2 id="community__title">Kurzy komunity</h2>
           {courses.map((course) => (
             <Course key={course.url} courseName={course.name} />

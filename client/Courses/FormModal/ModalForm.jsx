@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const FormModal = ({ closeModal }) => {
+const FormModal = ({ closeModal, onAddCourse }) => {
   const [courseName, setCourseName] = useState('');
   const [courseUrl, setCourseUrl] = useState('');
 
@@ -11,16 +11,7 @@ const FormModal = ({ closeModal }) => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            fetch('api/courses', {
-              method: 'POST',
-              headers: {
-                'Content-type': 'application/json',
-              },
-              body: JSON.stringify({
-                name: courseName,
-                url: courseUrl,
-              }),
-            });
+            onAddCourse()
             closeModal(false);
           }}
         >

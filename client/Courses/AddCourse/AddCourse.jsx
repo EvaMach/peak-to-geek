@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ModalForm from '../FormModal/ModalForm.jsx';
 
-const AddCourse = () => {
+const AddCourse = ({onNewCourse}) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ const AddCourse = () => {
       >
         <p>Přidat kurz</p>
       </div>
-      {openModal && <ModalForm closeModal={setOpenModal} />}
+      {openModal && <ModalForm onAddCourse={onNewCourse} closeModal={setOpenModal} />}
     </>
   );
 };
