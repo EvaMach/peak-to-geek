@@ -11,7 +11,7 @@ const FormModal = ({ closeModal, onAddCourse }) => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            onAddCourse()
+            onAddCourse(courseName, courseUrl);
             closeModal(false);
           }}
         >
