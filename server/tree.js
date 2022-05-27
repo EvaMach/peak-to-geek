@@ -3,12 +3,10 @@ export const tree = {
     {
       id: '8',
       name: 'Principy a best practices',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Principy web vývoje',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -30,11 +28,10 @@ export const tree = {
         {
           id: '2',
           name: 'Přístupnost',
-          done: false,
           checkboxes: [
             {
               id: '1',
-              name: 'Dodonečný kontrast - WCAG Guidelines',
+              name: 'Kontrast - WCAG Guidelines',
               done: false,
             },
             {
@@ -44,7 +41,7 @@ export const tree = {
             },
             {
               id: '3',
-              name: 'Ovladatelnost klávesnicí a nástroji jako screen reader a další',
+              name: 'Ovladatelnost klávesnicí a nástroji jako screen reader atp.',
               done: false,
             },
           ],
@@ -52,7 +49,6 @@ export const tree = {
         {
           id: '3',
           name: 'Best practices',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -86,12 +82,10 @@ export const tree = {
     {
       id: '7',
       name: 'Design process: User testing',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Druhy testování',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -148,7 +142,6 @@ export const tree = {
         {
           id: '2',
           name: 'Proces testování',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -166,17 +159,17 @@ export const tree = {
               done: false,
             },
             {
-              id: '3',
+              id: '4',
               name: 'Výběr nástroje k testování',
               done: false,
             },
             {
-              id: '4',
+              id: '5',
               name: 'Samotný test - komunikace s uživatelem',
               done: false,
             },
             {
-              id: '5',
+              id: '6',
               name: 'Analýza dat a reportování výsledků',
               done: false,
             },
@@ -187,12 +180,10 @@ export const tree = {
     {
       id: '6',
       name: 'Design process: Prototype',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Prototypování',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -214,7 +205,6 @@ export const tree = {
         {
           id: '2',
           name: 'Grafika',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -233,12 +223,10 @@ export const tree = {
     {
       id: '5',
       name: 'Design proces: Ideate',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Wireframy: proces',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -267,12 +255,10 @@ export const tree = {
     {
       id: '4',
       name: 'Design proces: Define',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'UX výzkum',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -321,12 +307,10 @@ export const tree = {
     {
       id: '3',
       name: 'Design proces: Emphatise',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Heuristiky použitelnosti',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -383,7 +367,6 @@ export const tree = {
         {
           id: '2',
           name: 'Dobrý design',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -417,12 +400,10 @@ export const tree = {
     {
       id: '2',
       name: 'Základy UI',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Barvy',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -463,8 +444,7 @@ export const tree = {
         },
         {
           id: '2',
-          name: 'Mřížky',
-          done: false,
+          name: 'Mřížky/Grids',
           checkboxes: [
             {
               id: '1',
@@ -491,7 +471,6 @@ export const tree = {
         {
           id: '3',
           name: 'Typografie',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -538,7 +517,6 @@ export const tree = {
         {
           id: '4',
           name: 'Tvary',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -557,12 +535,10 @@ export const tree = {
     {
       id: '1',
       name: 'Základy UX',
-      done: false,
       leaves: [
         {
           id: '1',
           name: 'Design proces',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -589,7 +565,6 @@ export const tree = {
         {
           id: '2',
           name: 'UX disciplíny',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -616,7 +591,6 @@ export const tree = {
         {
           id: '3',
           name: 'UX Aspekty',
-          done: false,
           checkboxes: [
             {
               id: '1',
@@ -658,7 +632,6 @@ export const tree = {
         {
           id: '4',
           name: 'Zákony UX',
-          done: false,
           checkboxes: [
             {
               id: '1',
