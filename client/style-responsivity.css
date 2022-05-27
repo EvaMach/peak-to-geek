@@ -545,10 +545,11 @@ header {
   font-size: 16px;
   font-weight: 600;
   text-align: center;
+  position: relative;
 }
 
 .tree__trunk {
-  border-bottom: 700vh solid #72164c;
+  border-bottom: 260vh solid #72164c;
   border-left: 8em solid transparent;
   border-right: 8em solid transparent;
   width: 18em;
@@ -570,6 +571,9 @@ header {
   margin: 10px auto;
   position: absolute;
   left: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .tree__treetop--right {
@@ -608,6 +612,9 @@ header {
   margin: 10px auto;
   position: absolute;
   right: 0em;
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .tree__treetop--left {
@@ -634,7 +641,7 @@ header {
 
 @media (min-width: 992px) {
   .tree__trunk {
-    border-bottom: 700vh solid #72164c;
+    border-bottom: 300vh solid #72164c;
     border-left: 7em solid transparent;
     border-right: 7em solid transparent;
     width: 20em;
@@ -722,6 +729,8 @@ header {
   background-color: rgb(232, 232, 232);
   padding: 2rem;
   border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
 }
 
 .modal__header {

@@ -7,7 +7,7 @@ export const tree = {
       leaves: [
         {
           id: '1',
-          name: 'Principy v rámci webového vývoje',
+          name: 'Principy web vývoje',
           done: false,
           checkboxes: [
             {

@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../style-responsivity.css';
 import Branch from './Branch/Branch.jsx';
 import Navigation from '../Navigation/Navigation.jsx';
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
+  const activeBranch = useRef(null);
+
+  const scrollToBottom = () => {
+    activeBranch.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, []);
 
   useEffect(() => {
     fetch('./api/tree')
@@ -32,6 +41,7 @@ const Tree = () => {
               </div>
             </div>
           </div>
+          <div ref={activeBranch}></div>
         </main>
       </div>
     </>

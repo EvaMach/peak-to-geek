@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style-new.css';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
@@ -31,7 +32,13 @@ const Home = () => {
               motivovaných nadšenců
             </p>
             <Link to="/login" id="main-page__signup-link">
-              <button id="main-page__signup-button">Přidej se!</button>
+              <motion.button
+                whileHover={{ scale: 1.5 }}
+                whileTap={{ scale: 0.9 }}
+                id="main-page__signup-button"
+              >
+                Přidej se!
+              </motion.button>
             </Link>
           </div>
         </div>
