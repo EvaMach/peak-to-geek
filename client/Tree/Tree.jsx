@@ -24,27 +24,25 @@ const Tree = () => {
   }, []);
 
   return (
-    <>
-      <div className="container">
-        <Navigation />
-        <main>
-          <h1 id="tree__title">Tvůj Geek strom</h1>
-          <div className="tree" id="tree">
-            <div className="tree__treetop">Portfolio</div>
-            <div className="tree__core">
-              <div className="tree__trunk">
-                <div className="tree__branches">
-                  {branches.map((branch) => (
-                    <Branch key={branch.id} initialBranch={branch}></Branch>
-                  ))}
-                </div>
+    <div className="container">
+      <Navigation />
+      <main>
+        <h1 id="tree__title">Tvůj Geek strom</h1>
+        <div className="tree" id="tree">
+          <div className="tree__treetop">Portfolio</div>
+          <div className="tree__core">
+            <div className="tree__trunk">
+              <div className="tree__branches">
+                {branches.map((branch) => (
+                  <Branch key={branch.id} initialBranch={branch}></Branch>
+                ))}
               </div>
             </div>
           </div>
-          <div ref={activeBranch}></div>
-        </main>
-      </div>
-    </>
+        </div>
+        <div ref={activeBranch}></div>
+      </main>
+    </div>
   );
 };
 

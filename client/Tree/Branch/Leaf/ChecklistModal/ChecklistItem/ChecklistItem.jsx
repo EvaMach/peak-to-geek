@@ -1,35 +1,19 @@
 import React, { useState } from 'react';
 
-const ChecklistItem = ({
-  itemName,
-  apiItemState,
-  branchId,
-  leafId,
-  itemId,
-  onCheck,
-}) => {
-  const [itemDone, setItemDone] = useState(apiItemState);
+const ChecklistItem = ({ initialItem, branchId, leafId, onCheck }) => {
+  const [itemDone, setItemDone] = useState(initialItem.done);
 
   return (
     <div>
       <input
         onChange={(event) => {
           setItemDone(event.target.checked);
-          onCheck(itemId, branchId, leafId, itemDone);
-          // fetch(`/api/tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`, {
-          //   method: 'POST',
-          //   headers: {
-          //     'Content-Type': 'application/json',
-          //   },
-          //   body: JSON.stringify({
-          //     done: !itemDone,
-          //   }),
-          // });
+          onCheck(initialItem.id, branchId, leafId, itemDone);
         }}
         checked={itemDone}
         type="checkbox"
       />
-      {itemName}
+      {initialItem.name}
     </div>
   );
 };

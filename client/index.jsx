@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home.jsx';
 import Info from './Info/Info.jsx';
-import Navigation from './Navigation/Navigation.jsx';
 import Login from './Login/Login.jsx';
 import Dashboard from './Dashboard/Dashboard.jsx';
 import Tree from './Tree/Tree.jsx';
@@ -12,7 +11,6 @@ import Courses from './Courses/Courses.jsx';
 const App = () => {
   return (
     <div>
-      {/* <Navigation /> */}
       <Home />
     </div>
   );

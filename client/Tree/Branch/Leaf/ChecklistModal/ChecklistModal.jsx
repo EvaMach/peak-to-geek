@@ -8,13 +8,13 @@ const ChecklistModal = ({
   branchId,
   onChecked,
 }) => {
-  const [checkboxes, setCheckboxes] = useState([]);
+  const [checklistItems, setChecklistItems] = useState([]);
 
   useEffect(() => {
     fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`)
       .then((response) => response.json())
       .then((data) => {
-        setCheckboxes(data.results.checkboxes);
+        setChecklistItems(data.results.checkboxes);
       });
   }, []);
 
@@ -30,12 +30,10 @@ const ChecklistModal = ({
           X
         </button>
       </div>
-      {checkboxes.map((checkbox) => (
+      {checklistItems.map((item) => (
         <ChecklistItem
-          key={checkbox.name}
-          itemName={checkbox.name}
-          itemId={checkbox.id}
-          apiItemState={checkbox.done}
+          key={item.name}
+          initialItem={item}
           branchId={branchId}
           leafId={leafId}
           onCheck={onChecked}
