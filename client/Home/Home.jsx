@@ -1,5 +1,6 @@
 import React from 'react';
-import '../style-new.css';
+import './Home.css';
+import '../style.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 

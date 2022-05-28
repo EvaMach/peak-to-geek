@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../style-responsivity.css';
+import './Tree.css';
+import '../style.css';
 import Branch from './Branch/Branch.jsx';
 import Navigation from '../Navigation/Navigation.jsx';
 

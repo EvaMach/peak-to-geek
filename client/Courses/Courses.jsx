@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import '../style-new.css';
+import './Courses.css';
+import '../style.css';
 import Navigation from '../Navigation/Navigation.jsx';
 import { Link } from 'react-router-dom';
 import Course from './Course/Course.jsx';

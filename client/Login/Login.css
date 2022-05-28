@@ -1,0 +1,59 @@
+/* LOGIN */
+
+#login-page__body {
+  background: url(img/login-page-41.svg) no-repeat fixed;
+  background-size: cover;
+}
+
+#login__core {
+  margin-top: 20%;
+}
+
+#login__title {
+  font-size: 4em;
+  text-align: center;
+}
+
+#login__form {
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  max-width: 30%;
+}
+
+.login__field {
+  margin: 0.6rem 0;
+  padding: 0.8em;
+  border-radius: 1em;
+  border: 1px solid #72164c;
+}
+
+.login__remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.login__remember-me--text {
+  font-size: 80%;
+  margin-left: 1em;
+}
+
+#login__button {
+  font-weight: 600;
+  font-size: 100%;
+  background-color: #72164c;
+  border: 1px solid #72164c;
+  border-radius: 1em;
+  color: white;
+  padding: 0.8rem;
+  width: 100%;
+  margin-top: 1em;
+}
+
+#login__button:hover {
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #dbbcc2;
+  border: 1px solid #dbbcc2;
+  color: #000000;
+}

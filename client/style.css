@@ -1,25 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* Fonty */
+
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+/* Barvičky */
+/*Blue --> #2E9398
+Pink --> #92475C
+Light pink --> #DBBCC2
+Alternative pink --> #c48894
+Light blue --> #A4CBCD
+Grey --> #CFCFCF
+*/
+
+/* Responzivita */
+
+/* 576px */
+/* 768px */
+/* 992px */
+/* 1200px */
+
+/* ALL, SPOLEČNÉ */
 
 * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-html {
-  font-family: 'Open Sans', sans-serif;
+/* @media (max-width: 368px) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+    max-width: 100%;
+  }
+} */
+
+main {
+  width: 100%;
 }
 
 .container {
-  max-width: 26rem;
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
+  margin: auto;
+  padding: 2% 5%;
+  font-size: 3vw;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 4rem;
+h1,
+h2 {
+  font-family: 'Kodchasan', sans-serif;
+  color: #2e9398;
 }
+
+h3 {
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 1.7em;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120vh;
+} */
 
 .leaf {
   color: red;

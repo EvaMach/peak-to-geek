@@ -1,0 +1,75 @@
+/* MAIN PAGE */
+
+#main-page__body {
+  background: url(img/homepage.svg) no-repeat fixed;
+  background-size: 80vmax;
+  background-position: inherit;
+}
+
+.main-page__header {
+  display: flex;
+  justify-content: space-between;
+}
+.main-page__main {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-page__title {
+  font-size: 5em;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+
+.main-page__login {
+  font-weight: 600;
+  margin-top: 2em;
+}
+
+.main-page__info {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.main-page__text {
+  font-size: 1.4em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+#main-page__signup-button {
+  font-weight: 600;
+  font-size: medium;
+  background-color: #72164c;
+  border: 1px solid #72164c;
+  border-radius: 10em;
+  color: white;
+  padding: 0.5rem 1em;
+  margin-top: 3em;
+}
+
+#main-page__signup-link {
+  align-self: end;
+  max-width: 30%;
+}
+
+#main-page__signup-button:hover {
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #dbbcc2;
+  border: 1px solid #dbbcc2;
+  color: #000000;
+}
+
+.tree__image {
+  max-width: 33%;
+  position: absolute;
+  bottom: 0%;
+  right: 10%;
+}
+
+.main__left-side {
+  max-width: 60%;
+}

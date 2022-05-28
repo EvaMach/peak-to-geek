@@ -1,5 +1,7 @@
 import React from 'react';
-import '../style-responsivity.css';
+// import '../style-responsivity.css';
+import './Dashboard.css';
+import '../style.css';
 import Navigation from '../Navigation/Navigation.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';

@@ -1,0 +1,39 @@
+/* KURZY */
+
+#courses__title {
+  font-size: 4em;
+}
+
+#community__title {
+  font-size: 3em;
+  margin-top: 15%;
+}
+
+.modal {
+  background-color: rgb(232, 232, 232);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__header button {
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  background: none;
+}
+
+.empty {
+  height: 1em;
+  margin-right: 1em;
+}
+
+.tree__leaf-icon {
+  width: 20px;
+}
