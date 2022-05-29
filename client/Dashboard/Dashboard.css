@@ -15,7 +15,6 @@
 }
 
 .follow-up__leaves {
-  /* margin-left: 45%; */
   margin-top: -25%;
   margin-bottom: 10%;
 }
@@ -23,7 +22,8 @@
 .leaves__tree-checklist {
   display: flex;
   align-items: center;
-  /* margin-left: -40%; */
+  margin-left: 50%;
+  margin-top: 20%;
 }
 
 .leaves__leaf--inactive {
@@ -39,9 +39,9 @@
   border-left: 1.5em solid #72164c;
   border-top: 0em solid #72164c;
   border-right: 0em solid #72164c;
-  width: 60vw;
+  width: 80vw;
   height: 10vmax;
-  margin: 20vw auto 0 auto;
+  margin: -10% auto 0 auto;
   position: relative;
   left: 25%;
 }
@@ -53,8 +53,8 @@
   aspect-ratio: 1 / 1;
   z-index: 1;
   position: absolute;
-  bottom: 45%;
-  left: 12%;
+  bottom: 50%;
+  left: 18%;
   margin: 0 auto;
 }
 
@@ -161,10 +161,11 @@
   border: 2px solid #72164c;
 }
 
-/* responzivita pro dashboard */
+/* Responzivita pro dashboard */
 @media (min-width: 576px) {
   #dashboard__title {
-    font-size: 2em;
+    font-size: 3em;
+    margin-top: 5%;
   }
   .dashboard__right-side {
     display: flex;
@@ -172,34 +173,223 @@
   }
   .dashboard__image--sloth {
     max-width: 100%;
-    width: 40%;
-    margin: -1em auto 0em 2em;
+    width: 60%;
+    margin: -1em auto -5em auto;
     display: block;
+    transform: rotate(90deg);
   }
 }
 
 @media (min-width: 768px) {
   #dashboard__title {
     text-align: left;
-    margin-top: 1em;
-  }
-}
-
-@media (min-width: 992px) {
-  #dashboard__title {
+    margin-top: 10vh;
     font-size: 3em;
-    text-align: left;
-    margin-top: 0.5em;
+  }
+  #dashboard__core h3 {
+    font-size: 1.5em;
   }
   #dashboard__core {
     display: flex;
     justify-content: space-between;
+    font-size: 0.6em;
+  }
+
+  /* Responzivita pro levou stranu dashboardu */
+
+  .dashboard__left-side {
+    width: 50%;
   }
 
   /* 🧩 responzivita pro kurzy v rámci dashboardu */
 
   #actual-courses__title {
     margin-bottom: 0.8em;
+  }
+
+  .course-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #72164c;
+    border-radius: 1em;
+    padding: 0.7em 1em;
+    color: #ffffff;
+  }
+
+  .actual-courses--course1,
+  .actual-courses--course2,
+  .actual-courses--course3 {
+    margin-bottom: 1em;
+  }
+
+  .actual-courses--course4 {
+    display: none;
+  }
+
+  .check-icon1,
+  .check-icon3 {
+    filter: invert(1);
+  }
+
+  .course__study-day {
+    background-color: #a4cbcd;
+    color: #000000;
+    font-weight: 600;
+    min-width: fit-content;
+    width: 10%;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    text-align: center;
+  }
+
+  .actual-courses__button {
+    background-color: #dbbcc2;
+    border: 2px solid #dbbcc2;
+    border-radius: 1em;
+    padding: 0.7em 1em;
+    font-weight: 600;
+    width: 70%;
+    margin-left: 30%;
+  }
+
+  .actual-courses__button:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #72164c;
+  }
+
+  /* 🧩 Responzivita pro pravou stranu dashboardu */
+
+  .dashboard__right-side {
+    width: 50%;
+  }
+
+  .dashboard__image--sloth {
+    max-width: 100%;
+    width: 60%;
+    margin-top: 1vh;
+    margin-bottom: 30%;
+  }
+
+  .dashboard__follow-up {
+    margin-top: 0em;
+  }
+
+  .dashboard__motivation {
+    margin: -17% 0% 0% 40%;
+    position: absolute;
+    bottom: -1%;
+  }
+
+  .follow-up__leaves {
+    margin-left: 20%;
+  }
+
+  .follow-up__leaves h3 {
+    margin-bottom: 10%;
+  }
+
+  .leaves__tree-checklist {
+    display: flex;
+    align-items: center;
+    margin-left: 7em;
+    margin-bottom: -5em;
+    font-size: 0.9em;
+  }
+
+  .leaves__leaf--inactive {
+    max-width: 2em;
+  }
+
+  .follow-up__tree {
+    position: relative;
+  }
+
+  .follow-up__tree-branch--left {
+    border-bottom: 2.5em solid #72164c;
+    border-left: 1.5em solid #72164c;
+    border-top: 0em solid #72164c;
+    border-right: 0em solid #72164c;
+    width: 35em;
+    height: 10vmax;
+    margin: 1em auto 0 auto;
+    position: relative;
+    left: 25%;
+    top: 3em;
+  }
+
+  .follow-up__treetop--left {
+    width: 30%;
+    border-radius: 50%;
+    background-color: #2e9398;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+    position: absolute;
+    bottom: 1%;
+    left: 12%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  h1#dashboard__title {
+    font-size: 4em;
+    text-align: left;
+    margin-top: 0.5em;
+  }
+
+  #dashboard__core {
+    font-size: 1em;
+  }
+
+  #dashboard__core h3 {
+    font-size: 2em;
+  }
+  /* 🧩 Responzivita pro levou stranu dashboardu */
+
+  /* (A) Streak + progress */
+
+  .dashboard__streak-update {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5%;
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .streak-update__crown-icon {
+    margin-right: 2em;
+    width: 3em;
+    height: 4em;
+  }
+
+  .dashboard__tree-progress {
+    margin-bottom: 10%;
+  }
+
+  .tree-progress__label {
+    margin-bottom: 0.5em;
+  }
+
+  .tree-progress__bar {
+    flex: 0 0 30em;
+    background-color: lightgray;
+    height: 0.8em;
+    border-radius: 0.3em;
+  }
+
+  .tree-progress__bar--actual {
+    background-color: #2e9398;
+    width: 50%;
+    height: 0.8em;
+    border-radius: 0.3em;
+  }
+
+  /* (B) Kurzy */
+
+  #actual-courses__title {
+    margin-bottom: 0.5em;
   }
 
   .course-bar {
@@ -254,58 +444,46 @@
     border: 2px solid #72164c;
   }
 
-  /* 🧩 responzivita pro pravou stranu dashboardu */
+  /* 🧩 Responzivita pro pravou stranu dashboardu */
 
-  .dashboard__right-side {
-    flex-grow: 2;
-  }
-
-  .dashboard__right-side img {
-    width: 20vw;
+  .dashboard__image--sloth {
+    width: 22vw;
     transform: rotate(90deg);
-    margin-top: -1em;
-    margin-left: 33%;
-  }
-
-  .dashboard__motivation {
-    margin: -17% 0% 0% 40%;
-    position: absolute;
-    bottom: -1%;
+    margin-top: -4em;
+    margin-bottom: 15%;
   }
 
   .follow-up__leaves {
-    margin-left: 45%;
-    margin-top: -10%;
+    margin-left: 25%;
+    margin-bottom: 0;
   }
 
   .follow-up__leaves h3 {
-    margin-bottom: 10%;
+    margin-left: 25%;
+    margin-top: 5%;
   }
 
   .leaves__tree-checklist {
-    display: flex;
-    align-items: center;
-    margin-left: -40%;
+    font-size: 1.2em;
+    margin-bottom: 3em;
+    /* margin-left: 30%; */
   }
 
-  .leaves__leaf--inactive {
+  /* .leaves__leaf--inactive {
     max-width: 2em;
-  }
-
-  .follow-up__tree {
-    position: relative;
-  }
+  } */
 
   .follow-up__tree-branch--left {
-    border-bottom: 2.5em solid #72164c;
-    border-left: 1.5em solid #72164c;
+    border-bottom: 3.5em solid #72164c;
+    border-left: 2em solid #72164c;
     border-top: 0em solid #72164c;
     border-right: 0em solid #72164c;
-    width: 35em;
-    height: 10vmax;
+    width: 40vw;
+    height: 7vmax;
     margin: 1em auto 0 auto;
     position: relative;
-    left: 25%;
+    left: 8vw;
+    top: -5em;
   }
 
   .follow-up__treetop--left {
@@ -313,10 +491,9 @@
     border-radius: 50%;
     background-color: #2e9398;
     aspect-ratio: 1 / 1;
-    z-index: 1;
+    /* z-index: 1; */
     position: absolute;
-    bottom: 45%;
-    left: 12%;
-    margin: 0 auto;
+    bottom: 10em;
+    left: 10%;
   }
 }

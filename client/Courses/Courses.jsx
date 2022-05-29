@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Courses.css';
 import '../style.css';
-import Navigation from '../Navigation/Navigation.jsx';
+import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import { Link } from 'react-router-dom';
 import Course from './Course/Course.jsx';
 import AddCourse from './AddCourse/AddCourse.jsx';
@@ -37,14 +37,8 @@ const Courses = () => {
   return (
     <>
       <div className="container">
-        <header>
-          <div id="logo" className="courses__logo">
-            <Link to="/">
-              <img src="img/logo-nerd-sloth.png" alt="" />
-            </Link>
-          </div>
-          <Navigation />
-        </header>
+        <NavigationHeader />
+
         <main>
           <h1 id="courses__title">Tvoje kurzy</h1>
           <AddCourse onNewCourse={handleAddCourse} />

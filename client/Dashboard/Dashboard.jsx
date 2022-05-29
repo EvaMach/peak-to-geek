@@ -2,7 +2,7 @@ import React from 'react';
 // import '../style-responsivity.css';
 import './Dashboard.css';
 import '../style.css';
-import Navigation from '../Navigation/Navigation.jsx';
+import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
@@ -12,7 +12,7 @@ const Dashboard = () => {
   return (
     <>
       <div className="container__topbar">
-        <Navigation />
+        <NavigationHeader />
       </div>
       <Outlet />
       <div className="container">

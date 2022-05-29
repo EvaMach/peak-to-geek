@@ -1,8 +1,8 @@
 import React from 'react';
-import Navigation from '../Navigation/Navigation.jsx';
+import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 
 const Info = () => {
-  return <Navigation />;
+  return <NavigationHeader />;
 };
 
 export default Info;

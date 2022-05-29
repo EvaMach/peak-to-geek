@@ -49,6 +49,10 @@ header {
     margin-top: 1em;
   }
 
+  #logo img {
+    width: 10vw;
+  }
+
   ul#navigation__items {
     display: flex;
     justify-content: space-evenly;
@@ -57,7 +61,7 @@ header {
 
   .navigation__item {
     list-style: none;
-    margin: 0 1.5em;
+    margin: 0 0.7em;
     font-size: 1em;
   }
 
@@ -91,15 +95,9 @@ header {
     margin-top: 1em;
   }
 
-  ul#navigation__items {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
   .navigation__item {
     list-style: none;
-    margin: 0 1.5em;
+    margin: 0 0.8em;
     font-size: 0.8em;
   }
 
@@ -141,14 +139,13 @@ header {
     max-width: 90vw;
     margin-top: 0;
   }
-}
 
-/* navigace */
-#logo img {
-  width: 7vw;
-}
-.navigation__item {
-  list-style: none;
-  margin: 0 1.5em;
-  font-size: 1.2em;
+  #logo img {
+    width: 5vw;
+    margin-top: 1%;
+  }
+
+  .navigation__item {
+    font-size: 1em;
+  }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import './Navigation.css';
+import './NavigationHeader.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
 
-const Navigation = () => {
+const NavigationHeader = () => {
   return (
     <header>
       <div id="logo" className="info__logo">
@@ -47,4 +47,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationHeader;

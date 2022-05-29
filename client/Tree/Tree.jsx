@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './Tree.css';
 import '../style.css';
 import Branch from './Branch/Branch.jsx';
-import Navigation from '../Navigation/Navigation.jsx';
+import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 
 const Tree = () => {
   const [branches, setBranches] = useState([]);
@@ -26,7 +26,7 @@ const Tree = () => {
 
   return (
     <div className="container">
-      <Navigation />
+      <NavigationHeader />
       <main>
         <h1 id="tree__title">Tvůj Geek strom</h1>
         <div className="tree" id="tree">

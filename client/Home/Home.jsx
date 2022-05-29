@@ -3,27 +3,12 @@ import './Home.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import MainHeader from '../MainHeader/MainHeader';
 
 const Home = () => {
   return (
     <div className="container">
-      <header className="main-page__header">
-        <div className="left-side header__left-side">
-          <div id="logo" className="main-page__logo">
-            <Link to="/">
-              <img
-                src={require('./img/logo-nerd-sloth.png')}
-                alt="Logo Peak to Geek"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="right-side header__right-side">
-          <Link to="/login" className="main-page__login">
-            Přihlásit se
-          </Link>
-        </div>
-      </header>
+      <MainHeader />
       <main className="main-page__main">
         <div className="left-side main__left-side">
           <h1 id="main-page__title">Peak to Geek</h1>
