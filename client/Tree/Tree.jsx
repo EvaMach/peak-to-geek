@@ -30,7 +30,9 @@ const Tree = () => {
       <main>
         <h1 id="tree__title">Tvůj Geek strom</h1>
         <div className="tree" id="tree">
-          <div className="tree__treetop">Portfolio</div>
+          <div className="tree__treetop" id="tree__treetop">
+            Portfolio
+          </div>
           <div className="tree__core">
             <div className="tree__trunk">
               <div className="tree__branches">

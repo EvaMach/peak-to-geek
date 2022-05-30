@@ -13,13 +13,10 @@ header {
   max-width: 100vw;
   width: 90vw;
   margin-bottom: -3em;
+  margin-top: -1em;
 }
 
 /* (a) logo, levá strana */
-/* 
-#logo {
-  margin-top: -1em;
-} */
 
 #logo img {
   width: 15vw;
@@ -42,18 +39,51 @@ header {
   display: none;
 }
 
+#navigation__items--hamburger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2em;
+  list-style: none;
+  margin-left: 10px;
+  margin-top: -20px;
+  background-color: #a4cbcd;
+  padding: 20px 0;
+  position: absolute;
+  left: 5em;
+  width: 70vw;
+  line-height: 2em;
+  border-radius: 25em 0;
+  z-index: 3;
+}
+
 /* 🧩 responzivita pro navigaci */
 
 @media (min-width: 576px) {
-  header {
+  /* header {
     margin-top: 1em;
-  }
+  } */
 
   #logo img {
     width: 10vw;
   }
 
-  ul#navigation__items {
+  /* #navigation__items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    list-style: none;
+    margin-left: 10px;
+    margin-top: -50px;
+    background-color: #c48894;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    line-height: 30px;
+  } */
+
+  /* ul#navigation__items {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -63,7 +93,7 @@ header {
     list-style: none;
     margin: 0 0.7em;
     font-size: 1em;
-  }
+  } */
 
   .navigation__item:not(.navigation__item--actual):hover {
     color: #c48894;
@@ -85,14 +115,27 @@ header {
     color: #72164c;
     border-bottom: 2px solid #72164c;
   }
-  #hamburger {
+  /* #hamburger {
     display: none;
-  }
+  } */
 }
 
 @media (min-width: 768px) {
   header {
     margin-top: 1em;
+  }
+
+  ul#navigation__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0%;
+    background-color: unset;
+    padding: 0;
+    position: unset;
+    line-height: unset;
+    font-size: unset;
   }
 
   .navigation__item {
@@ -128,7 +171,7 @@ header {
 
 @media (min-width: 992px) {
   .container__topbar {
-    font-size: 1.5vw;
+    /* font-size: 10px; */
     margin: auto;
     padding: 1% 5%;
   }
@@ -145,7 +188,11 @@ header {
     margin-top: 1%;
   }
 
+  #navigation {
+    margin-bottom: 0;
+  }
+
   .navigation__item {
-    font-size: 1em;
+    font-size: 20px;
   }
 }

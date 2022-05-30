@@ -2,13 +2,16 @@
 
 #tree__title {
   font-size: 4em;
-  color: #2e9398;
   margin-top: 3vw;
   font-size: 2em;
 }
 
 .tree__core {
   display: flex;
+}
+
+#tree__treetop {
+  font-size: 1em;
 }
 
 .tree__treetop {
@@ -22,14 +25,15 @@
   margin: 3% auto -2% auto;
   z-index: 1;
   color: white;
-  font-size: 16px;
+  font-size: 0.8em;
   font-weight: 600;
+  padding: 0.3em;
   text-align: center;
   position: relative;
 }
 
 .tree__trunk {
-  border-bottom: 200vh solid #72164c;
+  border-bottom: 180vh solid #72164c;
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   width: 5em;
@@ -37,16 +41,6 @@
   position: relative;
 }
 
-@media (max-width: 368px) {
-  .tree__trunk {
-    border-bottom: 160vh solid #72164c;
-    border-left: 1.5em solid transparent;
-    border-right: 1.5em solid transparent;
-    width: 5em;
-    margin: 0 auto;
-    position: relative;
-  }
-}
 /* Pravá strana stromu */
 
 /* Větve + koruny - in common */
@@ -98,7 +92,7 @@
   border-top: 0em solid #72164c;
   border-right: 0em solid #72164c;
   width: 40vw;
-  height: 7vmax;
+  height: 10vmax;
   margin: 10px auto;
   position: absolute;
   right: 0em;
@@ -129,15 +123,81 @@
   margin-top: 77em;
 }
 
+/* Checklisty */
+
+.modal {
+  background-color: rgb(232, 232, 232);
+  padding: 2em;
+  border-radius: 2em;
+  position: absolute;
+  left: -7em;
+  bottom: 7em;
+  z-index: 1;
+  font-size: 0.8em;
+  /* line-height: 2em; */
+}
+
+.leaves {
+  font-size: 0.5em;
+  line-height: 0.1em;
+}
+
+.tree__leaf-icon {
+  width: 2em;
+}
+
+/* RESPONZIVITA */
+
+@media (max-width: 368px) {
+  .tree__trunk {
+    border-bottom: 160vh solid #72164c;
+    border-left: 1.5em solid transparent;
+    border-right: 1.5em solid transparent;
+    width: 5em;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@media (min-width: 430px) {
+  .tree__trunk {
+    border-bottom: 200vh solid #72164c;
+  }
+}
+@media (min-width: 430px) {
+  .tree__trunk {
+    border-bottom: 220vh solid #72164c;
+  }
+}
+@media (min-width: 530px) {
+  .tree__trunk {
+    border-bottom: 250vh solid #72164c;
+  }
+}
+
 @media (min-width: 576px) {
   .tree__trunk {
-    border-bottom: 270vh solid #72164c;
+    border-bottom: 280vh solid #72164c;
+  }
+}
+@media (min-width: 650px) {
+  .tree__trunk {
+    border-bottom: 300vh solid #72164c;
+  }
+}
+@media (min-width: 700px) {
+  .tree__trunk {
+    border-bottom: 330vh solid #72164c;
   }
 }
 
 @media (min-width: 768px) {
+  #tree__title {
+    margin-top: 15vh;
+  }
+
   .tree__trunk {
-    border-bottom: 350vh solid #72164c;
+    border-bottom: 370vh solid #72164c;
   }
 
   .tree__branch--right {
@@ -149,14 +209,27 @@
   }
 }
 
+@media (min-width: 890px) {
+  .tree__trunk {
+    border-bottom: 410vh solid #72164c;
+  }
+}
+
 @media (min-width: 992px) {
   #tree__title {
-    font-size: 2em;
+    font-size: 4em;
     margin-top: 1em;
   }
 
+  #tree__treetop {
+    font-size: 2em;
+  }
+  .tree__treetop {
+    font-size: 1.5em;
+  }
+
   .tree__trunk {
-    border-bottom: 380vh solid #72164c;
+    border-bottom: 430vh solid #72164c;
     border-left: 7em solid transparent;
     border-right: 7em solid transparent;
     width: 20em;
@@ -226,6 +299,11 @@
   }
   .tree__branch--1 {
     margin-top: 225em;
+  }
+
+  .leaves {
+    font-size: 1.2em;
+    line-height: 0.5em;
   }
 }
 

@@ -5,6 +5,7 @@
 /* Barvičky */
 /*Blue --> #2E9398
 Pink --> #92475C
+Pink no. 2 --> #72164c
 Light pink --> #DBBCC2
 Alternative pink --> #c48894
 Light blue --> #A4CBCD
@@ -61,6 +62,7 @@ main {
 h1,
 h2 {
   font-family: 'Kodchasan', sans-serif;
+  /* color: #72164c; */
   color: #2e9398;
 }
 
