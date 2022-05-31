@@ -26,7 +26,7 @@ const Login = () => {
                 .then((response) => response.json())
                 .then((data) => {
                   window.localStorage.setItem('token', data.results.token);
-                  window.location = '/';
+                  window.location = '/dashboard';
                 });
             }}
             id="login__form"
@@ -58,12 +58,9 @@ const Login = () => {
                 Zapamatovat si mě
               </span>
             </div>
-
-            <Link to="/dashboard">
-              <button type="button" id="login__button">
-                Přihlásit se
-              </button>
-            </Link>
+            <button type="submit" id="login__button">
+              Přihlásit se
+            </button>
           </form>
         </div>
       </main>

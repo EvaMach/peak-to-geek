@@ -21,9 +21,15 @@ export const users = [
     login: 'nelusa',
     password: 'lenochodik',
     token: '33417A25432A462D4A614E645267556A',
-    courses: {
-      name: 'UX basics',
-      url: 'test',
-    },
+    courses: [
+      {
+        name: 'UI basics',
+        url: 'test',
+      },
+      {
+        name: 'Figma basics',
+        url: 'test',
+      },
+    ],
   },
 ];

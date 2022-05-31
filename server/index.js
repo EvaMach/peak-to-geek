@@ -153,6 +153,27 @@ server.post('/api/courses', (req, resp) => {
   });
 });
 
+server.get('/api/my-courses', (req, resp) => {
+  const token = req.headers.authorization;
+
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: {
+      login: user.login,
+      courses: user.courses,
+    },
+  });
+});
+
+// END
+
 server.use(express.static('dist'));
 
 server.get('*', (req, resp) => {

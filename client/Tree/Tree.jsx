@@ -5,6 +5,12 @@ import Branch from './Branch/Branch.jsx';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 
 const Tree = () => {
+  const token = window.localStorage.getItem('token');
+
+  if (token === null) {
+    window.location = '/login';
+  }
+
   const [branches, setBranches] = useState([]);
   const activeBranch = useRef(null);
 
