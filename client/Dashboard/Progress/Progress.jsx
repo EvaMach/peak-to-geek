@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Progress = () => {
+const Progress = ({ token }) => {
+  const [userProgress, setUserProgress] = useState(0);
+
+  useEffect(() => {
+    fetch('./api/my-tree', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserProgress(data.results.tree.length);
+      });
+  }, []);
+
+  console.log(userProgress);
+
   return (
     <>
       <div className="dashboard__streak-update">
@@ -22,7 +39,10 @@ const Progress = () => {
           Tvůj postup znalostním stromem
         </div>
         <div className="tree-progress__bar">
-          <div className="tree-progress__bar--actual"></div>
+          <div
+            className="tree-progress__bar--actual"
+            style={{ width: `${userProgress}%` }}
+          ></div>
         </div>
       </div>
     </>

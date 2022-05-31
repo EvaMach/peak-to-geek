@@ -25,7 +25,7 @@ const Dashboard = () => {
         <main id="dashboard__core">
           <div className="dashboard__left-side">
             <h1 id="dashboard__title">Ahoj Aničko!</h1>
-            <Progress />
+            <Progress token={token} />
             <DashboardCourses token={token} />
           </div>
           <FollowUp />
