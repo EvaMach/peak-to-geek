@@ -6,7 +6,6 @@ import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 
 const Tree = () => {
   const token = window.localStorage.getItem('token');
-
   if (token === null) {
     window.location = '/login';
   }
@@ -14,19 +13,53 @@ const Tree = () => {
   const [branches, setBranches] = useState([]);
   const activeBranch = useRef(null);
 
-  const scrollToBottom = () => {
-    activeBranch.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const scrollToBottom = () => {
+  //   activeBranch.current.scrollIntoView({ behavior: 'smooth' });
+  // };
+
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, []);
+
+  // useEffect(() => {
+  //   fetch('./api/tree')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setBranches(data.results.branches.map((branch) => branch));
+  //     });
+  // }, []);
 
   useEffect(() => {
-    scrollToBottom();
-  }, []);
-
-  useEffect(() => {
-    fetch('./api/tree')
+    fetch('./api/my-tree', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
-        setBranches(data.results.branches.map((branch) => branch));
+        data.results.tree.forEach((item) => {
+          const branchId = item.slice(0, 1);
+          const leafId = item.slice(1, 2);
+          const itemId = item.slice(2);
+          fetch(
+            `/api/my-tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`,
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                done: true,
+              }),
+            },
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              console.log('test');
+              setBranches(data.results.branches.map((branch) => branch));
+            });
+        });
       });
   }, []);
 
@@ -43,7 +76,11 @@ const Tree = () => {
             <div className="tree__trunk">
               <div className="tree__branches">
                 {branches.map((branch) => (
-                  <Branch key={branch.id} initialBranch={branch}></Branch>
+                  <Branch
+                    key={branch.id}
+                    initialBranch={branch}
+                    token={token}
+                  ></Branch>
                 ))}
               </div>
             </div>

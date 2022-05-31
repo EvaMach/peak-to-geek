@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Leaf from './Leaf/Leaf.jsx';
 import { motion } from 'framer-motion';
 
-const Branch = ({ initialBranch }) => {
+const Branch = ({ initialBranch, token }) => {
   const [branchUpdate, setBranchUpdate] = useState(initialBranch);
   const leaves = branchUpdate.leaves.map((leaf) => leaf.checkboxes);
 
@@ -25,6 +25,18 @@ const Branch = ({ initialBranch }) => {
       .then((data) => {
         setBranchUpdate(data.results);
       });
+    fetch('api/my-tree/update', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        branchId,
+        leafId,
+        itemId,
+      }),
+    });
   };
 
   return (

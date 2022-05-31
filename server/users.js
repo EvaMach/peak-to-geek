@@ -14,7 +14,7 @@ export const users = [
         url: 'test',
       },
     ],
-    tree: [],
+    tree: ['811', '812', '813', '621', '622'],
   },
   {
     name: 'Nelča',
@@ -23,13 +23,14 @@ export const users = [
     token: '33417A25432A462D4A614E645267556A',
     courses: [
       {
-        name: 'UI basics',
+        name: 'UX',
         url: 'test',
       },
       {
-        name: 'Figma basics',
+        name: 'User testing',
         url: 'test',
       },
     ],
+    tree: ['411', '412', '413'],
   },
 ];
