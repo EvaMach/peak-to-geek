@@ -10,7 +10,7 @@ const NavigationHeader = () => {
       <div id="logo" className="info__logo">
         <Link to="/">
           <img
-            src={require('./img/logo-nerd-sloth.png')}
+            src={require('./img/logo_own--colored3.svg')}
             alt="Peak to Geek logo"
           />
         </Link>

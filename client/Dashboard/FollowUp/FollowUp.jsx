@@ -5,7 +5,7 @@ const FollowUp = () => {
     <div className="dashboard__right-side">
       <img
         className="dashboard__image--sloth"
-        src={require('../img/sloth.svg')}
+        src={require('../img/sloth_own--colored.svg')}
         alt="Lenochod visící na stromě"
       />
       <div className="dashboard__follow-up">

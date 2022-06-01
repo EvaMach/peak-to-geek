@@ -173,10 +173,10 @@
   }
   .dashboard__image--sloth {
     max-width: 100%;
-    width: 60%;
-    margin: -1em auto -5em auto;
+    width: 80%;
+    margin: -2em auto -1em auto;
     display: block;
-    transform: rotate(90deg);
+    transform: rotate(-20deg);
   }
 }
 
@@ -267,9 +267,10 @@
 
   .dashboard__image--sloth {
     max-width: 100%;
-    width: 60%;
+    width: 80%;
     margin-top: 1vh;
     margin-bottom: 30%;
+    z-index: -1;
   }
 
   .dashboard__follow-up {
@@ -353,7 +354,7 @@
   .dashboard__streak-update {
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
     font-size: 1.2em;
     font-weight: 600;
   }
@@ -377,6 +378,7 @@
     background-color: lightgray;
     height: 0.8em;
     border-radius: 0.3em;
+    width: 90%;
   }
 
   .tree-progress__bar--actual {
@@ -400,6 +402,8 @@
     border-radius: 1em;
     padding: 0.7em 1em;
     color: #ffffff;
+    font-size: 1.3em;
+    width: 90%;
   }
 
   .actual-courses--course1,
@@ -435,7 +439,8 @@
     padding: 0.7em 1em;
     font-weight: 600;
     width: 50%;
-    margin-left: 50%;
+    margin-left: 40%;
+    font-size: 1.1em;
   }
 
   .actual-courses__button:hover {
@@ -447,10 +452,11 @@
   /* 🧩 Responzivita pro pravou stranu dashboardu */
 
   .dashboard__image--sloth {
-    width: 22vw;
-    transform: rotate(90deg);
-    margin-top: -2em;
-    margin-bottom: 15%;
+    width: 40vw;
+    /* transform: rotate(90deg); */
+    margin-top: 0em;
+    margin-bottom: 25%;
+    margin-left: 10%;
   }
 
   .follow-up__leaves {

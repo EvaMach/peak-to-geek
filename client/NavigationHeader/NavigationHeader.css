@@ -21,6 +21,7 @@ header {
 #logo img {
   width: 15vw;
   margin-top: -3vh;
+  margin-bottom: 3vh;
 }
 
 /* (b) navigace */
@@ -190,6 +191,7 @@ header {
 
   #navigation {
     margin-bottom: 0;
+    margin-top: -2vh;
   }
 
   .navigation__item {

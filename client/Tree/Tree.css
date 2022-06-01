@@ -211,7 +211,7 @@
 
 @media (min-width: 890px) {
   .tree__trunk {
-    border-bottom: 410vh solid #72164c;
+    border-bottom: 400vh solid #72164c;
   }
 }
 
@@ -229,7 +229,7 @@
   }
 
   .tree__trunk {
-    border-bottom: 430vh solid #72164c;
+    border-bottom: 420vh solid #72164c;
     border-left: 7em solid transparent;
     border-right: 7em solid transparent;
     width: 20em;
@@ -307,8 +307,39 @@
   }
 }
 
+@media (min-width: 1050px) {
+  .tree__trunk {
+    border-bottom: 440vh solid #72164c;
+  }
+}
+
 @media (min-width: 1200px) {
   .tree__trunk {
-    border-bottom: 450vh solid #72164c;
+    border-bottom: 460vh solid #72164c;
+  }
+}
+@media (min-width: 1250px) {
+  .tree__trunk {
+    border-bottom: 480vh solid #72164c;
+  }
+}
+@media (min-width: 1300px) {
+  .tree__trunk {
+    border-bottom: 500vh solid #72164c;
+  }
+}
+@media (min-width: 1400px) {
+  .tree__trunk {
+    border-bottom: 520vh solid #72164c;
+  }
+}
+@media (min-width: 1500px) {
+  .tree__trunk {
+    border-bottom: 580vh solid #72164c;
+  }
+}
+@media (min-width: 1600px) {
+  .tree__trunk {
+    border-bottom: 620vh solid #72164c;
   }
 }
