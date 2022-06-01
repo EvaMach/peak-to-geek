@@ -9,6 +9,12 @@ import FollowUp from './FollowUp/FollowUp.jsx';
 import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+  const token = window.localStorage.getItem('token');
+
+  if (token === null) {
+    window.location = '/login';
+  }
+
   return (
     <>
       <div className="container__topbar">
@@ -19,8 +25,8 @@ const Dashboard = () => {
         <main id="dashboard__core">
           <div className="dashboard__left-side">
             <h1 id="dashboard__title">Ahoj Aničko!</h1>
-            <Progress />
-            <DashboardCourses />
+            <Progress token={token} />
+            <DashboardCourses token={token} />
           </div>
           <FollowUp />
         </main>

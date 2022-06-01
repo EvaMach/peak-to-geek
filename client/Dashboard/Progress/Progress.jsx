@@ -1,13 +1,34 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
-const Progress = () => {
+const Progress = ({ token }) => {
+  const [userProgress, setUserProgress] = useState(0);
+  const controls = useAnimation();
+
+  useEffect(() => {
+    fetch('./api/my-tree', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserProgress(data.results.tree.length);
+      });
+  }, []);
+
+  controls.start({
+    width: `${userProgress}%`,
+    transition: { duration: 3 },
+  });
+
   return (
     <>
       <div className="dashboard__streak-update">
         <motion.div
           animate={{ scale: [1, 1.5, 1], rotate: 360 }}
-          transition={{ duration: 2, delay: 0.3 }}
+          transition={{ duration: 2, delay: 0 }}
         >
           <img
             className="streak-update__crown-icon"
@@ -22,7 +43,10 @@ const Progress = () => {
           Tvůj postup znalostním stromem
         </div>
         <div className="tree-progress__bar">
-          <div className="tree-progress__bar--actual"></div>
+          <motion.div
+            animate={controls}
+            className="tree-progress__bar--actual"
+          />
         </div>
       </div>
     </>

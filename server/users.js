@@ -14,16 +14,23 @@ export const users = [
         url: 'test',
       },
     ],
-    tree: [],
+    tree: ['811', '812', '813', '621', '622'],
   },
   {
     name: 'Nelča',
     login: 'nelusa',
     password: 'lenochodik',
     token: '33417A25432A462D4A614E645267556A',
-    courses: {
-      name: 'UX basics',
-      url: 'test',
-    },
+    courses: [
+      {
+        name: 'UX',
+        url: 'test',
+      },
+      {
+        name: 'User testing',
+        url: 'test',
+      },
+    ],
+    tree: ['411', '412', '413'],
   },
 ];

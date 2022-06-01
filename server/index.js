@@ -62,19 +62,19 @@ server.get('/api/tree/branch/:id', (req, resp) => {
   });
 });
 
-server.post('/api/tree/branch/:id', (req, resp) => {
-  const { id } = req.params;
-  const { done } = req.body;
+// server.post('/api/tree/branch/:id', (req, resp) => {
+//   const { id } = req.params;
+//   const { done } = req.body;
 
-  const branch = tree.branches.find((i) => i.id === id);
+//   const branch = tree.branches.find((i) => i.id === id);
 
-  branch.done = done;
+//   branch.done = done;
 
-  resp.send({
-    status: 'success',
-    results: branch,
-  });
-});
+//   resp.send({
+//     status: 'success',
+//     results: branch,
+//   });
+// });
 
 // LISTY
 
@@ -99,21 +99,21 @@ server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   });
 });
 
-server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
-  const { id, id2 } = req.params;
-  const { done } = req.body;
+// server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
+//   const { id, id2 } = req.params;
+//   const { done } = req.body;
 
-  const branch = tree.branches.find((i) => i.id === id);
-  const leaves = branch.leaves;
-  const leaf = leaves.find((i) => i.id === id2);
+//   const branch = tree.branches.find((i) => i.id === id);
+//   const leaves = branch.leaves;
+//   const leaf = leaves.find((i) => i.id === id2);
 
-  leaf.done = done;
+//   leaf.done = done;
 
-  resp.send({
-    status: 'success',
-    results: leaf,
-  });
-});
+//   resp.send({
+//     status: 'success',
+//     results: leaf,
+//   });
+// });
 
 // CHECKLISTY
 
@@ -122,10 +122,8 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
   const { done } = req.body;
 
   const branch = tree.branches.find((i) => i.id === id);
-  const leaves = branch.leaves;
-  const leaf = leaves.find((i) => i.id === id2);
-  const checkboxes = leaf.checkboxes;
-  const checkboxItem = checkboxes.find((i) => i.id === id3);
+  const leaf = branch.leaves.find((i) => i.id === id2);
+  const checkboxItem = leaf.checkboxes.find((i) => i.id === id3);
 
   checkboxItem.done = done;
 
@@ -133,6 +131,52 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
     status: 'success',
     results: branch,
   });
+});
+
+// CHECKBOXY UŽIVATELE
+
+server.get('/api/my-tree', (req, resp) => {
+  const token = req.headers.authorization;
+
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: {
+      login: user.login,
+      tree: user.tree,
+    },
+  });
+});
+
+server.post('/api/my-tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
+  const { id, id2, id3 } = req.params;
+  const { done } = req.body;
+
+  const branch = tree.branches.find((i) => i.id === id);
+  const leaf = branch.leaves.find((i) => i.id === id2);
+  const checkboxItem = leaf.checkboxes.find((i) => i.id === id3);
+
+  checkboxItem.done = done;
+
+  resp.send({
+    status: 'success',
+    results: tree,
+  });
+});
+
+server.post('/api/my-tree/update', (req, resp) => {
+  const { branchId, leafId, itemId } = req.body;
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  user.tree.push(branchId + leafId + itemId);
+  resp.sendStatus(200);
 });
 
 // KURZY
@@ -152,6 +196,27 @@ server.post('/api/courses', (req, resp) => {
     results: courses,
   });
 });
+
+server.get('/api/my-courses', (req, resp) => {
+  const token = req.headers.authorization;
+
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: {
+      login: user.login,
+      courses: user.courses,
+    },
+  });
+});
+
+// END
 
 server.use(express.static('dist'));
 

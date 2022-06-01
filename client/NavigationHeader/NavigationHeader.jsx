@@ -39,7 +39,10 @@ const NavigationHeader = () => {
             <li className="navigation__item">Tvoje kurzy</li>
           </Link>
           <Link to="/login">
-            <li className="navigation__item">
+            <li
+              onClick={() => localStorage.removeItem('token')}
+              className="navigation__item"
+            >
               <img
                 src={require('./img/icon__log-out.svg')}
                 alt="Ikona odhlášení"

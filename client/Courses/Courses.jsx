@@ -7,13 +7,28 @@ import Course from './Course/Course.jsx';
 import AddCourse from './AddCourse/AddCourse.jsx';
 
 const Courses = () => {
+  const token = window.localStorage.getItem('token');
+  if (token === null) {
+    window.location = '/login';
+  }
   const [courses, setCourses] = useState([]);
+  const [userCourses, setUserCourses] = useState([]);
 
   useEffect(() => {
     fetch('/api/courses')
       .then((response) => response.json())
       .then((data) => {
         setCourses(data.results);
+      });
+    fetch('/api/my-courses', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserCourses(data.results.courses);
       });
   }, []);
 
@@ -41,6 +56,9 @@ const Courses = () => {
 
         <main>
           <h1 id="courses__title">Tvoje kurzy</h1>
+          {userCourses.map((userCourse) => (
+            <Course key={userCourse.url} courseName={userCourse.name} />
+          ))}
           <AddCourse onNewCourse={handleAddCourse} />
           <h2 id="community__title">Kurzy komunity</h2>
           {courses.map((course) => (
