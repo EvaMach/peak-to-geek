@@ -6,7 +6,7 @@ const Progress = ({ token }) => {
   const controls = useAnimation();
 
   useEffect(() => {
-    fetch('./api/my-tree', {
+    fetch('./api/user-tree', {
       method: 'GET',
       headers: {
         Authorization: token,

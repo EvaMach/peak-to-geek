@@ -15,35 +15,6 @@ const Dashboard = () => {
     window.location = '/login';
   }
 
-  useEffect(() => {
-    fetch('./api/my-tree', {
-      method: 'GET',
-      headers: {
-        Authorization: token,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        data.results.tree.forEach((item) => {
-          const branchId = item.slice(0, 1);
-          const leafId = item.slice(1, 2);
-          const itemId = item.slice(2);
-          fetch(
-            `/api/my-tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`,
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                done: true,
-              }),
-            },
-          );
-        });
-      });
-  }, []);
-
   return (
     <>
       <div className="container__topbar">

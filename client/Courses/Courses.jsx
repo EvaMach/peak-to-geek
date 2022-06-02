@@ -20,7 +20,7 @@ const Courses = () => {
       .then((data) => {
         setCourses(data.results);
       });
-    fetch('/api/my-courses', {
+    fetch('/api/user-courses', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -33,7 +33,7 @@ const Courses = () => {
   }, []);
 
   const handleAddCourse = (courseName, courseUrl) => {
-    fetch('api/my-courses', {
+    fetch('api/user-courses', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

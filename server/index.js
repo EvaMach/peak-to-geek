@@ -42,41 +42,7 @@ server.get('/api/tree', (req, resp) => {
   });
 });
 
-// JEDNOTLIVÉ VĚTVE
-
-server.get('/api/tree/branch/:id', (req, resp) => {
-  const { id } = req.params;
-
-  const branch = tree.branches.find((i) => i.id === id);
-
-  if (branch === undefined) {
-    resp.status(404).send({
-      status: 'error',
-      message: 'Checklist not found',
-    });
-    return;
-  }
-  resp.send({
-    status: 'success',
-    results: branch,
-  });
-});
-
-// server.post('/api/tree/branch/:id', (req, resp) => {
-//   const { id } = req.params;
-//   const { done } = req.body;
-
-//   const branch = tree.branches.find((i) => i.id === id);
-
-//   branch.done = done;
-
-//   resp.send({
-//     status: 'success',
-//     results: branch,
-//   });
-// });
-
-// LISTY
+// LISTY - CHECKBOXY
 
 server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
@@ -99,33 +65,31 @@ server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   });
 });
 
-// server.post('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
-//   const { id, id2 } = req.params;
-//   const { done } = req.body;
+// CHECKBOXY UŽIVATELE
 
-//   const branch = tree.branches.find((i) => i.id === id);
-//   const leaves = branch.leaves;
-//   const leaf = leaves.find((i) => i.id === id2);
-
-//   leaf.done = done;
-
-//   resp.send({
-//     status: 'success',
-//     results: leaf,
-//   });
-// });
-
-// CHECKLISTY
-
-server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
-  const { id, id2, id3 } = req.params;
-  const { done } = req.body;
+server.get('/api/user-branch/:id', (req, resp) => {
+  const { id } = req.params;
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
 
   const branch = tree.branches.find((i) => i.id === id);
-  const leaf = branch.leaves.find((i) => i.id === id2);
-  const checkboxItem = leaf.checkboxes.find((i) => i.id === id3);
 
-  checkboxItem.done = done;
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  const userIds = user.tree.map((id) => id.slice(2));
+
+  branch.leaves.forEach((leaf) => {
+    leaf.checkboxes.forEach((checkboxItem) => {
+      if (userIds.includes(checkboxItem.id)) {
+        checkboxItem.done = true;
+      } else {
+        checkboxItem.done = false;
+      }
+    });
+  });
 
   resp.send({
     status: 'success',
@@ -133,9 +97,7 @@ server.post('/api/tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
   });
 });
 
-// CHECKBOXY UŽIVATELE
-
-server.get('/api/my-tree', (req, resp) => {
+server.get('/api/user-tree', (req, resp) => {
   const token = req.headers.authorization;
 
   const user = users.find((u) => u.token === token);
@@ -154,30 +116,32 @@ server.get('/api/my-tree', (req, resp) => {
   });
 });
 
-server.post('/api/my-tree/branch/:id/leaf/:id2/item/:id3', (req, resp) => {
-  const { id, id2, id3 } = req.params;
-  const { done } = req.body;
-
-  const branch = tree.branches.find((i) => i.id === id);
-  const leaf = branch.leaves.find((i) => i.id === id2);
-  const checkboxItem = leaf.checkboxes.find((i) => i.id === id3);
-
-  checkboxItem.done = done;
-
-  resp.send({
-    status: 'success',
-    results: tree,
-  });
-});
-
-server.post('/api/my-tree/update', (req, resp) => {
+server.post('/api/user-tree/update', (req, resp) => {
   const { branchId, leafId, itemId } = req.body;
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
 
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
   const branch = tree.branches.find((i) => i.id === branchId);
 
   user.tree.push(branchId + leafId + itemId);
+
+  const userIds = user.tree.map((id) => id.slice(2));
+
+  branch.leaves.forEach((leaf) => {
+    leaf.checkboxes.forEach((checkboxItem) => {
+      userIds.forEach((id) => {
+        if (checkboxItem.id === id) {
+          checkboxItem.done = true;
+        }
+      });
+    });
+  });
+
   resp.send({
     status: 'success',
     results: branch,
@@ -202,7 +166,7 @@ server.post('/api/courses', (req, resp) => {
   });
 });
 
-server.get('/api/my-courses', (req, resp) => {
+server.get('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
 
   const user = users.find((u) => u.token === token);
@@ -221,7 +185,7 @@ server.get('/api/my-courses', (req, resp) => {
   });
 });
 
-server.post('/api/my-courses', (req, resp) => {
+server.post('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
   const { name, url } = req.body;
 

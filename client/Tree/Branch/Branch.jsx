@@ -11,21 +11,21 @@ const Branch = ({ initialBranch, token }) => {
       checkboxes.every((checkbox) => checkbox.done === true),
     );
 
-  const handleCheck = (itemId, branchId, leafId, itemDone) => {
-    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`, {
-      method: 'POST',
+  useEffect(() => {
+    fetch(`/api/user-branch/${initialBranch.id}`, {
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        Authorization: token,
       },
-      body: JSON.stringify({
-        done: !itemDone,
-      }),
     })
       .then((response) => response.json())
       .then((data) => {
         setBranchUpdate(data.results);
       });
-    fetch('api/my-tree/update', {
+  }, []);
+
+  const handleCheck = (itemId, branchId, leafId) => {
+    fetch('api/user-tree/update', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,7 +36,11 @@ const Branch = ({ initialBranch, token }) => {
         leafId,
         itemId,
       }),
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setBranchUpdate(data.results);
+      });
   };
 
   return (
