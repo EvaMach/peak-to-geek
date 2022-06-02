@@ -175,8 +175,13 @@ server.post('/api/my-tree/update', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
 
+  const branch = tree.branches.find((i) => i.id === branchId);
+
   user.tree.push(branchId + leafId + itemId);
-  resp.sendStatus(200);
+  resp.send({
+    status: 'success',
+    results: branch,
+  });
 });
 
 // KURZY
@@ -207,6 +212,27 @@ server.get('/api/my-courses', (req, resp) => {
     return;
   }
 
+  resp.send({
+    status: 'success',
+    results: {
+      login: user.login,
+      courses: user.courses,
+    },
+  });
+});
+
+server.post('/api/my-courses', (req, resp) => {
+  const token = req.headers.authorization;
+  const { name, url } = req.body;
+
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  user.courses.push({ name, url });
   resp.send({
     status: 'success',
     results: {

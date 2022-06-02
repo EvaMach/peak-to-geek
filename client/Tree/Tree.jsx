@@ -22,45 +22,11 @@ const Tree = () => {
   //   scrollToBottom();
   // }, []);
 
-  // useEffect(() => {
-  //   fetch('./api/tree')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setBranches(data.results.branches.map((branch) => branch));
-  //     });
-  // }, []);
-
   useEffect(() => {
-    fetch('./api/my-tree', {
-      method: 'GET',
-      headers: {
-        Authorization: token,
-      },
-    })
+    fetch('./api/tree')
       .then((response) => response.json())
       .then((data) => {
-        data.results.tree.forEach((item) => {
-          const branchId = item.slice(0, 1);
-          const leafId = item.slice(1, 2);
-          const itemId = item.slice(2);
-          fetch(
-            `/api/my-tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`,
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                done: true,
-              }),
-            },
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              console.log('test');
-              setBranches(data.results.branches.map((branch) => branch));
-            });
-        });
+        setBranches(data.results.branches.map((branch) => branch));
       });
   }, []);
 
