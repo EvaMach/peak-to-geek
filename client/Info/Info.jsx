@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
-import './Info.css';
+import './Info.scss';
 import '../style.css';
 import Footer from '../Footer/Footer.jsx';
 import { Link, Outlet } from 'react-router-dom';

@@ -3,9 +3,15 @@ import './NavigationHeader.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
+import { NavLink } from 'react-router-dom';
 
 const NavigationHeader = () => {
   const [isOpened, setIsOpened] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
+
+  // const addClass = () => {
+  //   setIsActive(true);
+  // };
   return (
     <header>
       <div id="logo" className="info__logo">
@@ -34,8 +40,26 @@ const NavigationHeader = () => {
         <ul
           id={!isOpened ? 'navigation__items' : 'navigation__items--hamburger'}
         >
+          {/* <li className="navigation__item">
+            <NavLink activeClassName="navigation__item--actual" to="/info">
+              Info
+            </NavLink>
+          </li> */}
+          {/* <li className="navigation__item navigation__item--actual">
+            <NavLink
+              to="/info"
+              className={({ isActive }) => {
+                isActive
+                  ? 'navigation__item navigation__item--actual'
+                  : 'navigation__item';
+              }}
+            >
+              Info
+            </NavLink>
+          </li> */}
+
           <Link to="/info">
-            <li className="navigation__item navigation__item--actual">Info</li>
+            <li className="navigation__item">Info</li>
           </Link>
           <Link to="/dashboard">
             <li className="navigation__item">Dashboard</li>
