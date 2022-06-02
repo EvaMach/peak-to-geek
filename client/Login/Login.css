@@ -1,16 +1,18 @@
 /* LOGIN */
 
-#login-page__body {
+.container__login {
   background: url(img/login-page-41.svg) no-repeat fixed;
   background-size: cover;
+  height: 100vmax;
+  margin: 0;
 }
 
 #login__core {
-  margin-top: 20%;
+  padding-top: 50%;
 }
 
 #login__title {
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -56,4 +58,37 @@
   background-color: #dbbcc2;
   border: 1px solid #dbbcc2;
   color: #000000;
+}
+
+@media (min-width: 576px) {
+  #login__core {
+    padding-top: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container__login {
+    max-height: 100vmax;
+  }
+  #login__core {
+    padding-top: 30%;
+  }
+}
+@media (min-width: 992px) {
+  .container__login {
+    height: 80vmax;
+    max-height: 100vmax;
+  }
+  #login__core {
+    padding-top: 20%;
+  }
+}
+@media (min-width: 1200px) {
+  .container__login {
+    height: 70vmax;
+    max-height: 100vmax;
+  }
+  #login__core {
+    padding-top: 20%;
+  }
 }

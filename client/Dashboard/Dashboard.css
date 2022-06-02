@@ -22,7 +22,7 @@
 .leaves__tree-checklist {
   display: flex;
   align-items: center;
-  margin-left: 50%;
+  margin-left: 60%;
   margin-top: 20%;
 }
 
@@ -39,7 +39,7 @@
   border-left: 1.5em solid #72164c;
   border-top: 0em solid #72164c;
   border-right: 0em solid #72164c;
-  width: 80vw;
+  width: 60vw;
   height: 10vmax;
   margin: -10% auto 0 auto;
   position: relative;
@@ -54,14 +54,14 @@
   z-index: 1;
   position: absolute;
   bottom: 50%;
-  left: 18%;
+  left: 28%;
   margin: 0 auto;
 }
 
 /* Levá strana */
 
 #dashboard__title {
-  font-size: 4em;
+  /* font-size: 4em; */
   margin-bottom: 5%;
   text-align: center;
 }
@@ -81,7 +81,7 @@
 }
 
 .dashboard__tree-progress {
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 }
 
 .tree-progress__label {
@@ -116,6 +116,12 @@
   border-radius: 1em;
   padding: 0.7em 1em;
   color: #ffffff;
+}
+
+.course-bar__check {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .actual-courses--course1,
@@ -163,10 +169,10 @@
 
 /* Responzivita pro dashboard */
 @media (min-width: 576px) {
-  #dashboard__title {
-    font-size: 3em;
-    margin-top: 5%;
-  }
+  /* #dashboard__title {
+    /* font-size: 30px; */
+  /* margin-top: 5%; 
+  } */
   .dashboard__right-side {
     display: flex;
     flex-direction: column;
@@ -177,14 +183,27 @@
     margin: -2em auto -1em auto;
     display: block;
     transform: rotate(-20deg);
+    z-index: -1;
+  }
+
+  .follow-up__treetop--left {
+    width: 30%;
+    border-radius: 50%;
+    background-color: #2e9398;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+    position: absolute;
+    bottom: 60%;
+    left: 28%;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) {
   #dashboard__title {
     text-align: left;
-    margin-top: 10vh;
-    font-size: 3em;
+    /* margin-top: 10vh; */
+    /* font-size: 3em; */
   }
   #dashboard__core h3 {
     font-size: 1.5em;
@@ -267,10 +286,11 @@
 
   .dashboard__image--sloth {
     max-width: 100%;
-    width: 80%;
-    margin-top: 1vh;
-    margin-bottom: 30%;
-    z-index: -1;
+    width: 50vw;
+    /* margin-top: 1vh; */
+    margin-top: -3em;
+    margin-bottom: 45%;
+    transform: rotate(-20deg);
   }
 
   .dashboard__follow-up {
@@ -296,7 +316,7 @@
     align-items: center;
     margin-left: 7em;
     margin-bottom: -5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .leaves__leaf--inactive {
@@ -312,11 +332,11 @@
     border-left: 1.5em solid #72164c;
     border-top: 0em solid #72164c;
     border-right: 0em solid #72164c;
-    width: 35em;
+    width: 25em;
     height: 10vmax;
     margin: 1em auto 0 auto;
     position: relative;
-    left: 25%;
+    left: 20%;
     top: 3em;
   }
 
@@ -325,19 +345,18 @@
     border-radius: 50%;
     background-color: #2e9398;
     aspect-ratio: 1 / 1;
-    z-index: 1;
     position: absolute;
     bottom: 1%;
-    left: 12%;
+    left: 8%;
     margin: 0 auto;
   }
 }
 
 @media (min-width: 992px) {
   h1#dashboard__title {
-    font-size: 4em;
+    /* font-size: 40px; */
     text-align: left;
-    margin-top: 0.5em;
+    /* margin-top: 0.5em; */
   }
 
   #dashboard__core {
@@ -366,7 +385,7 @@
   }
 
   .dashboard__tree-progress {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
   }
 
   .tree-progress__label {
@@ -452,9 +471,9 @@
   /* 🧩 Responzivita pro pravou stranu dashboardu */
 
   .dashboard__image--sloth {
-    width: 40vw;
+    width: 35vw;
     /* transform: rotate(90deg); */
-    margin-top: 0em;
+    margin-top: -10%;
     margin-bottom: 25%;
     margin-left: 10%;
   }
@@ -497,9 +516,56 @@
     border-radius: 50%;
     background-color: #2e9398;
     aspect-ratio: 1 / 1;
-    /* z-index: 1; */
     position: absolute;
     bottom: 10em;
     left: 10%;
   }
+}
+
+@media (min-width: 1200px) {
+  .follow-up__tree-branch--left {
+    width: 42vw;
+  }
+  .follow-up__treetop--left {
+    left: 6%;
+  }
+  .dashboard__image--sloth {
+    width: 35vw;
+    transform: rotate(-20deg);
+    margin-top: -10%;
+    margin-bottom: 30%;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1700px) {
+  #dashboard__core {
+    font-size: 0.8em;
+  }
+
+  #dashboard__core h3 {
+    font-size: 1.5em;
+  }
+  .dashboard__tree-progress {
+    margin-bottom: 10%;
+  }
+
+  .dashboard__right-side {
+    z-index: -2;
+  }
+
+  .dashboard__image--sloth {
+    width: 30vw;
+    transform: rotate(-20deg);
+    margin-top: -10%;
+    z-index: -1;
+  }
+  /* .dashboard__image--sloth {
+    width: 30vw;
+    transform: rotate(0deg);
+    margin-top: -30%;
+    margin-bottom: 40%;
+    margin-left: -30%;
+    z-index: -1;
+  } */
 }

@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 import './Login.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
+import MainHeader from '../MainHeader/MainHeader.jsx';
 
+// document.body.style.backgroundColor = "url('img/login-page-41.svg')";
+// document.body.style.backgroundAttachment = 'fixed';
+// document.body.style.backgroundRepeat = 'noRepeat';
 const Login = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <div className="container">
-      <header></header>
+    <div className="container__login">
       <main id="login">
         <div id="login__core">
           <h1 id="login__title">Vítej zpátky!</h1>

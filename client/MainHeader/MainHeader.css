@@ -1,0 +1,6 @@
+.main-page__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em 0 1em;
+  align-items: center;
+}

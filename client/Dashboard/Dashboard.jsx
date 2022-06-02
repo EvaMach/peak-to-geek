@@ -6,6 +6,7 @@ import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
+import Footer from '../Footer/Footer.jsx';
 import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -30,8 +31,8 @@ const Dashboard = () => {
           </div>
           <FollowUp />
         </main>
-        <footer></footer>
       </div>
+      <Footer />
     </>
   );
 };

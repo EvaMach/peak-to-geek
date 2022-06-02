@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NavigationHeader.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
+import { Squash as Hamburger } from 'hamburger-react';
 
 const NavigationHeader = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -16,11 +17,18 @@ const NavigationHeader = () => {
         </Link>
       </div>
       <nav id="navigation" className="info__navigation">
-        <img
+        {/* <img
           onClick={() => setIsOpened(!isOpened)}
           id="hamburger"
           src={require('./img/hamburger.svg')}
           alt="Hamburger menu"
+        /> */}
+
+        <Hamburger
+          label="Show menu"
+          rounded
+          toggled={isOpened}
+          toggle={setIsOpened}
         />
 
         <ul

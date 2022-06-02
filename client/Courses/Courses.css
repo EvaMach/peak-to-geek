@@ -1,12 +1,15 @@
 /* KURZY */
 
 #courses__title {
-  font-size: 4em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
 #community__title {
-  font-size: 3em;
+  font-size: 2em;
   margin-top: 15%;
+  margin-bottom: 0.2em;
+  color: var(--main-turqoise);
 }
 
 .modal {

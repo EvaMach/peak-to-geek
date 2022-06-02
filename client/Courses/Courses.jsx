@@ -5,6 +5,7 @@ import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import { Link } from 'react-router-dom';
 import Course from './Course/Course.jsx';
 import AddCourse from './AddCourse/AddCourse.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 const Courses = () => {
   const token = window.localStorage.getItem('token');
@@ -51,9 +52,10 @@ const Courses = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container__topbar">
         <NavigationHeader />
-
+      </div>
+      <div className="container">
         <main>
           <h1 id="courses__title">Tvoje kurzy</h1>
           {userCourses.map((userCourse) => (
@@ -65,8 +67,8 @@ const Courses = () => {
             <Course key={course.url} courseName={course.name} />
           ))}
         </main>
-        <footer></footer>
       </div>
+      <Footer />
     </>
   );
 };

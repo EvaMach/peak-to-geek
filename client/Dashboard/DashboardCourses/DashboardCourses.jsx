@@ -20,7 +20,7 @@ const DashboardCourses = ({ token }) => {
 
   return (
     <div className="dashboard__actual-courses">
-      <h3 id="actual-courses__title">Tvoje aktuální kurzy:</h3>
+      <h3 id="actual-courses__title">Tvoje aktuální kurzy</h3>
       <div className="actual-courses__info">
         {userCourses.map((userCourse) => (
           <Course key={userCourse.name} courseName={userCourse.name} />

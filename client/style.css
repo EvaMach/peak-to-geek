@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
 
 /* Barvičky */
+
+:root {
+  --main-turqoise: #2e9398;
+  --light-turqoise: #a4cbcd;
+  --main-pink: #72164c;
+  --light-pink: #dbbcc2;
+  --grey: #cfcfcf;
+}
 /*Blue --> #2E9398
 Pink --> #92475C
 Pink no. 2 --> #72164c
@@ -42,11 +50,15 @@ Grey --> #CFCFCF
   }
 } */
 
-/* html,
+/* * {
+  border: 1px solid red;
+} */
+
+html,
 body {
   min-height: 100%;
-  overflow-y: scroll;
-} */
+  /* overflow-x: hidden; */
+}
 
 main {
   width: 100%;
@@ -54,21 +66,28 @@ main {
 
 .container {
   width: 100%;
-  margin: auto;
-  padding: 2% 5%;
+  margin: 0 auto 0 auto;
+  padding: 0% 5%;
   font-size: 3vw;
 }
 
 h1,
 h2 {
   font-family: 'Kodchasan', sans-serif;
-  /* color: #72164c; */
-  color: #2e9398;
+  color: var(--main-turqoise);
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 h3 {
   font-family: 'Kodchasan', sans-serif;
-  font-size: 1.7em;
+  font-size: 1.5em;
 }
 
 a {
@@ -78,4 +97,40 @@ a {
 
 .leaf {
   color: red;
+}
+
+@media (min-width: 576px) {
+  h1 {
+    font-size: 2.8em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 95%;
+    /* margin: 0 auto 0 auto;
+    padding: 5% 10% 0 10%;
+    font-size: 3vw; */
+  }
 }

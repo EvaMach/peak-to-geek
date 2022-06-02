@@ -1,0 +1,248 @@
+h1#about-project__title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.about-project h2 {
+  color: var(--main-pink);
+  padding-top: 1em;
+  padding-bottom: 0.2em;
+}
+
+.about-project h3 {
+  padding-top: 2em;
+  font-size: 1.2em;
+  text-decoration: underline var(--main-turqoise) 2px;
+  font-weight: 600;
+}
+
+.about-project p {
+  text-align: justify;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.about-project__container {
+  display: flex;
+  flex-direction: column;
+}
+
+figure {
+  text-align: center;
+  margin: 2em auto 0 auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: var(--main-pink);
+}
+
+.phases-pic {
+  width: 15rem;
+}
+
+.about-project {
+  width: 90%;
+  margin: auto;
+}
+
+#about-project__tree {
+  display: none;
+}
+
+/* BUDU DOPLŇOVAT!!! */
+
+.creator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  height: 30em;
+  margin: auto;
+  aspect-ratio: 1/1;
+  border: 2em solid var(--light-pink);
+  padding: 5em;
+  border-radius: 100%;
+  font-size: 0.7em;
+  margin-top: 5em;
+}
+
+.creator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+}
+
+.creator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.8em;
+}
+
+.creator__photo {
+  display: none;
+}
+
+.creator__contacts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.creator__contact-icon {
+  width: 1rem;
+}
+
+/* Navigace */
+
+#info-navigation {
+  font-weight: 600;
+  margin-bottom: 3.5em;
+  font-size: 1em;
+}
+
+ul#info-navigation__items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* gap: 1em; */
+  margin-top: 1.5em;
+  margin-bottom: -8em;
+  font-weight: 500;
+  font-size: 0.8em;
+}
+
+.info-navigation__item {
+  list-style: none;
+  margin: 0 0.5em;
+  font-size: 1.2em;
+}
+
+.info-navigation__item:not(.navigation__item--actual):hover {
+  color: #c48894;
+}
+
+.info-navigation__item:not(.navigation__item--actual)::after {
+  content: '';
+  display: block;
+  width: 0;
+  transition: width 0.3s;
+}
+
+.info-navigation__item:not(.navigation__item--actual):hover::after {
+  width: 100%;
+  border-bottom: 2px solid #c48894;
+}
+
+.info-navigation__item--actual {
+  color: #72164c;
+  border-bottom: 2px solid #72164c;
+}
+
+@media (min-width: 576px) {
+  .creator-container {
+    width: 38em;
+    height: 38em;
+    max-width: 40em;
+    max-height: 40em;
+    padding: 4em;
+    border-radius: 100%;
+    font-size: 1em;
+  }
+
+  .creator__photo {
+    display: block;
+    height: 5rem;
+  }
+
+  ul#info-navigation__items {
+    justify-content: right;
+  }
+  .phases-pic {
+    width: 25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1#about-project__title {
+    text-align: left;
+  }
+
+  ul#info-navigation__items {
+    font-weight: 600;
+  }
+
+  .creator-container {
+    width: 35em;
+    height: 35em;
+    /* aspect-ratio: 1/1;
+    padding: 5em;
+    border-radius: 100%;
+    font-size: 1em;
+    margin-top: 0em;
+    margin: auto; */
+  }
+
+  .creator__photo {
+    height: 10em;
+  }
+
+  .creator__contacts {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .creator__contact-icon {
+    width: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    position: relative;
+    /* height: 90vh; */
+  }
+
+  .about-project__container {
+    width: 50%;
+  }
+
+  #about-project__tree {
+    display: block;
+    max-width: 50%;
+    position: fixed;
+    left: 70%;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .creator-container {
+    width: 45em;
+    height: 45em;
+    /* aspect-ratio: 1/1;
+    padding: 5em;
+    border-radius: 100%;
+    font-size: 1em;*/
+    margin-top: 0em;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about-project__tree {
+    display: block;
+    max-width: 30%;
+    position: fixed;
+    left: 60%;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+/* @media (min-width: 1400px) {
+  #about-project__tree {
+    max-width: 30%;
+  }
+} */

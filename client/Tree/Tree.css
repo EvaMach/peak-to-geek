@@ -1,10 +1,10 @@
 /* TREE  */
 
-#tree__title {
+/* #tree__title {
   font-size: 4em;
   margin-top: 3vw;
   font-size: 2em;
-}
+} */
 
 .tree__core {
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 .tree__trunk {
-  border-bottom: 180vh solid #72164c;
+  border-bottom: 100em solid #72164c;
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   width: 5em;
@@ -146,11 +146,17 @@
   width: 2em;
 }
 
+/* .bushes {
+  filter: invert(87%) sepia(10%) saturate(611%) hue-rotate(134deg)
+    brightness(90%) contrast(88%);
+  width: 40em;
+} */
+
 /* RESPONZIVITA */
 
 @media (max-width: 368px) {
   .tree__trunk {
-    border-bottom: 160vh solid #72164c;
+    border-bottom: 100em solid #72164c;
     border-left: 1.5em solid transparent;
     border-right: 1.5em solid transparent;
     width: 5em;
@@ -159,46 +165,41 @@
   }
 }
 
-@media (min-width: 430px) {
+/* @media (min-width: 430px) {
   .tree__trunk {
-    border-bottom: 200vh solid #72164c;
-  }
-}
-@media (min-width: 430px) {
-  .tree__trunk {
-    border-bottom: 220vh solid #72164c;
+    border-bottom: 150vh solid #72164c;
   }
 }
 @media (min-width: 530px) {
   .tree__trunk {
-    border-bottom: 250vh solid #72164c;
+    border-bottom: 180vh solid #72164c;
   }
 }
 
 @media (min-width: 576px) {
   .tree__trunk {
-    border-bottom: 280vh solid #72164c;
+    border-bottom: 210vh solid #72164c;
   }
 }
 @media (min-width: 650px) {
   .tree__trunk {
-    border-bottom: 300vh solid #72164c;
+    border-bottom: 240vh solid #72164c;
   }
 }
 @media (min-width: 700px) {
   .tree__trunk {
-    border-bottom: 330vh solid #72164c;
+    border-bottom: 270vh solid #72164c;
   }
-}
+} */
 
 @media (min-width: 768px) {
-  #tree__title {
-    margin-top: 15vh;
-  }
-
+  /* #tree__title {
+    margin-top: 0.5em;
+  } */
+  /* 
   .tree__trunk {
-    border-bottom: 370vh solid #72164c;
-  }
+    border-bottom: 100em solid #72164c;
+  } */
 
   .tree__branch--right {
     border-bottom: 1.5em solid #72164c;
@@ -208,28 +209,28 @@
     border-bottom: 1.5em solid #72164c;
   }
 }
-
+/* 
 @media (min-width: 890px) {
   .tree__trunk {
-    border-bottom: 400vh solid #72164c;
+    border-bottom: 110em solid #72164c;
   }
-}
+} */
 
 @media (min-width: 992px) {
-  #tree__title {
+  /* #tree__title {
     font-size: 4em;
     margin-top: 1em;
-  }
+  } */
 
   #tree__treetop {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .tree__treetop {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .tree__trunk {
-    border-bottom: 420vh solid #72164c;
+    border-bottom: 280em solid #72164c;
     border-left: 7em solid transparent;
     border-right: 7em solid transparent;
     width: 20em;
@@ -307,39 +308,13 @@
   }
 }
 
-@media (min-width: 1050px) {
-  .tree__trunk {
-    border-bottom: 440vh solid #72164c;
-  }
-}
-
-@media (min-width: 1200px) {
-  .tree__trunk {
-    border-bottom: 460vh solid #72164c;
-  }
-}
-@media (min-width: 1250px) {
-  .tree__trunk {
-    border-bottom: 480vh solid #72164c;
-  }
-}
-@media (min-width: 1300px) {
-  .tree__trunk {
-    border-bottom: 500vh solid #72164c;
-  }
-}
-@media (min-width: 1400px) {
-  .tree__trunk {
-    border-bottom: 520vh solid #72164c;
-  }
-}
 @media (min-width: 1500px) {
   .tree__trunk {
-    border-bottom: 580vh solid #72164c;
+    border-bottom: 420em solid #72164c;
   }
 }
 @media (min-width: 1600px) {
   .tree__trunk {
-    border-bottom: 620vh solid #72164c;
+    border-bottom: 480em solid #72164c;
   }
 }
