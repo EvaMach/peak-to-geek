@@ -4,7 +4,9 @@
   background: url(img/homepage.svg) no-repeat fixed;
   /* background-size: 80vmax; */
   /* background-position: inherit; */
-  height: 100vmax;
+  height: 30em;
+  background-size: 700px;
+  background-position-y: center;
 }
 
 .main-page__main {
@@ -92,9 +94,9 @@
   .tree__image {
     display: block;
     max-width: 33%;
-    position: absolute;
-    bottom: 0%;
-    right: 10%;
+    position: fixed;
+    bottom: -3%;
+    right: 8%;
   }
 
   #main-page__signup-link {

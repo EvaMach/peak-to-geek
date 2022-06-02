@@ -3,12 +3,14 @@
 .container__login {
   background: url(img/login-page-41.svg) no-repeat fixed;
   background-size: cover;
-  height: 100vmax;
+  min-height: 45em;
+  height: 50em;
   margin: 0;
+  overflow-y: hidden;
 }
 
 #login__core {
-  padding-top: 50%;
+  padding-top: 40%;
 }
 
 #login__title {
@@ -20,7 +22,7 @@
   display: flex;
   flex-direction: column;
   margin: 2% auto;
-  max-width: 30%;
+  max-width: 50%;
 }
 
 .login__field {
@@ -42,7 +44,6 @@
 
 #login__button {
   font-weight: 600;
-  font-size: 100%;
   background-color: #72164c;
   border: 1px solid #72164c;
   border-radius: 1em;
@@ -61,32 +62,32 @@
 }
 
 @media (min-width: 576px) {
-  #login__core {
-    padding-top: 40%;
-  }
-}
-
-@media (min-width: 768px) {
   .container__login {
-    max-height: 100vmax;
+    min-height: 45em;
+    max-height: 50em;
   }
   #login__core {
     padding-top: 30%;
   }
+  #login__form {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  #login__core {
+    padding-top: 25%;
+  }
 }
 @media (min-width: 992px) {
-  .container__login {
-    height: 80vmax;
-    max-height: 100vmax;
-  }
   #login__core {
     padding-top: 20%;
   }
 }
 @media (min-width: 1200px) {
   .container__login {
-    height: 70vmax;
-    max-height: 100vmax;
+    min-height: 50em;
+    max-height: 60em;
   }
   #login__core {
     padding-top: 20%;

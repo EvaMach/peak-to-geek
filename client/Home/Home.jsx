@@ -3,7 +3,7 @@ import './Home.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import MainHeader from '../MainHeader/MainHeader';
+import MainHeader from '../MainHeader/MainHeader.jsx';
 
 const Home = () => {
   return (
