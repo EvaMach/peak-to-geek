@@ -139,11 +139,16 @@
 
 .leaves {
   font-size: 0.5em;
-  line-height: 0.1em;
+  line-height: 2em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .tree__leaf-icon {
   width: 2em;
+  margin-left: 0.3em;
 }
 
 /* .bushes {
@@ -239,7 +244,7 @@
   .tree__branch--right {
     border-bottom: 4em solid #72164c;
     border-right: 3em solid #72164c;
-    width: 35vmax;
+    width: 37vmax;
     height: 7vmax;
   }
 
@@ -272,7 +277,7 @@
     border-left: 3em solid #72164c;
     border-top: 0em solid #72164c;
     border-right: 0em solid #72164c;
-    width: 35vmax;
+    width: 37vmax;
     height: 7vmax;
   }
 
@@ -300,7 +305,6 @@
 
   .leaves {
     font-size: 1.2em;
-    line-height: 0.5em;
   }
 }
 
@@ -366,6 +370,6 @@
 
   .leaves {
     font-size: 1em;
-    line-height: 1em;
+    line-height: 2.3em;
   }
 }

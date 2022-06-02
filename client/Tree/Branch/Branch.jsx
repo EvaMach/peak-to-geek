@@ -51,7 +51,7 @@ const Branch = ({ initialBranch, token }) => {
           : `tree__branch--${branchUpdate.id} tree__branch--left`
       }
     >
-      {branchStateCheck() ? (
+      {/* {branchStateCheck() ? (
         <motion.div
           initial={{ opacity: 0, y: [1000], x: [-50] }}
           animate={{
@@ -63,7 +63,7 @@ const Branch = ({ initialBranch, token }) => {
         >
           <img src={require('./img/sloth.svg')} alt="lenochodik" />
         </motion.div>
-      ) : null}
+      ) : null} */}
       <div
         className={
           branchUpdate.id % 2 === 0
