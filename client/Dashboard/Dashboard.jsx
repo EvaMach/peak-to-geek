@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import '../style-responsivity.css';
 import './Dashboard.css';
 import '../style.css';
@@ -7,14 +7,42 @@ import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
 import Footer from '../Footer/Footer.jsx';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   const token = window.localStorage.getItem('token');
-
   if (token === null) {
     window.location = '/login';
   }
+
+  useEffect(() => {
+    fetch('./api/my-tree', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        data.results.tree.forEach((item) => {
+          const branchId = item.slice(0, 1);
+          const leafId = item.slice(1, 2);
+          const itemId = item.slice(2);
+          fetch(
+            `/api/my-tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`,
+            {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                done: true,
+              }),
+            },
+          );
+        });
+      });
+  }, []);
 
   return (
     <>
