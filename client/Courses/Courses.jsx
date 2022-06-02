@@ -55,8 +55,8 @@ const Courses = () => {
       <div className="container__topbar">
         <NavigationHeader />
       </div>
-      <div className="container">
-        <main>
+      <div className="container container__your-courses">
+        <main className="main__your-courses">
           <h1 id="courses__title">Tvoje kurzy</h1>
           {userCourses.map((userCourse) => (
             <Course key={userCourse.url} courseName={userCourse.name} />

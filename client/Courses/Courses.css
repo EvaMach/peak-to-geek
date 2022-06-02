@@ -3,11 +3,12 @@
 #courses__title {
   font-size: 3em;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 #community__title {
   font-size: 2em;
-  margin-top: 15%;
+  margin-top: 35%;
   margin-bottom: 0.2em;
   color: var(--main-turqoise);
 }
@@ -35,4 +36,108 @@
 .empty {
   height: 1em;
   margin-right: 1em;
+}
+
+#courses__modal {
+  top: 15em;
+}
+
+/* #your-courses__button {
+  width: 50%;
+  margin-left: 50%;
+  text-align: center;
+} */
+
+@media (min-width: 576px) {
+  .container__your-courses {
+    font-size: 0.8em;
+  }
+
+  #courses__title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+  }
+
+  #community__title {
+    font-size: 2em;
+    margin-top: 20%;
+    margin-bottom: 0.2em;
+  }
+  .container__your-courses button {
+    width: 40%;
+    margin-left: 60%;
+    text-align: center;
+  }
+  /* #your-courses__course-bar {
+    width: 90%;
+  }
+  #your-courses__button {
+    width: 40%;
+    margin-left: 50%;
+    text-align: center;
+  } */
+}
+
+@media (min-width: 768px) {
+  #courses__title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+  }
+
+  #community__title {
+    font-size: 1.5em;
+    margin-top: 10%;
+    margin-bottom: 0.2em;
+  }
+  .container__your-courses #your-courses__course-bar {
+    width: 80%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .container__your-courses button {
+    width: 30%;
+    margin-left: 50%;
+  }
+  /*  #your-courses__course-bar {
+   width: 80%;
+    margin-right: 0;
+    margin-left: 0; 
+    font-size: 0.6em;
+  }*/
+  /*#your-courses__button {
+    /* width: 30%;
+    margin-left: 50%; 
+    font-size: 0.6em;
+  }*/
+}
+
+@media (min-width: 992px) {
+  .main__your-courses {
+    margin-bottom: 5em;
+  }
+
+  #courses__title {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+  }
+
+  #community__title {
+    font-size: 2.5em;
+    margin-top: 5%;
+    margin-bottom: 0.2em;
+  }
+
+  .container__your-courses #your-courses__course-bar {
+    width: 70%;
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 1.5em;
+  }
+
+  .container__your-courses button {
+    width: 20%;
+    margin-left: 50%;
+  }
 }

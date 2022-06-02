@@ -3,6 +3,7 @@ import './Login.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import MainHeader from '../MainHeader/MainHeader.jsx';
+import { motion } from 'framer-motion';
 
 // document.body.style.backgroundColor = "url('img/login-page-41.svg')";
 // document.body.style.backgroundAttachment = 'fixed';
@@ -61,9 +62,14 @@ const Login = () => {
                 Zapamatovat si mě
               </span>
             </div>
-            <button type="submit" id="login__button">
+            <motion.button
+              type="submit"
+              id="login__button"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
               Přihlásit se
-            </button>
+            </motion.button>
           </form>
         </div>
       </main>

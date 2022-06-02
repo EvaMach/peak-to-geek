@@ -5,7 +5,7 @@ const FormModal = ({ closeModal, onAddCourse }) => {
   const [courseUrl, setCourseUrl] = useState('');
 
   return (
-    <div className="modal">
+    <div id="courses__modal" className="modal">
       <div className="modal__header">
         <h3>Přidat nový kurz</h3>{' '}
         <form

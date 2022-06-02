@@ -101,7 +101,7 @@ a {
 
 @media (min-width: 576px) {
   h1 {
-    font-size: 2.8em;
+    font-size: 2.5em;
   }
   h2 {
     font-size: 2em;
@@ -110,7 +110,7 @@ a {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
   h2 {
     font-size: 1.5em;

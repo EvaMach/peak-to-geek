@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import ModalForm from '../FormModal/ModalForm.jsx';
+import { motion } from 'framer-motion';
 
 const AddCourse = ({ onNewCourse }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
     <>
-      <div
+      <motion.button
+        whileHover={{ scale: 1.2 }}
+        whileTap={{ scale: 0.9 }}
         onClick={() => setOpenModal(true)}
-        className="course-bar actual-courses--course1"
+        id="your-courses__button"
+        // className="course-bar actual-courses--course1"
+        className="actual-courses__button"
       >
         <p>Přidat kurz</p>
-      </div>
+      </motion.button>
       {openModal && (
         <ModalForm onAddCourse={onNewCourse} closeModal={setOpenModal} />
       )}

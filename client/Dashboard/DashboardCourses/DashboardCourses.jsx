@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Course from '../../Courses/Course/Course';
 
 const DashboardCourses = ({ token }) => {
@@ -27,9 +28,13 @@ const DashboardCourses = ({ token }) => {
         ))}
       </div>
       <Link to="/courses">
-        <button className="actual-courses__button">
+        <motion.button
+          className="actual-courses__button"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.7 }}
+        >
           Zobrazit všechny kurzy
-        </button>
+        </motion.button>
       </Link>
     </div>
   );

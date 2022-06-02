@@ -2,7 +2,10 @@ import React from 'react';
 
 const Course = ({ courseName }) => {
   return (
-    <div className="course-bar actual-courses--course1">
+    <div
+      id="your-courses__course-bar"
+      className="course-bar actual-courses--course1"
+    >
       <p>{courseName}</p>
       <div className="course-bar__check">
         <img

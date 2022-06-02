@@ -19,7 +19,7 @@ const ChecklistModal = ({
   }, []);
 
   return (
-    <div className="modal">
+    <div id="tree__modal" className="modal">
       <div className="modal__header">
         <h3>{modalName}</h3>{' '}
         <button
