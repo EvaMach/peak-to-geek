@@ -1,42 +1,35 @@
-/* TREE  */
+/* -------------------- MOBILE FIRST -------------------- */
 
-/* #tree__title {
-  font-size: 4em;
-  margin-top: 3vw;
-  font-size: 2em;
-} */
+#tree__title {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+/* Tree */
 
 .tree__core {
   display: flex;
 }
 
 #tree__treetop {
-  font-size: 1em;
-  position: relative;
-  width: 30%;
-}
-
-.tree__treetop {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--main-turqoise);
+  color: var(--white);
   border-radius: 50%;
-  background-color: #2e9398;
+  width: 40%;
   aspect-ratio: 1 / 1;
   margin: 3% auto -2% auto;
+  position: relative;
   z-index: 1;
-  color: white;
-  font-size: 0.8em;
-  font-weight: 600;
-  padding: 0.3em;
-  text-align: center;
-  position: absolute;
-  bottom: 50%;
-  width: 50%;
 }
 
 .tree__trunk {
-  border-bottom: 100em solid #72164c;
+  border-bottom: 100em solid var(--main-pink);
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   width: 5em;
@@ -44,111 +37,53 @@
   position: relative;
 }
 
-/* Checklisty */
+/* Bushes */
 
-#tree__modal {
-  background-color: rgb(232, 232, 232);
-  padding: 2em;
-  border-radius: 2em;
-  position: absolute;
-  /* left: -5em; */
-  bottom: 7em;
-  z-index: 1;
-  font-size: 1em;
-  /* line-height: 2em; */
-}
-
-.leaves {
-  font-size: 0.7em;
-  line-height: 2em;
-  cursor: pointer;
+.bushes {
   display: flex;
-  flex-direction: column;
-  align-items: end;
-  word-break: break-word;
-  width: 52%;
+  justify-content: center;
 }
 
-.leaves--left {
-  align-items: start;
-}
-
-.tree__leaf-icon {
-  width: 2em;
-  margin-left: 0.3em;
-}
-
-/* .bushes {
+.bushes img {
   filter: invert(87%) sepia(10%) saturate(611%) hue-rotate(134deg)
     brightness(90%) contrast(88%);
-  width: 40em;
-} */
-
-/* RESPONZIVITA */
-
-/* @media (max-width: 368px) {
-  .tree__trunk {
-    border-bottom: 100em solid #72164c;
-    border-left: 1.5em solid transparent;
-    border-right: 1.5em solid transparent;
-    width: 5em;
-    margin: 0 auto;
-    position: relative;
-  }
-} */
-
-/* @media (min-width: 430px) {
-  .tree__trunk {
-    border-bottom: 150vh solid #72164c;
-  }
+  width: 20em;
+  margin-top: -7em;
 }
-@media (min-width: 530px) {
-  .tree__trunk {
-    border-bottom: 180vh solid #72164c;
-  }
-}
+
+/* RESPONSIVITY */
 
 @media (min-width: 576px) {
-  .tree__trunk {
-    border-bottom: 210vh solid #72164c;
+  #tree__title {
+    font-size: 2em;
   }
-}
-@media (min-width: 650px) {
-  .tree__trunk {
-    border-bottom: 240vh solid #72164c;
-  }
-}
-@media (min-width: 700px) {
-  .tree__trunk {
-    border-bottom: 270vh solid #72164c;
-  }
-} */
 
-/* @media (min-width: 768px) {
-  /* #tree__title {
-    margin-top: 0.5em;
-  } */
-/* 
-  .tree__trunk {
-    border-bottom: 100em solid #72164c;
-  } */
-/* 
-@media (min-width: 890px) {
-  .tree__trunk {
-    border-bottom: 110em solid #72164c;
+  #tree__treetop {
+    width: 35%;
   }
-} */
+}
+
+@media (min-width: 768px) {
+  #tree__title {
+    font-size: 1.5em;
+    margin-top: 0.5em;
+  }
+
+  #tree__treetop {
+    font-size: 0.8em;
+    width: 30%;
+  }
+}
 
 @media (min-width: 992px) {
   #tree__title {
     font-size: 4em;
   }
 
+  /* Tree */
+
   #tree__treetop {
     font-size: 2em;
-  }
-  .tree__treetop {
-    font-size: 1.5em;
   }
 
   .tree__trunk {
@@ -158,8 +93,11 @@
     width: 20em;
   }
 
-  .leaves {
-    font-size: 1.2em;
+  /* Bushes */
+
+  .bushes img {
+    width: 65em;
+    margin-top: -20em;
   }
 }
 
@@ -167,19 +105,14 @@
   #tree__title {
     font-size: 3em;
   }
+
+  /* Tree */
+
   #tree__treetop {
     width: 25%;
   }
-  .tree__treetop {
-    width: 40%;
-  }
+
   .tree__trunk {
     border-bottom: 200em solid #72164c;
-  }
-
-  .leaves {
-    font-size: 1em;
-    line-height: 2.3em;
-    width: 66%;
   }
 }

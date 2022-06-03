@@ -4,8 +4,8 @@ import '../../style.css';
 
 const Evca = () => {
   return (
-    <div className="creator-container">
-      <div className="creator">
+    <div className="creator">
+      <div className="creator__container">
         <div className="creator__header">
           <h1 id="creator__title">O mně</h1>
           <img
@@ -14,14 +14,14 @@ const Evca = () => {
             alt="Evča Machová - profilová fotografie"
           />
         </div>
-        <p>Ahoj,</p>
-        <p>
+        <p className="creator__text">Ahoj,</p>
+        <p className="creator__text">
           já jsem Evča Machová. Už z dálky mě asi poznáte podle poměrně vysoké
           postavy a širokého úsměvu. Původem lingvistika a nadšenkyně do IT už
           nějakou dobu, ale až s Digitální akademií jsem programování i změnu
           oboru vzala opravdu seriózně.💪
         </p>
-        <p>
+        <p className="creator__text">
           Momentálně pracuju jako tester a UX/UI designérka, ale doufám, že už
           se brzy přesunu na pozici FE vývojářky. Javascript mě nadchnul a
           připadá mi, že jsem se konečně našla. Už se těším, až rozjedu nějaké

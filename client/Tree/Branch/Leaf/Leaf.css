@@ -1,0 +1,59 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+.leaves {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 0.6em;
+  line-height: 2em;
+  word-break: break-word;
+  width: 52%;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+.leaves--left {
+  align-items: start;
+}
+
+.tree__leaf-icon {
+  width: 2em;
+  margin-left: 0.3em;
+}
+
+/* RESPONSIVITY */
+
+@media (min-width: 576px) {
+  .leaves {
+    font-size: 0.6em;
+  }
+}
+
+@media (min-width: 768px) {
+  .leaves {
+    font-size: 0.5em;
+    margin-bottom: 4em;
+    margin-right: 2em;
+  }
+
+  .leaves--left {
+    align-items: start;
+    margin-left: 2em;
+    margin-right: -1em;
+  }
+}
+
+@media (min-width: 992px) {
+  .leaves {
+    font-size: 1.3em;
+    margin-bottom: 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .leaves {
+    font-size: 1em;
+    line-height: 2.3em;
+    width: 66%;
+  }
+}

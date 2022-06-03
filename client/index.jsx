@@ -25,6 +25,7 @@ createRoot(document.querySelector('#app')).render(
       <Route path="/" element={<Home />} />
       <Route path="info" element={<Info />}>
         <Route path="/info" element={<About />} />
+        <Route exact path="/info/about" element={<About />} />
         <Route path="/info/nelca" element={<Nelca />} />
         <Route path="/info/evca" element={<Evca />} />
       </Route>

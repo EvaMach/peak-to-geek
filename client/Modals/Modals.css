@@ -1,0 +1,43 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+/* In common */
+
+.modal {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__header button {
+  border: none;
+  padding: 3px;
+  cursor: pointer;
+  background: none;
+}
+
+/* Tree */
+
+#tree__modal {
+  font-size: 1em;
+  background-color: var(--light-grey);
+  border-radius: 2em;
+  padding: 2em;
+  position: absolute;
+  /* left: -5em; */
+  bottom: 7em;
+  z-index: 1;
+  /* line-height: 2em; */
+}
+
+/* Courses */
+
+#courses__modal {
+  top: 15em;
+}

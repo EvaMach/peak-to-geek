@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import '../style-responsivity.css';
 import './Dashboard.css';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
@@ -33,7 +32,7 @@ const Dashboard = () => {
       <div className="container__topbar">
         <NavigationHeader />
       </div>
-      <Outlet />
+      {/* <Outlet /> */}
       <div className="container">
         <main id="dashboard__core">
           <div className="dashboard__left-side">

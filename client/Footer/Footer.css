@@ -1,10 +1,11 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
 #footer {
   height: 50px;
-  /* background-color: #a4cbcd; */
-  justify-content: space-between;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 5% 5% 2% 5%;
+  padding: 7% 5% 2% 5%;
   font-size: 0.5em;
 }
 
@@ -15,27 +16,39 @@
   gap: 3em;
 }
 
+/* RESPONSIVITY */
+
+@media (max-width: 368px) {
+  #footer {
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    gap: 2em;
+  }
+  .footer__contacts {
+    gap: 1em;
+  }
+}
+
 @media (min-width: 576px) {
   #footer {
-    font-size: 0.8em;
+    font-size: 0.7em;
+    padding-top: 10%;
   }
 }
 @media (min-width: 768px) {
   #footer {
-    padding-top: 8em;
-    /* padding-bottom: 0;
-    margin-bottom: 0; */
+    padding-top: 8%;
+    padding-bottom: 5%;
   }
 }
 @media (min-width: 992px) {
   #footer {
-    padding-top: 1em;
-    /* padding-bottom: 0;
-    margin-bottom: 0; */
+    padding-top: 5%;
   }
 }
 @media (min-width: 1200px) {
   #footer {
     font-size: 0.8em;
+    padding-bottom: 2%;
   }
 }

@@ -1,13 +1,12 @@
 import React from 'react';
 import '../Info.css';
-import '../../style.css';
 
 const About = () => {
   return (
     <>
       <section>
         <h2>O projektu</h2>
-        <p>
+        <p className="about-project__text">
           Peak to geek je motivační IT platforma, zaměřená na znalostní a
           kariérní rozvoj v oblasti UX a UI designu. Základem platormy je
           unikátní uživatelský profil s dashboardem, který mapuje postup
@@ -18,7 +17,7 @@ const About = () => {
       </section>
       <section>
         <h2>Jak nápad vznikl?</h2>
-        <p>
+        <p className="about-project__text">
           Na tématu jsme se shodly celkem rychle. Obě nás to táhne k UX a UI
           designu a zároveň jsme obě přesně cílovou skupinou naší platformy -
           nadšenkyně do IT, které sledují několik online kurzů na webech typu
@@ -28,7 +27,7 @@ const About = () => {
           nemluvě.
         </p>
         <br />
-        <p>
+        <p className="about-project__text">
           Platforma, kde by uživatel získával každodenní motivaci, měl přehled o
           svých kurzech a věděl, co všechno se potřebuje v daném oboru naučit,
           nám přišla jako skvělý projekt, který budeme samy hojně používat.
@@ -36,13 +35,13 @@ const About = () => {
       </section>
       <section>
         <h2>Fáze projektu</h2>
-        <p>
+        <p className="about-project__text">
           Téma našeho projektu vzniklo poměrně rychle. Pak následovalo několik
           schůzek a callů, kde jsme si utřídily, jak vlastně chceme, aby projekt
           vypadal.
         </p>
         <h3>Rozvržení obsahu v Miru</h3>
-        <p>
+        <p className="about-project__text">
           Miro bylo naším základem, kde jsme si rozvrhly, jaký obsah by
           platforma mohla mít a na kolik samostatných stránek by se to vlastně
           vešlo. Naše plány byly zpočátku samozřejmě velké, takže platforma měla
@@ -50,18 +49,18 @@ const About = () => {
           a ubíraly a ubíraly... Aktuálně se v Miru nachází především přehled
           obsahu, který na stránce bude.
         </p>
-        <figure>
+        <figure className="about-project__phases">
           <img
-            className="phases-pic"
+            className="phases__picture"
             src={require('../img/miro.png')}
-            alt="Miro screenshot"
+            alt="Fáze vývoje projektu v Miru - screenshot"
           />
-          <figcaption>
+          <figcaption className="phases__picture--caption">
             Rozvržení stránek, obsahu a návrh stromu v Miru
           </figcaption>
         </figure>
         <h3>Návrhy ve Figmě</h3>
-        <p>
+        <p className="about-project__text">
           Brzy po vyjasnění obsahu jsme začaly pracovat na návrzích ve Figmě.
           Časem se postupně měnily, ale hlavní design se víceméně dodnes drží
           prvního návrhu. Už tehdy v počátcích jsme se shodly, že ústředním
@@ -70,20 +69,24 @@ const About = () => {
           motivovat a poleze s ním nahoru. Ve finální verzi návrhů jsme vybraly
           font a barvy, které v projektu využijeme.
         </p>
-        <figure>
+        <figure className="about-project__phases">
           <img
-            className="phases-pic"
+            className="phases__picture"
             src={require('../img/figma.png')}
-            alt="Figma screenshot"
+            alt="Fáze vývoje projektu ve Figmě - screenshot"
           />
-          <figcaption>Návrh vzhledu stránek, výběr barev a fontů</figcaption>
+          <figcaption className="phases__picture--caption">
+            Návrh vzhledu stránek, výběr barev a fontů
+          </figcaption>
         </figure>
         <h3>Programování</h3>
-        <p>Aktuální a nejnáročnějí fáze. Držte nám palce!</p>
+        <p className="about-project__text">
+          Aktuální a nejnáročnějí fáze. Držte nám palce! 🤞🏼
+        </p>
       </section>
       <section>
         <h2>Plány do budoucna</h2>
-        <p>
+        <p className="about-project__text">
           Jsme holky motivované, takže samozřejmě máme velké plány do budoucna!
           Aktuální cíle? Vytvořit kromě přihlašování i registraci, přidat kromě
           UX/UI designu i další IT obory, rozšířit uživatelský profil na

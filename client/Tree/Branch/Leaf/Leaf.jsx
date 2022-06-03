@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
+import './Leaf.css';
+import '../../../Modals/Modals.css';
 
 const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -41,7 +43,7 @@ const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
                 ? require('./img/leaf__done--left.svg')
                 : require('./img/leaf__black.svg')
             }
-            alt="lísteček"
+            alt="Lísteček na stromě"
           />
           {initialLeaf.name}
         </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Tree.css';
-import '../style.css';
 import Branch from './Branch/Branch.jsx';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import Footer from '../Footer/Footer.jsx';
@@ -54,6 +53,9 @@ const Tree = () => {
                   ))}
                 </div>
               </div>
+            </div>
+            <div className="bushes">
+              <img src={require('./img/bushes3.svg')} alt="Křoví" />
             </div>
           </div>
           {/* <div ref={activeBranch}></div> */}

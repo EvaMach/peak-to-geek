@@ -1,16 +1,16 @@
-/* LOGIN */
+/* -------------------- MOBILE FIRST -------------------- */
 
-.container__login {
-  background: url(img/login-page-41.svg) no-repeat fixed;
+.login__container {
+  background: url(img/login-page__background.svg) no-repeat fixed;
   background-size: cover;
   min-height: 45em;
-  height: 50em;
+  height: 55em;
   margin: 0;
   overflow-y: hidden;
 }
 
 #login__core {
-  padding-top: 40%;
+  padding-top: 50%;
 }
 
 #login__title {
@@ -21,8 +21,8 @@
 #login__form {
   display: flex;
   flex-direction: column;
-  margin: 2% auto;
-  max-width: 50%;
+  margin: 8% auto;
+  max-width: 60%;
 }
 
 .login__field {
@@ -35,60 +35,69 @@
 .login__remember-me {
   display: flex;
   align-items: center;
-}
-
-.login__remember-me--text {
-  font-size: 80%;
-  margin-left: 1em;
+  gap: 1em;
+  font-size: 0.8em;
 }
 
 #login__button {
   font-weight: 600;
-  background-color: #72164c;
-  border: 1px solid #72164c;
+  background-color: var(--main-pink);
+  border: 1px solid var(--main-pink);
   border-radius: 1em;
-  color: white;
-  padding: 0.8rem;
+  color: var(--white);
   width: 100%;
-  margin-top: 1em;
+  padding: 0.8em;
+  margin-top: 2em;
 }
 
 #login__button:hover {
   font-weight: 600;
   cursor: pointer;
-  background-color: #dbbcc2;
-  border: 1px solid #dbbcc2;
-  color: #000000;
+  background-color: var(--light-pink);
+  border: 1px solid var(--light-pink);
+  color: var(--black);
+}
+
+/* RESPONSIVITY */
+
+@media (max-width: 368px) {
+  #login__core {
+    padding-top: 60%;
+  }
 }
 
 @media (min-width: 576px) {
-  .container__login {
-    min-height: 45em;
-    max-height: 50em;
+  .login__container {
+    max-height: 60em;
   }
   #login__core {
+    padding-top: 40%;
+  }
+  #login__form {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 768px) {
+  #login__core {
     padding-top: 30%;
+  }
+
+  #login__form {
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 992px) {
+  #login__core {
+    padding-top: 25%;
   }
   #login__form {
     max-width: 30%;
   }
 }
 
-@media (min-width: 768px) {
-  #login__core {
-    padding-top: 25%;
-  }
-}
-@media (min-width: 992px) {
-  #login__core {
-    padding-top: 20%;
-  }
-}
-@media (min-width: 1200px) {
-  .container__login {
-    min-height: 50em;
-    max-height: 60em;
-  }
+@media (min-width: 1400px) {
   #login__core {
     padding-top: 20%;
   }

@@ -18,7 +18,7 @@ const FollowUp = () => {
             <img
               className="leaves__leaf--inactive"
               src={require('../img/leaf__black.svg')}
-              alt="Lísteček"
+              alt="Černý lísteček pro dashboard"
             />
             <p>Návody a best practices</p>
           </div>
