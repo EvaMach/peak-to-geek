@@ -146,6 +146,10 @@
   align-items: end;
 }
 
+.leaves--left {
+  align-items: start;
+}
+
 .tree__leaf-icon {
   width: 2em;
   margin-left: 0.3em;

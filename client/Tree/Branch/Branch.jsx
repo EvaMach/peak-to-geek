@@ -73,7 +73,11 @@ const Branch = ({ initialBranch, token }) => {
       >
         <p>{branchUpdate.name}</p>&nbsp;&nbsp;
       </div>
-      <div className="leaves">
+      <div
+        className={
+          branchUpdate.id % 2 === 0 ? 'leaves' : ' leaves leaves--left'
+        }
+      >
         {branchUpdate.leaves.map((leaf) => (
           <Leaf
             key={leaf.name}
