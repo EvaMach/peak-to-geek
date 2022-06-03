@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Leaf from './Leaf/Leaf.jsx';
 import { motion } from 'framer-motion';
+import './Branch.css';
 
 const Branch = ({ initialBranch, token }) => {
   const [branchUpdate, setBranchUpdate] = useState(initialBranch);
