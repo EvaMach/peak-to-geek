@@ -46,22 +46,46 @@ server.get('/api/tree', (req, resp) => {
 
 server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
-  const { done } = req.body;
 
   const branch = tree.branches.find((i) => i.id === id);
   const leaves = branch.leaves;
   const leaf = leaves.find((i) => i.id === id2);
 
-  if (leaf === undefined) {
+  if (branch === undefined) {
     resp.status(404).send({
       status: 'error',
-      message: 'Checklist not found',
+      message: 'Branch not found',
     });
     return;
   }
+
+  if (leaf === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Leaf not found',
+    });
+    return;
+  }
+
   resp.send({
     status: 'success',
     results: leaf,
+  });
+});
+
+// USER INFO
+server.get('/api/user', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: user,
   });
 });
 
@@ -76,6 +100,14 @@ server.get('/api/user-branch/:id', (req, resp) => {
 
   if (user === undefined) {
     resp.sendStatus(403);
+    return;
+  }
+
+  if (branch === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Branch not found',
+    });
     return;
   }
 

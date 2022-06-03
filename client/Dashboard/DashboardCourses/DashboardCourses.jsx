@@ -7,7 +7,7 @@ const DashboardCourses = ({ token }) => {
   const [userCourses, setUserCourses] = useState([]);
 
   useEffect(() => {
-    fetch('/api/my-courses', {
+    fetch('/api/user-courses', {
       method: 'GET',
       headers: {
         Authorization: token,

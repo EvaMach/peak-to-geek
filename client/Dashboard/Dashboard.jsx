@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import '../style-responsivity.css';
 import './Dashboard.css';
 import '../style.css';
@@ -10,10 +10,24 @@ import Footer from '../Footer/Footer.jsx';
 import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+  const [userName, setUserName] = useState('');
   const token = window.localStorage.getItem('token');
   if (token === null) {
     window.location = '/login';
   }
+
+  useEffect(() => {
+    fetch('api/user', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setUserName(data.results.name);
+      });
+  }, []);
 
   return (
     <>
@@ -24,7 +38,7 @@ const Dashboard = () => {
       <div className="container">
         <main id="dashboard__core">
           <div className="dashboard__left-side">
-            <h1 id="dashboard__title">Ahoj Aničko!</h1>
+            <h1 id="dashboard__title">Ahoj {userName}!</h1>
             <Progress token={token} />
             <DashboardCourses token={token} />
           </div>
