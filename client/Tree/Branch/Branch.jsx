@@ -47,8 +47,8 @@ const Branch = ({ initialBranch, token }) => {
     <span
       className={
         branchUpdate.id % 2 === 0
-          ? `tree__branch--${branchUpdate.id} tree__branch--right`
-          : `tree__branch--${branchUpdate.id} tree__branch--left`
+          ? `tree__branch--${branchUpdate.id} tree__branch tree__branch--right`
+          : `tree__branch--${branchUpdate.id} tree__branch tree__branch--left`
       }
     >
       {/* {branchStateCheck() ? (

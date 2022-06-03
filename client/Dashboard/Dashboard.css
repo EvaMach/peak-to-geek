@@ -113,6 +113,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #72164c;
+  border: 1px solid rgba(78, 78, 78, 0.651);
   border-radius: 1em;
   padding: 0.7em 1em;
   color: #ffffff;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
 
-const Leaf = ({ initialLeaf, branchId, onChecked }) => {
+const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -16,7 +16,11 @@ const Leaf = ({ initialLeaf, branchId, onChecked }) => {
         />
       )}
       {branchId % 2 === 0 ? (
-        <div onClick={() => setOpenModal(true)}>
+        <div
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
           {initialLeaf.name}
           <img
             className="tree__leaf-icon"

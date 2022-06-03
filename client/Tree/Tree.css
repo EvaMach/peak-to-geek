@@ -12,13 +12,14 @@
 
 #tree__treetop {
   font-size: 1em;
+  position: relative;
+  width: 30%;
 }
 
 .tree__treetop {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
   border-radius: 50%;
   background-color: #2e9398;
   aspect-ratio: 1 / 1;
@@ -29,7 +30,9 @@
   font-weight: 600;
   padding: 0.3em;
   text-align: center;
-  position: relative;
+  position: absolute;
+  bottom: 50%;
+  width: 50%;
 }
 
 .tree__trunk {
@@ -41,29 +44,29 @@
   position: relative;
 }
 
+.tree__branch {
+  width: 43vw;
+  height: 10vmax;
+  margin: 10px auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-bottom: 2em solid #72164c;
+  border-top: 0em solid #72164c;
+}
+
 /* Pravá strana stromu */
 
 /* Větve + koruny - in common */
 
 .tree__branch--right {
-  border-bottom: 2em solid #72164c;
   border-right: 1em solid #72164c;
-  border-top: 0em solid #72164c;
   border-left: 0em solid #72164c;
-  width: 40vw;
-  height: 10vmax;
-  margin: 10px auto;
-  position: absolute;
   left: 0em;
-  display: flex;
-  justify-content: center;
-  align-items: end;
 }
 
 .tree__treetop--right {
-  width: 50%;
-  position: absolute;
-  bottom: 50%;
   left: 77%;
 }
 
@@ -87,24 +90,12 @@
 /* Větve + koruny - in common */
 
 .tree__branch--left {
-  border-bottom: 2em solid #72164c;
   border-left: 1em solid #72164c;
-  border-top: 0em solid #72164c;
   border-right: 0em solid #72164c;
-  width: 40vw;
-  height: 10vmax;
-  margin: 10px auto;
-  position: absolute;
   right: 0em;
-  display: flex;
-  justify-content: center;
-  align-items: end;
 }
 
 .tree__treetop--left {
-  width: 50%;
-  position: absolute;
-  bottom: 50%;
   right: 77%;
 }
 
@@ -130,20 +121,22 @@
   padding: 2em;
   border-radius: 2em;
   position: absolute;
-  left: -7em;
+  /* left: -5em; */
   bottom: 7em;
   z-index: 1;
-  font-size: 0.8em;
+  font-size: 1em;
   /* line-height: 2em; */
 }
 
 .leaves {
-  font-size: 0.5em;
+  font-size: 0.7em;
   line-height: 2em;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: end;
+  word-break: break-word;
+  width: 52%;
 }
 
 .leaves--left {
@@ -163,7 +156,7 @@
 
 /* RESPONZIVITA */
 
-@media (max-width: 368px) {
+/* @media (max-width: 368px) {
   .tree__trunk {
     border-bottom: 100em solid #72164c;
     border-left: 1.5em solid transparent;
@@ -172,7 +165,7 @@
     margin: 0 auto;
     position: relative;
   }
-}
+} */
 
 /* @media (min-width: 430px) {
   .tree__trunk {
@@ -231,10 +224,10 @@
   }
 
   #tree__treetop {
-    font-size: 1.5em;
+    font-size: 2em;
   }
   .tree__treetop {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .tree__trunk {

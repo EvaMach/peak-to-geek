@@ -6,7 +6,7 @@ export const tree = {
       leaves: [
         {
           id: '1',
-          name: 'Principy web vývoje',
+          name: 'Web vývoj',
           checkboxes: [
             {
               id: '108',
@@ -85,7 +85,7 @@ export const tree = {
       leaves: [
         {
           id: '1',
-          name: 'Druhy testování',
+          name: 'Druhy testů',
           checkboxes: [
             {
               id: '097',
@@ -141,7 +141,7 @@ export const tree = {
         },
         {
           id: '2',
-          name: 'Proces testování',
+          name: 'Proces',
           checkboxes: [
             {
               id: '087',
@@ -226,7 +226,7 @@ export const tree = {
       leaves: [
         {
           id: '1',
-          name: 'Wireframy: proces',
+          name: 'Wireframování',
           checkboxes: [
             {
               id: '076',
