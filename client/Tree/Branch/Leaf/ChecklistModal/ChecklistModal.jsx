@@ -30,15 +30,17 @@ const ChecklistModal = ({
           X
         </button>
       </div>
-      {checklistItems.map((item) => (
-        <ChecklistItem
-          key={item.name}
-          initialItem={item}
-          branchId={branchId}
-          leafId={leafId}
-          onCheck={onChecked}
-        />
-      ))}
+      <div className="checklists">
+        {checklistItems.map((item) => (
+          <ChecklistItem
+            key={item.name}
+            initialItem={item}
+            branchId={branchId}
+            leafId={leafId}
+            onCheck={onChecked}
+          />
+        ))}
+      </div>
     </div>
   );
 };

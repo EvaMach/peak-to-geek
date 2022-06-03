@@ -12,6 +12,22 @@
   margin-bottom: 2em;
 }
 
+.checklists {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.checkbox {
+  margin-right: 0.5em;
+}
+
 .leaves--left {
   align-items: start;
 }

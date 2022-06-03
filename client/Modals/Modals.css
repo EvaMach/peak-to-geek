@@ -34,8 +34,8 @@
   bottom: 7em;
   z-index: 1;
   /* line-height: 2em; */
+  width: 26em;
 }
-
 /* Courses */
 
 #courses__modal {

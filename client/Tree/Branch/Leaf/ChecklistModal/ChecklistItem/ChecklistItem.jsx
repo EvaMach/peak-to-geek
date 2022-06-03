@@ -4,8 +4,9 @@ const ChecklistItem = ({ initialItem, branchId, leafId, onCheck }) => {
   const [itemDone, setItemDone] = useState(initialItem.done);
 
   return (
-    <div>
+    <label className="checklist-item">
       <input
+        className="checkbox"
         onChange={(event) => {
           setItemDone(event.target.checked);
           onCheck(initialItem.id, branchId, leafId, itemDone);
@@ -14,7 +15,7 @@ const ChecklistItem = ({ initialItem, branchId, leafId, onCheck }) => {
         type="checkbox"
       />
       {initialItem.name}
-    </div>
+    </label>
   );
 };
 
