@@ -52,10 +52,27 @@
   border-radius: 2em;
   position: absolute;
   /* left: -5em; */
-  bottom: 7em;
+  /* bottom: 2em; */
   z-index: 1;
   font-size: 1em;
   /* line-height: 2em; */
+  width: 26em;
+}
+
+.checklists {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  line-height: 1.5em;
+}
+
+.checkbox {
+  margin-right: 0.5em;
 }
 
 .leaves {
