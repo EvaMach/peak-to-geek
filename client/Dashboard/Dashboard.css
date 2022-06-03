@@ -56,6 +56,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-pink);
+  border: 1px solid rgba(78, 78, 78, 0.651);
   border-radius: 1em;
   padding: 0.7em 1em;
   color: var(--white);

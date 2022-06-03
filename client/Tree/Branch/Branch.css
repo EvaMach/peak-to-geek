@@ -1,0 +1,218 @@
+.tree__treetop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #2e9398;
+  aspect-ratio: 1 / 1;
+  margin: 3% auto -2% auto;
+  z-index: 1;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 0.3em;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  width: 50%;
+}
+
+.tree__branch {
+  width: 43vw;
+  height: 10vmax;
+  margin: 10px auto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  border-bottom: 2em solid #72164c;
+  border-top: 0em solid #72164c;
+}
+
+/* Pravá strana stromu */
+
+/* Větve + koruny - in common */
+
+.tree__branch--right {
+  border-right: 1em solid #72164c;
+  border-left: 0em solid #72164c;
+  left: 0em;
+}
+
+.tree__treetop--right {
+  left: 77%;
+}
+
+/* Větve - individual */
+
+.tree__branch--8 {
+  margin-top: 7em;
+}
+.tree__branch--6 {
+  margin-top: 27em;
+}
+.tree__branch--4 {
+  margin-top: 47em;
+}
+.tree__branch--2 {
+  margin-top: 67em;
+}
+
+/* Levá strana stromu */
+
+/* Větve + koruny - in common */
+
+.tree__branch--left {
+  border-left: 1em solid #72164c;
+  border-right: 0em solid #72164c;
+  right: 0em;
+}
+
+.tree__treetop--left {
+  right: 77%;
+}
+
+/* Větve - individual */
+
+.tree__branch--7 {
+  margin-top: 17em;
+}
+.tree__branch--5 {
+  margin-top: 37em;
+}
+.tree__branch--3 {
+  margin-top: 57em;
+}
+.tree__branch--1 {
+  margin-top: 77em;
+}
+
+@media (min-width: 768px) {
+  .tree__branch--right {
+    border-bottom: 1.5em solid #72164c;
+  }
+
+  .tree__branch--left {
+    border-bottom: 1.5em solid #72164c;
+  }
+}
+
+@media (min-width: 992px) {
+  .tree__treetop {
+    font-size: 1.5em;
+  }
+  /* Pravá strana stromečku */
+  .tree__branch--right {
+    border-bottom: 4em solid #72164c;
+    border-right: 3em solid #72164c;
+    width: 37vmax;
+    height: 7vmax;
+  }
+
+  .tree__treetop--right {
+    width: 50%;
+    position: absolute;
+    bottom: 50%;
+    left: 77%;
+  }
+
+  /* Větve - individual */
+
+  .tree__branch--8 {
+    margin-top: 15em;
+  }
+  .tree__branch--6 {
+    margin-top: 75em;
+  }
+  .tree__branch--4 {
+    margin-top: 135em;
+  }
+  .tree__branch--2 {
+    margin-top: 195em;
+  }
+
+  /* Levá strana stromečku */
+
+  .tree__branch--left {
+    border-bottom: 4em solid #72164c;
+    border-left: 3em solid #72164c;
+    border-top: 0em solid #72164c;
+    border-right: 0em solid #72164c;
+    width: 37vmax;
+    height: 7vmax;
+  }
+
+  .tree__treetop--left {
+    width: 50%;
+    position: absolute;
+    bottom: 50%;
+    right: 77%;
+  }
+
+  /* Větve - individual */
+
+  .tree__branch--7 {
+    margin-top: 45em;
+  }
+  .tree__branch--5 {
+    margin-top: 105em;
+  }
+  .tree__branch--3 {
+    margin-top: 165em;
+  }
+  .tree__branch--1 {
+    margin-top: 225em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tree__treetop {
+    width: 40%;
+  }
+  .tree__treetop--right {
+    bottom: 50%;
+    left: 85%;
+  }
+  .tree__treetop--left {
+    bottom: 50%;
+    right: 85%;
+  }
+  .tree__branch--right {
+    border-bottom: 3em solid #72164c;
+    border-right: 2em solid #72164c;
+  }
+  .tree__branch--left {
+    border-bottom: 3em solid #72164c;
+    border-left: 2em solid #72164c;
+  }
+
+  /* Větve - individual (pravá strana) */
+
+  .tree__branch--8 {
+    margin-top: 10em;
+  }
+  .tree__branch--6 {
+    margin-top: 50em;
+  }
+  .tree__branch--4 {
+    margin-top: 90em;
+  }
+  .tree__branch--2 {
+    margin-top: 130em;
+  }
+
+  /* Větve - individual (levá strana) */
+
+  .tree__branch--7 {
+    margin-top: 30em;
+  }
+  .tree__branch--5 {
+    margin-top: 70em;
+  }
+  .tree__branch--3 {
+    margin-top: 110em;
+  }
+  .tree__branch--1 {
+    margin-top: 150em;
+  }
+}

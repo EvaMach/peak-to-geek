@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Leaf from './Leaf/Leaf.jsx';
 import { motion } from 'framer-motion';
+import './Branch.css';
 
 const Branch = ({ initialBranch, token }) => {
   const [branchUpdate, setBranchUpdate] = useState(initialBranch);
@@ -11,21 +12,21 @@ const Branch = ({ initialBranch, token }) => {
       checkboxes.every((checkbox) => checkbox.done === true),
     );
 
-  const handleCheck = (itemId, branchId, leafId, itemDone) => {
-    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`, {
-      method: 'POST',
+  useEffect(() => {
+    fetch(`/api/user-branch/${initialBranch.id}`, {
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        Authorization: token,
       },
-      body: JSON.stringify({
-        done: !itemDone,
-      }),
     })
       .then((response) => response.json())
       .then((data) => {
         setBranchUpdate(data.results);
       });
-    fetch('api/my-tree/update', {
+  }, []);
+
+  const handleCheck = (itemId, branchId, leafId) => {
+    fetch('api/user-tree/update', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -36,18 +37,22 @@ const Branch = ({ initialBranch, token }) => {
         leafId,
         itemId,
       }),
-    });
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setBranchUpdate(data.results);
+      });
   };
 
   return (
     <span
       className={
         branchUpdate.id % 2 === 0
-          ? `tree__branch--${branchUpdate.id} tree__branch--right`
-          : `tree__branch--${branchUpdate.id} tree__branch--left`
+          ? `tree__branch--${branchUpdate.id} tree__branch tree__branch--right`
+          : `tree__branch--${branchUpdate.id} tree__branch tree__branch--left`
       }
     >
-      {branchStateCheck() ? (
+      {/* {branchStateCheck() ? (
         <motion.div
           initial={{ opacity: 0, y: [1000], x: [-50] }}
           animate={{
@@ -59,7 +64,7 @@ const Branch = ({ initialBranch, token }) => {
         >
           <img src={require('./img/sloth.svg')} alt="lenochodik" />
         </motion.div>
-      ) : null}
+      ) : null} */}
       <div
         className={
           branchUpdate.id % 2 === 0
@@ -69,7 +74,11 @@ const Branch = ({ initialBranch, token }) => {
       >
         <p>{branchUpdate.name}</p>&nbsp;&nbsp;
       </div>
-      <div className="leaves">
+      <div
+        className={
+          branchUpdate.id % 2 === 0 ? 'leaves' : ' leaves leaves--left'
+        }
+      >
         {branchUpdate.leaves.map((leaf) => (
           <Leaf
             key={leaf.name}

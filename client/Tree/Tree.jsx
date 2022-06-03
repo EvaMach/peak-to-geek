@@ -12,12 +12,12 @@ const Tree = () => {
   }
 
   const [branches, setBranches] = useState([]);
-  const activeBranch = useRef(null);
+  // const activeBranch = useRef(null);
 
   // const scrollToBottom = () => {
   //   activeBranch.current.scrollIntoView({ behavior: 'smooth' });
   // };
-
+  // //
   // useEffect(() => {
   //   scrollToBottom();
   // }, []);
@@ -56,7 +56,7 @@ const Tree = () => {
               </div>
             </div>
           </div>
-          <div ref={activeBranch}></div>
+          {/* <div ref={activeBranch}></div> */}
         </main>
       </div>
       <Footer />

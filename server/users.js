@@ -1,6 +1,6 @@
 export const users = [
   {
-    name: 'Evča',
+    name: 'Evčo',
     login: 'evcamach',
     password: 'corgi',
     token: '77217A25432A462D4A614E645267556A',
@@ -14,23 +14,40 @@ export const users = [
         url: 'test',
       },
     ],
-    tree: ['811', '812', '813', '621', '622'],
+    tree: ['81108', '81107', '81106', '621', '622'],
   },
   {
-    name: 'Nelča',
+    name: 'Nelčo',
     login: 'nelusa',
     password: 'lenochodik',
     token: '33417A25432A462D4A614E645267556A',
     courses: [
       {
-        name: 'UX',
-        url: 'test',
+        name: 'Foundations of User Experience (UX) Design',
+        url: 'https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design',
       },
       {
-        name: 'User testing',
-        url: 'test',
+        name: 'Conduct UX Research and Test Early Concepts',
+        url: 'https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design',
       },
     ],
     tree: ['411', '412', '413'],
+  },
+  {
+    name: 'Geeku',
+    login: 'geek',
+    password: 'guest',
+    token: '64450N25732A462D4A894E635267556A',
+    courses: [
+      {
+        name: 'Digitální akademie ',
+        url: 'https://www.czechitas.cz/tema/digitalni-akademie?gclid=Cj0KCQjw4uaUBhC8ARIsANUuDjVKF6pyBbPUQAbuR994uNyGeeUkKqQQushuavgh46Q8W7Z25LBfJAIaAg7uEALw_wcB',
+      },
+      {
+        name: 'Poznej tvorbu webu',
+        url: 'https://www.czechitas.cz/kurzy/poznej-tvorbu-webu',
+      },
+    ],
+    tree: [],
   },
 ];

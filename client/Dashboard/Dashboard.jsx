@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 // import '../style-responsivity.css';
 import './Dashboard.css';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
@@ -9,13 +9,14 @@ import Footer from '../Footer/Footer.jsx';
 import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+  const [userName, setUserName] = useState('');
   const token = window.localStorage.getItem('token');
   if (token === null) {
     window.location = '/login';
   }
 
   useEffect(() => {
-    fetch('./api/my-tree', {
+    fetch('api/user', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -23,23 +24,7 @@ const Dashboard = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        data.results.tree.forEach((item) => {
-          const branchId = item.slice(0, 1);
-          const leafId = item.slice(1, 2);
-          const itemId = item.slice(2);
-          fetch(
-            `/api/my-tree/branch/${branchId}/leaf/${leafId}/item/${itemId}`,
-            {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                done: true,
-              }),
-            },
-          );
-        });
+        setUserName(data.results.name);
       });
   }, []);
 
@@ -52,7 +37,7 @@ const Dashboard = () => {
       <div className="container">
         <main id="dashboard__core">
           <div className="dashboard__left-side">
-            <h1 id="dashboard__title">Ahoj Aničko!</h1>
+            <h1 id="dashboard__title">Ahoj {userName}!</h1>
             <Progress token={token} />
             <DashboardCourses token={token} />
           </div>
