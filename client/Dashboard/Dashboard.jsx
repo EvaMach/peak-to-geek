@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 // import '../style-responsivity.css';
 import './Dashboard.css';
-import '../style.css';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';

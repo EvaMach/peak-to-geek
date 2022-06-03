@@ -40,28 +40,69 @@ const NavigationHeader = () => {
         <ul
           id={!isOpened ? 'navigation__items' : 'navigation__items--hamburger'}
         >
-          {/* <li className="navigation__item">
-            <NavLink activeClassName="navigation__item--actual" to="/info">
-              Info
-            </NavLink>
-          </li> */}
-          {/* <li className="navigation__item navigation__item--actual">
+          <li className="navigation__item">
             <NavLink
               to="/info"
-              className={({ isActive }) => {
-                isActive
-                  ? 'navigation__item navigation__item--actual'
-                  : 'navigation__item';
-              }}
+              className={({ isActive }) =>
+                isActive ? 'navigation__item--actual' : ''
+              }
             >
               Info
             </NavLink>
-          </li> */}
+          </li>
 
-          <Link to="/info">
+          <li className="navigation__item">
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) =>
+                isActive ? 'navigation__item--actual' : ''
+              }
+            >
+              Dashboard
+            </NavLink>
+          </li>
+          <li className="navigation__item">
+            <NavLink
+              to="/tree"
+              className={({ isActive }) =>
+                isActive ? 'navigation__item--actual' : ''
+              }
+            >
+              Tvůj Geek strom
+            </NavLink>
+          </li>
+          <li className="navigation__item">
+            <NavLink
+              to="/courses"
+              className={({ isActive }) =>
+                isActive ? 'navigation__item--actual' : ''
+              }
+            >
+              Tvoje kurzy
+            </NavLink>
+          </li>
+
+          <li
+            onClick={() => localStorage.removeItem('token')}
+            className="navigation__item"
+          >
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive ? 'navigation__item--actual' : ''
+              }
+            >
+              <img
+                src={require('./img/icon__log-out.svg')}
+                alt="Ikona odhlášení"
+              />
+            </NavLink>
+          </li>
+
+          {/* <Link to="/info">
             <li className="navigation__item">Info</li>
-          </Link>
-          <Link to="/dashboard">
+          </Link> */}
+          {/* <Link to="/dashboard">
             <li className="navigation__item">Dashboard</li>
           </Link>
           <Link to="/tree">
@@ -80,7 +121,7 @@ const NavigationHeader = () => {
                 alt="Ikona odhlášení"
               />
             </li>
-          </Link>
+          </Link> */}
         </ul>
       </nav>
     </header>

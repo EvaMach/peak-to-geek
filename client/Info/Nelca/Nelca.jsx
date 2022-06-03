@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Info.scss';
+import '../Info.css';
 import '../../style.css';
 
 const Nelca = () => {

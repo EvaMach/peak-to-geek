@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Course from '../../Courses/Course/Course';
+import Course from '../../Courses/Course/Course.jsx';
 
 const DashboardCourses = ({ token }) => {
   const [userCourses, setUserCourses] = useState([]);

@@ -149,10 +149,10 @@ header {
     line-height: unset;
     font-size: unset;
     gap: 1em;
+    list-style: none;
   }
 
   .navigation__item {
-    list-style: none;
     font-size: 0.8em;
   }
 
@@ -173,8 +173,8 @@ header {
   }
 
   .navigation__item--actual {
-    color: #72164c;
-    border-bottom: 2px solid #72164c;
+    color: var(--alternative-pink);
+    border-bottom: 2px solid var(--main-pink);
   }
   .hamburger-react {
     display: none;

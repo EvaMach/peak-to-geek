@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Courses.css';
-import '../style.css';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import Course from './Course/Course.jsx';
 import AddCourse from './AddCourse/AddCourse.jsx';

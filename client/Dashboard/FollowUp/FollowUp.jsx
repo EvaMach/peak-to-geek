@@ -8,6 +8,9 @@ const FollowUp = () => {
         src={require('../img/sloth_own--colored.svg')}
         alt="Lenochod visící na stromě"
       />
+      <div className="dashboard__motivation">
+        Nikdo učený z nebe nespadl. To dáš!
+      </div>
       <div className="dashboard__follow-up">
         <div className="follow-up__leaves">
           <h3>Jaký lístek tě čeká?</h3>
@@ -22,11 +25,7 @@ const FollowUp = () => {
         </div>
 
         <div className="follow-up__tree">
-          <div className="follow-up__tree-branch--left">
-            <div className="dashboard__motivation">
-              Nikdo učený z nebe nespadl. To dáš!
-            </div>
-          </div>
+          <div className="follow-up__tree-branch--left"></div>
           <div className="follow-up__treetop--left"></div>
         </div>
       </div>
