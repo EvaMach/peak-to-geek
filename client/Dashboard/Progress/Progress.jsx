@@ -3,10 +3,11 @@ import { motion, useAnimation } from 'framer-motion';
 
 const Progress = ({ token }) => {
   const [userProgress, setUserProgress] = useState(0);
+  const [userDays, setUserDays] = useState(1);
   const controls = useAnimation();
 
   useEffect(() => {
-    fetch('./api/user-tree', {
+    fetch('./api/user', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -15,6 +16,7 @@ const Progress = ({ token }) => {
       .then((response) => response.json())
       .then((data) => {
         setUserProgress(data.results.tree.length);
+        setUserDays(data.results.day);
       });
   }, []);
 
@@ -36,7 +38,7 @@ const Progress = ({ token }) => {
             alt="Ikonka progress korunky"
           />
         </motion.div>
-        <p>Svůj strom pěstuješ už XY. den v řadě</p>
+        <p>Svůj strom pěstuješ už {userDays}. den v řadě</p>
       </div>
       <div className="dashboard__tree-progress">
         <div className="tree-progress__label">

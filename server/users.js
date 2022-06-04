@@ -2,6 +2,7 @@ export const users = [
   {
     name: 'Evčo',
     login: 'evcamach',
+    day: 3,
     password: 'corgi',
     token: '77217A25432A462D4A614E645267556A',
     courses: [
@@ -19,6 +20,7 @@ export const users = [
   {
     name: 'Nelčo',
     login: 'nelusa',
+    day: 5,
     password: 'lenochodik',
     token: '33417A25432A462D4A614E645267556A',
     courses: [
@@ -36,6 +38,7 @@ export const users = [
   {
     name: 'Geeku',
     login: 'geek',
+    day: 1,
     password: 'guest',
     token: '64450N25732A462D4A894E635267556A',
     courses: [
