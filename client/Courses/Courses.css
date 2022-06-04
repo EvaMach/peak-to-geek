@@ -68,6 +68,12 @@
 @media (min-width: 992px) {
   .container__your-courses {
     margin-bottom: 5%;
+    background: url(img/courses__background.svg) no-repeat fixed;
+    background-size: cover;
+    min-height: 45em;
+    height: 60vh;
+    margin: 0;
+    background-position: center;
   }
 
   #courses__title {
@@ -86,5 +92,12 @@
 
   #your-courses__button {
     width: 20%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container__your-courses {
+    background-position: right;
+    background-size: unset;
   }
 }

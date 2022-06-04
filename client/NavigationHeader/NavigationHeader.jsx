@@ -3,11 +3,13 @@ import './NavigationHeader.css';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavLink } from 'react-router-dom';
+import DarkMode from '../DarkMode';
 
 const NavigationHeader = () => {
   const [isOpened, setIsOpened] = useState(false);
   return (
     <header>
+      <DarkMode />
       <div id="logo" className="info__logo">
         <Link to="/dashboard">
           <img
