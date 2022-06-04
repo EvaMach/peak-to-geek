@@ -1,5 +1,17 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
+/* Tree */
+
+#tree__modal {
+  font-size: 1.1em;
+  background-color: var(--light-grey);
+  border-radius: 2em;
+  padding: 2em;
+  position: absolute;
+  z-index: 1;
+  width: 26em;
+}
+
 .leaves {
   display: flex;
   flex-direction: column;

@@ -21,18 +21,6 @@
   cursor: pointer;
   background: none;
 }
-
-/* Tree */
-
-#tree__modal {
-  font-size: 1.1em;
-  background-color: var(--light-grey);
-  border-radius: 2em;
-  padding: 2em;
-  position: absolute;
-  z-index: 1;
-  width: 26em;
-}
 /* Courses */
 
 #courses__modal {
