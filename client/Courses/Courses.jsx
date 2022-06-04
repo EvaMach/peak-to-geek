@@ -74,12 +74,20 @@ const Courses = () => {
         <main className="main__your-courses">
           <h1 id="courses__title">Tvoje kurzy</h1>
           {userCourses.map((userCourse) => (
-            <Course key={userCourse.url} courseName={userCourse.name} />
+            <Course
+              key={userCourse.url}
+              courseName={userCourse.name}
+              courseUrl={userCourse.url}
+            />
           ))}
           <AddCourse onNewCourse={handleAddCourse} />
           <h2 id="community__title">Kurzy komunity</h2>
           {courses.map((course) => (
-            <Course key={course.url} courseName={course.name} />
+            <Course
+              key={course.url}
+              courseName={course.name}
+              courseUrl={course.url}
+            />
           ))}
         </main>
       </div>
