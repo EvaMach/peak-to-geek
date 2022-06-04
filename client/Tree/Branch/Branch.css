@@ -12,6 +12,12 @@
   height: 10vmax;
   margin: 10px auto;
   position: absolute;
+  border-radius: 10px;
+}
+
+.tree__branch--active {
+  position: relative;
+  bottom: 20rem;
 }
 
 .tree__treetop {

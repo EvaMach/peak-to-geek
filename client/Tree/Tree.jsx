@@ -5,29 +5,36 @@ import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const Tree = () => {
+  const activeBranch = useRef(null);
   const token = window.localStorage.getItem('token');
   if (token === null) {
     window.location = '/login';
   }
 
   const [branches, setBranches] = useState([]);
-  // const activeBranch = useRef(null);
-
-  // const scrollToBottom = () => {
-  //   activeBranch.current.scrollIntoView({ behavior: 'smooth' });
-  // };
-  // //
-  // useEffect(() => {
-  //   scrollToBottom();
-  // }, []);
 
   useEffect(() => {
-    fetch('./api/tree')
+    fetch('./api/tree', {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
-        setBranches(data.results.branches.map((branch) => branch));
+        setBranches(data.results.map((branch) => branch));
       });
   }, []);
+
+  const scrollToBranch = () => {
+    activeBranch.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    if (branches.length > 0) {
+      scrollToBranch();
+    }
+  }, [branches]);
 
   return (
     <>
@@ -49,6 +56,7 @@ const Tree = () => {
                       key={branch.id}
                       initialBranch={branch}
                       token={token}
+                      activeBranchRef={activeBranch}
                     ></Branch>
                   ))}
                 </div>
@@ -58,7 +66,6 @@ const Tree = () => {
               <img src={require('./img/bushes3.svg')} alt="Křoví" />
             </div>
           </div>
-          {/* <div ref={activeBranch}></div> */}
         </main>
       </div>
       <Footer />

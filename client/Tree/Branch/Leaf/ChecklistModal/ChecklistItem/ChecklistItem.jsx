@@ -37,6 +37,7 @@ const ChecklistItem = ({ initialItem, branchId, leafId, onCheck }) => {
   return (
     <label className="checklist__item">
       <input
+        value={isChecked}
         onChange={(event) => {
           setIsChecked(event.target.checked);
           onCheck(initialItem.id, branchId, leafId, isChecked);
