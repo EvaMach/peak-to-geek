@@ -9,10 +9,14 @@ export const users = [
       {
         name: 'UI basics',
         url: 'test',
+        active: false,
+        id: '1',
       },
       {
         name: 'Figma basics',
         url: 'test',
+        active: false,
+        id: '2',
       },
     ],
     tree: ['81108', '81107', '81106', '621', '622'],
@@ -27,10 +31,12 @@ export const users = [
       {
         name: 'Foundations of User Experience (UX) Design',
         url: 'https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design',
+        active: false,
       },
       {
         name: 'Conduct UX Research and Test Early Concepts',
         url: 'https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design',
+        active: false,
       },
     ],
     tree: [
@@ -58,10 +64,12 @@ export const users = [
       {
         name: 'Digitální akademie ',
         url: 'https://www.czechitas.cz/tema/digitalni-akademie?gclid=Cj0KCQjw4uaUBhC8ARIsANUuDjVKF6pyBbPUQAbuR994uNyGeeUkKqQQushuavgh46Q8W7Z25LBfJAIaAg7uEALw_wcB',
+        active: false,
       },
       {
         name: 'Poznej tvorbu webu',
         url: 'https://www.czechitas.cz/kurzy/poznej-tvorbu-webu',
+        active: false,
       },
     ],
     tree: [],

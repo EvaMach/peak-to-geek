@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.course-bar--active {
+  background-color: var(--main-turqoise);
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {

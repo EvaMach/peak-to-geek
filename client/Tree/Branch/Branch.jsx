@@ -54,7 +54,7 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
                 opacity: 1,
                 y: [-1000, -40],
               }}
-              transition={{ duration: 3 }}
+              transition={{ duration: 1 }}
             >
               <img
                 className="tree__branch-sloth"

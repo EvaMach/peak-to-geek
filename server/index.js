@@ -201,7 +201,6 @@ server.post('/api/courses', (req, resp) => {
 
 server.get('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
-
   const user = users.find((u) => u.token === token);
 
   if (user === undefined) {
@@ -236,6 +235,44 @@ server.post('/api/user-courses', (req, resp) => {
       login: user.login,
       courses: user.courses,
     },
+  });
+});
+
+server.post('/api/course/:id', (req, resp) => {
+  const { id } = req.params;
+  const token = req.headers.authorization;
+  const { done } = req.body;
+  const user = users.find((u) => u.token === token);
+
+  const course = user.courses.find((i) => i.id === id);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  course.active = done;
+
+  resp.send({
+    status: 'success',
+    results: course,
+  });
+});
+
+server.get('/api/active-courses', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  const activeCourses = user.courses.filter((course) => course.active === true);
+
+  resp.send({
+    status: 'success',
+    results: activeCourses,
   });
 });
 

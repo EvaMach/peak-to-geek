@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Course = ({ courseName, courseUrl }) => {
+const Course = ({ courseName, token, courseId, courseActive }) => {
+  const [activeCourse, setActiveCourse] = useState(courseActive);
+
+  console.log(activeCourse);
+  console.log(courseId);
   return (
-    <a
-      href={courseUrl}
+    <div
+      onClick={() => {
+        setActiveCourse(!activeCourse);
+        fetch(`/api/course/${courseId}`, {
+          method: 'POST',
+          headers: {
+            Authorization: token,
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify({
+            done: !activeCourse,
+          }),
+        });
+      }}
       id="your-courses__course-bar"
-      className="course-bar course-bar__actual-courses"
+      className={
+        activeCourse
+          ? 'course-bar--active course-bar course-bar__actual-courses'
+          : 'course-bar course-bar__actual-courses'
+      }
     >
       <p>{courseName}</p>
-      <div className="course-bar__check">
-        <img
-          className="course__check-icon check-icon1"
-          src={require('../img/checkbox__tick--empty.svg')}
-          alt="Kontrola plnění kurzu"
-        />
-        <div className="course__study-day study-day1">PO</div>
-      </div>
-    </a>
+    </div>
   );
 };
 export default Course;

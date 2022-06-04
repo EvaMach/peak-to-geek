@@ -29,8 +29,8 @@ const Progress = ({ token }) => {
     <>
       <div className="dashboard__streak-update">
         <motion.div
-          animate={{ scale: [1, 1.5, 1], rotate: 360 }}
-          transition={{ duration: 2, delay: 0 }}
+          animate={{ scale: [0, 1.5, 1] }}
+          transition={{ duration: 0.7, delay: 0 }}
         >
           <img
             className="streak-update__crown-icon"

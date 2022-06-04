@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Course from '../../Courses/Course/Course.jsx';
+import DashboardCourse from './DashboardCourse/DashboardCourse.jsx';
 
 const DashboardCourses = ({ token }) => {
-  const [userCourses, setUserCourses] = useState([]);
+  const [activeCourses, setActiveCourses] = useState([]);
 
   useEffect(() => {
-    fetch('/api/user-courses', {
+    fetch('/api/active-courses', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -15,7 +15,7 @@ const DashboardCourses = ({ token }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setUserCourses(data.results.courses);
+        setActiveCourses(data.results);
       });
   }, []);
 
@@ -23,11 +23,11 @@ const DashboardCourses = ({ token }) => {
     <div className="dashboard__actual-courses">
       <h3 id="actual-courses__title">Tvoje aktuální kurzy</h3>
       <div className="actual-courses__info">
-        {userCourses.map((userCourse) => (
-          <Course
-            key={userCourse.name}
-            courseName={userCourse.name}
-            courseUrl={userCourse.url}
+        {activeCourses.map((activeCourse) => (
+          <DashboardCourse
+            key={activeCourse.name}
+            courseName={activeCourse.name}
+            courseUrl={activeCourse.url}
           />
         ))}
       </div>

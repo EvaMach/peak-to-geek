@@ -77,7 +77,9 @@ const Courses = () => {
             <Course
               key={userCourse.url}
               courseName={userCourse.name}
-              courseUrl={userCourse.url}
+              courseId={userCourse.id}
+              courseActive={userCourse.active}
+              token={token}
             />
           ))}
           <AddCourse onNewCourse={handleAddCourse} />
@@ -87,6 +89,7 @@ const Courses = () => {
               key={course.url}
               courseName={course.name}
               courseUrl={course.url}
+              token={token}
             />
           ))}
         </main>

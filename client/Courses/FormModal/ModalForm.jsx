@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './ModalForm.css';
+// import { Formik, Field, Form } from 'formik';
 
 const FormModal = ({ closeModal, onAddCourse }) => {
   const [courseName, setCourseName] = useState('');
