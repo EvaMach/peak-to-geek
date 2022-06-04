@@ -4,7 +4,7 @@
   background: url(img/homepage.svg) no-repeat fixed;
   background-size: 1000px;
   background-position-y: center;
-  height: 40em;
+  height: 48em;
 }
 
 .main-page__main {
@@ -104,8 +104,6 @@
     bottom: -3%;
     right: -10em;
   }
-
-  /* margin-left: -10em; */
 }
 
 @media (min-width: 992px) {
