@@ -43,6 +43,10 @@
     margin-top: 10%;
   }
 
+  #community__title {
+    font-size: 2em;
+  }
+
   .container__your-courses #your-courses__course-bar {
     width: 80%;
     margin-right: 0;

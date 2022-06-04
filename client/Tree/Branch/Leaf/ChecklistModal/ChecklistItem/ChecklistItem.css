@@ -1,3 +1,5 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
 input[type='checkbox'] {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -12,9 +14,24 @@ input[type='checkbox'] {
   display: inline-block;
   height: 20px;
   width: 20px;
+  min-width: 20px;
+  aspect-ratio: 1/1;
   background: #fff;
   border: 2px #ddd solid;
-  margin-right: 4px;
+  margin-right: 0.7em;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+.checklist__item {
+  display: flex;
+  align-items: center;
+  line-height: 1.5em;
   cursor: pointer;
 }
