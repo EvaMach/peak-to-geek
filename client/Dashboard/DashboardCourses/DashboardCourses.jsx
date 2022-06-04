@@ -28,6 +28,10 @@ const DashboardCourses = ({ token }) => {
             key={activeCourse.name}
             courseName={activeCourse.name}
             courseUrl={activeCourse.url}
+            courseId={activeCourse.id}
+            courseActive={activeCourse.active}
+            courseDone={activeCourse.done}
+            token={token}
           />
         ))}
       </div>

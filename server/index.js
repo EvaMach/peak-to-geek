@@ -241,7 +241,7 @@ server.post('/api/user-courses', (req, resp) => {
 server.post('/api/course/:id', (req, resp) => {
   const { id } = req.params;
   const token = req.headers.authorization;
-  const { done } = req.body;
+  const { active, done } = req.body;
   const user = users.find((u) => u.token === token);
 
   const course = user.courses.find((i) => i.id === id);
@@ -251,7 +251,8 @@ server.post('/api/course/:id', (req, resp) => {
     return;
   }
 
-  course.active = done;
+  course.active = active;
+  course.done = done;
 
   resp.send({
     status: 'success',

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 
-const Course = ({ courseName, token, courseId, courseActive }) => {
+const Course = ({ courseName, token, courseId, courseActive, courseDone }) => {
   const [activeCourse, setActiveCourse] = useState(courseActive);
 
-  console.log(activeCourse);
-  console.log(courseId);
   return (
     <div
       onClick={() => {
@@ -16,7 +14,8 @@ const Course = ({ courseName, token, courseId, courseActive }) => {
             'Content-type': 'application/json',
           },
           body: JSON.stringify({
-            done: !activeCourse,
+            active: !activeCourse,
+            done: courseDone,
           }),
         });
       }}

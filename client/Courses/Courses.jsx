@@ -79,6 +79,7 @@ const Courses = () => {
               courseName={userCourse.name}
               courseId={userCourse.id}
               courseActive={userCourse.active}
+              courseDone={userCourse.done}
               token={token}
             />
           ))}

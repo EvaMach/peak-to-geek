@@ -9,14 +9,16 @@ export const users = [
       {
         name: 'UI basics',
         url: 'test',
-        active: false,
+        active: true,
         id: '1',
+        done: false,
       },
       {
         name: 'Figma basics',
         url: 'test',
         active: false,
         id: '2',
+        done: false,
       },
     ],
     tree: ['81108', '81107', '81106', '621', '622'],
