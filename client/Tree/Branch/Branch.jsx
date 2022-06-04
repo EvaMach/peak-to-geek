@@ -31,7 +31,6 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
       });
   };
 
-  console.log('branchState', branchStateCheck());
   return (
     <span
       className={

@@ -66,6 +66,7 @@ const Tree = () => {
               <img src={require('./img/bushes3.svg')} alt="Křoví" />
             </div>
           </div>
+          <div ref={activeBranch}></div>
         </main>
       </div>
       <Footer />
