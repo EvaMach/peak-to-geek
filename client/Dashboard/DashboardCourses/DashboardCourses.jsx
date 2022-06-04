@@ -24,7 +24,11 @@ const DashboardCourses = ({ token }) => {
       <h3 id="actual-courses__title">Tvoje aktuální kurzy</h3>
       <div className="actual-courses__info">
         {userCourses.map((userCourse) => (
-          <Course key={userCourse.name} courseName={userCourse.name} />
+          <Course
+            key={userCourse.name}
+            courseName={userCourse.name}
+            courseUrl={userCourse.url}
+          />
         ))}
       </div>
       <Link to="/courses">

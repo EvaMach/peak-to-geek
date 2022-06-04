@@ -129,25 +129,6 @@ server.get('/api/user-branch/:id', (req, resp) => {
   });
 });
 
-server.get('/api/user-tree', (req, resp) => {
-  const token = req.headers.authorization;
-
-  const user = users.find((u) => u.token === token);
-
-  if (user === undefined) {
-    resp.sendStatus(403);
-    return;
-  }
-
-  resp.send({
-    status: 'success',
-    results: {
-      login: user.login,
-      tree: user.tree,
-    },
-  });
-});
-
 server.post('/api/user-tree/update', (req, resp) => {
   const { branchId, leafId, itemId } = req.body;
   const token = req.headers.authorization;

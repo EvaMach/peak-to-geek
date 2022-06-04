@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Course = ({ courseName }) => {
+const Course = ({ courseName, courseUrl }) => {
   return (
-    <div
+    <a
+      href={courseUrl}
       id="your-courses__course-bar"
       className="course-bar course-bar__actual-courses"
     >
@@ -15,7 +16,7 @@ const Course = ({ courseName }) => {
         />
         <div className="course__study-day study-day1">PO</div>
       </div>
-    </div>
+    </a>
   );
 };
 export default Course;
