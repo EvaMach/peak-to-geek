@@ -17,7 +17,13 @@
 
 .tree__branch--active {
   position: relative;
-  bottom: 20rem;
+  bottom: 40rem;
+}
+
+.tree__branch-sloth {
+  width: 8em;
+  position: absolute;
+  top: -9em;
 }
 
 .tree__treetop {
@@ -97,7 +103,16 @@
 
 /* RESPONSIVITY */
 
+@media (min-width: 576px) {
+  .tree__branch-sloth {
+    top: -10em;
+  }
+}
+
 @media (min-width: 768px) {
+  .tree__branch-sloth {
+    top: -11em;
+  }
   .tree__treetop {
     font-size: 0.7em;
   }
@@ -114,6 +129,11 @@
 @media (min-width: 992px) {
   .tree__treetop {
     font-size: 1.3em;
+  }
+
+  .tree__branch-sloth {
+    width: 12em;
+    top: -17em;
   }
 
   /* Right side */

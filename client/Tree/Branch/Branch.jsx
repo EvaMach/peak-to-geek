@@ -39,22 +39,6 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
           : `tree__branch--${branchUpdate.id} tree__branch tree__branch--left`
       }
     >
-      {branchStateCheck() ? (
-        <>
-          <motion.div
-            initial={{ opacity: 0, y: [1000], x: [-50] }}
-            animate={{
-              opacity: 1,
-              y: [0, -200],
-              x: [-50, 0, -50, 0, -50, 40, 100],
-            }}
-            transition={{ duration: 7 }}
-          >
-            <img src={require('./img/sloth.svg')} alt="lenochodik" />
-          </motion.div>
-          <div className="tree__branch--active" ref={activeBranchRef}></div>
-        </>
-      ) : null}
       <div
         className={
           branchUpdate.id % 2 === 0
@@ -62,6 +46,25 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
             : `tree__treetop tree__treetop--left`
         }
       >
+        {branchStateCheck() ? (
+          <>
+            <motion.div
+              initial={{ opacit: 0, y: [-1000] }}
+              animate={{
+                opacity: 1,
+                y: [-1000, -40],
+              }}
+              transition={{ duration: 3 }}
+            >
+              <img
+                className="tree__branch-sloth"
+                src={require('./img/tree-sloth.svg')}
+                alt="lenochodik"
+              />
+            </motion.div>
+            <div className="tree__branch--active" ref={activeBranchRef}></div>
+          </>
+        ) : null}
         <p>{branchUpdate.name}</p>
       </div>
       <div
