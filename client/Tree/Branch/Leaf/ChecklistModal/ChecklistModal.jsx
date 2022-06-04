@@ -21,7 +21,7 @@ const ChecklistModal = ({
   return (
     <div id="tree__modal" className="modal">
       <div className="modal__header">
-        <h3>{modalName}</h3>{' '}
+        <h3>{modalName}</h3>
         <button
           onClick={() => {
             closeModal(false);

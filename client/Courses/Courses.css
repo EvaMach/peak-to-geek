@@ -13,6 +13,10 @@
   color: var(--main-turqoise);
 }
 
+.main__your-courses {
+  position: relative;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
@@ -30,9 +34,7 @@
     margin-top: 20%;
   }
 
-  .container__your-courses button {
-    width: 40%;
-    margin-left: 60%;
+  #your-courses__button {
     text-align: center;
   }
 }
@@ -49,7 +51,7 @@
     margin-left: 0;
   }
 
-  .container__your-courses button {
+  #your-courses__button {
     width: 30%;
     margin-left: 50%;
   }
@@ -74,7 +76,7 @@
     font-size: 1.3em;
   }
 
-  .container__your-courses button {
+  #your-courses__button {
     width: 20%;
   }
 }
