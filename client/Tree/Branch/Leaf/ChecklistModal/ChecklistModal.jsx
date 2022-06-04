@@ -28,8 +28,8 @@ const ChecklistModal = ({
           }}
         >
           <img
-            className="modal__icon--close"
-            src={require('./img/modal__icon--close.svg')}
+            className="modal__simple-icon--close"
+            src={require('./img/modal__simple-icon--close.svg')}
             alt="Křížek pro zavírání modálu"
           />
         </button>

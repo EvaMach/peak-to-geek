@@ -9,7 +9,7 @@ const NavigationHeader = () => {
   return (
     <header>
       <div id="logo" className="info__logo">
-        <Link to="/">
+        <Link to="/dashboard">
           <img
             src={require('./img/logo_own--colored3.svg')}
             alt="Peak to Geek logo"
@@ -74,7 +74,7 @@ const NavigationHeader = () => {
             className="navigation__item"
           >
             <NavLink
-              to="/login"
+              to="/"
               className={({ isActive }) =>
                 isActive ? 'navigation__item--actual' : ''
               }

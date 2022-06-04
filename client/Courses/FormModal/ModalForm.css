@@ -23,6 +23,12 @@
   width: 70%;
 }
 
+.modal__icon--close {
+  width: 2em;
+  margin-top: -1em;
+  margin-right: -1em;
+}
+
 @media (min-width: 768px) {
   #courses__modal {
     width: 80%;

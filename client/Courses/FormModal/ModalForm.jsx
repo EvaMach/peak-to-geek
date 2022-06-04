@@ -15,7 +15,11 @@ const FormModal = ({ closeModal, onAddCourse }) => {
             closeModal(false);
           }}
         >
-          X
+          <img
+            className="modal__icon--close"
+            src={require('./img/modal__icon--close.svg')}
+            alt="Křížek pro zavírání modálu"
+          />
         </button>
       </div>
       <form
