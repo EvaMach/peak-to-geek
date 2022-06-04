@@ -17,6 +17,21 @@
   --light-grey: #e8e8e8;
   --black: #000000;
   --white: #ffffff;
+  --background-color: unset;
+}
+
+[data-theme='dark'] {
+  --main-turqoise: #a4cbcd;
+  --light-turqoise: #2e9398;
+  --main-pink: #dbbcc2;
+  --light-pink: #72164c;
+  --alternative-pink: #c48894;
+  --pink-old: #92475c;
+  --grey: #cfcfcf;
+  --light-grey: #e8e8e8;
+  --black: #ffffff;
+  --white: #000000;
+  --background-color: unset;
 }
 
 /* Responzivita */
@@ -44,6 +59,7 @@
 html,
 body {
   min-height: 100%;
+  background-color: var(--background-color);
 }
 
 main {
