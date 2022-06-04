@@ -22,7 +22,7 @@ const Progress = ({ token }) => {
 
   controls.start({
     width: `${userProgress}%`,
-    transition: { duration: 3 },
+    transition: { duration: 2 },
   });
 
   return (

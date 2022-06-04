@@ -18,6 +18,8 @@ const ChecklistModal = ({
       });
   }, []);
 
+  console.log(checklistItems);
+
   return (
     <div id="tree__modal" className="modal">
       <div className="modal__header">

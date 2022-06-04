@@ -35,10 +35,30 @@ server.post('/api/login', (req, resp) => {
 
 // STROM
 
+const userBranch = (branch, userIds) => ({
+  id: branch.id,
+  name: branch.name,
+  leaves: branch.leaves.map((leaf) => ({
+    id: leaf.id,
+    name: leaf.name,
+    checkboxes: leaf.checkboxes.map((checkboxItem) => ({
+      id: checkboxItem.id,
+      name: checkboxItem.name,
+      done: userIds.includes(checkboxItem.id),
+    })),
+  })),
+});
+
 server.get('/api/tree', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+  const userIds = user.tree.map((id) => id.slice(2));
+
+  const newTree = tree.branches.map((branch) => userBranch(branch, userIds));
+
   resp.send({
     status: 'success',
-    results: tree,
+    results: newTree,
   });
 });
 
