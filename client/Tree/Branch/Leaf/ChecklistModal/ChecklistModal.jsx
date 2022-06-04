@@ -30,7 +30,7 @@ const ChecklistModal = ({
           X
         </button>
       </div>
-      <div className="checklists">
+      <div className="checklist">
         {checklistItems.map((item) => (
           <ChecklistItem
             key={item.name}

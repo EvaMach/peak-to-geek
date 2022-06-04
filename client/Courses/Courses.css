@@ -13,11 +13,6 @@
   color: var(--main-turqoise);
 }
 
-.empty {
-  height: 1em;
-  margin-right: 1em;
-}
-
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
