@@ -268,18 +268,18 @@ server.post('/api/user-dashboard/course/:id', (req, resp) => {
   const { done } = req.body;
   const user = users.find((u) => u.token === token);
 
-  const course = user.courses.find((i) => i.id === id);
+  const dashboardCourse = user.dashboard.find((i) => i.id === id);
 
   if (user === undefined) {
     resp.sendStatus(403);
     return;
   }
 
-  course.done = done;
+  dashboardCourse.done = done;
 
   resp.send({
     status: 'success',
-    results: course,
+    results: dashboardCourse,
   });
 });
 
@@ -292,17 +292,18 @@ server.get('/api/user-dashboard', (req, resp) => {
     return;
   }
 
-  if (user.dashboard === undefined) {
-    user.dashboardDate = dayjs().startOf('week').format('DD.MM.YYYY');
+  if (
+    user.dashboard === undefined ||
+    dayjs().startOf('minute').format('HH.mm') !== user.dashboardDate
+  ) {
+    user.dashboardState = 'new';
+    user.dashboardDate = dayjs().startOf('minute').format('HH.mm');
     user.dashboard = user.courses
       .filter((course) => course.active === true)
       .map((course) => ({ done: false, ...course }));
   } else {
-    user.dashboard = user.courses
-      .filter((course) => course.active === true)
-      .map((course) => ({ done: false, ...course }));
+    user.dashboardState = 'same';
   }
-
   resp.send({
     status: 'success',
     results: user,

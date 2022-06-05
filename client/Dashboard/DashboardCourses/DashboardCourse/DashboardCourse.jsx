@@ -8,6 +8,7 @@ const DashboardCourse = ({
   courseDone,
 }) => {
   const [courseFinished, setCourseFinished] = useState(courseDone);
+  console.log(courseFinished);
   return (
     <div
       onClick={() => {
