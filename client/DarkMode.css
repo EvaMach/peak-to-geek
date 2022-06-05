@@ -1,15 +1,11 @@
-/* 1 */
-
 /* Custom Dark Mode Toggle Element */
 .toggle-theme-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 4px;
-}
-
-.toggle-theme-wrapper span {
-  font-size: 28px;
+  justify-content: end;
+  margin-bottom: -3em;
 }
 
 .toggle-theme {
@@ -50,7 +46,7 @@ input:checked + .slider:before {
 }
 
 input:checked + .slider {
-  background-color: cornflowerblue;
+  background-color: #92475c;
 }
 
 .slider.round {
@@ -59,4 +55,19 @@ input:checked + .slider {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Courses */
+
+#your-courses__course-bar {
+  color: var(--white);
+  background-color: var(--course-bar);
+}
+
+#your-courses__course-bar p {
+  color: var(--white);
+}
+
+.main__your-courses button {
+  color: var(--black);
 }
