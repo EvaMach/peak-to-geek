@@ -2,6 +2,9 @@ import express from 'express';
 import { tree } from './tree.js';
 import { courses } from './courses.js';
 import { users } from './users.js';
+import dayjs from 'dayjs';
+import 'dayjs/locale/cs.js';
+dayjs.locale('cs');
 
 const port = process.env.PORT ?? 2000;
 const server = express();
@@ -241,7 +244,7 @@ server.post('/api/user-courses', (req, resp) => {
 server.post('/api/course/:id', (req, resp) => {
   const { id } = req.params;
   const token = req.headers.authorization;
-  const { active, done } = req.body;
+  const { active } = req.body;
   const user = users.find((u) => u.token === token);
 
   const course = user.courses.find((i) => i.id === id);
@@ -252,6 +255,26 @@ server.post('/api/course/:id', (req, resp) => {
   }
 
   course.active = active;
+
+  resp.send({
+    status: 'success',
+    results: course,
+  });
+});
+
+server.post('/api/user-dashboard/course/:id', (req, resp) => {
+  const { id } = req.params;
+  const token = req.headers.authorization;
+  const { done } = req.body;
+  const user = users.find((u) => u.token === token);
+
+  const course = user.courses.find((i) => i.id === id);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
   course.done = done;
 
   resp.send({
@@ -260,7 +283,7 @@ server.post('/api/course/:id', (req, resp) => {
   });
 });
 
-server.get('/api/active-courses', (req, resp) => {
+server.get('/api/user-dashboard', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
 
@@ -269,11 +292,20 @@ server.get('/api/active-courses', (req, resp) => {
     return;
   }
 
-  const activeCourses = user.courses.filter((course) => course.active === true);
+  if (user.dashboard === undefined) {
+    user.dashboardDate = dayjs().startOf('week').format('DD.MM.YYYY');
+    user.dashboard = user.courses
+      .filter((course) => course.active === true)
+      .map((course) => ({ done: false, ...course }));
+  } else {
+    user.dashboard = user.courses
+      .filter((course) => course.active === true)
+      .map((course) => ({ done: false, ...course }));
+  }
 
   resp.send({
     status: 'success',
-    results: activeCourses,
+    results: user,
   });
 });
 

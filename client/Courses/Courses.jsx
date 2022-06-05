@@ -31,6 +31,8 @@ const Courses = () => {
       });
   }, []);
 
+  console.log(userCourses);
+
   const handleAddCourse = (courseName, courseUrl) => {
     fetch('api/user-courses', {
       method: 'POST',
@@ -79,7 +81,6 @@ const Courses = () => {
               courseName={userCourse.name}
               courseId={userCourse.id}
               courseActive={userCourse.active}
-              courseDone={userCourse.done}
               token={token}
             />
           ))}

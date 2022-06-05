@@ -12,8 +12,7 @@ const DashboardCourse = ({
     <div
       onClick={() => {
         setCourseFinished(!courseFinished);
-        console.log(courseActive);
-        fetch(`/api/course/${courseId}`, {
+        fetch(`/api/user-dashboard/course/${courseId}`, {
           method: 'POST',
           headers: {
             Authorization: token,
@@ -21,7 +20,6 @@ const DashboardCourse = ({
           },
           body: JSON.stringify({
             done: !courseFinished,
-            active: courseActive,
           }),
         });
       }}

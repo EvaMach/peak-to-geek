@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import '../Courses.css';
 
-const Course = ({ courseName, token, courseId, courseActive, courseDone }) => {
+const Course = ({ courseName, token, courseId, courseActive }) => {
   const [activeCourse, setActiveCourse] = useState(courseActive);
 
   return (
@@ -15,7 +16,6 @@ const Course = ({ courseName, token, courseId, courseActive, courseDone }) => {
           },
           body: JSON.stringify({
             active: !activeCourse,
-            done: courseDone,
           }),
         });
       }}
