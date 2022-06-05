@@ -59,15 +59,6 @@ input:checked + .slider {
 
 /* Courses */
 
-#your-courses__course-bar {
-  color: var(--white);
-  background-color: var(--course-bar);
-}
-
-#your-courses__course-bar p {
-  color: var(--white);
-}
-
 .main__your-courses button {
   color: var(--black);
 }

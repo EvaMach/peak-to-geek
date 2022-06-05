@@ -2,16 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import DashboardCourse from './DashboardCourse/DashboardCourse.jsx';
-import dayjs from 'dayjs';
-import dayscs from 'dayjs/locale/cs';
-dayjs.locale('cs');
 
 const DashboardCourses = ({ token }) => {
   const [activeCourses, setActiveCourses] = useState([]);
-  console.log(dayjs().startOf('week'));
 
   useEffect(() => {
-    fetch('/api/active-courses', {
+    fetch('/api/user-dashboard', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -19,7 +15,7 @@ const DashboardCourses = ({ token }) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setActiveCourses(data.results);
+        setActiveCourses(data.results.dashboard);
       });
   }, []);
 
