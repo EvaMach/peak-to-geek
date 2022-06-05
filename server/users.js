@@ -29,11 +29,13 @@ export const users = [
     token: '33417A25432A462D4A614E645267556A',
     courses: [
       {
+        id: '1',
         name: 'Foundations of User Experience (UX) Design',
         url: 'https://www.coursera.org/learn/foundations-user-experience-design?specialization=google-ux-design',
         active: false,
       },
       {
+        id: '2',
         name: 'Conduct UX Research and Test Early Concepts',
         url: 'https://www.coursera.org/learn/conduct-ux-research?specialization=google-ux-design',
         active: false,
