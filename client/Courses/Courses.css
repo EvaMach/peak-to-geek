@@ -21,6 +21,15 @@
   background-color: var(--main-turqoise);
 }
 
+button.your-courses__add-dashboard-btn {
+  border: 1px var(--light-pink) solid;
+  background: none;
+  color: white;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {

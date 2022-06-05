@@ -16,7 +16,7 @@ const AddCourse = ({ onNewCourse }) => {
         // className="course-bar actual-courses--course1"
         className="actual-courses__button"
       >
-        <p>Přidat kurz</p>
+        <p>Přidat nový kurz</p>
       </motion.button>
       {openModal && (
         <ModalForm onAddCourse={onNewCourse} closeModal={setOpenModal} />
