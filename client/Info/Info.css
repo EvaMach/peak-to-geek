@@ -235,7 +235,7 @@
 
   .about-project__tree {
     display: block;
-    max-width: 50%;
+    max-width: 500px;
     position: fixed;
     left: 70%;
     bottom: 0;
@@ -260,13 +260,13 @@
   /* Tree */
 
   .about-project__tree {
-    max-width: 30%;
+    /* max-width: 30%; */
     left: 60%;
   }
 }
 
 @media (min-width: 1700px) {
   .about-project__container {
-    width: 40%;
+    width: 60%;
   }
 }
