@@ -75,7 +75,7 @@
   padding-bottom: 0.5em;
   text-decoration: underline var(--main-turqoise) 2px;
   font-weight: 600;
-  color: var(--about-h3);
+  color: var(--h3);
 }
 
 .about-project__text {
@@ -239,7 +239,7 @@
     position: fixed;
     left: 70%;
     bottom: 0;
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
   }
 
@@ -267,6 +267,6 @@
 
 @media (min-width: 1700px) {
   .about-project__container {
-    width: 60%;
+    width: 50%;
   }
 }

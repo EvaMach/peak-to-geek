@@ -49,12 +49,17 @@
   .leaves {
     font-size: 0.6em;
   }
+  .tree__leaf-icon {
+    width: 2em;
+    margin-left: 0.5em;
+    margin-right: 0.3em;
+  }
 }
 
 @media (min-width: 768px) {
   .leaves {
-    font-size: 0.5em;
-    margin-bottom: 4em;
+    font-size: 0.6em;
+    margin-bottom: 3em;
     margin-right: 2em;
   }
 
@@ -67,15 +72,16 @@
 
 @media (min-width: 992px) {
   .leaves {
-    font-size: 1.3em;
-    margin-bottom: 3em;
+    font-size: 1.5em;
+    margin-bottom: 2em;
   }
 }
 
 @media (min-width: 1200px) {
   .leaves {
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 2.3em;
     width: 66%;
+    margin-bottom: 1em;
   }
 }

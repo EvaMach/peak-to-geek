@@ -20,10 +20,10 @@
   bottom: 40rem;
 }
 
-.tree__branch-sloth {
-  width: 8em;
+.tree__branch--sloth {
+  width: 7em;
   position: absolute;
-  top: -9em;
+  top: -8em;
 }
 
 .tree__treetop {
@@ -33,8 +33,6 @@
   font-size: 0.8em;
   font-weight: 600;
   text-align: center;
-  background-color: var(--main-turqoise);
-  color: var(--white);
   border-radius: 50%;
   width: 50%;
   aspect-ratio: 1 / 1;
@@ -104,36 +102,41 @@
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
-  .tree__branch-sloth {
-    top: -10em;
+  .tree__branch--sloth {
+    top: -7em;
+    width: 6em;
+    left: 0.5em;
   }
 }
 
 @media (min-width: 768px) {
-  .tree__branch-sloth {
-    top: -11em;
+  .tree__branch--sloth {
+    top: -9em;
+    width: 7em;
+    left: 0.9em;
   }
   .tree__treetop {
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .tree__branch--right {
-    border-bottom: 1.5em solid var(--main-pink);
+    border-bottom: 1.5em solid var(--tree);
   }
 
   .tree__branch--left {
-    border-bottom: 1.5em solid var(--main-pink);
+    border-bottom: 1.5em solid var(--tree);
   }
 }
 
 @media (min-width: 992px) {
-  .tree__treetop {
-    font-size: 1.3em;
+  .tree__branch--sloth {
+    width: 10em;
+    top: -13em;
+    left: 0.6em;
   }
 
-  .tree__branch-sloth {
-    width: 12em;
-    top: -17em;
+  .tree__treetop {
+    font-size: 1.3em;
   }
 
   /* Right side */
@@ -141,8 +144,8 @@
   /* In common */
 
   .tree__branch--right {
-    border-bottom: 4em solid var(--main-pink);
-    border-right: 3em solid var(--main-pink);
+    border-bottom: 4em solid var(--tree);
+    border-right: 3em solid var(--tree);
     width: 37vmax;
     height: 7vmax;
   }
@@ -167,8 +170,8 @@
   /* In common */
 
   .tree__branch--left {
-    border-bottom: 4em solid var(--main-pink);
-    border-left: 3em solid var(--main-pink);
+    border-bottom: 4em solid var(--tree);
+    border-left: 3em solid var(--tree);
     width: 37vmax;
     height: 7vmax;
   }
@@ -200,8 +203,8 @@
   /* In common */
 
   .tree__branch--right {
-    border-bottom: 3em solid var(--main-pink);
-    border-right: 2em solid var(--main-pink);
+    border-bottom: 3em solid var(--tree);
+    border-right: 2em solid var(--tree);
   }
 
   .tree__treetop--right {
@@ -228,8 +231,8 @@
   /* In common */
 
   .tree__branch--left {
-    border-bottom: 3em solid var(--main-pink);
-    border-left: 2em solid var(--main-pink);
+    border-bottom: 3em solid var(--tree);
+    border-left: 2em solid var(--tree);
   }
 
   .tree__treetop--left {

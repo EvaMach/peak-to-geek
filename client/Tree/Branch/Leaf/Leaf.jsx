@@ -32,7 +32,7 @@ const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal, token }) => {
                 ? require('./img/leaf__done.svg')
                 : require('./img/leaf__black.svg')
             }
-            alt="lísteček"
+            alt="Lísteček na stromě"
           />
         </div>
       ) : (

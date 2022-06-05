@@ -71,33 +71,57 @@ input:checked + .slider {
   --background-color: unset;
   --font-color: #000000;
   --topbar: #e8e8e8;
-  --course-bar: #72164c;
   --h1: #2e9398;
   --about-h2: #72164c;
   --about-h3: #000000;
   --links: #000000;
+  --active-links: #72164c;
+  --about-project__text: #000000;
+  --dashboard--motivation: #72164c;
+  --tree-progress__label: #000000;
+  --tree__treetop: #2e9398;
+  --tree: #72164c;
+  --progress-bar: #e8e8e8;
+  --progress-bar__actual: #2e9398;
+  --leaves: #000000;
+  --course-bar: #72164c;
+  --course-bar__text: #ffffff;
+  --course-bar__active: #2e9398;
+  /* --course-bar__active-text: #ffffff; */
+  --button__text: #000000;
 }
 
 [data-theme='dark'] {
+  --main-pink: #532741;
   --main-turqoise: #a4cbcd;
-  --light-turqoise: #2e9398;
-  --light-pink: #72164c;
+  --light-turqoise: #43696b;
+  --light-pink: #bfa9ae;
   --grey: #e8e8e8;
   --light-grey: #cfcfcf;
-  --black: #ffffff;
-  --white: #000000;
+  /* --black: #ffffff;
+  --white: #000000; */
 
-  /* --background-color: #272727; */
-  /* --background-color: #141313; */
-  /* --background-color: #121212; */
   --background-color: #1c1c1e;
-  --font-color: #ffffff9f;
+  --font-color: #cbb1b6;
   --topbar: #282829;
-  --course-bar: #dbbcc2;
-  --h1: #2e9398;
+  --h1: #4e7a7c;
   --about-h2: #c48894;
-  --about-h3: #a4cbcd;
-  --links: #ffffff9f;
+  --h3: #4e7a7c;
+  --links: #ffffffba;
+  --active-links: #c48894;
+  --about-project__text: #c4c4c4;
+  --dashboard--motivation: #dbbcc2;
+  --tree-progress__label: #ffffff9f;
+  --tree__treetop: #345c5e;
+  --tree: #532741;
+  --progress-bar: #8b8b8b;
+  --progress-bar__actual: #532741;
+  --leaves: #ffffff9f;
+  --course-bar: #dbbcc2;
+  --course-bar__text: #ffffffde;
+  --course-bar__active: #3c5556;
+  /* --course-bar__active-text: #000000; */
+  --button__text: #000000;
 }
 
 /* Info */
@@ -107,32 +131,85 @@ input:checked + .slider {
 }
 
 .about-project h3 {
-  color: var(--about-h3);
+  color: var(--h3);
+}
+
+.about-project__text {
+  color: var(--about-project__text);
 }
 
 #info-navigation__items {
   color: var(--about-navigation);
 }
 
+[data-theme='dark'] .about-project__tree {
+  filter: saturate(0.8);
+}
+
 /* Dashboard */
+
+.dashboard__motivation {
+  color: var(--dashboard--motivation);
+}
+
+.tree-progress__label {
+  color: var(--tree-progress__label);
+}
+
+.tree-progress__bar {
+  background-color: var(--progress-bar);
+}
+
+.tree-progress__bar--actual {
+  background-color: var(--progress-bar__actual);
+}
 
 /* Tree */
 
+#tree__treetop {
+  background-color: var(--tree__treetop);
+  color: var(--white);
+}
+
+.tree__treetop {
+  background-color: var(--tree__treetop);
+}
+
 .tree__treetop p {
-  color: #ffffff;
+  color: var(--white);
+}
+
+.leaves {
+  color: var(--leaves);
+}
+
+.leaves .checklist__item {
+  color: var(--black);
+}
+
+[data-theme='dark'] .tree__leaf-icon {
+  filter: contrast(0.4);
 }
 
 /* Courses */
 
 .course-bar {
-  color: var(--white);
   background-color: var(--course-bar);
 }
 
 .course-bar p {
-  color: var(--white);
+  color: var(--course-bar__text);
 }
 
-.main__your-courses button {
+/* .main__your-courses button {
   color: var(--black);
+} */
+
+#your-courses__button {
+  background-color: var(--light-pink);
+  border: 1px solid var(--light-pink);
+}
+
+#your-courses__button p {
+  color: var(--button__text);
 }

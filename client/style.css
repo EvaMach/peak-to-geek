@@ -77,9 +77,12 @@ a {
   color: var(--links);
 }
 
-h3,
 p {
   color: var(--font-color);
+}
+
+h3 {
+  color: var(--h3);
 }
 
 @media (min-width: 992px) {

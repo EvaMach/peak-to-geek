@@ -75,8 +75,8 @@ header {
 }
 
 .navigation__item--actual {
-  color: var(--main-pink);
-  border-bottom: 2px solid var(--main-pink);
+  color: var(--active-links);
+  border-bottom: 2px solid var(--active-links);
 }
 
 /* RESPONSIVITY */

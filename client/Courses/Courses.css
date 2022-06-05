@@ -18,7 +18,7 @@
 }
 
 .course-bar--active {
-  background-color: var(--main-turqoise);
+  background-color: var(--course-bar__active);
 }
 
 button.course-bar__btn,
@@ -99,12 +99,21 @@ a.course-bar__btn:hover {
 }
 
 @media (min-width: 992px) {
-  .container__your-courses {
+  /* .container__your-courses {
     margin-bottom: 5%;
-    background: url(img/courses__background.svg) no-repeat fixed;
+    background: url(img/courses__background--transparent.svg) no-repeat fixed;
     background-size: cover;
     min-height: 45em;
     height: 60vh;
+    margin: 0;
+    background-position: center;
+  } */
+
+  #your-courses__page {
+    margin-bottom: 5%;
+    background: url(img/courses__background--transparent.svg) no-repeat fixed;
+    background-size: cover;
+    min-height: 45em;
     margin: 0;
     background-position: center;
   }

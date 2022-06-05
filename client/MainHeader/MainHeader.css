@@ -4,12 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 0 2em;
+  padding: 2em 1em 0 1em;
 }
 
 .main-page__login {
   font-weight: 600;
   margin-top: 1em;
+}
+
+.main-page__topbar .toggle-theme-wrapper {
+  padding-right: 1em;
 }
 
 /* RESPONSIVITY */

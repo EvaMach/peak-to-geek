@@ -72,9 +72,38 @@ const Courses = () => {
 
   return (
     <>
-      <div className="container__topbar">
-        <NavigationHeader />
+      <div id="your-courses__page">
+        <div className="container__topbar">
+          <NavigationHeader />
+        </div>
+        <div className="container container__your-courses">
+          <main className="main__your-courses">
+            <h1 id="courses__title">Tvoje kurzy</h1>
+            {userCourses.map((userCourse) => (
+              <Course
+                key={userCourse.url}
+                courseName={userCourse.name}
+                courseId={userCourse.id}
+                courseActive={userCourse.active}
+                token={token}
+              />
+            ))}
+            <AddCourse onNewCourse={handleAddCourse} />
+            <h2 id="community__title">Kurzy komunity</h2>
+            {courses.map((course) => (
+              <Course
+                key={course.url}
+                courseName={course.name}
+                courseUrl={course.url}
+                token={token}
+              />
+            ))}
+          </main>
+        </div>
+        <Footer />
       </div>
+<<<<<<< HEAD
+=======
       <div className="container container__your-courses">
         <main className="main__your-courses">
           <h1 id="courses__title">Tvoje kurzy</h1>
@@ -130,6 +159,7 @@ const Courses = () => {
         </main>
       </div>
       <Footer />
+>>>>>>> 3f6f52a861b15a4ab54eebc5ea05522ee38a1d59
     </>
   );
 };

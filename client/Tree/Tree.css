@@ -18,8 +18,6 @@
   font-size: 1em;
   font-weight: 600;
   text-align: center;
-  background-color: var(--main-turqoise);
-  color: var(--white);
   border-radius: 50%;
   width: 40%;
   aspect-ratio: 1 / 1;
@@ -29,7 +27,7 @@
 }
 
 .tree__trunk {
-  border-bottom: 100em solid var(--main-pink);
+  border-bottom: 100em solid var(--tree);
   border-left: 1.5em solid transparent;
   border-right: 1.5em solid transparent;
   width: 5em;
@@ -87,7 +85,7 @@
   }
 
   .tree__trunk {
-    border-bottom: 280em solid #72164c;
+    border-bottom: 280em solid var(--tree);
     border-left: 7em solid transparent;
     border-right: 7em solid transparent;
     width: 20em;
@@ -113,6 +111,6 @@
   }
 
   .tree__trunk {
-    border-bottom: 200em solid #72164c;
+    border-bottom: 200em solid var(--tree);
   }
 }
