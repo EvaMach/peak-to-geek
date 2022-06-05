@@ -222,7 +222,7 @@ server.get('/api/user-courses', (req, resp) => {
 
 server.post('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
-  const { name, url } = req.body;
+  const { name, url, active, id } = req.body;
 
   const user = users.find((u) => u.token === token);
 
@@ -231,7 +231,7 @@ server.post('/api/user-courses', (req, resp) => {
     return;
   }
 
-  user.courses.push({ name, url });
+  user.courses.push({ name, url, active, id });
   resp.send({
     status: 'success',
     results: {

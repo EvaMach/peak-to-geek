@@ -21,13 +21,28 @@
   background-color: var(--main-turqoise);
 }
 
-button.your-courses__add-dashboard-btn {
+button.course-bar__btn,
+a.course-bar__btn {
   border: 1px var(--light-pink) solid;
   background: none;
   color: white;
   padding: 0.5em;
   border-radius: 10px;
   cursor: pointer;
+}
+
+button.course-bar__btn:hover,
+a.course-bar__btn:hover {
+  border: 1px var(--light-pink) solid;
+  background: rgba(255, 255, 255, 0.388);
+  color: white;
+  padding: 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.course-bar__link {
+  color: white;
 }
 
 /* RESPONSIVITY */

@@ -31,8 +31,6 @@ const Courses = () => {
       });
   }, []);
 
-  console.log(userCourses);
-
   const handleAddCourse = (courseName, courseUrl) => {
     fetch('api/user-courses', {
       method: 'POST',
@@ -43,6 +41,8 @@ const Courses = () => {
       body: JSON.stringify({
         name: courseName,
         url: courseUrl,
+        active: false,
+        id: String(Math.floor(Math.random() * 100)),
       }),
     })
       .then((response) => response.json())
@@ -67,6 +67,8 @@ const Courses = () => {
     }
   };
 
+  console.log(userCourses);
+
   return (
     <>
       <div className="container__topbar">
@@ -82,16 +84,19 @@ const Courses = () => {
               courseId={userCourse.id}
               courseActive={userCourse.active}
               token={token}
+              userCourse={true}
             />
           ))}
           <AddCourse onNewCourse={handleAddCourse} />
           <h2 id="community__title">Kurzy komunity</h2>
+          <h2>Inspiruj se kurzy, co si přidali další geekové.</h2>
           {courses.map((course) => (
             <Course
               key={course.url}
               courseName={course.name}
               courseUrl={course.url}
               token={token}
+              userCourse={false}
             />
           ))}
         </main>
