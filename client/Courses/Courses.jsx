@@ -89,7 +89,8 @@ const Courses = () => {
           ))}
           <AddCourse onNewCourse={handleAddCourse} />
           <h2 id="community__title">Kurzy komunity</h2>
-          <h2>Inspiruj se kurzy, co si přidali další geekové.</h2>
+          <h2>Inspiruj se kurzy, co si přidali další geekové. </h2>
+
           {courses.map((course) => (
             <Course
               key={course.url}

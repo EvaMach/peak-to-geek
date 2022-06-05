@@ -69,6 +69,9 @@ server.get('/api/tree', (req, resp) => {
 
 server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+  const userIds = user.tree.map((id) => id.slice(2));
 
   const branch = tree.branches.find((i) => i.id === id);
   const leaves = branch.leaves;
@@ -89,6 +92,16 @@ server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
     });
     return;
   }
+
+  branch.leaves.forEach((leaf) => {
+    leaf.checkboxes.forEach((checkboxItem) => {
+      if (userIds.includes(checkboxItem.id)) {
+        checkboxItem.done = true;
+      } else {
+        checkboxItem.done = false;
+      }
+    });
+  });
 
   resp.send({
     status: 'success',

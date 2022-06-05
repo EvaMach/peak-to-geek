@@ -7,11 +7,17 @@ const ChecklistModal = ({
   leafId,
   branchId,
   onChecked,
+  token,
 }) => {
   const [checklistItems, setChecklistItems] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`)
+    fetch(`/api/tree/branch/${branchId}/leaf/${leafId}`, {
+      method: 'GET',
+      headers: {
+        Authorization: token,
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         setChecklistItems(data.results.checkboxes);
