@@ -123,18 +123,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 0.5em;
+  margin-top: 1em;
+  width: 95%;
 }
 
 .creator__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .creator__text {
   font-weight: 300;
-  font-size: 0.9em;
+  font-size: 1em;
   text-align: justify;
 }
 
@@ -182,12 +185,17 @@
   /* Nelča + Evča */
 
   .creator {
-    font-size: 1em;
-    width: 38em;
-    height: 38em;
-    max-width: 40em;
-    max-height: 40em;
-    padding: 4em;
+    font-size: 0.8em;
+    width: 40em;
+    height: 40em;
+    /* max-width: 40em;
+    max-height: 40em; */
+    padding: 5em;
+    aspect-ratio: 1/1;
+  }
+
+  .creator__container {
+    width: 95%;
   }
 
   .creator__photo {
@@ -209,6 +217,15 @@
   }
 
   /* Nelča + Evča */
+
+  .creator {
+    width: 50em;
+    height: 50em;
+    max-width: 55em;
+    max-width: 55em;
+    aspect-ratio: 1/1;
+    font-size: 0.9em;
+  }
 
   .creator__photo {
     height: 10em;
@@ -239,7 +256,6 @@
     position: fixed;
     left: 70%;
     bottom: 0;
-    /* z-index: -1; */
     overflow: hidden;
   }
 

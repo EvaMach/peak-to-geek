@@ -29,6 +29,7 @@ a.course-bar__btn {
   padding: 0.5em;
   border-radius: 10px;
   cursor: pointer;
+  min-inline-size: max-content;
 }
 
 button.course-bar__btn:hover,

@@ -85,54 +85,26 @@ const Courses = () => {
                 courseId={userCourse.id}
                 courseActive={userCourse.active}
                 token={token}
+                userCourse={true}
               />
             ))}
             <AddCourse onNewCourse={handleAddCourse} />
             <h2 id="community__title">Kurzy komunity</h2>
+            <h2>Inspiruj se kurzy, co si přidali další geekové. </h2>
+
             {courses.map((course) => (
               <Course
                 key={course.url}
                 courseName={course.name}
                 courseUrl={course.url}
                 token={token}
+                userCourse={false}
               />
             ))}
           </main>
         </div>
         <Footer />
       </div>
-<<<<<<< HEAD
-=======
-      <div className="container container__your-courses">
-        <main className="main__your-courses">
-          <h1 id="courses__title">Tvoje kurzy</h1>
-          {userCourses.map((userCourse) => (
-            <Course
-              key={userCourse.url}
-              courseName={userCourse.name}
-              courseId={userCourse.id}
-              courseActive={userCourse.active}
-              token={token}
-              userCourse={true}
-            />
-          ))}
-          <AddCourse onNewCourse={handleAddCourse} />
-          <h2 id="community__title">Kurzy komunity</h2>
-          <h2>Inspiruj se kurzy, co si přidali další geekové. </h2>
-
-          {courses.map((course) => (
-            <Course
-              key={course.url}
-              courseName={course.name}
-              courseUrl={course.url}
-              token={token}
-              userCourse={false}
-            />
-          ))}
-        </main>
-      </div>
-      <Footer />
->>>>>>> 3f6f52a861b15a4ab54eebc5ea05522ee38a1d59
     </>
   );
 };
