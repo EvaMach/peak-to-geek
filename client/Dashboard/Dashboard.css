@@ -28,17 +28,16 @@
 
 .tree-progress__label {
   margin-bottom: 0.5em;
+  color: var(--tree-progress__label);
 }
 
 .tree-progress__bar {
   flex: 0 0 30em;
-  background-color: var(--grey);
   height: 0.7em;
   border-radius: 0.3em;
 }
 
 .tree-progress__bar--actual {
-  background-color: var(--main-turqoise);
   width: 0%;
   height: 0.7em;
   border-radius: 0.3em;
@@ -161,7 +160,7 @@
 
 .follow-up__treetop--left {
   border-radius: 50%;
-  background-color: var(--main-turqoise);
+  background-color: var(--tree__treetop);
   width: 30%;
   aspect-ratio: 1 / 1;
   z-index: 1;
@@ -258,6 +257,7 @@
   .dashboard__image--sloth {
     width: 50vw;
     margin-top: -5em;
+    /* z-index: unset; */
   }
 
   .dashboard__follow-up {
@@ -268,7 +268,7 @@
     display: block;
     font-size: 0.8em;
     font-weight: 600;
-    color: var(--main-pink);
+    color: var(--dashboard--motivation);
     margin-bottom: 14em;
     margin-left: 12em;
   }
@@ -461,7 +461,7 @@
   }
 
   .dashboard__follow-up {
-    margin-top: -5em;
+    margin-top: -2em;
   }
 
   .leaves__tree-checklist {

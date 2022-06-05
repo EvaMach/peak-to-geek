@@ -1,16 +1,24 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
-.main-page__container {
-  background: url(img/homepage.svg) no-repeat fixed;
+/* .main-page__container {
+  background: url(img/homepage__transparent.svg) no-repeat fixed;
   background-size: 1000px;
   background-position-y: center;
   height: 48em;
+} */
+
+.main-page {
+  background: url(img/homepage__transparent.svg) no-repeat fixed;
+  height: 55em;
+  background-position: inherit;
 }
 
 .main-page__main {
   display: flex;
   justify-content: center;
   margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .main__left-side {

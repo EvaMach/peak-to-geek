@@ -57,9 +57,9 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
               transition={{ duration: 1 }}
             >
               <img
-                className="tree__branch-sloth"
+                className="tree__branch--sloth"
                 src={require('./img/tree-sloth.svg')}
-                alt="lenochodik"
+                alt="Lenochodík na větvičce pro splněné kurzy"
               />
             </motion.div>
             <div className="tree__branch--active" ref={activeBranchRef}></div>

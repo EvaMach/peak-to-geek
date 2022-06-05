@@ -1,5 +1,9 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
+.login__topbar .toggle-theme-wrapper {
+  padding-right: 1em;
+}
+
 .login__container {
   background: url(img/login-page__background.svg) no-repeat fixed;
   background-size: cover;
