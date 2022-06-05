@@ -9,7 +9,7 @@ export const users = [
       {
         name: 'UI basics',
         url: 'test',
-        active: true,
+        active: false,
         id: '1',
       },
       {

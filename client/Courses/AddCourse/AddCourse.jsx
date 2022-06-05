@@ -13,7 +13,6 @@ const AddCourse = ({ onNewCourse }) => {
         whileTap={{ scale: 0.9 }}
         onClick={() => setOpenModal(true)}
         id="your-courses__button"
-        // className="course-bar actual-courses--course1"
         className="actual-courses__button"
       >
         <p>Přidat nový kurz</p>
