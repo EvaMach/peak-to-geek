@@ -3,7 +3,7 @@ import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
 import './Leaf.css';
 import '../../../Modals/Modals.css';
 
-const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
+const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal, token }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
@@ -15,6 +15,7 @@ const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
           leafId={initialLeaf.id}
           branchId={branchId}
           onChecked={onChecked}
+          token={token}
         />
       )}
       {branchId % 2 === 0 ? (
@@ -35,7 +36,11 @@ const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal }) => {
           />
         </div>
       ) : (
-        <div onClick={() => setOpenModal(true)}>
+        <div
+          onClick={() => {
+            setOpenModal(true);
+          }}
+        >
           <img
             className="tree__leaf-icon"
             src={

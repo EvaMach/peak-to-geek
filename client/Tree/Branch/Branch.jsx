@@ -78,6 +78,7 @@ const Branch = ({ initialBranch, token, activeBranchRef }) => {
             initialLeaf={leaf}
             branchId={branchUpdate.id}
             onChecked={handleCheck}
+            token={token}
           ></Leaf>
         ))}
       </div>

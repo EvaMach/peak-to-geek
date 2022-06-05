@@ -34,10 +34,11 @@ const ChecklistItem = ({ initialItem, branchId, leafId, onCheck }) => {
     [0, 0.2],
   );
 
+  console.log(isChecked);
   return (
     <label className="checklist__item">
       <input
-        value={isChecked}
+        checked={isChecked}
         onChange={(event) => {
           setIsChecked(event.target.checked);
           onCheck(initialItem.id, branchId, leafId, isChecked);

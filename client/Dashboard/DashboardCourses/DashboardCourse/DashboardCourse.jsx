@@ -8,6 +8,7 @@ const DashboardCourse = ({
   courseDone,
 }) => {
   const [courseFinished, setCourseFinished] = useState(courseDone);
+  console.log(courseFinished);
   return (
     <div
       onClick={() => {
@@ -37,7 +38,7 @@ const DashboardCourse = ({
           }
           alt="Kontrola plnění kurzu"
         />
-        <div className="course__study-day study-day1">PO</div>
+        {/* <div className="course__study-day study-day1">PO</div> */}
       </div>
     </div>
   );

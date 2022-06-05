@@ -60,7 +60,6 @@
   border-radius: 1em;
   padding: 0.7em 1em;
   color: var(--white);
-  cursor: pointer;
 }
 
 .course-bar__check {
