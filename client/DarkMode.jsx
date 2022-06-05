@@ -2,10 +2,7 @@ import React from 'react';
 import './DarkMode.css';
 
 const setDark = () => {
-  // 2
   localStorage.setItem('theme', 'dark');
-
-  // 3
   document.documentElement.setAttribute('data-theme', 'dark');
 };
 

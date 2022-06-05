@@ -17,13 +17,16 @@
   --light-grey: #e8e8e8;
   --black: #000000;
   --white: #ffffff;
+
   --background-color: unset;
+  --font-color: #000000;
+  --course-bar: #72164c;
 }
 
 [data-theme='dark'] {
   --main-turqoise: #a4cbcd;
   --light-turqoise: #2e9398;
-  --main-pink: #dbbcc2;
+  --main-pink: #72164c;
   --light-pink: #72164c;
   --alternative-pink: #c48894;
   --pink-old: #92475c;
@@ -31,7 +34,10 @@
   --light-grey: #e8e8e8;
   --black: #ffffff;
   --white: #000000;
-  --background-color: unset;
+
+  --background-color: #272727;
+  --font-color: #ffffff;
+  --course-bar: #dbbcc2;
 }
 
 /* Responzivita */
@@ -87,6 +93,11 @@ h2 {
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+h3,
+p {
+  color: var(--font-color);
 }
 
 @media (min-width: 992px) {
