@@ -21,6 +21,7 @@
 
 .info-navigation__item {
   font-size: 1.2em;
+  color: var(--about-navigation);
 }
 
 .info-navigation__item:not(.navigation__item--actual):hover {
@@ -63,7 +64,7 @@
 
 .about-project h2 {
   font-size: 1.8em;
-  color: var(--main-pink);
+  color: var(--about-h2);
   padding-top: 1em;
   padding-bottom: 0.2em;
 }
@@ -74,6 +75,7 @@
   padding-bottom: 0.5em;
   text-decoration: underline var(--main-turqoise) 2px;
   font-weight: 600;
+  color: var(--about-h3);
 }
 
 .about-project__text {

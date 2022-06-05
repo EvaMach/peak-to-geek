@@ -17,27 +17,6 @@
   --light-grey: #e8e8e8;
   --black: #000000;
   --white: #ffffff;
-
-  --background-color: unset;
-  --font-color: #000000;
-  --course-bar: #72164c;
-}
-
-[data-theme='dark'] {
-  --main-turqoise: #a4cbcd;
-  --light-turqoise: #2e9398;
-  --main-pink: #72164c;
-  --light-pink: #72164c;
-  --alternative-pink: #c48894;
-  --pink-old: #92475c;
-  --grey: #cfcfcf;
-  --light-grey: #e8e8e8;
-  --black: #ffffff;
-  --white: #000000;
-
-  --background-color: #272727;
-  --font-color: #ffffff;
-  --course-bar: #dbbcc2;
 }
 
 /* Responzivita */
@@ -85,14 +64,17 @@ h3 {
   font-family: 'Kodchasan', sans-serif;
 }
 
-h1,
+h1 {
+  color: var(--h1);
+}
+
 h2 {
   color: var(--main-turqoise);
 }
 
 a {
   text-decoration: none;
-  color: var(--black);
+  color: var(--links);
 }
 
 h3,
