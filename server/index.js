@@ -229,6 +229,7 @@ server.get('/api/user-courses', (req, resp) => {
     results: {
       login: user.login,
       courses: user.courses,
+      dashboard: user.dashboard,
     },
   });
 });
@@ -260,18 +261,40 @@ server.post('/api/course/:id', (req, resp) => {
   const { active } = req.body;
   const user = users.find((u) => u.token === token);
 
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
   const course = user.courses.find((i) => i.id === id);
+  course.active = active;
+
+  resp.send({
+    status: 'success',
+    results: course,
+  });
+});
+
+server.get('/api/create-dashboard', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
 
   if (user === undefined) {
     resp.sendStatus(403);
     return;
   }
 
-  course.active = active;
+  if (user.dashboard === undefined) {
+    user.streak = 0;
+    user.dashboardDate = dayjs().startOf('minute').toISOString();
+    user.dashboard = user.courses
+      .filter((course) => course.active)
+      .map((course) => ({ done: false, ...course }));
+  }
 
   resp.send({
     status: 'success',
-    results: course,
+    results: user,
   });
 });
 
@@ -281,12 +304,12 @@ server.post('/api/user-dashboard/course/:id', (req, resp) => {
   const { done } = req.body;
   const user = users.find((u) => u.token === token);
 
-  const dashboardCourse = user.dashboard.find((i) => i.id === id);
-
   if (user === undefined) {
     resp.sendStatus(403);
     return;
   }
+
+  const dashboardCourse = user.dashboard.find((i) => i.id === id);
 
   dashboardCourse.done = done;
 
@@ -305,18 +328,26 @@ server.get('/api/user-dashboard', (req, resp) => {
     return;
   }
 
-  if (
-    user.dashboard === undefined ||
-    dayjs().startOf('minute').format('HH.mm') !== user.dashboardDate
-  ) {
-    user.dashboardState = 'new';
-    user.dashboardDate = dayjs().startOf('minute').format('HH.mm');
-    user.dashboard = user.courses
-      .filter((course) => course.active === true)
-      .map((course) => ({ done: false, ...course }));
-  } else {
-    user.dashboardState = 'same';
+  if (user.dashboard === undefined) {
+    resp.send({
+      status: 'success',
+      results: null,
+    });
+    return;
   }
+
+  const weekStart = dayjs().startOf('minute').toISOString();
+  console.log(weekStart, 'user', user.dashboardDate);
+
+  if (weekStart !== user.dashboardDate) {
+    const allDone = user.dashboard.every((course) => course.done);
+    user.streak = allDone ? user.streak + 1 : 0;
+    user.dashboardDate = weekStart;
+    user.dashboard = user.courses
+      .filter((course) => course.active)
+      .map((course) => ({ done: false, ...course }));
+  }
+
   resp.send({
     status: 'success',
     results: user,

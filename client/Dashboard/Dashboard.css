@@ -99,9 +99,8 @@
   border-radius: 1em;
   font-weight: 600;
   font-size: 90%;
-  width: 50%;
+  width: 40%;
   padding: 0.7em 1em;
-  margin-left: 50%;
 }
 
 .actual-courses__button:hover {
@@ -127,6 +126,13 @@
 .follow-up__leaves {
   margin-top: -25%;
   margin-bottom: 10%;
+}
+
+.actual-courses__empty {
+  margin-bottom: 1em;
+  background: #80808038;
+  padding: 2em;
+  border-radius: 3px;
 }
 
 .leaves__tree-checklist {
@@ -244,8 +250,6 @@
   }
 
   .actual-courses__button {
-    width: 70%;
-    margin-left: 30%;
   }
 
   /* Right side */
@@ -344,7 +348,6 @@
 
   .actual-courses__button {
     width: 50%;
-    margin-left: 45%;
     font-size: 1.1em;
   }
 

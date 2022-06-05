@@ -45,6 +45,12 @@ a.course-bar__btn:hover {
   color: white;
 }
 
+.your-courses__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
@@ -85,7 +91,10 @@ a.course-bar__btn:hover {
 
   #your-courses__button {
     width: 30%;
-    margin-left: 50%;
+  }
+
+  .your-courses__buttons {
+    width: 80%;
   }
 }
 
@@ -116,6 +125,10 @@ a.course-bar__btn:hover {
 
   #your-courses__button {
     width: 20%;
+  }
+
+  .your-courses__buttons {
+    width: 70%;
   }
 }
 
