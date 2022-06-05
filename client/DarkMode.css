@@ -1,4 +1,4 @@
-/* Custom Dark Mode Toggle Element */
+/* Toggle */
 .toggle-theme-wrapper {
   display: flex;
   flex-direction: row;
@@ -6,13 +6,15 @@
   gap: 4px;
   justify-content: end;
   margin-bottom: -3em;
+  margin-right: -2em;
+  padding-top: 0.3em;
 }
 
 .toggle-theme {
   position: relative;
   display: inline-block;
-  height: 34px;
-  width: 60px;
+  height: 20px;
+  width: 40px;
 }
 
 .toggle-theme input {
@@ -32,21 +34,22 @@
 
 .slider:before {
   background-color: #fff;
-  bottom: 4px;
   content: '';
-  height: 26px;
-  left: 4px;
+  height: 14px;
+  width: 14px;
+  aspect-ratio: 1/1;
   position: absolute;
+  right: 23px;
+  bottom: 3px;
   transition: 0.4s;
-  width: 26px;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(19px);
 }
 
 input:checked + .slider {
-  background-color: #92475c;
+  background-color: var(--pink-old);
 }
 
 .slider.round {
@@ -57,7 +60,73 @@ input:checked + .slider {
   border-radius: 50%;
 }
 
+/* COLORS */
+
+:root {
+  --background-color: unset;
+  --font-color: #000000;
+  --topbar: #e8e8e8;
+  --course-bar: #72164c;
+  --h1: #2e9398;
+  --about-h2: #72164c;
+  --about-h3: #000000;
+  --links: #000000;
+}
+
+[data-theme='dark'] {
+  --main-turqoise: #a4cbcd;
+  --light-turqoise: #2e9398;
+  --light-pink: #72164c;
+  --grey: #e8e8e8;
+  --light-grey: #cfcfcf;
+  --black: #ffffff;
+  --white: #000000;
+
+  /* --background-color: #272727; */
+  /* --background-color: #141313; */
+  /* --background-color: #121212; */
+  --background-color: #1c1c1e;
+  --font-color: #ffffff9f;
+  --topbar: #282829;
+  --course-bar: #dbbcc2;
+  --h1: #2e9398;
+  --about-h2: #c48894;
+  --about-h3: #a4cbcd;
+  --links: #ffffff9f;
+}
+
+/* Info */
+
+.about-project h2 {
+  color: var(--about-h2);
+}
+
+.about-project h3 {
+  color: var(--about-h3);
+}
+
+#info-navigation__items {
+  color: var(--about-navigation);
+}
+
+/* Dashboard */
+
+/* Tree */
+
+.tree__treetop p {
+  color: #ffffff;
+}
+
 /* Courses */
+
+.course-bar {
+  color: var(--white);
+  background-color: var(--course-bar);
+}
+
+.course-bar p {
+  color: var(--white);
+}
 
 .main__your-courses button {
   color: var(--black);
