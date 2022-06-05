@@ -14,6 +14,8 @@ header {
   align-items: center;
   max-width: 100vw;
   padding-top: 1em;
+  height: 8em;
+  margin-top: 0.5em;
 }
 
 /* Logo  */
@@ -99,16 +101,18 @@ header {
   .container__topbar {
     /* margin-top: 0.5em; */
     background-color: var(--topbar);
-    border-radius: 0 0 6em 6em;
+    border-radius: 0 0 4em 4em;
     padding-left: 3%;
     padding-right: 3%;
     width: unset;
+    margin-bottom: 2em;
   }
 
   /* Logo */
 
   #logo img {
     width: 8vw;
+    margin-top: 2em;
   }
 
   /* Navigation */
