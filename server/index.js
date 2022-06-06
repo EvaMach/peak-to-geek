@@ -156,7 +156,15 @@ server.post('/api/user-tree/update', (req, resp) => {
     return;
   }
 
-  user.tree.push(branchId + leafId + itemId);
+  const treeId = branchId + leafId + itemId;
+
+  if (!user.tree.includes(treeId)) {
+    user.tree.push(treeId);
+  } else {
+    const itemIndex = user.tree.indexOf(treeId);
+    user.tree.splice(itemIndex, 1);
+  }
+
   const userIds = user.tree.map((id) => id.slice(2));
   const newBranch = userBranch(branch, userIds);
 
