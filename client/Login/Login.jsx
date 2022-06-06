@@ -51,7 +51,7 @@ const Login = () => {
               <div className="login__remember-me">
                 <input
                   id="login__remember-me--input"
-                  className="login__field"
+                  className="login__field--checkbox"
                   type="checkbox"
                 />
                 <span className="login__remember-me--text">

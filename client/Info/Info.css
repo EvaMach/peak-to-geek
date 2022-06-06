@@ -252,7 +252,7 @@
 
   .about-project__tree {
     display: block;
-    max-width: 370px;
+    max-width: 55vh;
     position: fixed;
     left: 70%;
     bottom: 0;

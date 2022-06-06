@@ -66,6 +66,12 @@ a.course-bar__btn:hover {
   width: fit-content;
 }
 
+.your-courses__dashboard-update {
+  font-weight: 400;
+  font-style: italic;
+  padding-left: 0.5em;
+}
+
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
@@ -111,19 +117,13 @@ a.course-bar__btn:hover {
   .your-courses__buttons {
     width: 80%;
   }
+
+  .your-courses__dashboard-update {
+    font-size: 1.1em;
+  }
 }
 
 @media (min-width: 992px) {
-  /* .container__your-courses {
-    margin-bottom: 5%;
-    background: url(img/courses__background--transparent.svg) no-repeat fixed;
-    background-size: cover;
-    min-height: 45em;
-    height: 60vh;
-    margin: 0;
-    background-position: center;
-  } */
-
   #your-courses__page {
     margin-bottom: 5%;
     background: url(img/courses__background--transparent.svg) no-repeat fixed;

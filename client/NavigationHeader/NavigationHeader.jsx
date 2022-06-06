@@ -14,8 +14,8 @@ const NavigationHeader = () => {
         <div id="logo" className="info__logo">
           <Link to="/dashboard">
             <img
-              src={require('./img/logo_own--colored3.svg')}
-              alt="Peak to Geek logo"
+              src={require('./img/logo_own--colored.svg')}
+              alt="Logo Peak to Geek (lenochod s notebookem)"
             />
           </Link>
         </div>

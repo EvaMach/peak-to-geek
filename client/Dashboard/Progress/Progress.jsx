@@ -35,7 +35,7 @@ const Progress = ({ token }) => {
           <img
             className="streak-update__crown-icon"
             src={require('../img/progress-crown.svg')}
-            alt="Ikonka progress korunky"
+            alt="Ikonka korunky pro streak"
           />
         </motion.div>
         <p>Svůj strom pěstuješ už {userDays}. týden v řadě</p>

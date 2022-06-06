@@ -54,7 +54,7 @@ const Info = () => {
         <img
           className="about-project__tree"
           src={require('./img/tree.svg')}
-          alt="Stromeček v rámci info stránky"
+          alt="Stromeček na info stránce"
         />
       </main>
       <Footer />

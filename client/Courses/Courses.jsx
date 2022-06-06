@@ -114,7 +114,9 @@ const Courses = () => {
                   Přidat do dashboardu
                 </motion.button>
               ) : (
-                <div>Dashboard bude aktualizován automaticky</div>
+                <div className="your-courses__dashboard-update">
+                  Dashboard bude aktualizován automaticky
+                </div>
               )}
               <AddCourse onNewCourse={handleAddCourse} />
             </div>

@@ -5,10 +5,9 @@
 }
 
 .login__container {
-  background: url(img/login-page__background.svg) no-repeat fixed;
+  background: url(img/login-page__transparent.svg) no-repeat fixed;
   background-size: cover;
   min-height: 45em;
-  /* height: 55em; */
   height: 100vh;
   margin: 0;
 }
@@ -39,8 +38,9 @@
 .login__remember-me {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 1.5em;
   font-size: 0.8em;
+  padding-left: 0.5em;
 }
 
 #login__button {
@@ -71,9 +71,6 @@
 }
 
 @media (min-width: 576px) {
-  /* .login__container {
-    max-height: 60em;
-  } */
   #login__core {
     padding-top: 40%;
   }
