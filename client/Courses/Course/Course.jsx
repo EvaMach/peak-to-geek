@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
 import '../Courses.css';
 
-const Course = ({
-  courseName,
-  token,
-  courseId,
-  courseActive,
-  userCourse,
-  courseUrl,
-}) => {
-  const [activeCourse, setActiveCourse] = useState(courseActive);
+const Course = ({ token, userCourse, course }) => {
+  const [activeCourse, setActiveCourse] = useState(course.active);
 
   return (
     <div
@@ -19,13 +12,13 @@ const Course = ({
           : 'course-bar course-bar__actual-courses'
       }
     >
-      <p>{courseName}</p>
+      <p>{course.name}</p>
       {userCourse ? (
         <button
           className="course-bar__btn"
           onClick={() => {
             setActiveCourse(!activeCourse);
-            fetch(`/api/course/${courseId}`, {
+            fetch(`/api/course/${course.id}`, {
               method: 'POST',
               headers: {
                 Authorization: token,
@@ -40,7 +33,7 @@ const Course = ({
           {activeCourse ? 'Odebrat z dashboardu' : 'Přidat na dashboard'}
         </button>
       ) : (
-        <a href={courseUrl} className="course-bar__btn">
+        <a href={course.url} className="course-bar__btn">
           Přejít na kurz
         </a>
       )}

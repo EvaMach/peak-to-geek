@@ -65,7 +65,7 @@ const Courses = () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          setCourses(data.results.course);
+          setCourses(data.results);
         });
     }
   };
@@ -82,9 +82,7 @@ const Courses = () => {
             {userCourses.map((userCourse) => (
               <Course
                 key={userCourse.id}
-                courseName={userCourse.name}
-                courseId={userCourse.id}
-                courseActive={userCourse.active}
+                course={userCourse}
                 token={token}
                 userCourse={true}
               />
@@ -126,10 +124,9 @@ const Courses = () => {
             {courses.map((course) => (
               <Course
                 key={course.id}
-                courseName={course.name}
-                courseUrl={course.url}
                 token={token}
                 userCourse={false}
+                course={course}
               />
             ))}
           </main>

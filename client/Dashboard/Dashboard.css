@@ -54,6 +54,17 @@
   font-size: 1.5em;
 }
 
+.actual-courses__empty {
+  margin-bottom: 1em;
+  background: #80808038;
+  padding: 1.5em;
+  border-radius: 5px;
+}
+
+.actual-courses__empty p {
+  margin-top: 5px;
+}
+
 .course-bar {
   display: flex;
   justify-content: space-between;
@@ -129,13 +140,6 @@
 .follow-up__leaves {
   margin-top: -25%;
   margin-bottom: 10%;
-}
-
-.actual-courses__empty {
-  margin-bottom: 1em;
-  background: #80808038;
-  padding: 2em;
-  border-radius: 3px;
 }
 
 .leaves__tree-checklist {

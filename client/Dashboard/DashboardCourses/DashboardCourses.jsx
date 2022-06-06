@@ -24,7 +24,13 @@ const DashboardCourses = ({ token }) => {
       <h3 id="actual-courses__title">Tvoje aktuální kurzy</h3>
       <div className="actual-courses__info">
         {activeCourses === null || activeCourses.dashboard === undefined ? (
-          <div className="actual-courses__empty">Nemáš žádné aktivní kurzy</div>
+          <div className="actual-courses__empty">
+            <h4>Nemáš žádné aktuální kurzy 😱</h4>
+            <p>
+              Přidej si je ze sekce Tvoje kurzy a sleduj svůj každotýdenní
+              progress!
+            </p>
+          </div>
         ) : (
           <>
             <h2>{activeCourses.streak}</h2>
