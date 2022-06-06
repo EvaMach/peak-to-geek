@@ -45,7 +45,7 @@ const FollowUp = ({ token }) => {
 
       <div className="dashboard__follow-up">
         <div className="follow-up__leaves">
-          <h3>Jaký lístek tě čeká?</h3>
+          <h3>Tvůj aktuální lístek</h3>
           <div className="leaves__tree-checklist">
             <img
               className="leaves__leaf--inactive"

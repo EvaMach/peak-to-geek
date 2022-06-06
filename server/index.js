@@ -302,6 +302,40 @@ server.get('/api/create-dashboard', (req, resp) => {
   });
 });
 
+server.get('/api/user-dashboard', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  if (user.dashboard === undefined) {
+    resp.send({
+      status: 'success',
+      results: null,
+    });
+    return;
+  }
+
+  const weekStart = dayjs().startOf('week').toISOString();
+
+  if (weekStart !== user.dashboardDate) {
+    const allDone = user.dashboard.every((course) => course.done);
+    user.streak = allDone ? user.streak + 1 : 0;
+    user.dashboardDate = weekStart;
+    user.dashboard = user.courses
+      .filter((course) => course.active)
+      .map((course) => ({ done: false, ...course }));
+  }
+
+  resp.send({
+    status: 'success',
+    results: user.dashboard,
+  });
+});
+
 server.post('/api/user-dashboard/course/:id', (req, resp) => {
   const { id } = req.params;
   const token = req.headers.authorization;
@@ -323,41 +357,6 @@ server.post('/api/user-dashboard/course/:id', (req, resp) => {
   });
 });
 
-server.get('/api/user-dashboard', (req, resp) => {
-  const token = req.headers.authorization;
-  const user = users.find((u) => u.token === token);
-
-  if (user === undefined) {
-    resp.sendStatus(403);
-    return;
-  }
-
-  if (user.dashboard === undefined) {
-    resp.send({
-      status: 'success',
-      results: null,
-    });
-    return;
-  }
-
-  const weekStart = dayjs().startOf('week').toISOString();
-  console.log(weekStart, 'user', user.dashboardDate);
-
-  if (weekStart !== user.dashboardDate) {
-    const allDone = user.dashboard.every((course) => course.done);
-    user.streak = allDone ? user.streak + 1 : 0;
-    user.dashboardDate = weekStart;
-    user.dashboard = user.courses
-      .filter((course) => course.active)
-      .map((course) => ({ done: false, ...course }));
-  }
-
-  resp.send({
-    status: 'success',
-    results: user.dashboard,
-  });
-});
-
 server.get('/api/current-leaf/:id', (req, resp) => {
   const { id } = req.params;
 
@@ -371,6 +370,7 @@ server.get('/api/current-leaf/:id', (req, resp) => {
     });
     return;
   }
+
   resp.send({
     status: 'success',
     results: leaf.name,
