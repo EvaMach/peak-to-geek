@@ -5,14 +5,14 @@ import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
 import Footer from '../Footer/Footer.jsx';
-import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
-  const [userName, setUserName] = useState('');
   const token = window.localStorage.getItem('token');
   if (token === null) {
     window.location = '/login';
   }
+
+  const [userName, setUserName] = useState('');
 
   useEffect(() => {
     fetch('api/user', {
@@ -32,7 +32,7 @@ const Dashboard = () => {
       <div className="container__topbar">
         <NavigationHeader />
       </div>
-      {/* <Outlet /> */}
+
       <div className="container">
         <main id="dashboard__core">
           <div className="dashboard__left-side">
@@ -40,7 +40,7 @@ const Dashboard = () => {
             <Progress token={token} />
             <DashboardCourses token={token} />
           </div>
-          <FollowUp />
+          <FollowUp token={token} />
         </main>
       </div>
       <Footer />

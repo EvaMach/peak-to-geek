@@ -27,11 +27,11 @@
 }
 
 .dashboard__tree-progress {
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 }
 
 .tree-progress__label {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   color: var(--tree-progress__label);
 }
 
@@ -52,6 +52,17 @@
 #actual-courses__title {
   margin-bottom: 0.5em;
   font-size: 1.5em;
+}
+
+.actual-courses__empty {
+  margin-bottom: 1em;
+  background: #80808038;
+  padding: 1.5em;
+  border-radius: 5px;
+}
+
+.actual-courses__empty p {
+  margin-top: 5px;
 }
 
 .course-bar {
@@ -77,10 +88,10 @@
   margin-bottom: 1em;
 }
 
-.check-icon1,
-.check-icon3 {
+.course__check-icon {
   filter: invert(1);
   width: 1.5em;
+  cursor: pointer;
 }
 
 .course__study-day {
@@ -129,13 +140,6 @@
 .follow-up__leaves {
   margin-top: -25%;
   margin-bottom: 10%;
-}
-
-.actual-courses__empty {
-  margin-bottom: 1em;
-  background: #80808038;
-  padding: 2em;
-  border-radius: 3px;
 }
 
 .leaves__tree-checklist {
@@ -247,7 +251,7 @@
   }
 
   .tree-progress__label {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   /* (B) Courses */
@@ -332,7 +336,7 @@
   }
 
   .tree-progress__label {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   .tree-progress__bar {

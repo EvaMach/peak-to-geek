@@ -197,7 +197,7 @@ server.post('/api/user-tree/update', (req, resp) => {
   });
 });
 
-// KURZY
+// KURZY KOMUNITY
 
 server.get('/api/courses', (req, resp) => {
   resp.send({
@@ -215,6 +215,8 @@ server.post('/api/courses', (req, resp) => {
   });
 });
 
+// KURZY UŽIVATELE
+
 server.get('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
@@ -227,7 +229,6 @@ server.get('/api/user-courses', (req, resp) => {
   resp.send({
     status: 'success',
     results: {
-      login: user.login,
       courses: user.courses,
       dashboard: user.dashboard,
     },
@@ -249,7 +250,6 @@ server.post('/api/user-courses', (req, resp) => {
   resp.send({
     status: 'success',
     results: {
-      login: user.login,
       courses: user.courses,
     },
   });
@@ -275,6 +275,8 @@ server.post('/api/course/:id', (req, resp) => {
   });
 });
 
+// DASHBOARD
+
 server.get('/api/create-dashboard', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
@@ -286,7 +288,7 @@ server.get('/api/create-dashboard', (req, resp) => {
 
   if (user.dashboard === undefined) {
     user.streak = 0;
-    user.dashboardDate = dayjs().startOf('minute').toISOString();
+    user.dashboardDate = dayjs().startOf('week').toISOString();
     user.dashboard = user.courses
       .filter((course) => course.active)
       .map((course) => ({ done: false, ...course }));
@@ -295,6 +297,40 @@ server.get('/api/create-dashboard', (req, resp) => {
   resp.send({
     status: 'success',
     results: user,
+  });
+});
+
+server.get('/api/user-dashboard', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  if (user.dashboard === undefined) {
+    resp.send({
+      status: 'success',
+      results: null,
+    });
+    return;
+  }
+
+  const weekStart = dayjs().startOf('week').toISOString();
+
+  if (weekStart !== user.dashboardDate) {
+    const allDone = user.dashboard.every((course) => course.done);
+    user.streak = allDone ? user.streak + 1 : 0;
+    user.dashboardDate = weekStart;
+    user.dashboard = user.courses
+      .filter((course) => course.active)
+      .map((course) => ({ done: false, ...course }));
+  }
+
+  resp.send({
+    status: 'success',
+    results: user.dashboard,
   });
 });
 
@@ -319,38 +355,23 @@ server.post('/api/user-dashboard/course/:id', (req, resp) => {
   });
 });
 
-server.get('/api/user-dashboard', (req, resp) => {
-  const token = req.headers.authorization;
-  const user = users.find((u) => u.token === token);
+server.get('/api/current-leaf/:id', (req, resp) => {
+  const { id } = req.params;
 
-  if (user === undefined) {
-    resp.sendStatus(403);
-    return;
-  }
+  const branch = tree.branches.find((branch) => branch.id === id.slice(0, 1));
+  const leaf = branch.leaves.find((leaf) => leaf.id === id.slice(1, 2));
 
-  if (user.dashboard === undefined) {
-    resp.send({
-      status: 'success',
-      results: null,
+  if (leaf === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Leaf not found',
     });
     return;
   }
 
-  const weekStart = dayjs().startOf('minute').toISOString();
-  console.log(weekStart, 'user', user.dashboardDate);
-
-  if (weekStart !== user.dashboardDate) {
-    const allDone = user.dashboard.every((course) => course.done);
-    user.streak = allDone ? user.streak + 1 : 0;
-    user.dashboardDate = weekStart;
-    user.dashboard = user.courses
-      .filter((course) => course.active)
-      .map((course) => ({ done: false, ...course }));
-  }
-
   resp.send({
     status: 'success',
-    results: user,
+    results: leaf.name,
   });
 });
 
@@ -359,7 +380,6 @@ server.get('/api/user-dashboard', (req, resp) => {
 server.use(express.static('dist'));
 
 server.get('*', (req, resp) => {
-  // resp.sendFile('dist/index.html');
   resp.sendFile('index.html', { root: 'dist' });
 });
 

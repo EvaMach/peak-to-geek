@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
 import '../Courses.css';
 
-const Course = ({
-  courseName,
-  token,
-  courseId,
-  courseActive,
-  userCourse,
-  courseUrl,
-}) => {
-  const [activeCourse, setActiveCourse] = useState(courseActive);
+const Course = ({ token, userCourse, course }) => {
+  const [activeCourse, setActiveCourse] = useState(course.active);
 
-  return (
-    <div
-      className={
-        activeCourse
-          ? 'course-bar--active course-bar course-bar__actual-courses'
-          : 'course-bar course-bar__actual-courses'
-      }
-    >
-      <p>{courseName}</p>
-      {userCourse ? (
+  if (userCourse) {
+    return (
+      <div
+        className={
+          activeCourse
+            ? 'course-bar--active course-bar course-bar__actual-courses'
+            : 'course-bar course-bar__actual-courses'
+        }
+      >
+        <p>{course.name}</p>
         <button
           className="course-bar__btn"
           onClick={() => {
             setActiveCourse(!activeCourse);
-            fetch(`/api/course/${courseId}`, {
+            fetch(`/api/course/${course.id}`, {
               method: 'POST',
               headers: {
                 Authorization: token,
@@ -37,14 +30,19 @@ const Course = ({
             });
           }}
         >
-          {activeCourse ? 'Odebrat z dashboardu' : 'Přidat na dashboard'}
+          {activeCourse ? 'Odebrat z dashboardu' : 'Sledovat na dashboardu'}
         </button>
-      ) : (
-        <a href={courseUrl} className="course-bar__btn">
+      </div>
+    );
+  } else {
+    return (
+      <div className="course-bar course-bar__actual-courses">
+        <p>{course.name}</p>
+        <a href={course.url} className="course-bar__btn">
           Přejít na kurz
         </a>
-      )}
-    </div>
-  );
+      </div>
+    );
+  }
 };
 export default Course;
