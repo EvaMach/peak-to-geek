@@ -62,8 +62,12 @@ a.course-bar__btn:hover {
   height: fit-content;
 }
 
-#create-dashboard-btn {
+#create-dashboard__btn {
   width: fit-content;
+}
+
+.create-dashboard__info {
+  width: 50%;
 }
 
 /* RESPONSIVITY */

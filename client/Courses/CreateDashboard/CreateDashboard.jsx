@@ -7,7 +7,7 @@ const CreateDashboard = ({ userDashboard, onCreateDashboard }) => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        id="create-dashboard-btn"
+        id="create-dashboard__btn"
         className="actual-courses__button"
         onClick={onCreateDashboard}
       >
@@ -16,10 +16,12 @@ const CreateDashboard = ({ userDashboard, onCreateDashboard }) => {
     );
   } else {
     return (
-      <p>
-        Od teď už se bude dashboard aktualizovat automaticky každý týden. Nyní
-        zakliknuté kurzy se přidají do následujícího týdne.
-      </p>
+      <div className=".create-dashboard__info">
+        <p>
+          Po vytvoření se bude dashboard automaticky aktualizovat každý týden.
+        </p>
+        <p>Nyní zakliknuté kurzy se přidají do následujícího týdne.</p>
+      </div>
     );
   }
 };

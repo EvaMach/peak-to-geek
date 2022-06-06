@@ -4,16 +4,16 @@ import '../Courses.css';
 const Course = ({ token, userCourse, course }) => {
   const [activeCourse, setActiveCourse] = useState(course.active);
 
-  return (
-    <div
-      className={
-        activeCourse
-          ? 'course-bar--active course-bar course-bar__actual-courses'
-          : 'course-bar course-bar__actual-courses'
-      }
-    >
-      <p>{course.name}</p>
-      {userCourse ? (
+  if (userCourse) {
+    return (
+      <div
+        className={
+          activeCourse
+            ? 'course-bar--active course-bar course-bar__actual-courses'
+            : 'course-bar course-bar__actual-courses'
+        }
+      >
+        <p>{course.name}</p>
         <button
           className="course-bar__btn"
           onClick={() => {
@@ -30,14 +30,19 @@ const Course = ({ token, userCourse, course }) => {
             });
           }}
         >
-          {activeCourse ? 'Odebrat z dashboardu' : 'Přidat na dashboard'}
+          {activeCourse ? 'Odebrat z dashboardu' : 'Sledovat na dashboardu'}
         </button>
-      ) : (
+      </div>
+    );
+  } else {
+    return (
+      <div className="course-bar course-bar__actual-courses">
+        <p>{course.name}</p>
         <a href={course.url} className="course-bar__btn">
           Přejít na kurz
         </a>
-      )}
-    </div>
-  );
+      </div>
+    );
+  }
 };
 export default Course;

@@ -229,7 +229,6 @@ server.get('/api/user-courses', (req, resp) => {
   resp.send({
     status: 'success',
     results: {
-      login: user.login,
       courses: user.courses,
       dashboard: user.dashboard,
     },
@@ -251,7 +250,6 @@ server.post('/api/user-courses', (req, resp) => {
   resp.send({
     status: 'success',
     results: {
-      login: user.login,
       courses: user.courses,
     },
   });
@@ -382,7 +380,6 @@ server.get('/api/current-leaf/:id', (req, resp) => {
 server.use(express.static('dist'));
 
 server.get('*', (req, resp) => {
-  // resp.sendFile('dist/index.html');
   resp.sendFile('index.html', { root: 'dist' });
 });
 
