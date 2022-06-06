@@ -58,6 +58,15 @@ header {
   font-size: 1em;
 }
 
+#navigation__items .navigation__item {
+  position: inherit;
+  z-index: 1;
+}
+
+#navigation__items--hamburger .navigation__icon {
+  margin-top: 0.5em;
+}
+
 .navigation__item:not(.navigation__item--actual):hover {
   color: var(--alternative-pink);
 }

@@ -75,6 +75,7 @@ input:checked + .slider {
   --hamburger: #a4cbcd;
   --hamburger__border: #a4cbcd;
   --hamburger__links: #000000;
+  --main-page__title: #2e9398;
   --about-h2: #72164c;
   --h3: #000000;
   --links: #000000;
@@ -82,9 +83,12 @@ input:checked + .slider {
   --navigation__active-links: #72164c;
   --about-project__text: #000000;
   --dashboard--motivation: #72164c;
+  --courses-empty: #000000;
+  --tree: #72164c;
   --tree-progress__label: #000000;
   --tree__treetop: #2e9398;
-  --tree: #72164c;
+  --tree__modal: #e8e8e8;
+  --tree-modal__header: #000000;
   --progress-bar: #e8e8e8;
   --progress-bar__actual: #2e9398;
   --leaves: #000000;
@@ -93,20 +97,15 @@ input:checked + .slider {
   --course-bar__active: #2e9398;
   /* --course-bar__active-text: #ffffff; */
   --button__text: #000000;
+  --modal-shadow: #717171;
 }
 
 [data-theme='dark'] {
-  --main-pink: #532741;
-  --main-turqoise: #a4cbcd;
-  --light-turqoise: #43696b;
-  --light-pink: #bfa9ae;
-  --grey: #e8e8e8;
-  --light-grey: #cfcfcf;
-
   --background-color: #1c1c1e;
   --font-color: #cbb1b6;
   --topbar: #282829;
   --h1: #4e7a7c;
+  --main-page__title: #a4cbcd;
   --about-h2: #c48894;
   --h3: #4e7a7c;
   --links: #ffffffba;
@@ -117,9 +116,10 @@ input:checked + .slider {
   --hamburger__links: #000000;
   --about-project__text: #c4c4c4;
   --dashboard--motivation: #dbbcc2;
+  --courses-empty: #ffffff9f;
+  --tree: #532741;
   --tree-progress__label: #ffffff9f;
   --tree__treetop: #345c5e;
-  --tree: #532741;
   --progress-bar: #8b8b8b;
   --progress-bar__actual: #532741;
   --leaves: #ffffff9f;
@@ -128,6 +128,9 @@ input:checked + .slider {
   --course-bar__active: #3c5556;
   /* --course-bar__active-text: #000000; */
   --button__text: #000000;
+  --tree__modal: #8b8b8b;
+  --tree-modal__header: #345c5e;
+  --modal-shadow: #000000;
 }
 
 /* Navigation */
@@ -144,6 +147,16 @@ input:checked + .slider {
 
 [data-theme='dark'] .hamburger-react {
   filter: invert(0.3);
+}
+
+/* Home */
+
+#main-page__title {
+  color: var(--main-page__title);
+}
+
+[data-theme='dark'] .tree__image {
+  filter: saturate(0.8);
 }
 
 /* Info */
@@ -194,6 +207,19 @@ input:checked + .slider {
   background-color: var(--progress-bar__actual);
 }
 
+[data-theme='dark'] .dashboard__image--sloth,
+[data-theme='dark'] .dashboard__image--liana {
+  filter: brightness(0.7);
+}
+
+[data-theme='dark'] #navigation__items .navigation__icon {
+  filter: invert(0.8);
+}
+
+.actual-courses__empty {
+  color: var(--courses-empty);
+}
+
 /* Tree */
 
 #tree__treetop {
@@ -219,6 +245,18 @@ input:checked + .slider {
 
 [data-theme='dark'] .tree__leaf-icon {
   filter: contrast(0.4);
+}
+
+#tree__modal {
+  background-color: var(--tree__modal);
+}
+
+#tree__modal .modal__header h3 {
+  color: var(--tree-modal__header);
+}
+
+[data-theme='dark'] #tree__modal {
+  filter: drop-shadow(2px 4px 6px var(--modal-shadow));
 }
 
 /* Courses */

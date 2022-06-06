@@ -1,5 +1,9 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
+.container__your-courses {
+  margin-bottom: 120px;
+}
+
 #courses__title {
   font-size: 3em;
   margin-bottom: 0.5em;
@@ -13,6 +17,10 @@
   color: var(--main-turqoise);
 }
 
+#community__title--inspiration {
+  margin-bottom: 1em;
+}
+
 .main__your-courses {
   position: relative;
 }
@@ -23,6 +31,7 @@
 
 button.course-bar__btn,
 a.course-bar__btn {
+  font-size: 0.8em;
   border: 1px var(--light-pink) solid;
   background: none;
   color: white;
@@ -50,6 +59,11 @@ a.course-bar__btn:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: fit-content;
+}
+
+#create-dashboard-btn {
+  width: fit-content;
 }
 
 /* RESPONSIVITY */
@@ -134,7 +148,7 @@ a.course-bar__btn:hover {
   }
 
   #your-courses__button {
-    width: 20%;
+    width: 30%;
   }
 
   .your-courses__buttons {

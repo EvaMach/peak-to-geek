@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.dashboard__image--liana {
+  display: none;
+}
+
 /* (A) Streak + progress */
 
 .dashboard__streak-update {
@@ -98,7 +102,7 @@
   border-radius: 1em;
   font-weight: 600;
   font-size: 90%;
-  width: 40%;
+  /* width: 40%; */
   padding: 0.7em 1em;
 }
 
@@ -183,6 +187,10 @@
     margin-top: 5%;
   }
 
+  .course-bar {
+    font-size: 1em;
+  }
+
   .course-bar__check {
     width: 20%;
     gap: 1em;
@@ -198,10 +206,10 @@
   .dashboard__image--sloth {
     max-width: 100%;
     width: 80%;
-    margin: -2em auto -1em auto;
+    margin: 0 auto -1em auto;
     display: block;
     transform: rotate(-20deg);
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   .follow-up__treetop--left {
@@ -248,9 +256,6 @@
     margin-bottom: 0.8em;
   }
 
-  /* .actual-courses__button {
-  } */
-
   /* Right side */
 
   .dashboard__right-side {
@@ -259,7 +264,7 @@
 
   .dashboard__image--sloth {
     width: 50vw;
-    margin-top: -5em;
+    margin-top: -1em;
     /* z-index: unset; */
   }
 
@@ -354,8 +359,8 @@
   /* Right side */
 
   .dashboard__image--sloth {
-    width: 35vw;
-    margin: -10% 5% 0% 5%;
+    width: 36vw;
+    margin: -2em 5% 0% 5%;
     position: relative;
   }
 
@@ -453,6 +458,14 @@
     width: 30vw;
     margin-top: -7em;
     margin-left: -0.5em;
+    display: none;
+  }
+
+  .dashboard__image--liana {
+    display: block;
+    width: 40vw;
+    margin-top: -12em;
+    margin-left: -15em;
   }
 
   .dashboard__motivation {

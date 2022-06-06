@@ -1,25 +1,18 @@
 import React from 'react';
 import './DarkMode.css';
 
-const setDark = () => {
-  localStorage.setItem('theme', 'dark');
-  document.documentElement.setAttribute('data-theme', 'dark');
-};
-
-const setLight = () => {
-  localStorage.setItem('theme', 'light');
-  document.documentElement.setAttribute('data-theme', 'light');
-};
-
-const toggleTheme = (e) => {
-  if (e.target.checked) {
-    setDark();
-  } else {
-    setLight();
-  }
-};
-
 const DarkMode = () => {
+  const setDark = () => {
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'dark');
+  };
+  const setLight = () => {
+    localStorage.setItem('theme', 'light');
+    document.documentElement.setAttribute('data-theme', 'light');
+  };
+
+  const toggleTheme = (e) => (e.target.checked ? setDark() : setLight());
+
   return (
     <div className="toggle-theme-wrapper">
       {/* <span>☀️</span> */}

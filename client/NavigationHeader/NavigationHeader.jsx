@@ -85,6 +85,7 @@ const NavigationHeader = () => {
                 }
               >
                 <img
+                  className="navigation__icon"
                   src={require('./img/icon__log-out.svg')}
                   alt="Ikona odhlášení"
                 />

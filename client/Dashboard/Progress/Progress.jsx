@@ -38,7 +38,7 @@ const Progress = ({ token }) => {
             alt="Ikonka progress korunky"
           />
         </motion.div>
-        <p>Svůj strom pěstuješ už {userDays}. den v řadě</p>
+        <p>Svůj strom pěstuješ už {userDays}. týden v řadě</p>
       </div>
       <div className="dashboard__tree-progress">
         <div className="tree-progress__label">

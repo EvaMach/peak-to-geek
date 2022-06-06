@@ -8,6 +8,11 @@ const FollowUp = () => {
         src={require('../img/sloth_own--colored.svg')}
         alt="Lenochod visící na stromě"
       />
+      <img
+        className="dashboard__image--liana"
+        src={require('../img/liana.svg')}
+        alt="Lenochod visící na stromě s dlouhou lianou"
+      />
       <div className="dashboard__motivation">
         Nikdo učený z nebe nespadl. To dáš!
       </div>

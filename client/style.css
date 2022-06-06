@@ -19,6 +19,15 @@
   --white: #ffffff;
 }
 
+[data-theme='dark'] {
+  --main-pink: #532741;
+  --main-turqoise: #a4cbcd;
+  --light-turqoise: #43696b;
+  --light-pink: #bfa9ae;
+  --grey: #e8e8e8;
+  --light-grey: #cfcfcf;
+}
+
 /* Responzivita */
 
 /* 368px */

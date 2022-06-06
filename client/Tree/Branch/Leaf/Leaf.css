@@ -4,7 +4,6 @@
 
 #tree__modal {
   font-size: 1.1em;
-  background-color: var(--light-grey);
   border-radius: 2em;
   padding: 2em;
   position: absolute;
@@ -54,6 +53,10 @@
     margin-left: 0.5em;
     margin-right: 0.3em;
   }
+
+  .modal__simple-icon--close {
+    width: 1.5em;
+  }
 }
 
 @media (min-width: 768px) {
@@ -67,6 +70,10 @@
     align-items: start;
     margin-left: 2em;
     margin-right: -1em;
+  }
+
+  .modal__simple-icon--close {
+    width: 2em;
   }
 }
 

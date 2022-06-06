@@ -119,7 +119,9 @@ const Courses = () => {
               <AddCourse onNewCourse={handleAddCourse} />
             </div>
             <h2 id="community__title">Kurzy komunity</h2>
-            <h2>Inspiruj se kurzy, co si přidali další geekové. </h2>
+            <h3 id="community__title--inspiration">
+              Inspiruj se kurzy, které si přidali další geekové!{' '}
+            </h3>
 
             {courses.map((course) => (
               <Course
