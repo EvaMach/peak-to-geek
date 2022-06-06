@@ -3,7 +3,6 @@ import { motion, useAnimation } from 'framer-motion';
 
 const Progress = ({ token }) => {
   const [userProgress, setUserProgress] = useState(0);
-  const [userDays, setUserDays] = useState(1);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -16,7 +15,6 @@ const Progress = ({ token }) => {
       .then((response) => response.json())
       .then((data) => {
         setUserProgress(data.results.tree.length);
-        setUserDays(data.results.day);
       });
   }, []);
 
@@ -26,19 +24,12 @@ const Progress = ({ token }) => {
   });
 
   return (
-    <>
-      <div className="dashboard__tree-progress">
-        <div className="tree-progress__label">
-          Tvůj postup znalostním stromem
-        </div>
-        <div className="tree-progress__bar">
-          <motion.div
-            animate={controls}
-            className="tree-progress__bar--actual"
-          />
-        </div>
+    <div className="dashboard__tree-progress">
+      <div className="tree-progress__label">Tvůj postup znalostním stromem</div>
+      <div className="tree-progress__bar">
+        <motion.div animate={controls} className="tree-progress__bar--actual" />
       </div>
-    </>
+    </div>
   );
 };
 

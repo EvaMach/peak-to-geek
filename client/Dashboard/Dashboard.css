@@ -88,10 +88,10 @@
   margin-bottom: 1em;
 }
 
-.check-icon1,
-.check-icon3 {
+.course__check-icon {
   filter: invert(1);
   width: 1.5em;
+  cursor: pointer;
 }
 
 .course__study-day {

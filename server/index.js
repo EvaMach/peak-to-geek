@@ -197,7 +197,7 @@ server.post('/api/user-tree/update', (req, resp) => {
   });
 });
 
-// KURZY
+// KURZY KOMUNITY
 
 server.get('/api/courses', (req, resp) => {
   resp.send({
@@ -214,6 +214,8 @@ server.post('/api/courses', (req, resp) => {
     results: courses,
   });
 });
+
+// KURZY UŽIVATELE
 
 server.get('/api/user-courses', (req, resp) => {
   const token = req.headers.authorization;
@@ -275,6 +277,8 @@ server.post('/api/course/:id', (req, resp) => {
   });
 });
 
+// DASHBOARD
+
 server.get('/api/create-dashboard', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
@@ -286,7 +290,7 @@ server.get('/api/create-dashboard', (req, resp) => {
 
   if (user.dashboard === undefined) {
     user.streak = 0;
-    user.dashboardDate = dayjs().startOf('minute').toISOString();
+    user.dashboardDate = dayjs().startOf('week').toISOString();
     user.dashboard = user.courses
       .filter((course) => course.active)
       .map((course) => ({ done: false, ...course }));
@@ -336,7 +340,7 @@ server.get('/api/user-dashboard', (req, resp) => {
     return;
   }
 
-  const weekStart = dayjs().startOf('minute').toISOString();
+  const weekStart = dayjs().startOf('week').toISOString();
   console.log(weekStart, 'user', user.dashboardDate);
 
   if (weekStart !== user.dashboardDate) {
@@ -350,7 +354,26 @@ server.get('/api/user-dashboard', (req, resp) => {
 
   resp.send({
     status: 'success',
-    results: user,
+    results: user.dashboard,
+  });
+});
+
+server.get('/api/current-leaf/:id', (req, resp) => {
+  const { id } = req.params;
+
+  const branch = tree.branches.find((branch) => branch.id === id.slice(0, 1));
+  const leaf = branch.leaves.find((leaf) => leaf.id === id.slice(1, 2));
+
+  if (leaf === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Leaf not found',
+    });
+    return;
+  }
+  resp.send({
+    status: 'success',
+    results: leaf.name,
   });
 });
 
