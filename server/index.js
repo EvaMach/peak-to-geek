@@ -271,7 +271,7 @@ server.post('/api/course/:id', (req, resp) => {
 
   resp.send({
     status: 'success',
-    results: course,
+    results: user.courses,
   });
 });
 

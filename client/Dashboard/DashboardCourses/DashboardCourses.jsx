@@ -41,10 +41,10 @@ const DashboardCourses = ({ token }) => {
 
       {userDashboard === null ? (
         <div className="actual-courses__empty">
-          <h4>Nemáš žádné aktuální kurzy 😱</h4>
+          <h4>Nemáš žádné aktuální kurzy v rozvrhu 😱</h4>
           <p>
-            Přidej si je ze sekce Tvoje kurzy a sleduj svůj každotýdenní
-            progress!
+            Vytvoř si rozvrh s aktuálními kurzy ze sekce Tvoje kurzy a sleduj
+            svůj každotýdenní progress!
           </p>
         </div>
       ) : (

@@ -54,10 +54,10 @@ const Login = () => {
                   className="login__field"
                   type="checkbox"
                 />
-                <span className="login__remember-me--text">
+                {/* <span className="login__remember-me--text">
                   {' '}
                   Zapamatovat si mě
-                </span>
+                </span> */}
               </div>
               <motion.button
                 type="submit"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../Courses.css';
 
-const Course = ({ token, userCourse, course }) => {
+const Course = ({ userCourse, course, onActiveCourse }) => {
   const [activeCourse, setActiveCourse] = useState(course.active);
 
   if (userCourse) {
@@ -18,19 +18,10 @@ const Course = ({ token, userCourse, course }) => {
           className="course-bar__btn"
           onClick={() => {
             setActiveCourse(!activeCourse);
-            fetch(`/api/course/${course.id}`, {
-              method: 'POST',
-              headers: {
-                Authorization: token,
-                'Content-type': 'application/json',
-              },
-              body: JSON.stringify({
-                active: !activeCourse,
-              }),
-            });
+            onActiveCourse(course.id, activeCourse);
           }}
         >
-          {activeCourse ? 'Odebrat z dashboardu' : 'Sledovat na dashboardu'}
+          {activeCourse ? 'Odebrat z rozvrhu' : 'Přidat do rozvrhu'}
         </button>
       </div>
     );
