@@ -146,7 +146,7 @@
   .tree__branch--right {
     border-bottom: 4em solid var(--tree);
     border-right: 3em solid var(--tree);
-    width: 37vmax;
+    width: 38vmax;
     height: 7vmax;
   }
 
@@ -172,7 +172,7 @@
   .tree__branch--left {
     border-bottom: 4em solid var(--tree);
     border-left: 3em solid var(--tree);
-    width: 37vmax;
+    width: 38vmax;
     height: 7vmax;
   }
 

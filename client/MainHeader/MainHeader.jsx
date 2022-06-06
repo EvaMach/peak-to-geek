@@ -12,8 +12,8 @@ const MainHeader = () => {
         <div id="logo" className="main-page__logo">
           <Link to="/">
             <img
-              src={require('./img/logo_own--colored3.svg')}
-              alt="Logo Peak to Geek"
+              src={require('./img/logo_own--colored.svg')}
+              alt="Logo Peak to Geek (lenochod s notebookem)"
             />
           </Link>
         </div>

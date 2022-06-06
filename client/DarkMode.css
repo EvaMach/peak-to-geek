@@ -21,7 +21,7 @@
 }
 
 .slider {
-  background-color: #ccc;
+  background-color: rgb(154, 151, 151);
   position: absolute;
   cursor: pointer;
   bottom: 0;
@@ -159,6 +159,16 @@ input:checked + .slider {
   filter: saturate(0.8);
 }
 
+/* Login */
+
+[data-theme='dark'] .login__container {
+  filter: opacity(0.8);
+}
+
+.login__remember-me--text {
+  color: var(--font-color);
+}
+
 /* Info */
 
 .about-project h2 {
@@ -269,10 +279,6 @@ input:checked + .slider {
   color: var(--course-bar__text);
 }
 
-/* .main__your-courses button {
-  color: var(--black);
-} */
-
 #your-courses__button {
   background-color: var(--light-pink);
   border: 1px solid var(--light-pink);
@@ -280,4 +286,8 @@ input:checked + .slider {
 
 #your-courses__button p {
   color: var(--button__text);
+}
+
+.your-courses__dashboard-update {
+  color: var(--font-color);
 }

@@ -50,7 +50,7 @@ const FollowUp = ({ token }) => {
             <img
               className="leaves__leaf--inactive"
               src={require('../img/leaf__black.svg')}
-              alt="Černý lísteček pro dashboard"
+              alt="Černý lísteček pro strom na dashboardu"
             />
             <p>{leafName}</p>
           </div>

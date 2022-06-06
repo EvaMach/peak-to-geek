@@ -34,7 +34,7 @@ const Home = () => {
               <img
                 className="tree__image"
                 src={require('./img/tree.svg')}
-                alt="Stromeček"
+                alt="Stromeček na hlavní stránce"
               />
             </div>
           </main>
