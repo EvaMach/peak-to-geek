@@ -3,7 +3,7 @@ import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
 import './Leaf.css';
 import '../../../Modals/Modals.css';
 
-const Leaf = ({ initialLeaf, branchId, onChecked, onOpenModal, token }) => {
+const Leaf = ({ initialLeaf, branchId, onChecked, token }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (

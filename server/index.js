@@ -36,6 +36,22 @@ server.post('/api/login', (req, resp) => {
   });
 });
 
+// USER INFO
+server.get('/api/user', (req, resp) => {
+  const token = req.headers.authorization;
+  const user = users.find((u) => u.token === token);
+
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  resp.send({
+    status: 'success',
+    results: user,
+  });
+});
+
 // STROM
 
 const userBranch = (branch, userIds) => ({
@@ -55,8 +71,13 @@ const userBranch = (branch, userIds) => ({
 server.get('/api/tree', (req, resp) => {
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
-  const userIds = user.tree.map((id) => id.slice(2));
 
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  const userIds = user.tree.map((id) => id.slice(2));
   const newTree = tree.branches.map((branch) => userBranch(branch, userIds));
 
   resp.send({
@@ -67,15 +88,29 @@ server.get('/api/tree', (req, resp) => {
 
 // LISTY - CHECKBOXY
 
+const userLeaf = (leaf, userIds) => ({
+  id: leaf.id,
+  name: leaf.name,
+  checkboxes: leaf.checkboxes.map((checkboxItem) => ({
+    id: checkboxItem.id,
+    name: checkboxItem.name,
+    done: userIds.includes(checkboxItem.id),
+  })),
+});
+
 server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
   const { id, id2 } = req.params;
   const token = req.headers.authorization;
   const user = users.find((u) => u.token === token);
-  const userIds = user.tree.map((id) => id.slice(2));
 
+  if (user === undefined) {
+    resp.sendStatus(403);
+    return;
+  }
+
+  const userIds = user.tree.map((id) => id.slice(2));
   const branch = tree.branches.find((i) => i.id === id);
-  const leaves = branch.leaves;
-  const leaf = leaves.find((i) => i.id === id2);
+  const leaf = branch.leaves.find((i) => i.id === id2);
 
   if (branch === undefined) {
     resp.status(404).send({
@@ -93,75 +128,11 @@ server.get('/api/tree/branch/:id/leaf/:id2', (req, resp) => {
     return;
   }
 
-  branch.leaves.forEach((leaf) => {
-    leaf.checkboxes.forEach((checkboxItem) => {
-      if (userIds.includes(checkboxItem.id)) {
-        checkboxItem.done = true;
-      } else {
-        checkboxItem.done = false;
-      }
-    });
-  });
+  const newLeaf = userLeaf(leaf, userIds);
 
   resp.send({
     status: 'success',
-    results: leaf,
-  });
-});
-
-// USER INFO
-server.get('/api/user', (req, resp) => {
-  const token = req.headers.authorization;
-  const user = users.find((u) => u.token === token);
-
-  if (user === undefined) {
-    resp.sendStatus(403);
-    return;
-  }
-
-  resp.send({
-    status: 'success',
-    results: user,
-  });
-});
-
-// CHECKBOXY UŽIVATELE
-
-server.get('/api/user-branch/:id', (req, resp) => {
-  const { id } = req.params;
-  const token = req.headers.authorization;
-  const user = users.find((u) => u.token === token);
-
-  const branch = tree.branches.find((i) => i.id === id);
-
-  if (user === undefined) {
-    resp.sendStatus(403);
-    return;
-  }
-
-  if (branch === undefined) {
-    resp.status(404).send({
-      status: 'error',
-      message: 'Branch not found',
-    });
-    return;
-  }
-
-  const userIds = user.tree.map((id) => id.slice(2));
-
-  branch.leaves.forEach((leaf) => {
-    leaf.checkboxes.forEach((checkboxItem) => {
-      if (userIds.includes(checkboxItem.id)) {
-        checkboxItem.done = true;
-      } else {
-        checkboxItem.done = false;
-      }
-    });
-  });
-
-  resp.send({
-    status: 'success',
-    results: branch,
+    results: newLeaf,
   });
 });
 
@@ -177,23 +148,21 @@ server.post('/api/user-tree/update', (req, resp) => {
 
   const branch = tree.branches.find((i) => i.id === branchId);
 
-  user.tree.push(branchId + leafId + itemId);
-
-  const userIds = user.tree.map((id) => id.slice(2));
-
-  branch.leaves.forEach((leaf) => {
-    leaf.checkboxes.forEach((checkboxItem) => {
-      userIds.forEach((id) => {
-        if (checkboxItem.id === id) {
-          checkboxItem.done = true;
-        }
-      });
+  if (branch === undefined) {
+    resp.status(404).send({
+      status: 'error',
+      message: 'Branch not found',
     });
-  });
+    return;
+  }
+
+  user.tree.push(branchId + leafId + itemId);
+  const userIds = user.tree.map((id) => id.slice(2));
+  const newBranch = userBranch(branch, userIds);
 
   resp.send({
     status: 'success',
-    results: branch,
+    results: newBranch,
   });
 });
 
