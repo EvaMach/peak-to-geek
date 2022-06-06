@@ -27,11 +27,11 @@
 }
 
 .dashboard__tree-progress {
-  margin-bottom: 20%;
+  margin-bottom: 15%;
 }
 
 .tree-progress__label {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   color: var(--tree-progress__label);
 }
 
@@ -251,7 +251,7 @@
   }
 
   .tree-progress__label {
-    font-size: 0.9em;
+    font-size: 1.1em;
   }
 
   /* (B) Courses */
@@ -336,7 +336,7 @@
   }
 
   .tree-progress__label {
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
 
   .tree-progress__bar {

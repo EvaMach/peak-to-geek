@@ -1,18 +1,12 @@
 import React, { useState } from 'react';
 
-const DashboardCourse = ({
-  courseName,
-  courseId,
-  token,
-  courseActive,
-  courseDone,
-}) => {
-  const [courseFinished, setCourseFinished] = useState(courseDone);
+const DashboardCourse = ({ token, course }) => {
+  const [courseFinished, setCourseFinished] = useState(course.done);
   return (
     <div
       onClick={() => {
         setCourseFinished(!courseFinished);
-        fetch(`/api/user-dashboard/course/${courseId}`, {
+        fetch(`/api/user-dashboard/course/${course.id}`, {
           method: 'POST',
           headers: {
             Authorization: token,
@@ -26,7 +20,7 @@ const DashboardCourse = ({
       id="your-courses__course-bar"
       className="course-bar course-bar__actual-courses"
     >
-      <p>{courseName}</p>
+      <p>{course.name}</p>
       <div className="course-bar__check">
         <img
           className="course__check-icon check-icon1"
