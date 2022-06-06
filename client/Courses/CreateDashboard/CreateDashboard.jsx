@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import '../Courses.css';
 
 const CreateDashboard = ({
   userDashboard,
@@ -8,16 +8,18 @@ const CreateDashboard = ({
 }) => {
   if (userDashboard == null) {
     return (
-      <motion.button
+      <button
         disabled={!activeCourses}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        id="create-dashboard__btn"
+        id={
+          activeCourses
+            ? 'create-dashboard__btn'
+            : 'create-dashboard__btn--disabled'
+        }
         className="actual-courses__button"
         onClick={onCreateDashboard}
       >
         Vytvořit rozvrh
-      </motion.button>
+      </button>
     );
   } else {
     return (

@@ -62,8 +62,15 @@ a.course-bar__btn:hover {
   height: fit-content;
 }
 
-#create-dashboard__btn {
-  width: fit-content;
+#create-dashboard__btn:active,
+#create-dashboard__btn:focus {
+  transform: scale(1.1);
+}
+
+#create-dashboard__btn--disabled:hover {
+  cursor: not-allowed;
+  background-color: var(--light-pink);
+  border: 2px solid var(--light-pink);
 }
 
 .your-courses__dashboard-update {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const FollowUp = ({ token }) => {
-  const [leafName, setLeafName] = useState('');
+  const [leafName, setLeafName] = useState('Zatím jsi nesplnil žádný lístek');
 
   useEffect(() => {
     fetch('/api/user', {
