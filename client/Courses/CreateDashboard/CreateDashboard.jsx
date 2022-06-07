@@ -17,10 +17,12 @@ const CreateDashboard = ({ userDashboard, onCreateDashboard }) => {
   } else {
     return (
       <div className=".create-dashboard__info">
-        <p>
+        <p className="your-courses__dashboard-update">
           Po vytvoření se bude dashboard automaticky aktualizovat každý týden.
         </p>
-        <p>Nyní zakliknuté kurzy se přidají do následujícího týdne.</p>
+        <p className="your-courses__dashboard-update">
+          Nyní zakliknuté kurzy se přidají do následujícího týdne.
+        </p>
       </div>
     );
   }

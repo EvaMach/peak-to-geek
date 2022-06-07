@@ -435,6 +435,10 @@
   .dashboard__motivation {
     top: 10em;
   }
+
+  .dashboard__follow-up {
+    margin-top: -3em;
+  }
 }
 
 @media (min-width: 1700px) {
@@ -459,9 +463,6 @@
   /* Right side */
 
   .dashboard__image--sloth {
-    width: 30vw;
-    margin-top: -7em;
-    margin-left: -0.5em;
     display: none;
   }
 

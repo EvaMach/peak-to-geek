@@ -82,6 +82,7 @@ input:checked + .slider {
   --navigation__links: #000000;
   --navigation__active-links: #72164c;
   --about-project__text: #000000;
+  --caption: #72164c;
   --dashboard--motivation: #72164c;
   --courses-empty: #000000;
   --tree: #72164c;
@@ -95,7 +96,6 @@ input:checked + .slider {
   --course-bar: #72164c;
   --course-bar__text: #ffffff;
   --course-bar__active: #2e9398;
-  /* --course-bar__active-text: #ffffff; */
   --button__text: #000000;
   --modal-shadow: #717171;
 }
@@ -115,6 +115,7 @@ input:checked + .slider {
   --hamburger__border: #87b2b4;
   --hamburger__links: #000000;
   --about-project__text: #c4c4c4;
+  --caption: #dbbcc2;
   --dashboard--motivation: #dbbcc2;
   --courses-empty: #ffffff9f;
   --tree: #532741;
@@ -126,11 +127,15 @@ input:checked + .slider {
   --course-bar: #dbbcc2;
   --course-bar__text: #ffffffde;
   --course-bar__active: #3c5556;
-  /* --course-bar__active-text: #000000; */
   --button__text: #000000;
   --tree__modal: #8b8b8b;
   --tree-modal__header: #345c5e;
   --modal-shadow: #000000;
+}
+
+[data-theme='dark']
+  button:not(.form__button, button.course-bar__btn, #login__button, #main-page__signup-button) {
+  filter: drop-shadow(2px 4px 3px var(--modal-shadow));
 }
 
 /* Navigation */
@@ -199,6 +204,10 @@ input:checked + .slider {
   filter: invert(0.9);
 }
 
+.phases__picture--caption {
+  color: var(--caption);
+}
+
 /* Dashboard */
 
 .dashboard__motivation {
@@ -228,6 +237,14 @@ input:checked + .slider {
 
 .actual-courses__empty {
   color: var(--courses-empty);
+}
+
+[data-theme='dark'] .container__your-courses .course-bar {
+  border: 1px solid var(--main-pink);
+}
+
+[data-theme='dark'] .leaves__leaf--inactive {
+  filter: contrast(0.4);
 }
 
 /* Tree */
@@ -265,8 +282,8 @@ input:checked + .slider {
   color: var(--tree-modal__header);
 }
 
-[data-theme='dark'] #tree__modal {
-  filter: drop-shadow(2px 4px 6px var(--modal-shadow));
+#tree__modal {
+  filter: drop-shadow(2px 4px 3px var(--modal-shadow));
 }
 
 /* Courses */
@@ -290,4 +307,8 @@ input:checked + .slider {
 
 .your-courses__dashboard-update {
   color: var(--font-color);
+}
+
+#courses__modal {
+  filter: drop-shadow(2px 4px 3px var(--modal-shadow));
 }
