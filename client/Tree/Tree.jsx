@@ -5,12 +5,12 @@ import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import Footer from '../Footer/Footer.jsx';
 
 const Tree = () => {
-  const activeBranch = useRef(null);
   const token = window.localStorage.getItem('token');
   if (token === null) {
     window.location = '/login';
   }
 
+  const activeBranch = useRef(null);
   const [branches, setBranches] = useState([]);
 
   useEffect(() => {
@@ -41,6 +41,7 @@ const Tree = () => {
       <div className="container__topbar">
         <NavigationHeader />
       </div>
+
       <div className="container">
         <main>
           <h1 id="tree__title">Tvůj Geek strom</h1>

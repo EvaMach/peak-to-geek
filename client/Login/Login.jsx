@@ -55,7 +55,6 @@ const Login = () => {
                   type="checkbox"
                 />
                 <span className="login__remember-me--text">
-                  {' '}
                   Zapamatovat si mě
                 </span>
               </div>

@@ -82,6 +82,21 @@ const Courses = () => {
     );
   };
 
+  const handleActiveCourse = (courseId, activeCourse) => {
+    fetch(`/api/course/${courseId}`, {
+      method: 'POST',
+      headers: {
+        Authorization: token,
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        active: !activeCourse,
+      }),
+    }).then((response) =>
+      response.json().then((data) => setUserCourses(data.results)),
+    );
+  };
+
   return (
     <div id="your-courses__page">
       <div className="container__topbar">
@@ -97,6 +112,7 @@ const Courses = () => {
               course={userCourse}
               token={token}
               userCourse={true}
+              onActiveCourse={handleActiveCourse}
             />
           ))}
 
@@ -104,6 +120,9 @@ const Courses = () => {
             <CreateDashboard
               userDashboard={userDashboard}
               onCreateDashboard={handleCreateDashboard}
+              activeCourses={userCourses.some(
+                (course) => course.active === true,
+              )}
             />
             <AddCourse onNewCourse={handleAddCourse} />
           </div>

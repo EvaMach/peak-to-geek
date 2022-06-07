@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Leaf from './Leaf/Leaf.jsx';
 import { motion } from 'framer-motion';
 import './Branch.css';
