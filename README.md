@@ -4,7 +4,7 @@
 
 Motivational platform for IT enthusiasts! :sloth:
 
-![Peak to Geek logo](./client/img/logo_own--colored.svg)
+<img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="50">
 
 ---
 
