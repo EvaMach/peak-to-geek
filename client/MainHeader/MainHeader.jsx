@@ -2,7 +2,7 @@ import React from 'react';
 import './MainHeader.css';
 import '../style.css';
 import { Link } from 'react-router-dom';
-import DarkMode from '../DarkMode';
+import DarkMode from '../DarkMode/DarkMode.jsx';
 
 const MainHeader = () => {
   return (

@@ -24,10 +24,10 @@ This site was built using [Heroku](https://www.heroku.com/).
 
 <div align="center">
 
-[About](https://github.com/EvaMach/peak-to-geek#memo-about) •
-[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) •
-[User journey](https://github.com/EvaMach/peak-to-geek#world_map-user-journey) •
-[Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example) •
+[About](https://github.com/EvaMach/peak-to-geek#memo-about) :o:
+[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) :o:
+[User journey](https://github.com/EvaMach/peak-to-geek#world_map-user-journey) :o:
+[Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example) :o:
 
 </div>
 
@@ -46,7 +46,7 @@ Simply put:
 - The first such area we are focusing on within the DA project is UX / UI, while other areas (such as FE and BE development, data analysis, testing, project management etc.) are going to be continuously added afterwards.
 - And since our platform is primarily motivational, there are already included some gamification elements; followed by notifications and alerts as the next step :)
 
-**Read more about the Peak to Geek platform on [the project homepage](TBD).**
+> **Read more about the Peak to Geek platform on [the project homepage](TBD).**
 
 <!-- Link dodáme, až budeme mít nasazenou poslední verzi na Heroku + odkaz i do About na GitHubu -->
 

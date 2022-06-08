@@ -11,7 +11,7 @@ import Nelca from './Info/Nelca/Nelca.jsx';
 import Evca from './Info/Evca/Evca.jsx';
 import About from './Info/About/About.jsx';
 import './style.css';
-import './DarkMode.css';
+import './DarkMode/DarkMode.css';
 
 const App = () => {
   return (

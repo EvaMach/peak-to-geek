@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { motion } from 'framer-motion';
-import DarkMode from '../DarkMode';
+import DarkMode from '../DarkMode/DarkMode.jsx';
 
 const Login = () => {
   const [login, setLogin] = useState('');
