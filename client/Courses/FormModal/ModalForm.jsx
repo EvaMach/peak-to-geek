@@ -51,8 +51,13 @@ const FormModal = ({ closeModal, onAddCourse }) => {
         <motion.button
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-          className="actual-courses__button form__button"
+          className={`actual-courses__button form__button ${
+            courseName.length === 0 || courseUrl.length === 0
+              ? 'form__button--disabled'
+              : null
+          }`}
           type="submit"
+          disabled={courseName.length === 0 || courseUrl.length === 0}
         >
           Uložit kurz
         </motion.button>

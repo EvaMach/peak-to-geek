@@ -23,6 +23,11 @@
   width: 70%;
 }
 
+.form__button--disabled:hover,
+.form__button--disabled:active {
+  cursor: not-allowed;
+}
+
 .modal__icon--close {
   width: 2em;
   margin-top: -1em;

@@ -43,7 +43,7 @@
   padding-left: 0.5em;
 }
 
-#login__button {
+.login__button {
   font-weight: 600;
   background-color: var(--main-pink);
   border: 1px solid var(--main-pink);
@@ -54,12 +54,25 @@
   margin-top: 2em;
 }
 
-#login__button:hover {
+.login__button:hover {
   font-weight: 600;
   cursor: pointer;
   background-color: var(--light-pink);
   border: 1px solid var(--light-pink);
   color: var(--black);
+  transform: scale(1.2);
+}
+
+.login__button:active {
+  transform: scale(0.9);
+  transition: ease-in-out 500;
+}
+
+.login__button--disabled:hover,
+.login__button--disabled:active {
+  cursor: not-allowed;
+  transition: none;
+  transform: none;
 }
 
 /* RESPONSIVITY */

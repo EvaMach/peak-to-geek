@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Login.css';
-import { motion } from 'framer-motion';
 import DarkMode from '../DarkMode/DarkMode.jsx';
 
 const Login = () => {
@@ -34,7 +33,9 @@ const Login = () => {
             >
               <input
                 value={login}
-                onChange={(e) => setLogin(e.target.value)}
+                onChange={(e) => {
+                  setLogin(e.target.value);
+                }}
                 id="login__user-name"
                 className="login__field"
                 type="text"
@@ -58,14 +59,17 @@ const Login = () => {
                   Zapamatovat si mě
                 </span>
               </div>
-              <motion.button
+              <button
                 type="submit"
-                id="login__button"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
+                className={`login__button ${
+                  login.length === 0 || password === 0
+                    ? 'login__button--disabled'
+                    : null
+                }`}
+                disabled={login.length === 0 || password === 0}
               >
                 Přihlásit se
-              </motion.button>
+              </button>
             </form>
           </div>
         </main>
