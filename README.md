@@ -1,16 +1,14 @@
 <div align='center'>
 
-# :nerd_face: Peak to Geek
+# Peak to Geek :nerd_face:
 
 Motivational platform for IT enthusiasts! :sloth:
 
-<img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="100">
+<img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="150">
 
 ---
 
-<br />
-
-### Quick Links
+### Quick Link
 
 This site was built using [Heroku](https://www.heroku.com/).
 
@@ -27,7 +25,7 @@ This site was built using [Heroku](https://www.heroku.com/).
 <div align="center">
 
 [About](https://github.com/EvaMach/peak-to-geek#memo-about) •
-[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-techfeatures) •
+[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) •
 [User journey](https://github.com/EvaMach/peak-to-geek#world_map-user-journey) •
 [Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example) •
 
@@ -47,6 +45,10 @@ Simply put:
 - This is achieved by using special checklists that are a part of guidelines to specific IT areas.
 - The first such area we are focusing on within the DA project is UX / UI, while other areas (such as FE and BE development, data analysis, testing, project management etc.) are going to be continuously added afterwards.
 - And since our platform is primarily motivational, there are already included some gamification elements; followed by notifications and alerts as the next step :)
+
+**Read more about the Peak to Geek platform on [the project homepage](TBD).**
+
+<!-- Link dodáme, až budeme mít nasazenou poslední verzi na Heroku + odkaz i do About na GitHubu -->
 
 ## :magic_wand: Tech stack/features
 
