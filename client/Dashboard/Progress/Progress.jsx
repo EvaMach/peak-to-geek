@@ -19,7 +19,7 @@ const Progress = ({ token }) => {
   }, []);
 
   controls.start({
-    width: `${userProgress}%`,
+    width: `${(userProgress / 108) * 100}%`,
     transition: { duration: 2 },
   });
 
