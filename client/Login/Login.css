@@ -90,14 +90,32 @@
 }
 
 @media (min-width: 992px) {
+  .login__container {
+    background: url(img/login2.svg) no-repeat fixed;
+    background-size: cover;
+    min-height: 45em;
+    height: 100vh;
+    margin: 0;
+  }
   #login__core {
     padding-top: 25%;
   }
+
   #login__form {
     max-width: 30%;
     margin-top: 3%;
   }
 }
+
+/* @media (min-width: 1100px) {
+  .login__container {
+    background: url(img/login2.svg) no-repeat fixed;
+    background-size: cover;
+    min-height: 45em;
+    height: 100vh;
+    margin: 0;
+  }
+} */
 
 @media (min-width: 1200px) {
   #login__core {

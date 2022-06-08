@@ -29,7 +29,7 @@ const Nelca = () => {
           uskutečnit 🧩
         </p>
         <p className="creator__text">
-          P.S.: Jsem neuvěřitelný MILOVNÍK LENOCHODŮ 🦥 🦥 🦥
+          P.S.: Jsem neuvěřitelný MILOVNÍK LENOCHODŮ 🦥
         </p>
         <div className="creator__contacts">
           <a href="https://github.com/Nelusa">
