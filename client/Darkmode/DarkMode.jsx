@@ -15,12 +15,12 @@ const DarkMode = () => {
 
   return (
     <div className="toggle-theme-wrapper">
-      {/* <span>☀️</span> */}
+      <span className="dark-mode__icon">☼</span>
       <label className="toggle-theme" htmlFor="checkbox">
         <input type="checkbox" id="checkbox" onChange={toggleTheme} />
         <div className="slider round"></div>
       </label>
-      {/* <span>🌒</span> */}
+      <span className="dark-mode__icon">☽</span>
     </div>
   );
 };

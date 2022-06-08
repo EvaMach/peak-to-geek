@@ -59,6 +59,11 @@ input:checked + .slider {
   border-radius: 50%;
 }
 
+.dark-mode__icon {
+  font-size: 20px;
+  color: var(--font-color);
+}
+
 @media (min-width: 768px) {
   .toggle-theme-wrapper {
     margin-right: -10px;
