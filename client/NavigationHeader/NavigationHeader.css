@@ -80,7 +80,7 @@ header {
 
 .navigation__item:not(.navigation__item--actual):hover::after {
   width: 100%;
-  border-bottom: 2px solid #c48894;
+  border-bottom: 2px solid var(--alternative-pink);
 }
 
 .navigation__item--actual {
