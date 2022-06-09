@@ -306,6 +306,13 @@ input:checked + .slider {
   border: 1px solid var(--light-pink);
 }
 
+[data-theme='dark'] #create-dashboard__btn:hover {
+  background-color: var(--main-turqoise);
+  border: 2px solid var(--main-turqoise);
+  transform: scale(1.05);
+  transition: ease-in-out 8000;
+}
+
 #your-courses__button p {
   color: var(--button__text);
 }

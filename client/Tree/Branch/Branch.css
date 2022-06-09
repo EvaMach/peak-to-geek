@@ -132,7 +132,8 @@
   .tree__branch--sloth {
     width: 10em;
     top: -13em;
-    left: 0.6em;
+    /* left: 0.6em; */
+    left: -1em;
   }
 
   .tree__treetop {

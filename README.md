@@ -27,7 +27,7 @@ This site was built using [Heroku](https://www.heroku.com/).
 [About](https://github.com/EvaMach/peak-to-geek#memo-about) :o:
 [Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) :o:
 [User journey](https://github.com/EvaMach/peak-to-geek#world_map-user-journey) :o:
-[Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example) :o:
+[Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example)
 
 </div>
 
@@ -55,6 +55,7 @@ Simply put:
 - React v18
 - JavaScript
 - CSS
+- Node.js + express
 
 <!-- Budeme to nějak rozepisovat? -->
 
