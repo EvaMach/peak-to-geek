@@ -1,0 +1,101 @@
+/* -------------------- STYLES BOOK -------------------- */
+
+/* Fonty */
+
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+/* Barvičky */
+
+:root {
+  --main-turqoise: #2e9398;
+  --light-turqoise: #a4cbcd;
+  --main-pink: #72164c;
+  --light-pink: #dbbcc2;
+  --alternative-pink: #c48894;
+  --pink-old: #92475c;
+  --grey: #cfcfcf;
+  --light-grey: #e8e8e8;
+  --black: #000000;
+  --white: #ffffff;
+}
+
+[data-theme='dark'] {
+  --main-pink: #532741;
+  --main-turqoise: #a4cbcd;
+  --light-turqoise: #43696b;
+  --light-pink: #bfa9ae;
+  --grey: #e8e8e8;
+  --light-grey: #cfcfcf;
+}
+
+/* Responzivita */
+
+/* 368px */
+/* 576px */
+/* 768px */
+/* 992px */
+/* 1200px */
+
+/* -------------------- STYLES -------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--background-color);
+}
+
+main {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0% 5%;
+  font-size: 3vw;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Kodchasan', sans-serif;
+}
+
+h1 {
+  color: var(--h1);
+}
+
+h2 {
+  color: var(--main-turqoise);
+}
+
+h3 {
+  color: var(--h3);
+}
+
+a {
+  text-decoration: none;
+  color: var(--links);
+}
+
+p {
+  color: var(--font-color);
+}
+
+@media (min-width: 992px) {
+  .container {
+    font-size: 1vw;
+  }
+}

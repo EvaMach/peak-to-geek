@@ -244,7 +244,7 @@ input:checked + .slider {
   color: var(--courses-empty);
 }
 
-[data-theme='dark'] .container__your-courses .course-bar {
+[data-theme='dark'] .your-courses__container .course-bar {
   border: 1px solid var(--main-pink);
 }
 
@@ -317,7 +317,7 @@ input:checked + .slider {
   color: var(--button__text);
 }
 
-.your-courses__dashboard-update {
+.create-dashboard__info {
   color: var(--font-color);
 }
 

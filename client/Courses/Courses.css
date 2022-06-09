@@ -1,6 +1,6 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
-.container__your-courses {
+.your-courses__container {
   margin-bottom: 120px;
 }
 
@@ -73,7 +73,7 @@ a.course-bar__btn:hover {
   border: 2px solid var(--light-pink);
 }
 
-.your-courses__dashboard-update {
+.create-dashboard__info {
   font-weight: 400;
   font-style: italic;
   padding-left: 0.5em;
@@ -82,7 +82,7 @@ a.course-bar__btn:hover {
 /* RESPONSIVITY */
 
 @media (min-width: 576px) {
-  .container__your-courses {
+  .your-courses__container {
     font-size: 0.8em;
     margin-bottom: 10%;
   }
@@ -111,7 +111,7 @@ a.course-bar__btn:hover {
     font-size: 2em;
   }
 
-  .container__your-courses .course-bar {
+  .your-courses__container .course-bar {
     width: 80%;
     margin-right: 0;
     margin-left: 0;
@@ -125,7 +125,7 @@ a.course-bar__btn:hover {
     width: 80%;
   }
 
-  .your-courses__dashboard-update {
+  .create-dashboard__info {
     font-size: 1.1em;
   }
 }
@@ -149,7 +149,7 @@ a.course-bar__btn:hover {
     margin-top: 5%;
   }
 
-  .container__your-courses .course-bar {
+  .your-courses__container .course-bar {
     width: 70%;
     font-size: 1.3em;
   }
@@ -164,7 +164,7 @@ a.course-bar__btn:hover {
 }
 
 @media (min-width: 1500px) {
-  .container__your-courses {
+  .your-courses__container {
     background-position: right;
     background-size: unset;
   }

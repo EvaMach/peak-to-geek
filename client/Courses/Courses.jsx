@@ -103,7 +103,7 @@ const Courses = () => {
         <NavigationHeader />
       </div>
 
-      <div className="container container__your-courses">
+      <div className="container your-courses__container">
         <main className="main__your-courses">
           <h1 id="courses__title">Tvoje kurzy</h1>
           {userCourses.map((userCourse) => (

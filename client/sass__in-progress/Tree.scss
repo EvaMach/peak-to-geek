@@ -1,0 +1,118 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+#tree__title {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+/* Tree */
+
+#tree__treetop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 50%;
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  margin: 3% auto -2% auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tree {
+  &__core {
+    display: flex;
+  }
+
+  &_trunk {
+    border-bottom: 100em solid var(--tree);
+    border-left: 1.5em solid transparent;
+    border-right: 1.5em solid transparent;
+    width: 5em;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+/* Bushes */
+
+.bushes {
+  display: flex;
+  justify-content: center;
+  img {
+    filter: invert(87%) sepia(10%) saturate(611%) hue-rotate(134deg)
+      brightness(90%) contrast(88%);
+    width: 20em;
+    margin-top: -7em;
+  }
+}
+
+/* RESPONSIVITY */
+
+@media (min-width: 576px) {
+  #tree {
+    &__title {
+      font-size: 2em;
+    }
+
+    &__treetop {
+      width: 35%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #tree {
+    &__title {
+      font-size: 1.5em;
+      margin-top: 0.5em;
+    }
+
+    &__treetop {
+      font-size: 0.8em;
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #tree {
+    &__title {
+      font-size: 4em;
+    }
+
+    &__treetop {
+      font-size: 2em;
+    }
+  }
+
+  .tree__trunk {
+    border-bottom: 280em solid var(--tree);
+    border-left: 7em solid transparent;
+    border-right: 7em solid transparent;
+    width: 20em;
+  }
+
+  .bushes img {
+    width: 65em;
+    margin-top: -20em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #tree {
+    &__title {
+      font-size: 3em;
+    }
+
+    &__treetop {
+      width: 25%;
+    }
+  }
+  .tree__trunk {
+    border-bottom: 200em solid var(--tree);
+  }
+}

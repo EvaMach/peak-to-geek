@@ -23,11 +23,11 @@ const CreateDashboard = ({
     );
   } else {
     return (
-      <div className=".create-dashboard__info">
-        <p className="your-courses__dashboard-update">
+      <div className="create-dashboard__info">
+        <p>
           Po vytvoření se bude rozvrh sám automaticky aktualizovat každý týden.
         </p>
-        <p className="your-courses__dashboard-update">
+        <p>
           Nyní zakliknuté kurzy se přidají nebo odeberou do následujícího týdne.
         </p>
       </div>
