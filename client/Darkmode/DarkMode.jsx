@@ -28,7 +28,9 @@ const DarkMode = () => {
         />
         <div className="slider round"></div>
       </label>
-      <span className="dark-mode__icon">☽</span>
+      <span id="moon" className="dark-mode__icon">
+        ☽
+      </span>
     </div>
   );
 };
