@@ -265,7 +265,7 @@ server.get('/api/create-dashboard', (req, resp) => {
 
   if (user.dashboard === undefined) {
     user.streak = 0;
-    user.dashboardDate = dayjs().startOf('week').toISOString();
+    user.dashboardDate = dayjs().startOf('minute').toISOString();
     user.dashboard = user.courses
       .filter((course) => course.active)
       .map((course) => ({ done: false, ...course }));
@@ -294,12 +294,12 @@ server.get('/api/user-dashboard', (req, resp) => {
     return;
   }
 
-  const weekStart = dayjs().startOf('week').toISOString();
+  const minuteStart = dayjs().startOf('minute').toISOString();
 
-  if (weekStart !== user.dashboardDate) {
+  if (minuteStart !== user.dashboardDate) {
     const allDone = user.dashboard.every((course) => course.done);
     user.streak = allDone ? user.streak + 1 : 0;
-    user.dashboardDate = weekStart;
+    user.dashboardDate = minuteStart;
     user.dashboard = user.courses
       .filter((course) => course.active)
       .map((course) => ({ done: false, ...course }));
@@ -307,7 +307,7 @@ server.get('/api/user-dashboard', (req, resp) => {
 
   resp.send({
     status: 'success',
-    results: user.dashboard,
+    results: user,
   });
 });
 

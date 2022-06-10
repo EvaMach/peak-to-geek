@@ -1,23 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './DarkMode.css';
 
 const DarkMode = () => {
-  const setDark = () => {
-    localStorage.setItem('theme', 'dark');
-    document.documentElement.setAttribute('data-theme', 'dark');
-  };
-  const setLight = () => {
-    localStorage.setItem('theme', 'light');
-    document.documentElement.setAttribute('data-theme', 'light');
-  };
+  const [darkmodeChecked, setDarkmodeChecked] = useState(
+    localStorage.getItem('theme') === 'dark',
+  );
 
-  const toggleTheme = (e) => (e.target.checked ? setDark() : setLight());
+  useEffect(() => {
+    localStorage.setItem('theme', darkmodeChecked ? 'dark' : null);
+    document.documentElement.setAttribute(
+      'data-theme',
+      darkmodeChecked ? 'dark' : 'light',
+    );
+  }, [darkmodeChecked]);
+
+  const toggleTheme = () => setDarkmodeChecked(!darkmodeChecked);
 
   return (
     <div className="toggle-theme-wrapper">
       <span className="dark-mode__icon">☼</span>
       <label className="toggle-theme" htmlFor="checkbox">
-        <input type="checkbox" id="checkbox" onChange={toggleTheme} />
+        <input
+          type="checkbox"
+          id="checkbox"
+          checked={darkmodeChecked}
+          onChange={toggleTheme}
+        />
         <div className="slider round"></div>
       </label>
       <span className="dark-mode__icon">☽</span>
