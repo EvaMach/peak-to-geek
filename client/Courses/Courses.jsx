@@ -117,6 +117,7 @@ const Courses = () => {
           ))}
 
           <div className="your-courses__buttons">
+            <AddCourse onNewCourse={handleAddCourse} />
             <CreateDashboard
               userDashboard={userDashboard}
               onCreateDashboard={handleCreateDashboard}
@@ -124,7 +125,6 @@ const Courses = () => {
                 (course) => course.active === true,
               )}
             />
-            <AddCourse onNewCourse={handleAddCourse} />
           </div>
 
           <h2 id="community__title">Kurzy komunity</h2>
