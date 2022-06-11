@@ -17,7 +17,7 @@ const DarkMode = () => {
   const toggleTheme = () => setDarkmodeChecked(!darkmodeChecked);
 
   return (
-    <div className="toggle-theme-wrapper">
+    <div className="toggle-theme--wrapper">
       <span className="dark-mode__icon">☼</span>
       <label className="toggle-theme" htmlFor="checkbox">
         <input

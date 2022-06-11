@@ -1,5 +1,5 @@
 /* Toggle */
-.toggle-theme-wrapper {
+.toggle-theme--wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,7 +75,7 @@ input:checked + .slider {
 }
 
 @media (min-width: 768px) {
-  .toggle-theme-wrapper {
+  .toggle-theme--wrapper {
     padding-right: 10px;
   }
 }
@@ -182,7 +182,28 @@ input:checked + .slider {
 /* Login */
 
 [data-theme='dark'] .login__container {
-  filter: opacity(0.65);
+  filter: opacity(0.8);
+  background: url(../Login/img/login-page__transparent--dark3.svg) no-repeat
+    fixed;
+}
+
+[data-theme='dark'] input[type='text']#login__user-name,
+textarea {
+  background-color: #282829;
+}
+
+[data-theme='dark'] input[type='password']#login__user-password,
+textarea {
+  background-color: #282829;
+}
+
+[data-theme='dark'] input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #282829 inset !important;
+  box-shadow: #282829;
+  -webkit-text-fill-color: #ffffffc4;
 }
 
 .login__remember-me--text {
@@ -261,6 +282,14 @@ input:checked + .slider {
 
 [data-theme='dark'] .leaves__leaf--inactive {
   filter: contrast(0.4);
+}
+
+[data-theme='dark'] #create-dashboard__btn:hover,
+button.actual-courses__button:hover {
+  background-color: var(--main-turqoise);
+  border: 2px solid var(--main-turqoise);
+  transform: scale(1.05);
+  transition: ease-in-out 8000;
 }
 
 /* Tree */

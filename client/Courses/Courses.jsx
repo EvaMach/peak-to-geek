@@ -104,7 +104,7 @@ const Courses = () => {
       </div>
 
       <div className="container your-courses__container">
-        <main className="main__your-courses">
+        <main className="your-courses__main">
           <h1 id="courses__title">Tvoje kurzy</h1>
           {userCourses.map((userCourse) => (
             <Course
