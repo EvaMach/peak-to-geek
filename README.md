@@ -4,7 +4,7 @@
 
 Motivational platform for IT enthusiasts! :sloth:
 
-<img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="150">
+<img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="120">
 
 ---
 
@@ -13,7 +13,6 @@ Motivational platform for IT enthusiasts! :sloth:
 This site was built using [Heroku](https://www.heroku.com/).
 
   <a href="https://peak-to-geek.herokuapp.com/">
-  <!-- Link dodáme, až budeme mít nasazenou poslední verzi na Heroku + odkaz i do About na GitHubu -->
     <img src='https://img.shields.io/badge/HOMEPAGE-gray?style=for-the-badge'>
   </a>
 </div>
@@ -26,8 +25,8 @@ This site was built using [Heroku](https://www.heroku.com/).
 
 [About](https://github.com/EvaMach/peak-to-geek#memo-about) :o:
 [Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) :o:
-[User journey](https://github.com/EvaMach/peak-to-geek#world_map-user-journey) :o:
-[Code example](https://github.com/EvaMach/peak-to-geek#jigsaw-code-example)
+[How to install](https://github.com/EvaMach/peak-to-geek#gear-how-to-install) :o:
+[User journey](https://github.com/EvaMach/peak-to-geek/#world_map-user-journey) :o:
 
 </div>
 
@@ -39,13 +38,13 @@ This project was created during the [Digital Academy: Web](https://www.czechitas
 
 Being a motivational IT platform its main goal is to promote self-development in IT by offering guidelines how to proceed towards a certain career goal, and means to track progress and get inspiration from other users. The platform is essentialy a unique profile, where the user can store their online courses, find out which courses to take and check which areas of knowledge to complete within their study journey.
 
-Main features:
+**Main features:**
 
 - User dashboard with an overview of the weekly progress, course studying streak and a good hit of daily motivation
 - Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed areas 
 - List of user courses to follow and community courses to get inspired by
 
-Current state of development: **Version 1**
+**Version 1:**
 - Responsive web app with its own API
 - Pre-made user accounts
 - One IT field of study: UX / UI design 
@@ -55,9 +54,7 @@ Plans for future versions:
 - Other areas (such as FE and BE development, data analysis, testing, project management etc.)
 - Mobile app 
 
-> **Read more about the Peak to Geek platform on [the project homepage](TBD).**
-
-<!-- Link dodáme, až budeme mít nasazenou poslední verzi na Heroku + odkaz i do About na GitHubu -->
+> **Read more about the Peak to Geek platform on [the project homepage] (https://peak-to-geek.herokuapp.com/).**
 
 ## :magic_wand: Tech stack/features
 
