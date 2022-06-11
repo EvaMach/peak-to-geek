@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './ModalForm.css';
-// import { Formik, Field, Form } from 'formik';
+import './FormModal.scss';
 
 const FormModal = ({ closeModal, onAddCourse }) => {
   const [courseName, setCourseName] = useState('');
@@ -24,6 +23,7 @@ const FormModal = ({ closeModal, onAddCourse }) => {
         </button>
       </div>
       <form
+        className="form"
         onSubmit={(e) => {
           e.preventDefault();
           onAddCourse(courseName, courseUrl);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ModalForm from '../FormModal/ModalForm.jsx';
+import FormModal from '../FormModal/FormModal.jsx';
 import '../../Modals/Modals.scss';
 import { motion } from 'framer-motion';
 
@@ -18,7 +18,7 @@ const AddCourse = ({ onNewCourse }) => {
         <p>Přidat nový kurz</p>
       </motion.button>
       {openModal && (
-        <ModalForm onAddCourse={onNewCourse} closeModal={setOpenModal} />
+        <FormModal onAddCourse={onNewCourse} closeModal={setOpenModal} />
       )}
     </>
   );

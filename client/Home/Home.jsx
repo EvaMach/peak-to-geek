@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -12,7 +12,7 @@ const Home = () => {
         <MainHeader />
         <div className="main-page__container">
           <main className="main-page__main">
-            <div className="left-side main__left-side">
+            <div className="left-side main-page__left-side">
               <h1 id="main-page__title">Peak to Geek</h1>
               <div className="main-page__info">
                 <p className="main-page__text">

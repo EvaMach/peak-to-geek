@@ -6,14 +6,6 @@
 }
 
 .modal {
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    margin-top: 1em;
-    align-items: end;
-  }
-
   &__icon--close {
     width: 2em;
     margin-top: -1em;
@@ -22,18 +14,21 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+  align-items: end;
   &__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
   }
-
   &_input {
     padding: 0.5em;
     width: 70%;
   }
-
   &__button--disabled:hover,
   &__button--disabled:active {
     cursor: not-allowed;
