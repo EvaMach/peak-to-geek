@@ -1,33 +1,33 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
-#tree__title {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-}
-
 /* Tree */
 
-#tree__treetop {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 50%;
-  width: 40%;
-  aspect-ratio: 1 / 1;
-  margin: 3% auto -2% auto;
-  position: relative;
-  z-index: 1;
+#tree {
+  &__title {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  &__treetop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    margin: 3% auto -2% auto;
+    position: relative;
+    z-index: 1;
+  }
 }
 
 .tree {
   &__core {
     display: flex;
   }
-
-  &_trunk {
+  &__trunk {
     border-bottom: 100em solid var(--tree);
     border-left: 1.5em solid transparent;
     border-right: 1.5em solid transparent;

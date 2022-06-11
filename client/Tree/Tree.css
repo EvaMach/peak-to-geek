@@ -7,10 +7,6 @@
 
 /* Tree */
 
-.tree__core {
-  display: flex;
-}
-
 #tree__treetop {
   display: flex;
   justify-content: center;
@@ -24,6 +20,10 @@
   margin: 3% auto -2% auto;
   position: relative;
   z-index: 1;
+}
+
+.tree__core {
+  display: flex;
 }
 
 .tree__trunk {

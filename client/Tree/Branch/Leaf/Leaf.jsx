@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
-import './Leaf.css';
-import '../../../Modals/Modals.css';
+import './Leaf.scss';
+import '../../../Modals/Modals.scss';
 
 const Leaf = ({ initialLeaf, branchId, onChecked, token }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -26,7 +26,7 @@ const Leaf = ({ initialLeaf, branchId, onChecked, token }) => {
         >
           {initialLeaf.name}
           <img
-            className="tree__leaf-icon"
+            className="leaves__icon"
             src={
               initialLeaf.checkboxes.every((i) => i.done === true)
                 ? require('./img/leaf__done.svg')
@@ -42,7 +42,7 @@ const Leaf = ({ initialLeaf, branchId, onChecked, token }) => {
           }}
         >
           <img
-            className="tree__leaf-icon"
+            className="leaves__icon"
             src={
               initialLeaf.checkboxes.every((i) => i.done === true)
                 ? require('./img/leaf__done--left.svg')

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ChecklistItem.css';
+import './ChecklistItem.scss';
 import {
   animated,
   useSpring,

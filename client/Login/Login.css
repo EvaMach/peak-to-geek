@@ -65,7 +65,6 @@
 
 .login__button:active {
   transform: scale(0.9);
-  transition: ease-in-out 500;
 }
 
 .login__button--disabled:hover,

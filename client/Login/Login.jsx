@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './Login.scss';
 import DarkMode from '../DarkMode/DarkMode.jsx';
 
 const Login = () => {

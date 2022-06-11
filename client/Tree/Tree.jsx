@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './Tree.css';
+import './Tree.scss';
 import Branch from './Branch/Branch.jsx';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import Footer from '../Footer/Footer.jsx';

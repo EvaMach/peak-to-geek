@@ -1,7 +1,5 @@
 /* -------------------- MOBILE FIRST -------------------- */
 
-/* In common */
-
 .modal {
   background-color: var(--light-grey);
   padding: 2rem;
@@ -11,12 +9,11 @@
   &__header {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__header button {
-    border: none;
-    padding: 3px;
-    cursor: pointer;
-    background: none;
+    & button {
+      border: none;
+      padding: 3px;
+      cursor: pointer;
+      background: none;
+    }
   }
 }

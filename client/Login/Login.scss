@@ -55,6 +55,7 @@
     width: 100%;
     padding: 0.8em;
     margin-top: 2em;
+    transition: all 0.2s ease-in-out;
     &:hover {
       font-weight: 600;
       cursor: pointer;
@@ -65,7 +66,6 @@
     }
     &:active {
       transform: scale(0.9);
-      transition: ease-in-out 500;
     }
     &--disabled:hover,
     &--disabled:active {

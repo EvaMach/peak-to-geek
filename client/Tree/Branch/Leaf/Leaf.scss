@@ -9,16 +9,15 @@
   position: absolute;
   z-index: 1;
   width: 26em;
-  & .modal {
-    &__header {
-      margin-bottom: 0.8em;
-    }
-    &__simple-icon--close {
-      width: 1em;
-      margin-top: -1em;
-      margin-right: -0.5em;
-    }
+  & .modal__header {
+    margin-bottom: 0.8em;
   }
+}
+
+.modal__simple-icon--close {
+  width: 1em;
+  margin-top: -1em;
+  margin-right: -0.5em;
 }
 
 .leaves {
@@ -31,14 +30,13 @@
   width: 52%;
   cursor: pointer;
   margin-bottom: 2em;
+  &__icon {
+    width: 2em;
+    margin-left: 0.3em;
+  }
   &--left {
     align-items: start;
   }
-}
-
-.tree__leaf-icon {
-  width: 2em;
-  margin-left: 0.3em;
 }
 
 /* RESPONSIVITY */
@@ -46,12 +44,13 @@
 @media (min-width: 576px) {
   .leaves {
     font-size: 0.6em;
+    &__icon {
+      width: 2em;
+      margin-left: 0.5em;
+      margin-right: 0.3em;
+    }
   }
-  .tree__leaf-icon {
-    width: 2em;
-    margin-left: 0.5em;
-    margin-right: 0.3em;
-  }
+
   .modal__simple-icon--close {
     width: 1.5em;
   }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ModalForm from '../FormModal/ModalForm.jsx';
-import '../../Modals/Modals.css';
+import '../../Modals/Modals.scss';
 import { motion } from 'framer-motion';
 
 const AddCourse = ({ onNewCourse }) => {

@@ -279,7 +279,7 @@ input:checked + .slider {
   color: var(--black);
 }
 
-[data-theme='dark'] .tree__leaf-icon {
+[data-theme='dark'] .leaves__icon {
   filter: contrast(0.4);
 }
 
