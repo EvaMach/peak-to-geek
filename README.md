@@ -35,16 +35,25 @@ This site was built using [Heroku](https://www.heroku.com/).
 
 ## :memo: About
 
-This project has been created within the [Digital Academy: Web](https://www.czechitas.cz/kurzy/digitalni-akademie-web) - an intensive web development [course](https://docs.google.com/spreadsheets/d/1uuo2skY2L4KZoBT-YzaN5iY02RUsiza5mgDshyJbGRI/edit#gid=1798591226) via [Czechitas](https://www.czechitas.cz/) organisation.
+This project was created during the [Digital Academy: Web](https://www.czechitas.cz/kurzy/digitalni-akademie-web) - an intensive web development [course](https://docs.google.com/spreadsheets/d/1uuo2skY2L4KZoBT-YzaN5iY02RUsiza5mgDshyJbGRI/edit#gid=1798591226) organised by the [Czechitas](https://www.czechitas.cz/) organisation.
 
-As the motivational IT platform it focuses on self-development in IT, regarding education, career mapping, knowledge check and gamification. The platform is based on a unique IT profile, where the users can monitor their progress in courses and knowledge.
+Being a motivational IT platform its main goal is to promote self-development in IT by offering guidelines how to proceed towards a certain career goal, and means to track progress and get inspiration from other users. The platform is essentialy a unique profile, where the user can store their online courses, find out which courses to take and check which areas of knowledge to complete within their study journey.
 
-Simply put:
+Main features:
 
-- It is a place that can be used to overview one's IT knowledge necessary for certain jobs, and the progress made towards this career goal.
-- This is achieved by using special checklists that are a part of guidelines to specific IT areas.
-- The first such area we are focusing on within the DA project is UX / UI, while other areas (such as FE and BE development, data analysis, testing, project management etc.) are going to be continuously added afterwards.
-- And since our platform is primarily motivational, there are already included some gamification elements; followed by notifications and alerts as the next step :)
+- User dashboard with an overview of the weekly progress, course studying streak and a good hit of daily motivation
+- Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed areas 
+- List of user courses to follow and community courses to get inspired by
+
+Current state of development: **Version 1**
+- Responsive web app with its own API
+- Pre-made user accounts
+- One IT field of study: UX / UI design 
+
+Plans for future versions: 
+- Sign up
+- Other areas (such as FE and BE development, data analysis, testing, project management etc.)
+- Mobile app 
 
 > **Read more about the Peak to Geek platform on [the project homepage](TBD).**
 
@@ -55,9 +64,23 @@ Simply put:
 - React v18
 - JavaScript
 - CSS
-- Node.js + express
+- Node.js + Express framework 
+- Day.js and Motion Framer libraries
 
-<!-- Budeme to nějak rozepisovat? -->
+## :gear: How to install 
+- clone the project
+- go to project directory and run ```npm install```
+- open two terminals and run the app 
+```
+npm run dev:server
+npm run dev:client
+```
+- use guest account to login
+```
+login: geek
+password: guest
+```
+- or create your own account in ```server/users.js ```
 
 ## :world_map: User journey
 
@@ -65,6 +88,4 @@ Simply put:
 
 <!-- Natočila bych user journey jako na MYM, akorát samozřejmě v aktuální verzi přímo na stránce - od přihlášení, přes klik na strom a checklisty až po přidání nového kurzu a vytvoření dashboardu/přidání kurzů na dashboard, na konec odhlášení -->
 
-## :jigsaw: Code Example
 
-<!-- Budeme dávat nějakou ukázku kódu? -->
