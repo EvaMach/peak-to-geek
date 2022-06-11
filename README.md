@@ -6,6 +6,10 @@ Motivational platform for IT enthusiasts! :sloth:
 
 <img src='./client/img/logo_own--colored.svg' alt="Peak to Geek logo" width="120">
 
+Contributor: https://github.com/Nelusa/
+
+Mentor: https://github.com/podlomar/
+
 ---
 
 ### Quick Link
@@ -41,8 +45,9 @@ Being a motivational IT platform its main goal is to promote self-development in
 **Main features:**
 
 - User dashboard with an overview of the weekly progress, course studying streak and a good hit of daily motivation
-- Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed areas 
+- Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed sections 
 - List of user courses to follow and community courses to get inspired by
+- Dark mode 
 
 **Version 1:**
 - Responsive web app with its own API
@@ -54,7 +59,7 @@ Plans for future versions:
 - Other areas (such as FE and BE development, data analysis, testing, project management etc.)
 - Mobile app 
 
-> **Read more about the Peak to Geek platform on [the project homepage] (https://peak-to-geek.herokuapp.com/).**
+> **Read more about the Peak to Geek platform on [the project homepage](https://peak-to-geek.herokuapp.com/)**
 
 ## :magic_wand: Tech stack/features
 
