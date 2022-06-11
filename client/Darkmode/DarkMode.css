@@ -68,6 +68,12 @@ input:checked + .slider {
   padding-bottom: 1.5px;
 }
 
+@media (max-width: 670px) {
+  .dark-mode__icon {
+    color: var(--black);
+  }
+}
+
 @media (min-width: 768px) {
   .toggle-theme-wrapper {
     padding-right: 10px;
@@ -176,11 +182,12 @@ input:checked + .slider {
 /* Login */
 
 [data-theme='dark'] .login__container {
-  filter: opacity(0.8);
+  filter: opacity(0.65);
 }
 
 .login__remember-me--text {
   color: var(--font-color);
+  background-color: var(--background-color);
 }
 
 /* Info */

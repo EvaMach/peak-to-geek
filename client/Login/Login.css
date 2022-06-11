@@ -43,6 +43,12 @@
   padding-left: 0.5em;
 }
 
+.login__remember-me--text {
+  font-weight: 600;
+  padding: 0.1em 0.5em;
+  border-radius: 5px;
+}
+
 .login__button {
   font-weight: 600;
   background-color: var(--main-pink);

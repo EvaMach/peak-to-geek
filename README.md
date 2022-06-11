@@ -30,7 +30,7 @@ This site was built using [Heroku](https://www.heroku.com/).
 [About](https://github.com/EvaMach/peak-to-geek#memo-about) :o:
 [Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) :o:
 [How to install](https://github.com/EvaMach/peak-to-geek#gear-how-to-install) :o:
-[User journey](https://github.com/EvaMach/peak-to-geek/#world_map-user-journey) :o:
+[User journey](https://github.com/EvaMach/peak-to-geek/#world_map-user-journey)
 
 </div>
 
@@ -45,19 +45,21 @@ Being a motivational IT platform its main goal is to promote self-development in
 **Main features:**
 
 - User dashboard with an overview of the weekly progress, course studying streak and a good hit of daily motivation
-- Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed sections 
+- Gamified roadmap containing areas of knowledge necessary for a given IT field with checklists to track completed sections
 - List of user courses to follow and community courses to get inspired by
-- Dark mode 
+- Dark mode
 
 **Version 1:**
+
 - Responsive web app with its own API
 - Pre-made user accounts
-- One IT field of study: UX / UI design 
+- One IT field of study: UX / UI design
 
-Plans for future versions: 
+Plans for future versions:
+
 - Sign up
 - Other areas (such as FE and BE development, data analysis, testing, project management etc.)
-- Mobile app 
+- Mobile app
 
 > **Read more about the Peak to Geek platform on [the project homepage](https://peak-to-geek.herokuapp.com/)**
 
@@ -66,28 +68,31 @@ Plans for future versions:
 - React v18
 - JavaScript
 - CSS
-- Node.js + Express framework 
+- Node.js + Express framework
 - Day.js and Motion Framer libraries
 
-## :gear: How to install 
+## :gear: How to install
+
 - clone the project
-- go to project directory and run ```npm install```
-- open two terminals and run the app 
+- go to project directory and run `npm install`
+- open two terminals and run the app
+
 ```
 npm run dev:server
 npm run dev:client
 ```
+
 - use guest account to login
+
 ```
 login: geek
 password: guest
 ```
-- or create your own account in ```server/users.js ```
+
+- or create your own account in `server/users.js `
 
 ## :world_map: User journey
 
 <!-- PŘIDAT GIF HÍR -->
 
 <!-- Natočila bych user journey jako na MYM, akorát samozřejmě v aktuální verzi přímo na stránce - od přihlášení, přes klik na strom a checklisty až po přidání nového kurzu a vytvoření dashboardu/přidání kurzů na dashboard, na konec odhlášení -->
-
-
