@@ -68,9 +68,9 @@ Plans for future versions:
 
 - React v18
 - JavaScript
-- CSS
+- CSS & SASS
 - Node.js + Express framework
-- Day.js and Motion Framer libraries
+- Day.js & Motion Framer libraries
 
 ## :gear: How to install
 
