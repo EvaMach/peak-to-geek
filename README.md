@@ -91,6 +91,14 @@ password: guest
 
 - or create your own account in `server/users.js `
 
+## :bar_chart: Project structure
+
+<div align='center'>
+
+  <img src='./client/img/figjam--structure.png' alt="Project structure (components)" width="100">
+
+</div>
+
 ## :world_map: User journey
 
 <!-- PŘIDAT GIF HÍR -->
