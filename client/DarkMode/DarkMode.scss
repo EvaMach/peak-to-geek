@@ -174,8 +174,17 @@ input:checked + .slider {
 
 [data-theme='dark'] .login__container {
   filter: opacity(0.8);
-  background: url(../Login/img/login-page__transparent--dark4.svg) no-repeat
-    fixed;
+}
+
+@media (min-width: 992px) {
+  [data-theme='dark'] .login__container {
+    background: url(../Login/img/login-page__transparent--dark4.svg) no-repeat
+      fixed;
+    background-size: cover;
+    min-height: 45em;
+    height: 100vh;
+    margin: 0;
+  }
 }
 
 [data-theme='dark'] input[type='text']#login__user-name,
