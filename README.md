@@ -98,7 +98,11 @@ password: guest
 
   <img src='./client/img/figjam--structure.svg' alt="Project structure (components)" width="600">
 
+</div>
+
 ## :world_map: User journey
+
+<div align='center'>
 
 STAY TUNED! 👀
 
