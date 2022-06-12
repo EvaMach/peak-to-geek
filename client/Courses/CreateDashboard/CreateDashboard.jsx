@@ -1,5 +1,5 @@
 import React from 'react';
-import '../Courses.css';
+import '../Courses.scss';
 
 const CreateDashboard = ({
   userDashboard,

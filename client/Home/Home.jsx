@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.scss';
-import '../style.css';
+import '../style.scss';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import MainHeader from '../MainHeader/MainHeader.jsx';

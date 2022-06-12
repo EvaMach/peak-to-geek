@@ -21,7 +21,6 @@ const DashboardCourse = ({ token, course }) => {
       id="your-courses__course-bar"
       className="course-bar course-bar__actual-courses"
     >
-      <p>{course.name}</p>
       <img
         className="course__check-icon"
         src={
@@ -31,6 +30,10 @@ const DashboardCourse = ({ token, course }) => {
         }
         alt="Kontrola plnění kurzu"
       />
+      <p>{course.name}</p>
+      <a href={course.url} className="course-bar__btn">
+        Přejít na kurz
+      </a>
     </div>
   );
 };

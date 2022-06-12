@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Courses.css';
+import '../Courses.scss';
 
 const Course = ({ userCourse, course, onActiveCourse }) => {
   const [activeCourse, setActiveCourse] = useState(course.active);

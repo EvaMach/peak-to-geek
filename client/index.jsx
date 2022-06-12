@@ -10,8 +10,8 @@ import Courses from './Courses/Courses.jsx';
 import Nelca from './Info/Nelca/Nelca.jsx';
 import Evca from './Info/Evca/Evca.jsx';
 import About from './Info/About/About.jsx';
-import './style.css';
-import './DarkMode/DarkMode.css';
+import './style.scss';
+import './DarkMode/DarkMode.scss';
 
 const App = () => {
   return (

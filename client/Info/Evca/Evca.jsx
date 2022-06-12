@@ -1,6 +1,6 @@
 import React from 'react';
-import '../Info.css';
-import '../../style.css';
+import '../Info.scss';
+import '../../style.scss';
 
 const Evca = () => {
   return (
