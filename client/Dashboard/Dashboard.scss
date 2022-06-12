@@ -8,26 +8,27 @@
   text-align: center;
 }
 
+/* Streak update */
+
 .dashboard {
   &__image--liana {
     display: none;
   }
 
-  /* (A) Streak + progress */
-
   &__streak-update {
     display: flex;
     align-items: center;
     margin-bottom: 5%;
-    &__crown-icon {
-      margin-right: 1.5em;
-      width: 3em;
-      height: 4em;
-    }
   }
   &__tree-progress {
     margin-bottom: 15%;
   }
+}
+
+.streak-update__crown-icon {
+  margin-right: 1.5em;
+  width: 3em;
+  height: 4em;
 }
 
 .tree-progress {
@@ -136,18 +137,18 @@
 .follow-up {
   &__tree {
     position: relative;
-  }
-  &__tree-branch--left {
-    border-top: 0em solid var(--main-pink);
-    border-right: 0em solid var(--main-pink);
-    border-bottom: 2.5em solid var(--main-pink);
-    border-left: 1.5em solid var(--main-pink);
-    width: 60vw;
-    height: 10vmax;
-    margin: -10% auto 0 auto;
-    position: relative;
-    left: 25%;
-    border-radius: 10px;
+    &-branch--left {
+      border-top: 0em solid var(--main-pink);
+      border-right: 0em solid var(--main-pink);
+      border-bottom: 2.5em solid var(--main-pink);
+      border-left: 1.5em solid var(--main-pink);
+      width: 60vw;
+      height: 10vmax;
+      margin: -10% auto 0 auto;
+      position: relative;
+      left: 25%;
+      border-radius: 10px;
+    }
   }
   &__treetop--left {
     border-radius: 50%;
@@ -186,6 +187,7 @@
     font-size: 2.5em;
     margin-top: 5%;
   }
+
   .course-bar {
     font-size: 1em;
     &__check {
@@ -193,6 +195,7 @@
       gap: 1em;
     }
   }
+
   .dashboard {
     &__right-side {
       display: flex;
@@ -206,6 +209,7 @@
       transform: rotate(-2 0deg);
     }
   }
+
   .follow-up__treetop--left {
     bottom: 60%;
   }
@@ -227,12 +231,15 @@
       }
     }
   }
+
   .tree-progress__label {
     font-size: 1.1em;
   }
+
   #actual-courses__title {
     margin-bottom: 0.8em;
   }
+
   .dashboard {
     &__left-side {
       width: 50%;
@@ -240,30 +247,30 @@
     &__streak-update {
       font-size: 1em;
     }
+    &__right-side {
+      width: 50%;
+    }
+    &__image--sloth {
+      width: 50vw;
+      margin-top: -1em;
+    }
+    &__follow-up {
+      margin-top: 0em;
+    }
+    &__motivation {
+      display: block;
+      font-size: 0.8em;
+      font-weight: 600;
+      color: var(--dashboard--motivation);
+      margin-bottom: 14em;
+      margin-left: 12em;
+    }
   }
-  &__right-side {
-    width: 50%;
-  }
-  &__image--sloth {
-    width: 50vw;
-    margin-top: -1em;
-  }
-  &__follow-up {
-    margin-top: 0em;
-  }
-  &__motivation {
-    display: block;
-    font-size: 0.8em;
-    font-weight: 600;
-    color: var(--dashboard--motivation);
-    margin-bottom: 14em;
-    margin-left: 12em;
-  }
+
   .follow-up {
     &__leaves {
       margin-left: 20%;
     }
-
     &__tree-branch--left {
       width: 25em;
       margin-top: 1em;
@@ -275,6 +282,7 @@
       left: 8%;
     }
   }
+
   .leaves__tree-checklist {
     font-size: 0.8em;
     margin-left: 7em;
@@ -294,6 +302,7 @@
       }
     }
   }
+
   .dashboard {
     &__streak-update {
       font-size: 1.3em;
@@ -313,9 +322,11 @@
       top: 12em;
     }
   }
+
   .streak-update__crown-icon {
     margin-right: 2em;
   }
+
   .tree-progress {
     &__label {
       font-size: 1.4em;
@@ -323,19 +334,22 @@
     &__bar {
       height: 0.9em;
       width: 95%;
-    }
-    &__bar--actual {
-      height: 0.9em;
+      &--actual {
+        height: 0.9em;
+      }
     }
   }
+
   .course-bar {
     font-size: 1.3em;
     width: 95%;
   }
+
   .actual-courses__button {
     width: 50%;
     font-size: 1.1em;
   }
+
   .follow-up {
     &__leaves {
       margin-left: 25%;
@@ -362,6 +376,7 @@
       left: 10%;
     }
   }
+
   .leaves__tree-checklist {
     font-size: 1.2em;
     position: absolute;
@@ -373,9 +388,9 @@
   .dashboard__motivation {
     font-size: 1.1em;
   }
+
   .follow-up {
     &__treetop--left {
-      left: 6%;
       left: 12%;
     }
     &__tree-branch--left {
@@ -394,6 +409,7 @@
     }
   }
 }
+
 @media (min-width: 1700px) {
   #dashboard {
     &__title {
@@ -406,6 +422,7 @@
       }
     }
   }
+
   .dashboard {
     &__tree-progress {
       margin-bottom: 10%;
@@ -429,6 +446,7 @@
       margin-top: -2em;
     }
   }
+
   .follow-up {
     &__tree {
       padding-top: 20em;
@@ -442,6 +460,7 @@
       left: 12%;
     }
   }
+
   .leaves__tree-checklist {
     margin: 6em 0 6em 8em;
   }

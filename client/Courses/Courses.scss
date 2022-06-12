@@ -67,12 +67,10 @@ a.course-bar__btn {
   &__btn:active,
   &__btn:focus {
     transform: scale(1.1);
-    &--disabled {
-      &:hover {
-        cursor: not-allowed;
-        background-color: var(--light-pink);
-        border: 2px solid var(--light-pink);
-      }
+    &--disabled:hover {
+      cursor: not-allowed;
+      background-color: var(--light-pink);
+      border: 2px solid var(--light-pink);
     }
   }
 }
@@ -80,7 +78,7 @@ a.course-bar__btn {
 .create-dashboard__info {
   font-weight: 400;
   font-style: italic;
-  padding-left: 0.5em;
+  padding-left: 1em;
 }
 
 /* RESPONSIVITY */

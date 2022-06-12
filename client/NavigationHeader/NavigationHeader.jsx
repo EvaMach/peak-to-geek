@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './NavigationHeader.css';
+import './NavigationHeader.scss';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavLink } from 'react-router-dom';

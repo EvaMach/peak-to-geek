@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Dashboard.css';
+import './Dashboard.scss';
 import NavigationHeader from '../NavigationHeader/NavigationHeader.jsx';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
