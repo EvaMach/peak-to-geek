@@ -55,15 +55,23 @@ input:checked + .slider {
   background-color: var(--pink-old);
 }
 
-.dark-mode__icon {
-  font-size: 20px;
-  color: var(--font-color);
-  line-height: 20px;
-}
+// .dark-mode__icon {
+//   font-size: 20px;
+//   color: var(--font-color);
+//   line-height: 20px;
+// }
 
 // #moon {
 //   padding-bottom: 1.5px;
 // }
+
+.dark-mode__icon {
+  width: 15px;
+}
+
+[data-theme='dark'] .dark-mode__icon {
+  filter: invert(0.5);
+}
 
 @media (min-width: 768px) {
   .toggle-theme--wrapper {

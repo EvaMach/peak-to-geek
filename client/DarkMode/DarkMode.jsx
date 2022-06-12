@@ -18,7 +18,14 @@ const DarkMode = () => {
 
   return (
     <div className="toggle-theme--wrapper">
-      <span className="dark-mode__icon">☼</span>
+      <img
+        className="dark-mode__icon"
+        src={require('./img/icon--sun.svg')}
+        alt="Ikonka sluníčka u dark-modu"
+      />
+      {/* <span id="sun" className="dark-mode__icon">
+         ☼ 
+      </span> */}
       <label className="toggle-theme" htmlFor="checkbox">
         <input
           type="checkbox"
@@ -28,9 +35,14 @@ const DarkMode = () => {
         />
         <div className="slider round"></div>
       </label>
-      <span id="moon" className="dark-mode__icon">
-        ☽
-      </span>
+      {/* <span id="moon" className="dark-mode__icon">
+         ☽ 
+         </span> */}
+      <img
+        className="dark-mode__icon"
+        src={require('./img/icon--moon.svg')}
+        alt="Ikonka měsíčku u dark-modu"
+      />
     </div>
   );
 };

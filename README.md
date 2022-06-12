@@ -98,10 +98,8 @@ password: guest
 
   <img src='./client/img/figjam--structure.svg' alt="Project structure (components)" width="600">
 
-</div>
-
 ## :world_map: User journey
 
-<!-- PŘIDAT GIF HÍR -->
+STAY TUNED! 👀
 
-<!-- Natočila bych user journey jako na MYM, akorát samozřejmě v aktuální verzi přímo na stránce - od přihlášení, přes klik na strom a checklisty až po přidání nového kurzu a vytvoření dashboardu/přidání kurzů na dashboard, na konec odhlášení -->
+</div>
