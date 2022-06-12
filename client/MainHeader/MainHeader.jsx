@@ -1,5 +1,5 @@
 import React from 'react';
-import './MainHeader.css';
+import './MainHeader.scss';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import DarkMode from '../DarkMode/DarkMode.jsx';

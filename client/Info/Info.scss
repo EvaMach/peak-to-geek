@@ -30,19 +30,17 @@
   &:not(.navigation__item--actual) {
     &:hover {
       color: var(--alternative-pink);
+      &::after {
+        width: 100%;
+        border-bottom: 2px solid var(--alternative-pink);
+      }
     }
-
     &::after {
       content: '';
       display: block;
       width: 0;
       transition: width 0.3s;
       border-bottom: 2px solid transparent;
-    }
-
-    &:hover::after {
-      width: 100%;
-      border-bottom: 2px solid var(--alternative-pink);
     }
   }
 }
@@ -114,8 +112,7 @@
   border-radius: 100%;
   padding: 5em;
   margin: 2em auto;
-
-  &_container {
+  &__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,30 +120,25 @@
     margin-top: 1em;
     width: 95%;
   }
-
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     font-size: 0.9em;
   }
-
   &__text {
     font-weight: 300;
     font-size: 1em;
     text-align: justify;
   }
-
   &__photo {
     display: none;
   }
-
-  &_contacts {
+  &__contacts {
     display: flex;
     justify-content: space-evenly;
     margin-top: 1em;
   }
-
   &__contact-icon {
     width: 2em;
   }
@@ -159,6 +151,7 @@
     font-size: 2em;
     text-align: center;
   }
+
   .creator {
     width: 30em;
     height: 35em;
@@ -175,6 +168,7 @@
     justify-content: right;
     gap: 2em;
   }
+
   .creator {
     font-size: 0.8em;
     width: 40em;
@@ -233,6 +227,7 @@
       overflow: hidden;
     }
   }
+
   .creator {
     width: 45em;
     height: 45em;
