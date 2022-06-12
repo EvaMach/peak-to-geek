@@ -190,11 +190,13 @@ input:checked + .slider {
 [data-theme='dark'] input[type='text']#login__user-name,
 textarea {
   background-color: #282829;
+  color: #ffffffc4;
 }
 
 [data-theme='dark'] input[type='password']#login__user-password,
 textarea {
   background-color: #282829;
+  color: #ffffffc4;
 }
 
 [data-theme='dark'] input:-webkit-autofill,
@@ -204,6 +206,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #282829 inset !important;
   box-shadow: #282829;
   -webkit-text-fill-color: #ffffffc4;
+  color: #ffffffc4;
 }
 
 .login__remember-me--text {
