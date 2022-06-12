@@ -280,7 +280,8 @@ textarea {
   filter: contrast(0.4);
 }
 
-[data-theme='dark'] #create-dashboard__btn:hover,
+[data-theme='dark']
+  #create-dashboard__btn:not(#create-dashboard__btn--disabled):hover,
 button.actual-courses__button:hover {
   background-color: var(--main-turqoise);
   border: 2px solid var(--main-turqoise);
@@ -333,21 +334,22 @@ button.actual-courses__button:hover {
 }
 
 #your-courses {
-  background-color: var(--light-pink);
-  border: 1px solid var(--light-pink);
   &__button {
+    background-color: var(--light-pink);
+    border: 1px solid var(--light-pink);
     p {
       color: var(--button__text);
     }
   }
 }
 
-[data-theme='dark'] #create-dashboard__btn:hover {
-  background-color: var(--main-turqoise);
-  border: 2px solid var(--main-turqoise);
-  transform: scale(1.05);
-  transition: ease-in-out 8000;
-}
+// [data-theme='dark']
+//   #create-dashboard__btn:not(#create-dashboard__btn--disabled):hover {
+//   background-color: var(--main-turqoise);
+//   border: 2px solid var(--main-turqoise);
+//   transform: scale(1.05);
+//   transition: ease-in-out 8000;
+// }
 
 .create-dashboard__info {
   color: var(--font-color);
