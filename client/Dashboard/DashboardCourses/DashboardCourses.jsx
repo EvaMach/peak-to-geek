@@ -59,8 +59,8 @@ const DashboardCourses = ({ token }) => {
       <Link to="/courses">
         <motion.button
           className="actual-courses__button"
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.7 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           Zobrazit všechny kurzy
         </motion.button>
