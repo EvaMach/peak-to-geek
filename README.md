@@ -95,7 +95,7 @@ password: guest
 
 <div align='center'>
 
-  <img src='./client/img/figjam--structure.png' alt="Project structure (components)" width="100">
+  <img src='./client/img/figjam--structure.svg' alt="Project structure (components)" width="200">
 
 </div>
 
