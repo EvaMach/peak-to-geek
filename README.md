@@ -28,8 +28,9 @@ This site was built using [Heroku](https://www.heroku.com/).
 <div align="center">
 
 [About](https://github.com/EvaMach/peak-to-geek#memo-about) :o:
-[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stackfeatures) :o:
+[Tech stack/features](https://github.com/EvaMach/peak-to-geek#magic_wand-tech-stack) :o:
 [How to install](https://github.com/EvaMach/peak-to-geek#gear-how-to-install) :o:
+[Project structure](https://github.com/EvaMach/peak-to-geek#bar_chart-project-structure) :o:
 [User journey](https://github.com/EvaMach/peak-to-geek/#world_map-user-journey)
 
 </div>
@@ -63,7 +64,7 @@ Plans for future versions:
 
 > **Read more about the Peak to Geek platform on [the project homepage](https://peak-to-geek.herokuapp.com/)**
 
-## :magic_wand: Tech stack/features
+## :magic_wand: Tech stack
 
 - React v18
 - JavaScript
