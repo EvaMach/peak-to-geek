@@ -64,12 +64,6 @@ input:checked + .slider {
   padding-bottom: 1.5px;
 }
 
-@media (max-width: 670px) {
-  .dark-mode__icon {
-    color: var(--black);
-  }
-}
-
 @media (min-width: 768px) {
   .toggle-theme--wrapper {
     padding-right: 10px;
