@@ -15,7 +15,7 @@ const AddCourse = ({ onNewCourse }) => {
         id="your-courses__button"
         className="actual-courses__button"
       >
-        <p>Přidat nový kurz</p>
+        Přidat nový kurz
       </motion.button>
       {openModal && (
         <FormModal onAddCourse={onNewCourse} closeModal={setOpenModal} />

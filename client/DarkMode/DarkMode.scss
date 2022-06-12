@@ -343,13 +343,9 @@ button.actual-courses__button:hover {
   }
 }
 
-// [data-theme='dark']
-//   #create-dashboard__btn:not(#create-dashboard__btn--disabled):hover {
-//   background-color: var(--main-turqoise);
-//   border: 2px solid var(--main-turqoise);
-//   transform: scale(1.05);
-//   transition: ease-in-out 8000;
-// }
+[data-theme='dark'] #create-dashboard__btn--disabled {
+  background-color: #6a5d62;
+}
 
 .create-dashboard__info {
   color: var(--font-color);

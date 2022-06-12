@@ -15,7 +15,7 @@ const CreateDashboard = ({
             ? 'create-dashboard__btn'
             : 'create-dashboard__btn--disabled'
         }
-        className="actual-courses__button"
+        className="actual-courses__button "
         onClick={onCreateDashboard}
       >
         Vytvořit rozvrh
