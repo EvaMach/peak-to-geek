@@ -64,15 +64,16 @@ a.course-bar__btn {
   }
 }
 
-#create-dashboard {
-  &__btn:active,
-  &__btn:focus {
+#create-dashboard__btn {
+  &:active,
+  &:focus {
     transform: scale(1.1);
-    &--disabled:hover {
-      cursor: not-allowed;
-      background-color: var(--light-pink);
-      border: 2px solid var(--light-pink);
-    }
+  }
+  &--disabled {
+    cursor: not-allowed;
+    transform: none;
+    background-color: #e8e8e8;
+    border: none;
   }
 }
 

@@ -335,11 +335,7 @@ button.actual-courses__button:hover {
 #your-courses__button {
   background-color: var(--light-pink);
   border: 1px solid var(--light-pink);
-  &__button {
-    p {
-      color: var(--button__text);
-    }
-  }
+  color: var(--button__text);
 }
 
 [data-theme='dark'] #create-dashboard__btn:hover {
@@ -347,6 +343,10 @@ button.actual-courses__button:hover {
   border: 2px solid var(--main-turqoise);
   transform: scale(1.05);
   transition: ease-in-out 8000;
+}
+
+[data-theme='dark'] #create-dashboard__btn--disabled {
+  background-color: #6a5d62;
 }
 
 .create-dashboard__info {
