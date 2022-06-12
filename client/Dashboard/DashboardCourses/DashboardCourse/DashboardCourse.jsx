@@ -31,7 +31,7 @@ const DashboardCourse = ({ token, course }) => {
         alt="Kontrola plnění kurzu"
       />
       <p>{course.name}</p>
-      <a href={course.url} className="course-bar__btn">
+      <a href={course.url} target="_blank" className="course-bar__btn">
         Přejít na kurz
       </a>
     </div>
