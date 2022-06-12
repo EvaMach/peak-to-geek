@@ -58,11 +58,12 @@ input:checked + .slider {
 .dark-mode__icon {
   font-size: 20px;
   color: var(--font-color);
+  line-height: 20px;
 }
 
-#moon {
-  padding-bottom: 1.5px;
-}
+// #moon {
+//   padding-bottom: 1.5px;
+// }
 
 @media (min-width: 768px) {
   .toggle-theme--wrapper {
