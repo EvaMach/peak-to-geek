@@ -191,9 +191,9 @@ textarea {
 }
 
 [data-theme='dark'] input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
+[data-theme='dark'] input:-webkit-autofill:hover,
+[data-theme='dark'] input:-webkit-autofill:focus,
+[data-theme='dark'] input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #282829 inset !important;
   box-shadow: #282829;
   -webkit-text-fill-color: #ffffffc4;
