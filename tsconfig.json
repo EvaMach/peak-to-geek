@@ -6,8 +6,9 @@
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["client/**/*"]
+  "include": [
+    "client/**/*"
+  ]
 }

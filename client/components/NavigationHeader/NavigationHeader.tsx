@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import './NavigationHeader.scss';
-import { Link } from 'react-router-dom';
-import { Squash as Hamburger } from 'hamburger-react';
-import { NavLink } from 'react-router-dom';
-import DarkMode from '../../DarkMode/DarkMode';
+import React, { useState } from 'react'
+import './NavigationHeader.scss'
+import { Link, NavLink } from 'react-router-dom'
+import { Squash as Hamburger } from 'hamburger-react'
+import DarkMode from '../../DarkMode/DarkMode'
 
-const NavigationHeader = () => {
-  const [isOpened, setIsOpened] = useState(false);
+const NavigationHeader = (): JSX.Element => {
+  const [isOpened, setIsOpened] = useState(false)
   return (
     <>
       <DarkMode />
@@ -19,7 +18,7 @@ const NavigationHeader = () => {
             />
           </Link>
         </div>
-        <nav id="navigation" className="info__navigation">
+        <nav id="navigation" className=" info__navigation">
           <Hamburger
             label="Show menu"
             rounded
@@ -75,7 +74,7 @@ const NavigationHeader = () => {
             </li>
 
             <li
-              onClick={() => localStorage.removeItem('token')}
+              onClick={() => { localStorage.removeItem('token') }}
               className="navigation__item"
             >
               <NavLink
@@ -93,9 +92,9 @@ const NavigationHeader = () => {
             </li>
           </ul>
         </nav>
-      </header>
+      </header >
     </>
-  );
-};
+  )
+}
 
-export default NavigationHeader;
+export default NavigationHeader

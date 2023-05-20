@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationHeader from '../../components/NavigationHeader/NavigationHeader.jsx';
+import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import './InfoPage.scss';
 import Footer from '../../components/Footer/Footer.jsx';
 import { Link, NavLink, Outlet } from 'react-router-dom';

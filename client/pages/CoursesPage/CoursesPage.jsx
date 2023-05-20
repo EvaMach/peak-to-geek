@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './CoursesPage.scss';
-import NavigationHeader from '../../components/NavigationHeader/NavigationHeader.jsx';
+import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import Course from './Course/Course.jsx';
 import AddCourse from './AddCourse/AddCourse.jsx';
 import CreateDashboard from './CreateDashboard/CreateDashboard.jsx';

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './DashboardPage.scss';
-import NavigationHeader from '../../components/NavigationHeader/NavigationHeader.jsx';
+import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import DashboardCourses from './DashboardCourses/DashboardCourses.jsx';
 import Progress from './Progress/Progress.jsx';
 import FollowUp from './FollowUp/FollowUp.jsx';
