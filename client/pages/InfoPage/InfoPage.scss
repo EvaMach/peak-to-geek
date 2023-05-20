@@ -1,0 +1,253 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+/* InfoPage navigation */
+
+#info-navigation {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 2em;
+  &__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-top: 1.5em;
+    gap: 1em;
+    list-style: none;
+    margin-bottom: 0;
+  }
+}
+
+.info-navigation__item {
+  font-size: 1.2em;
+  color: var(--about-navigation);
+  border-bottom: 2px solid transparent;
+  &--actual {
+    color: var(--alternative-pink);
+    border-bottom: 2px solid var(--main-pink);
+  }
+  &:not(.navigation__item--actual) {
+    &:hover {
+      color: var(--alternative-pink);
+      &::after {
+        width: 100%;
+        border-bottom: 2px solid var(--alternative-pink);
+      }
+    }
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      transition: width 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+  }
+}
+
+/* About */
+
+.about-project {
+  width: 90%;
+  margin: auto;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 1.8em;
+    color: var(--about-h2);
+    padding-top: 1em;
+    padding-bottom: 0.2em;
+  }
+  h3 {
+    font-size: 1.2em;
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    text-decoration: underline var(--main-turqoise) 2px;
+    font-weight: 600;
+    color: var(--h3);
+  }
+  &__text {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 1em;
+    text-align: justify;
+  }
+
+  &__phases {
+    text-align: center;
+    margin: 2em auto 0 auto;
+  }
+  &__tree {
+    display: none;
+  }
+}
+
+#about-project__title {
+  font-size: 3em;
+  text-align: center;
+}
+
+.phases {
+  &__picture {
+    width: 20em;
+    &--caption {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+/* Nelča + Evča */
+
+.creator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  width: 40em;
+  height: 40em;
+  aspect-ratio: 1/1;
+  border: 2em solid var(--light-pink);
+  border-radius: 100%;
+  padding: 5em;
+  margin: 2em auto;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5em;
+    margin-top: 1em;
+    width: 95%;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-size: 0.9em;
+  }
+  &__text {
+    font-weight: 300;
+    font-size: 1em;
+    text-align: justify;
+  }
+  &__photo {
+    display: none;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+  }
+  &__contact-icon {
+    width: 2em;
+  }
+}
+
+/* RESPONSIVITY */
+
+@media (max-width: 368px) {
+  #about-project__title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .creator {
+    width: 30em;
+    height: 35em;
+    aspect-ratio: unset;
+    font-size: 0.5em;
+    margin-bottom: 10em;
+    margin-top: 10em;
+    border-radius: 30%;
+  }
+}
+
+@media (min-width: 576px) {
+  #info-navigation__items {
+    justify-content: right;
+    gap: 2em;
+  }
+
+  .creator {
+    font-size: 0.8em;
+    width: 40em;
+    height: 40em;
+    padding: 5em;
+    aspect-ratio: 1/1;
+    &__container {
+      width: 95%;
+    }
+    &__photo {
+      display: block;
+      height: 5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #about-project__title {
+    font-size: 2.5em;
+    text-align: left;
+  }
+
+  #info-navigation__items {
+    font-weight: 600;
+  }
+
+  .creator {
+    width: 50em;
+    height: 50em;
+    max-width: 55em;
+    max-width: 55em;
+    aspect-ratio: 1/1;
+    font-size: 0.9em;
+    &__photo {
+      height: 10em;
+    }
+    &_contacts {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .about-project {
+    position: relative;
+    &__container {
+      width: 60%;
+    }
+    &__tree {
+      display: block;
+      max-width: 55vh;
+      position: fixed;
+      left: 70%;
+      bottom: 0;
+      overflow: hidden;
+    }
+  }
+
+  .creator {
+    width: 45em;
+    height: 45em;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-project {
+    &__container {
+      width: 50%;
+    }
+    &__tree {
+      left: 60%;
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .about-project__container {
+    width: 50%;
+  }
+}
