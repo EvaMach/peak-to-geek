@@ -148,7 +148,12 @@ input:checked + .slider {
 }
 
 [data-theme='dark']
-  button:not(.form__button, button.course-bar__btn, #login__button, #main-page__signup-button) {
+  button:not(
+    .form__button,
+    button.course-bar__btn,
+    #login__button,
+    #main-page__signup-button
+  ) {
   filter: drop-shadow(2px 4px 3px var(--modal-shadow));
 }
 
@@ -169,7 +174,7 @@ input:checked + .slider {
   filter: invert(0.3);
 }
 
-/* Home */
+/* HomePage */
 
 #main-page__title {
   color: var(--main-page__title);
@@ -179,7 +184,7 @@ input:checked + .slider {
   filter: saturate(0.8);
 }
 
-/* Login */
+/* LoginPage */
 
 [data-theme='dark'] .login__container {
   filter: opacity(0.8);
@@ -187,8 +192,8 @@ input:checked + .slider {
 
 @media (min-width: 992px) {
   [data-theme='dark'] .login__container {
-    background: url(../Login/img/login-page__transparent--dark4.svg) no-repeat
-      fixed;
+    background: url(../pages/LoginPage/img/login-page__transparent--dark4.svg)
+      no-repeat fixed;
     background-size: cover;
     min-height: 45em;
     height: 100vh;
@@ -222,7 +227,7 @@ textarea {
   background-color: var(--background-color);
 }
 
-/* Info */
+/* InfoPage */
 
 .about-project {
   h2 {
@@ -258,7 +263,7 @@ textarea {
   color: var(--caption);
 }
 
-/* Dashboard */
+/* DashboardPage */
 
 .dashboard__motivation {
   color: var(--dashboard--motivation);
@@ -307,7 +312,7 @@ button.actual-courses__button:hover {
   transition: ease-in-out 8000;
 }
 
-/* Tree */
+/* TreePage */
 
 #tree__treetop {
   background-color: var(--tree__treetop);
@@ -342,7 +347,7 @@ button.actual-courses__button:hover {
   }
 }
 
-/* Courses */
+/* CoursesPage */
 
 .course-bar {
   background-color: var(--course-bar);
