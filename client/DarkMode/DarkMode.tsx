@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './DarkMode.scss';
 
-const DarkMode = () => {
+const DarkMode = (): JSX.Element => {
   const [darkmodeChecked, setDarkmodeChecked] = useState(
     localStorage.getItem('theme') === 'dark',
   );
 
   useEffect(() => {
-    localStorage.setItem('theme', darkmodeChecked ? 'dark' : null);
+    localStorage.setItem('theme', darkmodeChecked ? 'dark' : 'light');
     document.documentElement.setAttribute(
       'data-theme',
       darkmodeChecked ? 'dark' : 'light',
     );
   }, [darkmodeChecked]);
 
-  const toggleTheme = () => setDarkmodeChecked(!darkmodeChecked);
+  const toggleTheme = (): void => setDarkmodeChecked(!darkmodeChecked);
 
   return (
     <div className="toggle-theme--wrapper">

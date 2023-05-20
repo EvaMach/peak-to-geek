@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPage.scss';
-import DarkMode from '../../DarkMode/DarkMode.jsx';
+import DarkMode from '../../DarkMode/DarkMode';
 
 const LoginPage = () => {
   const [login, setLogin] = useState('');

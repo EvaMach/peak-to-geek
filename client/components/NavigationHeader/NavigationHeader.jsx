@@ -3,7 +3,7 @@ import './NavigationHeader.scss';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavLink } from 'react-router-dom';
-import DarkMode from '../../DarkMode/DarkMode.jsx';
+import DarkMode from '../../DarkMode/DarkMode';
 
 const NavigationHeader = () => {
   const [isOpened, setIsOpened] = useState(false);

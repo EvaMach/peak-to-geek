@@ -2,9 +2,9 @@ import React from 'react';
 import './MainHeader.scss';
 import '../../style.scss';
 import { Link } from 'react-router-dom';
-import DarkMode from '../../DarkMode/DarkMode.jsx';
+import DarkMode from '../../DarkMode/DarkMode';
 
-const MainHeader = () => {
+const MainHeader = (): JSX.Element => {
   return (
     <div className="main-page__topbar">
       <DarkMode />
