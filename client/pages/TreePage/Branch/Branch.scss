@@ -1,0 +1,226 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+/* Branches - general */
+
+.tree {
+  &__branch {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-bottom: 2em solid var(--main-pink);
+    border-top: 0em solid var(--main-pink);
+    width: 43vw;
+    height: 10vmax;
+    margin: 10px auto;
+    position: absolute;
+    border-radius: 10px;
+    &--active {
+      position: relative;
+      bottom: 40rem;
+    }
+    &--sloth {
+      width: 7em;
+      position: absolute;
+      top: -8em;
+    }
+
+    /* Right side */
+    &--right {
+      border-right: 1em solid var(--main-pink);
+      border-left: 0em solid var(--main-pink);
+      left: 0em;
+    }
+    &--8 {
+      margin-top: 7em;
+    }
+    &--6 {
+      margin-top: 27em;
+    }
+    &--4 {
+      margin-top: 47em;
+    }
+    &--2 {
+      margin-top: 67em;
+    }
+
+    /* Left side */
+    &--left {
+      border-left: 1em solid var(--main-pink);
+      border-right: 0em solid var(--main-pink);
+      right: 0em;
+    }
+    &--7 {
+      margin-top: 17em;
+    }
+    &--5 {
+      margin-top: 37em;
+    }
+    &--3 {
+      margin-top: 57em;
+    }
+    &--1 {
+      margin-top: 77em;
+    }
+  }
+
+  &__treetop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    padding: 0.3em;
+    position: absolute;
+    bottom: 50%;
+    &--right {
+      left: 77%;
+    }
+    &--left {
+      right: 77%;
+    }
+  }
+}
+
+/* RESPONSIVITY */
+
+@media (min-width: 576px) {
+  .tree__branch--sloth {
+    top: -7em;
+    width: 6em;
+    left: 0.5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .tree {
+    &__branch {
+      &--sloth {
+        top: -9em;
+        width: 7em;
+        left: 0.9em;
+      }
+      &--right {
+        border-bottom: 1.5em solid var(--tree);
+      }
+      &--left {
+        border-bottom: 1.5em solid var(--tree);
+      }
+    }
+
+    &__treetop {
+      font-size: 0.6em;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .tree {
+    &__treetop {
+      font-size: 1.3em;
+    }
+    &__branch {
+      &--sloth {
+        width: 10em;
+        top: -13em;
+        left: -1em;
+      }
+
+      /* Right side */
+      &--right {
+        border-bottom: 4em solid var(--tree);
+        border-right: 3em solid var(--tree);
+        width: 38vmax;
+        height: 7vmax;
+      }
+      &--8 {
+        margin-top: 15em;
+      }
+      &--6 {
+        margin-top: 75em;
+      }
+      &--4 {
+        margin-top: 135em;
+      }
+      &--2 {
+        margin-top: 195em;
+      }
+
+      /* Left side */
+      &--left {
+        border-bottom: 4em solid var(--tree);
+        border-left: 3em solid var(--tree);
+        width: 38vmax;
+        height: 7vmax;
+      }
+      &--7 {
+        margin-top: 45em;
+      }
+      &--5 {
+        margin-top: 105em;
+      }
+      &--3 {
+        margin-top: 165em;
+      }
+      &--1 {
+        margin-top: 225em;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .tree {
+    &__treetop {
+      width: 40%;
+      font-size: 1.1em;
+      &--right {
+        left: 83%;
+      }
+      &--left {
+        right: 83%;
+      }
+    }
+
+    &__branch {
+      /* Right side */
+      &--right {
+        border-bottom: 3em solid var(--tree);
+        border-right: 2em solid var(--tree);
+      }
+      &--8 {
+        margin-top: 10em;
+      }
+      &--6 {
+        margin-top: 50em;
+      }
+      &--4 {
+        margin-top: 90em;
+      }
+      &--2 {
+        margin-top: 130em;
+      }
+
+      /* Left side */
+      &--left {
+        border-bottom: 3em solid var(--tree);
+        border-left: 2em solid var(--tree);
+      }
+      &--7 {
+        margin-top: 30em;
+      }
+      &--5 {
+        margin-top: 70em;
+      }
+      &--3 {
+        margin-top: 110em;
+      }
+      &--1 {
+        margin-top: 150em;
+      }
+    }
+  }
+}

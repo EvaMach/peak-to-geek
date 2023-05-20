@@ -1,0 +1,19 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+.modal {
+  background-color: var(--light-grey);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: absolute;
+  z-index: 1;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    & button {
+      border: none;
+      padding: 3px;
+      cursor: pointer;
+      background: none;
+    }
+  }
+}

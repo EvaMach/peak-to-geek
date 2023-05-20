@@ -1,0 +1,44 @@
+/* -------------------- MOBILE FIRST -------------------- */
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  &__item {
+    display: flex;
+    align-items: center;
+    line-height: 1.5em;
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.checkbox {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  min-width: 20px;
+  aspect-ratio: 1/1;
+  background: #fff;
+  border: 2px #ddd solid;
+  margin-right: 0.7em;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  .checkbox {
+    height: 25px;
+    width: 25px;
+    min-width: 25px;
+  }
+}
