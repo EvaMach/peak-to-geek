@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import './NavigationHeader.scss'
-import { Link, NavLink } from 'react-router-dom'
-import { Squash as Hamburger } from 'hamburger-react'
-import DarkMode from '../../DarkMode/DarkMode'
+import React, { useState } from 'react';
+import './NavigationHeader.scss';
+import { Link, NavLink } from 'react-router-dom';
+import { Squash as Hamburger } from 'hamburger-react';
+import DarkMode from '../../DarkMode/DarkMode';
 
 const NavigationHeader = (): JSX.Element => {
-  const [isOpened, setIsOpened] = useState(false)
+  const [isOpened, setIsOpened] = useState(false);
   return (
     <>
       <DarkMode />
@@ -34,7 +34,7 @@ const NavigationHeader = (): JSX.Element => {
             <li className="navigation__item">
               <NavLink
                 to="/info"
-                className={({ isActive }) =>
+                className={({ isActive }): string =>
                   isActive ? 'navigation__item--actual' : ''
                 }
               >
@@ -45,7 +45,7 @@ const NavigationHeader = (): JSX.Element => {
             <li className="navigation__item">
               <NavLink
                 to="/dashboard"
-                className={({ isActive }) =>
+                className={({ isActive }): string =>
                   isActive ? 'navigation__item--actual' : ''
                 }
               >
@@ -55,7 +55,7 @@ const NavigationHeader = (): JSX.Element => {
             <li className="navigation__item">
               <NavLink
                 to="/tree"
-                className={({ isActive }) =>
+                className={({ isActive }): string =>
                   isActive ? 'navigation__item--actual' : ''
                 }
               >
@@ -65,7 +65,7 @@ const NavigationHeader = (): JSX.Element => {
             <li className="navigation__item">
               <NavLink
                 to="/courses"
-                className={({ isActive }) =>
+                className={({ isActive }): string =>
                   isActive ? 'navigation__item--actual' : ''
                 }
               >
@@ -74,12 +74,12 @@ const NavigationHeader = (): JSX.Element => {
             </li>
 
             <li
-              onClick={() => { localStorage.removeItem('token') }}
+              onClick={(): void => { localStorage.removeItem('token'); }}
               className="navigation__item"
             >
               <NavLink
                 to="/"
-                className={({ isActive }) =>
+                className={({ isActive }): string =>
                   isActive ? 'navigation__item--actual' : ''
                 }
               >
@@ -94,7 +94,7 @@ const NavigationHeader = (): JSX.Element => {
         </nav>
       </header >
     </>
-  )
-}
+  );
+};
 
-export default NavigationHeader
+export default NavigationHeader;
