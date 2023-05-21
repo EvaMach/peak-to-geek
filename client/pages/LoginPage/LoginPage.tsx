@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './LoginPage.scss';
 import DarkMode from '../../DarkMode/DarkMode';
 
-const LoginPage = () => {
+const LoginPage = (): JSX.Element => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
@@ -61,11 +61,10 @@ const LoginPage = () => {
               </div>
               <button
                 type="submit"
-                className={`login__button ${
-                  login.length === 0 || password === 0
-                    ? 'login__button--disabled'
-                    : null
-                }`}
+                className={`login__button ${login.length === 0 || password === 0
+                  ? 'login__button--disabled'
+                  : null
+                  }`}
                 disabled={login.length === 0 || password === 0}
               >
                 Přihlásit se

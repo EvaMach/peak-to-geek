@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './CoursesPage.scss';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
-import Course from './Course/Course.jsx';
-import AddCourse from './AddCourse/AddCourse.jsx';
-import CreateDashboard from './CreateDashboard/CreateDashboard.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
+import Course from './Course/Course';
+import AddCourse from './AddCourse/AddCourse';
+import CreateDashboard from './CreateDashboard/CreateDashboard';
+import Footer from '../../components/Footer/Footer';
 
 const CoursesPage = () => {
   const token = window.localStorage.getItem('token');

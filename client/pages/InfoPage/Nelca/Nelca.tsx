@@ -2,7 +2,7 @@ import React from 'react';
 import '../InfoPage.scss';
 import '../../../style.scss';
 
-const Nelca = () => {
+const Nelca = (): JSX.Element => {
   return (
     <div className="creator">
       <div className="creator__container">

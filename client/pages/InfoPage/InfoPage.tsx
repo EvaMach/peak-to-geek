@@ -1,10 +1,10 @@
 import React from 'react';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import './InfoPage.scss';
-import Footer from '../../components/Footer/Footer.jsx';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
+import { NavLink, Outlet } from 'react-router-dom';
 
-const InfoPage = () => {
+const InfoPage = (): JSX.Element => {
   return (
     <>
       <div className="container__topbar">
@@ -19,7 +19,7 @@ const InfoPage = () => {
               <li className="info-navigation__item">
                 <NavLink
                   to="/info/about"
-                  className={({ isActive }) =>
+                  className={({ isActive }): string =>
                     isActive ? 'info-navigation__item--actual' : ''
                   }
                 >
@@ -29,7 +29,7 @@ const InfoPage = () => {
               <li className="info-navigation__item">
                 <NavLink
                   to="/info/nelca"
-                  className={({ isActive }) =>
+                  className={({ isActive }): string =>
                     isActive ? 'info-navigation__item--actual' : ''
                   }
                 >
@@ -39,7 +39,7 @@ const InfoPage = () => {
               <li className="info-navigation__item">
                 <NavLink
                   to="/info/evca"
-                  className={({ isActive }) =>
+                  className={({ isActive }): string =>
                     isActive ? 'info-navigation__item--actual' : ''
                   }
                 >

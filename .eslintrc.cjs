@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
     'airbnb-typescript',
   ],
   parser: '@typescript-eslint/parser',
@@ -17,15 +18,14 @@ module.exports = {
     '@typescript-eslint',
     'react-hooks',
     'import',
+    'jsx-a11y',
   ],
   ignorePatterns: ['webpack.config.js', '.eslintrc.cjs'],
   rules: {
     'prefer-destructuring': 'off',
     'arrow-body-style': 'off',
-    'import/prefer-default-export': 'off',
     'no-nested-ternary': 'off',
     'no-void': ['error', { allowAsStatement: true }],
-    'react/prop-types': 'off',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': ['error', {
@@ -33,20 +33,16 @@ module.exports = {
       unnamedComponents: 'arrow-function',
     }],
     'jsx-a11y/media-has-caption': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'error',
-    '@typescript-eslint/explicit-member-accessibility': ['error'],
-    '@typescript-eslint/member-ordering': ['error'],
-    '@typescript-eslint/no-extraneous-class': ['error'],
-    '@typescript-eslint/no-parameter-properties': ['error'],
-    '@typescript-eslint/lines-between-class-members': [
-      'error',
-      'always',
-      { 'exceptAfterSingleLine': true },
-    ],
-    '@typescript-eslint/no-floating-promises': ['error'],
-    '@typescript-eslint/restrict-template-expressions': ['error', {
-      allowNumber: true,
-      allowBoolean: true,
-    }],
+
   },
+  overrides: [
+    {
+      files: ['*.tsx', '*.ts'],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'error',
+        '@typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+      }
+    }
+  ]
 };

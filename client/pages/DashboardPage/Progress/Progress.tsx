@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
-const Progress = ({ token }) => {
+interface Props {
+  token: string;
+}
+
+const Progress = ({ token }: Props): JSX.Element => {
   const [userProgress, setUserProgress] = useState(0);
   const controls = useAnimation();
 
   useEffect(() => {
-    fetch('./api/user', {
+    void fetch('./api/user', {
       method: 'GET',
       headers: {
         Authorization: token,
@@ -18,7 +22,7 @@ const Progress = ({ token }) => {
       });
   }, []);
 
-  controls.start({
+  void controls.start({
     width: `${(userProgress / 108) * 100}%`,
     transition: { duration: 2 },
   });

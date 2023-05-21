@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChecklistModal from './ChecklistModal/ChecklistModal.jsx';
+import ChecklistModal from './ChecklistModal/ChecklistModal';
 import './Leaf.scss';
 import '../../../../components/Modals/Modals.scss';
 

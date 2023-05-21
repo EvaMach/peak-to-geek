@@ -1,15 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useRoutes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
-import InfoPage from './pages/InfoPage/InfoPage.jsx';
-import LoginPage from './pages/LoginPage/LoginPage.jsx';
-import DashboardPage from './pages/DashboardPage/DashboardPage.jsx';
-import TreePage from './pages/TreePage/TreePage.jsx';
-import CoursesPage from './pages/CoursesPage/CoursesPage.jsx';
-import Nelca from './pages/InfoPage/Nelca/Nelca.jsx';
-import Evca from './pages/InfoPage/Evca/Evca.jsx';
-import About from './pages/InfoPage/About/About.jsx';
+import InfoPage from './pages/InfoPage/InfoPage';
+import LoginPage from './pages/LoginPage/LoginPage';
+import DashboardPage from './pages/DashboardPage/DashboardPage';
+import TreePage from './pages/TreePage/TreePage';
+import CoursesPage from './pages/CoursesPage/CoursesPage';
+import Nelca from './pages/InfoPage/Nelca/Nelca';
+import Evca from './pages/InfoPage/Evca/Evca';
+import About from './pages/InfoPage/About/About';
 import './style.scss';
 import './DarkMode/DarkMode.scss';
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './TreePage.scss';
-import Branch from './Branch/Branch.jsx';
+import Branch from './Branch/Branch';
 import NavigationHeader from '../../components/NavigationHeader/NavigationHeader';
 import Footer from '../../components/Footer/Footer';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../InfoPage.scss';
 
-const About = () => {
+const About = (): JSX.Element => {
   return (
     <>
       <section>

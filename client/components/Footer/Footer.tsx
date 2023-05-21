@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.scss';
 
-const Footer = () => (
+const Footer = (): JSX.Element => (
   <footer id="footer">
     <p className="footer__copyright">&copy; Digitální akademie: Web | 2022</p>
     <div className="footer__contacts">
